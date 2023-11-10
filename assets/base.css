@@ -3578,7 +3578,6 @@ details-disclosure>details {
   margin-left: 20px;
 }
 
-.header__icon--search,
-.header__icon--cart {
+.header__icon--search {
   display: none;
 }
