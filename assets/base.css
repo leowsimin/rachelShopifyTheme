@@ -3578,6 +3578,8 @@ details-disclosure>details {
   margin-left: 20px;
 }
 
-.header__icon--search {
+.header__icon--search,
+.header .header__icons .header__icon--account,
+.header .header__icons .header__icon--cart {
   display: none;
 }
