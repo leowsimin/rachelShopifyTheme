@@ -3577,3 +3577,7 @@ details-disclosure>details {
   padding: 7px 13px 7px 13px;
   margin-left: 20px;
 }
+
+.header__icon--search {
+  display: none;
+}
