@@ -187,8 +187,9 @@
                 }}
               </div>
             {%- else -%}
-            
+              {%- comment -%}
               <span class="h2">{{ shop.name }}</span>
+              {%- endcomment -%}
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
