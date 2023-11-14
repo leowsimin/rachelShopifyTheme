@@ -316,9 +316,9 @@ h3 {
     }
 
     .homePageCircle {
-        width: 180px;
+        width: 160px;
         position: absolute;
-        top: 5px;
+        top: 40px;
     }
 
     .homePageLine {
