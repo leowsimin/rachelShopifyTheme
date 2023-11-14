@@ -3540,8 +3540,6 @@ details-disclosure>details {
 
 .fullNavStyle {
   display: flex;
-  flex-direction: column;
-  /* or row, depending on your desired layout */
   align-items: center;
   justify-content: center;
 }
