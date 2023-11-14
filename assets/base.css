@@ -3543,7 +3543,7 @@ details-disclosure>details {
   align-items: center;
   justify-content: center;
 
-  position: fixed;
+  position: initial;
   top: 0;
   left: 0;
   right: 0;
