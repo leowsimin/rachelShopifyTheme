@@ -37,11 +37,11 @@
 }
 
 .homePageCircle {
-    width: 240px;
+    width: 250px;
     position: absolute;
     margin-left: -20px;
 
-    padding-top: 30px;
+    padding-top: 35px;
 }
 
 .homePageLine {
