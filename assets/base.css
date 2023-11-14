@@ -3540,13 +3540,16 @@ details-disclosure>details {
 .fullNavStyle {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  /* Add this line to create space between navStyle and sideNavBarStyle */
+  max-width: 80%;
+  /* Adjust the max-width as needed */
+  margin: auto;
+  /* Center the fullNavStyle */
 }
 
 .sideNavBarStyle {
   display: flex;
-  position: absolute;
-  left: 86%;
 }
 
 .logInButton a {
