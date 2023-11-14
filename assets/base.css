@@ -3542,15 +3542,6 @@ details-disclosure>details {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FAF5EE;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-
-  height: 10%;
 }
 
 .sideNavBarStyle {
