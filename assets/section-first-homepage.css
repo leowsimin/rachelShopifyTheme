@@ -307,7 +307,7 @@ h3 {
         position: relative;
         flex-direction: column;
 
-        padding-top: 200px;
+        padding-top: 10%;
     }
 
     .homePageStyle h1 {
