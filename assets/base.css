@@ -3548,6 +3548,8 @@ details-disclosure>details {
 
 .sideNavBarStyle {
   display: flex;
+  position: absolute;
+  left: 86%;
 }
 
 .logInButton a {
