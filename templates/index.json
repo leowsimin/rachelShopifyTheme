@@ -4,9 +4,15 @@
       "type": "homepage-first-section",
       "settings": {
       }
+    },
+    "8ad1c6ff-2ee4-4099-a911-e2eb266f3c68": {
+      "type": "homepage-second-section",
+      "settings": {
+      }
     }
   },
   "order": [
-    "5aa017a5-9a4f-4a97-85e1-414d9c8ea4ac"
+    "5aa017a5-9a4f-4a97-85e1-414d9c8ea4ac",
+    "8ad1c6ff-2ee4-4099-a911-e2eb266f3c68"
   ]
 }
