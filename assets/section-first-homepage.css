@@ -97,9 +97,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-    margin-top: 13%;
-    padding-top: 10%;
 }
 
 .homePageAllPeople {
@@ -324,7 +321,7 @@ h3 {
     .homePageLine {
         width: 120px;
         position: absolute;
-        padding-top: 95px;
+        padding-top: 9px;
 
         margin-left: 150px;
     }
@@ -374,6 +371,7 @@ h3 {
 
     .homePageTestimony {
         font-size: 40px;
+        padding-top: 20%;
     }
 
     h3 {
@@ -382,5 +380,9 @@ h3 {
 
     .homePageDescription {
         font-size: 13px;
+    }
+
+    .homePagePanel2 {
+        height: 160vh;
     }
 }
