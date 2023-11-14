@@ -1,12 +1,8 @@
 {
   "sections": {
-    "936d5409-7a3f-4d03-bdd5-78fecc5059bd": {
-      "type": "custom-liquid",
+    "5aa017a5-9a4f-4a97-85e1-414d9c8ea4ac": {
+      "type": "homepage-first-section",
       "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "rich_text": {
@@ -175,7 +171,7 @@
     }
   },
   "order": [
-    "936d5409-7a3f-4d03-bdd5-78fecc5059bd",
+    "5aa017a5-9a4f-4a97-85e1-414d9c8ea4ac",
     "rich_text",
     "featured_collection",
     "collage",
