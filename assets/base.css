@@ -3534,18 +3534,14 @@ details-disclosure>details {
 .navStyle {
   display: flex;
   align-items: center;
-  padding: 0;
+  justify-content: center;
+  margin: auto;
 }
 
 .fullNavStyle {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Add this line to create space between navStyle and sideNavBarStyle */
-  max-width: 50%;
-  /* Adjust the max-width as needed */
-  margin: auto;
-  /* Center the fullNavStyle */
 }
 
 .sideNavBarStyle {
