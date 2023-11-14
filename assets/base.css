@@ -2382,6 +2382,7 @@ product-info .loading__spinner:not(.hidden)~*,
   grid-template-areas: 'left-icons heading icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 749px) {
@@ -2780,8 +2781,6 @@ details[open]>.header__submenu {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
-
-  align-items: center;
 }
 
 .header--top-center .header__inline-menu,
