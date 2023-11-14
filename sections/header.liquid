@@ -165,7 +165,7 @@
       endif
     -%}
 
-    {%- if section.settings.logo_position != 'middle-center' -%}
+    {%- if section.settings.logo_position != 'middle-left' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
@@ -229,7 +229,9 @@
                 }}
               </div>
             {%- else -%}
+              {%- comment -%}
               <span class="h2">{{ shop.name }}</span>
+              {%- endcomment -%}
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
