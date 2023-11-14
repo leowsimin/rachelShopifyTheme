@@ -161,6 +161,10 @@ h3 {
     background: transparent;
 }
 
+.homePagePanel1 {
+    height: 100vh;
+}
+
 @media only screen and (max-width: 1095px) {
     .homePageStyle {
         display: flex;
