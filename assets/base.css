@@ -3542,7 +3542,7 @@ details-disclosure>details {
   align-items: center;
   justify-content: center;
   /* Add this line to create space between navStyle and sideNavBarStyle */
-  max-width: 80%;
+  max-width: 50%;
   /* Adjust the max-width as needed */
   margin: auto;
   /* Center the fullNavStyle */
