@@ -1,5 +1,14 @@
 {
   "sections": {
+    "936d5409-7a3f-4d03-bdd5-78fecc5059bd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -166,6 +175,7 @@
     }
   },
   "order": [
+    "936d5409-7a3f-4d03-bdd5-78fecc5059bd",
     "rich_text",
     "featured_collection",
     "collage",
