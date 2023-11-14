@@ -1,29 +1,27 @@
 {{ 'section-first-homepage.css' | asset_url | stylesheet_tag }}
 
-<div class="homePageContainer">
+<div class="homePagePanel1">
+    <div class="homePageStyle">
+        <img class="homePageCircle" src="{{ 'circle.svg' | asset_url }}" />
+        <h1>RENT,&nbsp;</h1>
+        <h1>DON'T BUY.</h1>
+        <img class="homePageLine" src="{{ 'cancelLine.svg' | asset_url }}" />
+    </div>
 
-    <div class="homePagePanel1">
-        <div class="homePageStyle">
-            <img class="homePageCircle" src="{{ 'circle.svg' | asset_url }}" />
-            <h1>RENT,&nbsp;</h1>
-            <h1>DON'T BUY.</h1>
-            <img class="homePageLine" src="{{ 'cancelLine.svg' | asset_url }}" />
-        </div>
+    <div class="homePageStyle2">
+        <p class="homePagePara">Be The Change.</p>
+        <img class="homePageArrow" src="{{ 'arrow.svg' | asset_url }}" />
+    </div>
 
-        <div class="homePageStyle2">
-            <p class="homePagePara">Be The Change.</p>
-            <img class="homePageArrow" src="{{ 'arrow.svg' | asset_url }}" />
-        </div>
-
-        <div class="homePageStyle3">
-            <a href="{{ linklists.main-menu.links[3].url }}">
-                <img class="homePageRentNowCircle" src="{{ 'rentNowCircle.svg' | asset_url }}" />
-            </a>
-            
-            <img class="homePageLuggages" src="{{ 'homePageLuggages.svg' | asset_url }}" />
-        </div>
+    <div class="homePageStyle3">
+        <a href="{{ linklists.main-menu.links[3].url }}">
+            <img class="homePageRentNowCircle" src="{{ 'rentNowCircle.svg' | asset_url }}" />
+        </a>
+        
+        <img class="homePageLuggages" src="{{ 'homePageLuggages.svg' | asset_url }}" />
     </div>
 </div>
+
 
 {% schema %}
   {
