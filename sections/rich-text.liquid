@@ -20,6 +20,101 @@
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+          <div class="homePageContainer">
+
+            <div class="homePagePanel1">
+                <div class="homePageStyle">
+                    <img class="homePageCircle" src="{{ 'circle.svg' | asset_url }}" />
+                    <h1>RENT,&nbsp;</h1>
+                    <h1>DON'T BUY.</h1>
+                    <img class="homePageLine" src="{{ 'cancelLine.svg' | asset_url }}" />
+                </div>
+
+                <div class="homePageStyle2">
+                    <p class="homePagePara">Be The Change.</p>
+                    <img class="homePageArrow" src="{{ 'arrow.svg' | asset_url }}" />
+                </div>
+
+                <div class="homePageStyle3">
+                    <a href="{{ linklists.main-menu.links[3].url }}">
+                        <img class="homePageRentNowCircle" src="{{ 'rentNowCircle.svg' | asset_url }}" />
+                    </a>
+                    
+                    <img class="homePageLuggages" src="{{ 'homePageLuggages.svg' | asset_url }}" />
+                </div>
+            </div>
+
+            <div class="homePagePanel2">
+                <h2 class="homePageTestimony">What do people say about us?</h2>
+
+                <div class="homePageAllPeople">
+
+                    <div class="homePageOpenPeople">
+                        <img class="homePageOpenQuote" src="{{ 'openQuotation.svg' | asset_url }}"/>
+
+                        <div class="homePagePeople1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                                <circle cx="75" cy="75" r="60" fill="#0D2610"/>
+                            </svg>
+                            <h3>RACHEL LEOW SI MIN</h3>
+                            <div class="homePageDescription">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                                <p>consectetur adipiscing elit, sed</p>
+                                <p>do eiusmod tempor incididunt</p>
+                                <p>ut labore et dolore magna</p>
+                                <p>aliqua. Ut enim ad minim</p>
+                                <p>veniam, quis nostrud</p>
+                                <p>exercitation ullamco laboris</p>
+                                <p>nisi ut aliquip ex ea commodo</p>
+                                <p>consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="homePagePeople2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                            <circle cx="75" cy="75" r="60" fill="#0D2610"/>
+                        </svg>
+                        <h3>ELIZABETH MARY</h3>
+                        <div class="homePageDescription">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                            <p>consectetur adipiscing elit, sed</p>
+                            <p>do eiusmod tempor incididunt</p>
+                            <p>ut labore et dolore magna</p>
+                            <p>aliqua. Ut enim ad minim</p>
+                            <p>veniam, quis nostrud</p>
+                            <p>exercitation ullamco laboris</p>
+                            <p>nisi ut aliquip ex ea commodo</p>
+                            <p>consequat.</p>
+                        </div>
+                    </div>
+
+                    <div class="homePageClosePeople">
+                        <div class="homePagePeople3" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                                <circle cx="75" cy="75" r="60" fill="#0D2610"/>
+                            </svg>
+                            <h3>ETHAN LEEE</h3>
+                            <div class="homePageDescription">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                                <p>consectetur adipiscing elit, sed</p>
+                                <p>do eiusmod tempor incididunt</p>
+                                <p>ut labore et dolore magna</p>
+                                <p>aliqua. Ut enim ad minim</p>
+                                <p>veniam, quis nostrud</p>
+                                <p>exercitation ullamco laboris</p>
+                                <p>nisi ut aliquip ex ea commodo</p>
+                                <p>consequat.</p>
+                            </div>
+                        </div>
+
+                        <img class="homePageCloseQuote" src="{{ 'closeQuotation.svg' | asset_url }}"/>
+                    </div>
+                </div>
+            </div>
+
+</div>
+          {%- comment -%}
             {%- when 'heading' -%}
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -87,6 +182,7 @@
                   </a>
                 {%- endif -%}
               </div>
+          {%- endcomment -%}
           {%- endcase -%}
         {%- endfor -%}
       </div>
