@@ -8,7 +8,7 @@
 <nav class="header__inline-menu">
   <div class="fullNavStyle">
       <ul class="navStyle">
-          <a class="navLink" href="{{ section.settings.menu.links.url }}">
+          <a class="navLink" href="{{ linklists.main-menu.links[0].url }}">
           {{ linklists.main-menu.links[0].title }}
           </a>
 
@@ -47,7 +47,7 @@
               </div>
           {% endif %}
       </div>
-  <div>
+  </div>
 {%- comment -%}
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
