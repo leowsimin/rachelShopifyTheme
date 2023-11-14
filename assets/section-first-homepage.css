@@ -322,11 +322,11 @@ h3 {
     }
 
     .homePageLine {
-        width: 130px;
+        width: 120px;
         position: absolute;
-        padding-top: 85px;
+        padding-top: 95px;
 
-        margin-left: 170px;
+        margin-left: 150px;
     }
 
     .homePagePara {
@@ -383,9 +383,5 @@ h3 {
 
     .homePageDescription {
         font-size: 13px;
-    }
-
-    .homePagePanel2 {
-        height: 160vh;
     }
 }
