@@ -2780,8 +2780,6 @@ details[open]>.header__submenu {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
-
-  background-color: #FFFCF8;
 }
 
 .header--top-center .header__inline-menu,
