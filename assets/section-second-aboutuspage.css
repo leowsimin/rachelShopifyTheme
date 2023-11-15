@@ -1,6 +1,7 @@
 .howitworks-second-section {
     display: block;
     align-items: center;
+    position: relative;
 }
 
 .howitworks-header2-container {
@@ -24,7 +25,6 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    position: relative;
 
     margin-left: 10%;
 }
