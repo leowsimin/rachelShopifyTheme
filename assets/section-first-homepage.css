@@ -153,8 +153,6 @@
     .homePageLuggages {
         display: block;
         position: relative;
-        align-items: center;
-        justify-content: center;
         width: 270px;
 
         padding-left: 2%;
