@@ -9,8 +9,7 @@
     display: block;
 }
 
-.howitworks-subheader-container1 h4,
-.howitworks-subheader-container2 h4 {
+h4 {
     color: #0D2610;
     font-family: JejuMyeongjo;
     font-size: 55px;
@@ -36,7 +35,7 @@
     position: relative;
 }
 
-.howitworks-subheader-container2 h5 {
+h5 {
     color: #0D2610;
     font-family: Syncopate;
     font-size: 65px;
