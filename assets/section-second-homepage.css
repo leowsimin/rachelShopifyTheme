@@ -74,9 +74,6 @@ h3 {
     background: transparent;
 }
 
-.homePagePanel1 {
-    height: 100vh;
-}
 
 @media only screen and (max-width: 1095px) {
     .homePageTestimony {
@@ -107,11 +104,6 @@ h3 {
 
         right: 100%;
         top: 45%;
-    }
-
-    .homePagePanel2 {
-        height: 170vh;
-        scroll-snap-align: start;
     }
 
     .homePageCloseQuote {
@@ -146,9 +138,5 @@ h3 {
 
     .homePageDescription {
         font-size: 13px;
-    }
-
-    .homePagePanel2 {
-        height: 160vh;
     }
 }
