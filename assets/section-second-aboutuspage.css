@@ -1,13 +1,17 @@
 .howitworks-second-section {
     display: block;
+    align-items: center;
 }
 
 .howitworks-header2-container {
     display: block;
+    align-items: center;
 }
 
 .howitworks-subheader-container3 {
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .howitworks-subheader-container4 {
