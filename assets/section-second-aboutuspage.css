@@ -24,8 +24,14 @@
     display: flex;
     text-align: center;
     justify-content: center;
+    position: relative;
 
     margin-left: 10%;
+}
+
+.howitworks-image3 {
+    position: absolute;
+
 }
 
 .howitworks-second-section-description {
