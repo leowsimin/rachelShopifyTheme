@@ -6,9 +6,8 @@
     display: block;
 }
 
-.howitworks-subheader-container1 h4 {
+.howitworks-subheader-container1 h4 h {
     color: #0D2610;
-    text-align: center;
     font-family: JejuMyeongjo;
     font-size: 100px;
     font-style: normal;
@@ -21,4 +20,11 @@
     display: flex;
 }
 
-.howitworks-subheader-container2 h5 {}
+.howitworks-subheader-container2 h5 {
+    color: #0D2610;
+    font-family: Syncopate;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
