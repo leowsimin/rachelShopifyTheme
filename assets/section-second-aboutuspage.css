@@ -2,4 +2,14 @@
     display: block;
 }
 
-.howitworks-header2-container {}
+.howitworks-header2-container {
+    display: block;
+}
+
+.howitworks-subheader-container3 {
+    display: flex;
+}
+
+.howitworks-subheader-container4 {
+    display: flex;
+}
