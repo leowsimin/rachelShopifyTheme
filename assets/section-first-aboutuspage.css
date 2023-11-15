@@ -6,16 +6,7 @@
     display: block;
 }
 
-.howitworks-subheader-container1 h4 {
-    color: #0D2610;
-    font-family: JejuMyeongjo;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -5px;
-}
-
+.howitworks-subheader-container1 h4,
 .howitworks-subheader-container2 h4 {
     color: #0D2610;
     font-family: JejuMyeongjo;
@@ -25,7 +16,6 @@
     line-height: normal;
     letter-spacing: -5px;
 }
-
 
 .howitworks-subheader-container2 {
     display: flex;
