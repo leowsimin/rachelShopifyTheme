@@ -222,13 +222,13 @@
 
     .homePageStyle {
         display: flex;
-        position: relative;
         flex-direction: column;
 
         padding-top: 15%;
     }
 
     .homePageStyle h1 {
+        position: relative;
         margin-top: 15px;
         font-size: 40px;
     }
