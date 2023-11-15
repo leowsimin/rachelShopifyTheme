@@ -22,17 +22,14 @@
 }
 
 .howitworks-subheader-container4 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
     margin-left: 10%;
 }
 
 .howitworks-image3 {
     width: 140px;
     position: absolute;
-    margin-left: 400px;
+    margin-left: 550px;
+    margin-top: 50px;
 }
 
 .howitworks-second-section-description {
