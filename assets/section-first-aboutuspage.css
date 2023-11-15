@@ -17,6 +17,10 @@
     letter-spacing: -5px;
 }
 
+.howitworks-subheader-container1 {
+    text-align: center;
+}
+
 .howitworks-subheader-container2 {
     display: flex;
 }
@@ -33,6 +37,6 @@
 }
 
 .howitworks-image1 {
-    width: 240px;
+    width: 300px;
     position: absolute;
 }
