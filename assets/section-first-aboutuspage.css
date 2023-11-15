@@ -28,4 +28,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    position: relative;
+}
+
+.howitworks-image1 {
+    width: 240px;
+    position: absolute;
 }
