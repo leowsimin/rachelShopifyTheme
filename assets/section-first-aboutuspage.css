@@ -66,6 +66,7 @@
     font-weight: 400;
     line-height: normal;
 
+    display: flex;
     text-align: center;
     justify-content: center;
 }
