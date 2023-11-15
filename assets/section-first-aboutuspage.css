@@ -33,6 +33,7 @@
     align-items: center;
 
     margin-left: 10%;
+    position: relative;
 }
 
 .howitworks-subheader-container2 h5 {
@@ -43,7 +44,6 @@
     font-weight: 700;
     line-height: normal;
 
-    position: relative;
     margin: 0;
     padding: 0 2% 0 2%;
 }
