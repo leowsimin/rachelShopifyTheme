@@ -75,3 +75,62 @@ h3 {
 .homePagePanel1 {
     height: 100vh;
 }
+
+@media only screen and (max-width: 1095px) {
+    .homePageTestimony {
+        margin-top: 15%;
+        padding-top: 20%;
+
+        font-size: 40px;
+    }
+
+    .homePageAllPeople {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .homePagePeople1 {
+        text-align: center;
+    }
+
+    .homePagePeople2 {
+        text-align: center;
+    }
+
+    .homePagePeople3 {
+        text-align: center;
+    }
+
+    .homePageOpenQuote {
+        position: absolute;
+        width: 60px;
+
+        right: 100%;
+        top: 45%;
+    }
+
+    .homePagePanel2 {
+        height: 170vh;
+        scroll-snap-align: start;
+    }
+
+    .homePageCloseQuote {
+        position: absolute;
+        width: 60px;
+        left: 100%;
+        top: 40%;
+    }
+
+    .homePageClosePeople {
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .homePageOpenPeople {
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
