@@ -29,6 +29,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-left: 5%;
 }
 
 .howitworks-subheader-container2 h5 {
