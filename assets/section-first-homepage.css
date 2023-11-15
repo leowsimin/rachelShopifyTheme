@@ -87,6 +87,10 @@
     width: 420px;
 }
 
+.homePagePanel1 {
+    height: 100vh;
+}
+
 @media only screen and (max-width: 990px) {
     .homePageStyle {
         display: flex;

@@ -74,6 +74,10 @@ h3 {
     background: transparent;
 }
 
+.homePagePanel2 {
+    height: 100vh;
+}
+
 
 @media only screen and (max-width: 990px) {
     .homePageTestimony {
