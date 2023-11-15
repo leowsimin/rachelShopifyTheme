@@ -225,7 +225,7 @@
         position: relative;
         flex-direction: column;
 
-        padding-top: 10%;
+        padding-top: 15%;
     }
 
     .homePageStyle h1 {
@@ -242,7 +242,7 @@
     .homePageLine {
         width: 120px;
         position: absolute;
-        padding-top: 84px;
+        padding-top: 85px;
 
         margin-left: 170px;
     }
