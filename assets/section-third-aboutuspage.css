@@ -69,7 +69,6 @@
 }
 
 .howitworks-subheader-container9 h6 {
-    position: relative;
 
     color: #0D2610;
     text-align: center;
@@ -91,4 +90,8 @@
     left: 50%;
     /* Center the image horizontally */
     transform: translateX(-50%);
+}
+
+.howitworks-subheader-container9 {
+    position: relative;
 }
