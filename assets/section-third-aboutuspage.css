@@ -85,6 +85,12 @@
     width: 200px;
     position: absolute;
     bottom: 0;
+
+    top: -50px;
+    /* Adjust the top position based on your layout */
+    left: 50%;
+    /* Center the image horizontally */
+    transform: translateX(-50%);
 }
 
 .howitworks-subheader-container9 {
