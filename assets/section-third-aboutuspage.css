@@ -38,13 +38,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .howitworks-image6 {
     width: 600px;
+
+    position: relative;
 }
 
 .howitworks-image7 {
     width: 300px;
+
+    position: absolute;
 }
