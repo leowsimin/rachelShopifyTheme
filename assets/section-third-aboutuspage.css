@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.howitworks-header3-container1 h5 {
+    margin-right: 10%;
+}
+
 .howitworks-subheader-container5 {
     display: flex;
     justify-content: center;
