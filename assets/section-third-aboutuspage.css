@@ -67,4 +67,12 @@
     width: 200px;
 }
 
-.howitworks-subheader-container9 h6 {}
+.howitworks-subheader-container9 h6 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
