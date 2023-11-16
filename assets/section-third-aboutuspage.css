@@ -11,12 +11,10 @@
 .howitworks-subheader-container5 {
     display: flex;
     margin-left: 23%;
-    position: relative;
 }
 
 .howitworks-subheader-container7 {
     display: flex;
-    position: relative;
 }
 
 .howitworks-image5 {
@@ -39,6 +37,10 @@
     position: absolute;
     margin-left: 700px;
     margin-top: 230px;
+}
+
+.howitwork-header3-parent-container2 {
+    position: relative;
 }
 
 .howitworks-header3-container2 {
