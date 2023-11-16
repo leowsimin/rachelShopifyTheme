@@ -36,6 +36,7 @@
 
 .howitworks-subheader-container8 {
     position: relative;
+
     display: flex;
     flex-direction: column;
 }
