@@ -39,12 +39,12 @@
 }
 
 .howitworks-subheader-container8 {
+    position: absolute;
     display: flex;
     flex-direction: column;
 }
 
 .howitworks-image6 {
-    position: absolute;
     width: 600px;
     margin-left: 50%;
 }
