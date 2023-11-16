@@ -34,4 +34,14 @@
     margin-right: 40px;
 }
 
-.howitworks-header3-container2 {}
+.howitworks-header3-container2 {
+    display: flex;
+}
+
+.howitworks-image6 {
+    width: 600px;
+}
+
+.howitworks-image7 {
+    width: 300px;
+}
