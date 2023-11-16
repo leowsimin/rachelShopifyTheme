@@ -43,6 +43,7 @@
 
 .howitworks-subheader-container7 {
     display: block;
+    position: relative;
 }
 
 .howitworks-subheader-container8 {
@@ -55,7 +56,6 @@
 }
 
 .howitworks-image7 {
-    position: relative;
 
     margin-top: 20%;
 }
