@@ -36,7 +36,9 @@
 
 .howitworks-header3-container2 {}
 
-.howitworks-image6 {}
+.howitworks-image6 {
+    width: 600px;
+}
 
 .howitworks-image7 {
     width: 200px;
