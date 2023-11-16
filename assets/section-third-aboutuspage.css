@@ -35,14 +35,11 @@
 }
 
 .howitworks-subheader-container8 {
-    position: relative;
-
     display: flex;
     flex-direction: column;
 }
 
 .howitworks-image6 {
-    position: absolute;
     width: 600px;
 }
 
