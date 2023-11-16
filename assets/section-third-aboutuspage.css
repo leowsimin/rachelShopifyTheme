@@ -50,6 +50,7 @@
 .howitworks-header3-container3 {
     display: block;
     text-align: center;
+    position: relative;
 }
 
 .howitworks-image8 {
@@ -59,6 +60,12 @@
 .howitworks-image9 {
     width: 200px;
     position: absolute;
+    top: 0;
+    /* Adjust the top position as needed */
+    left: 50%;
+    /* Center the image horizontally */
+    transform: translateX(-50%);
+    /* Center the image horizontally */
 }
 
 .howitworks-header3-container3 h6 {
@@ -68,8 +75,4 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-.howitworks-subheader-container7 {
-    position: relative;
 }
