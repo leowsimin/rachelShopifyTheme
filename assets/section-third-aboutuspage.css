@@ -1,4 +1,5 @@
 .howitworks-header3-container1 {
+    position: relative;
     display: block;
     text-align: center;
 
@@ -38,7 +39,6 @@
 
 .howitworks-image6 {
     position: absolute;
-    margin-left: 50px;
     width: 600px;
 }
 
