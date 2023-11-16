@@ -36,4 +36,6 @@
 .howitworks-image7 {
     width: 220px;
 
+    display: flex;
+    flex-direction: flex;
 }
