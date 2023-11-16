@@ -34,7 +34,12 @@
     margin-right: 40px;
 }
 
+.howitworks-header3-container2 {
+    position: relative;
+}
+
 .howitworks-subheader-container8 {
+    position: absolute;
     display: flex;
     flex-direction: column;
 }
