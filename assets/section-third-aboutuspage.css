@@ -47,4 +47,7 @@
     width: 200px;
 }
 
-.howitworks-header3-container3 {}
+.howitworks-header3-container3 {
+    display: block;
+    text-align: center;
+}
