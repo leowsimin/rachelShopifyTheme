@@ -34,17 +34,9 @@
     margin-right: 40px;
 }
 
-.howitworks-header3-container2 {
-    position: relative;
-    display: block;
-    text-align: center;
-}
+.howitworks-header3-container2 {}
 
-.howitworks-image6 {
-    position: absolute;
-    width: 600px;
-    margin-left: 50%;
-}
+.howitworks-image6 {}
 
 .howitworks-image7 {
     width: 200px;
