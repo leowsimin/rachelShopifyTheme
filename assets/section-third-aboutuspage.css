@@ -36,7 +36,9 @@
 }
 
 .howitworks-header3-container2 {
-    display: flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .howitworks-subheader-container7 {
