@@ -57,6 +57,8 @@
 
 .howitworks-header3-container3 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .howitworks-subheader-container7 {
