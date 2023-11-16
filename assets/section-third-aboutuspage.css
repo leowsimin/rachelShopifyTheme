@@ -96,3 +96,18 @@
 .howitworks-subheader-container9 {
     position: relative;
 }
+
+.howitworks-subheader-container8 ol {
+    list-style-position: inside;
+    text-align: center;
+    /* Center-align the list content */
+    width: 500px;
+    height: 150px;
+    margin: auto;
+    /* Center the ordered list within the container */
+}
+
+.howitworks-subheader-container8 ol li {
+    text-align: left;
+    /* Reset text alignment for list items if needed */
+}
