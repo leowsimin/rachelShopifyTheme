@@ -82,6 +82,6 @@
     /* Align numbers inside the list */
     text-align: left;
     /* Reset text alignment */
-    width: auto;
-    height: auto;
+    width: 500px;
+    height: 510px;
 }
