@@ -69,7 +69,6 @@
 }
 
 .howitworks-subheader-container9 h6 {
-    position: relative;
 
     color: #0D2610;
     text-align: center;
@@ -82,4 +81,8 @@
 
 .howitworks-image9 {
     position: absolute;
+}
+
+.howitworks-subheader-container9 {
+    position: relative;
 }
