@@ -1,6 +1,5 @@
 .howitworks-header3-container1 {
     display: block;
-    position: relative;
     margin-top: 5%;
 }
 
@@ -12,10 +11,12 @@
 .howitworks-subheader-container5 {
     display: flex;
     margin-left: 23%;
+    position: relative;
 }
 
 .howitworks-subheader-container7 {
     display: flex;
+    position: relative;
 }
 
 .howitworks-image5 {
