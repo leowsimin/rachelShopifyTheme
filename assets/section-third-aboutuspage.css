@@ -68,6 +68,8 @@
 }
 
 .howitworks-subheader-container9 h6 {
+    position: relative;
+
     color: #0D2610;
     text-align: center;
     font-family: Syncopate;
@@ -75,4 +77,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.howitworks-image9 {
+    position: absolute;
 }
