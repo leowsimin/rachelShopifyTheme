@@ -50,7 +50,6 @@
 .howitworks-header3-container3 {
     display: block;
     text-align: center;
-    position: relative;
 }
 
 .howitworks-image8 {
@@ -69,6 +68,7 @@
 }
 
 .howitworks-header3-container3 h6 {
+    position: relative;
     color: #0D2610;
     font-family: Syncopate;
     font-size: 25px;
