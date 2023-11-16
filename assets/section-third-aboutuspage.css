@@ -80,6 +80,7 @@
 .howitworks-header3-container3 ol {
     list-style-position: inside;
     text-align: center;
+    margin: auto;
     /* Center-align the list content */
     width: 500px;
     height: 150px;
