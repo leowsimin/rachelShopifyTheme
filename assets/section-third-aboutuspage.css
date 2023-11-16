@@ -42,8 +42,6 @@
 .howitworks-subheader-container7 {
     display: block;
     position: relative;
-
-    margin-left: 20%;
 }
 
 .howitworks-subheader-container8 {
@@ -53,6 +51,7 @@
 .howitworks-image6 {
     width: 600px;
     position: absolute;
+    margin-left: 20%;
 }
 
 .howitworks-image7 {
