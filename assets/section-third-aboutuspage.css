@@ -31,6 +31,7 @@
 }
 
 .howitworks-subheader-container6 h4 {
+    display: flex;
     margin-right: 40px;
 }
 
