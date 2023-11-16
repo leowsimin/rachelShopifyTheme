@@ -42,13 +42,12 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-
-    text-align: center;
 }
 
 .howitworks-image6 {
     width: 600px;
-    margin: auto;
+
+    margin-left: 10%;
 }
 
 .howitworks-image7 {
