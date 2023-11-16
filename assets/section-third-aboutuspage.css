@@ -7,12 +7,16 @@
 
 .howitworks-subheader-container5 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .howitworks-image5 {
+    width: 300px;
     position: absolute;
 }
 
 .howitworks-image6 {
+    width: 300px;
     position: absolute;
 }
