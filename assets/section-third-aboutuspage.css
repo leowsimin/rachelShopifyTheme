@@ -36,6 +36,8 @@
 
 .howitworks-header3-container2 {
     position: relative;
+    display: block;
+    text-align: center;
 }
 
 .howitworks-image6 {
