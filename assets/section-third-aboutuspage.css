@@ -77,12 +77,14 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    margin: 0;
 }
 
 .howitworks-image9 {
     position: absolute;
-
-    margin-left: 100px;
+    right: 0;
+    bottom: 0;
 }
 
 .howitworks-subheader-container9 {
