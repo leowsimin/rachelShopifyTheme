@@ -19,8 +19,10 @@
 }
 
 .howitworks-image5 {
-    width: 300px;
+    width: 250px;
     position: absolute;
+
+    margin-left: 100px;
 }
 
 .howitworks-image6 {
