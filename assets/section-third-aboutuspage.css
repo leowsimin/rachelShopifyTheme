@@ -88,4 +88,10 @@
 .howitworks-header3-container3 ol li {
     text-align: left;
     /* Reset text alignment for list items if needed */
+    color: #000;
+    font-family: JejuMyeongjo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
