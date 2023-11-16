@@ -59,15 +59,18 @@
 .howitworks-image9 {
     width: 200px;
     position: absolute;
-    padding-right: 100px;
+    margin-right: 100px;
 }
 
 .howitworks-header3-container3 h6 {
-    position: relative;
     color: #0D2610;
     font-family: Syncopate;
     font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.howitworks-subheader-container7 {
+    position: relative;
 }
