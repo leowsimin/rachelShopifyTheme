@@ -66,6 +66,9 @@
     /* Center the image horizontally */
     transform: translateX(-50%);
     /* Center the image horizontally */
+
+    margin-top: 5%;
+    margin-bottom: 5%
 }
 
 .howitworks-header3-container3 h6 {
