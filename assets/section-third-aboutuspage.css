@@ -37,6 +37,5 @@
     width: 220px;
 
     position: absolute;
-    display: flex;
-    justify-content: flex-end;
+    left: auto;
 }
