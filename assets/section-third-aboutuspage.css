@@ -85,3 +85,8 @@
     width: 500px;
     height: 150px;
 }
+
+.howitworks-header3-container3 ol li {
+    text-align: center;
+    /* Center-align the content */
+}
