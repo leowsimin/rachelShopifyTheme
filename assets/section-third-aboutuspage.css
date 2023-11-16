@@ -3,9 +3,10 @@
     margin-top: 5%;
 }
 
-.howitworks-header3-container1 h5 {
+.howitworks-subheader-container7 h5 {
     margin-left: 20%;
     padding: 0;
+    position: relative;
 }
 
 .howitworks-subheader-container5 {
@@ -15,7 +16,6 @@
 
 .howitworks-subheader-container7 {
     display: flex;
-    position: relative;
 }
 
 .howitworks-image5 {
