@@ -33,24 +33,3 @@
 .howitworks-subheader-container6 h4 {
     margin-right: 40px;
 }
-
-.howitworks-header3-container3 {
-    display: flex;
-}
-
-.howitworks-subheader-container7 {
-    display: flex;
-    flex-direction: column;
-}
-
-.howitworks-subheader-container8 {
-    display: block;
-}
-
-.howitworks-image6 {
-    width: 600px;
-}
-
-.howitworks-image7 {
-    width: 200px;
-}
