@@ -39,7 +39,8 @@
 }
 
 .howitworks-subheader-container7 {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .howitworks-subheader-container8 {
