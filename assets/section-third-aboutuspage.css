@@ -1,1 +1,16 @@
-.howitworks-header3-container1 {}
+.howitworks-header3-container1 {
+    display: block;
+    text-align: center;
+}
+
+.howitworks-subheader-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.howitworks-subheader-container6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
