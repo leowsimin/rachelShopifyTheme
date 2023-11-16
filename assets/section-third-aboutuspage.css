@@ -58,7 +58,9 @@
 
 .howitworks-image9 {
     width: 200px;
-    position: absolute
+    position: absolute;
+
+    margin-right: 100px;
 }
 
 .howitworks-header3-container3 h6 {
