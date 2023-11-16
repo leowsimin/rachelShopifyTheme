@@ -92,6 +92,8 @@
     left: 50%;
     /* Center the image horizontally */
     transform: translateX(-50%);
+
+    z-index: -1;
 }
 
 .howitworks-subheader-container9 {
