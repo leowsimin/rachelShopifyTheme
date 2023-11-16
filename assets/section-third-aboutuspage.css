@@ -58,13 +58,7 @@
 
 .howitworks-image9 {
     width: 200px;
-    position: absolute;
-    top: 130px;
-    /* Adjust the top position as needed */
-    left: 660px;
-    /* Center the image horizontally */
-    transform: translateX(-50%);
-    /* Center the image horizontally */
+    position: absolute
 }
 
 .howitworks-header3-container3 h6 {
