@@ -14,6 +14,10 @@
   }
 {%- endstyle -%}
 
+{%- comment -%}
+Recovery Page HTML
+{%- endcomment -%}
+
 <div class="customer login section-{{ section.id }}-padding">
   <h1 id="recover" tabindex="-1">
     {{ 'customer.recover_password.title' | t }}
@@ -67,6 +71,10 @@
     {%- endform -%}
   </div>
 
+{%- comment -%}
+Login Page HTML
+{%- endcomment -%}
+
   <h1 id="login" tabindex="-1">
     {{ 'customer.login_page.title' | t }}
   </h1>
@@ -81,6 +89,7 @@
         {{ 'customer.recover_password.success' | t }}
       </h3>
     {%- endif -%}
+    
     {%- form 'customer_login', novalidate: 'novalidate' -%}
       {%- if form.errors -%}
         <h2 class="form__message" tabindex="-1" autofocus>
