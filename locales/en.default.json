@@ -418,7 +418,8 @@
       "password": "Password",
       "title": "Login",
       "sign_in": "Sign in",
-      "submit": "Submit"
+      "submit": "Submit",
+      "phone_number": "Phone Number"
     },
     "order": {
       "title": "Order {{ name }}",
