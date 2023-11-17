@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{ 'section-third-aboutuspage.css' | asset_url | stylesheet_tag }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,4 +58,65 @@
 {% endstylesheet %}
 
 {% javascript %}
+=======
+{{ 'section-third-aboutuspage.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+<div class="howitworks-third-section">
+    <div class="howitworks-header3-container1">
+        <div class="howitworks-subheader-container5">
+            <h5>REPAIR</h5>
+            <img class="howitworks-image5" src="{{ 'howitworks-deadluggage.svg' | asset_url }}" />
+        </div>
+
+        <div class="howitworks-subheader-container6">
+            <h4>Of &nbsp; Luggage</h4>
+        </div>
+    </div>
+
+    <div class="howitworks-header3-container2">
+
+        <div class="howitworks-subheader-container7">
+            <img class="howitworks-image6" src="{{ 'howitworks-swigglylines.svg' | asset_url }}" />
+            <img class="howitworks-image7" src="{{ 'howitworks-happyluggage.svg' | asset_url }}" />
+        </div>
+
+        <div class="howitworks-subheader-container8">
+            <img class="howitworks-image8" src="{{ 'howitworks-15mins.svg' | asset_url }}" />
+
+            <div class="howitworks-subheader-container9">
+                <h6>process</h6>
+                <img class="howitworks-image9" src="{{ 'howitworks-process-circle.svg' | asset_url }}" />
+            </div>
+
+            <ol>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>consectetur adipiscing elit,</li>
+                <li>sed do eiusmod tempor</li>
+                <li>incididunt ut labore et dolore magna aliqu.</li>
+            </ol>
+
+        <div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "AboutUs Third Section",
+    "settings": [],
+    "presets": [
+        {
+            "name": "AboutUs Third Section"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+>>>>>>> d7888bdff3c6018333ad73cfdd2dbb24b69f9569
 {% endjavascript %}

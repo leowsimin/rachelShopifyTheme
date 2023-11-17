@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .howitworks-first-section {
     background-color: #FAF5EE;
     display: block;
@@ -73,4 +74,81 @@ h5 {
 .howitworks-image2 {
     width: 600px;
     margin-top: 5%;
+=======
+.howitworks-first-section {
+    background-color: #FAF5EE;
+    display: block;
+    padding-top: 5%;
+
+    text-align: center;
+}
+
+.howitworks-header1-container {
+    display: block;
+}
+
+h4 {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -5px;
+
+    margin: 0;
+}
+
+.howitworks-subheader-container1 {
+    text-align: center;
+    margin-right: 30%;
+}
+
+.howitworks-subheader-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10%;
+    position: relative;
+}
+
+h5 {
+    color: #0D2610;
+    font-family: Syncopate;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0 2% 0 3%;
+}
+
+.howitworks-image1 {
+    width: 340px;
+    position: absolute;
+
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+
+.howitworks-first-section-description p {
+    width: 70%;
+
+    margin: 0 auto;
+    margin-top: 5%;
+
+    color: #000;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.howitworks-image2 {
+    width: 600px;
+    margin-top: 5%;
+>>>>>>> d7888bdff3c6018333ad73cfdd2dbb24b69f9569
 }
