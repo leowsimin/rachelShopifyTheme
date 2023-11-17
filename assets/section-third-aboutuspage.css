@@ -1,0 +1,126 @@
+.howitworks-third-section {
+    background-color: #FFFCF8;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.howitworks-header3-container1 {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    margin-right: 30%;
+}
+
+.howitworks-subheader-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.howitworks-subheader-container6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.howitworks-image5 {
+    position: absolute;
+    width: 220px;
+
+    margin-top: 180px;
+    margin-left: 480px;
+}
+
+.howitworks-subheader-container5 h5 {
+    position: relative;
+}
+
+.howitworks-subheader-container6 h4 {
+    margin-right: 40px;
+}
+
+.howitworks-header3-container2 {
+    display: flex;
+}
+
+.howitworks-subheader-container7 {
+    display: block;
+    position: relative;
+
+    margin-left: 20%;
+}
+
+.howitworks-subheader-container8 {
+    display: block;
+    text-align: center;
+
+    margin-left: 10%;
+    margin-top: 230px;
+}
+
+.howitworks-image6 {
+    width: 600px;
+    position: absolute;
+}
+
+.howitworks-image7 {
+    width: 150px;
+    margin-top: 440px;
+    margin-left: 120px;
+}
+
+.howitworks-image8 {
+    width: 230px;
+}
+
+.howitworks-subheader-container9 h6 {
+
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-top: 15%;
+    margin-bottom: 9%;
+}
+
+.howitworks-image9 {
+    z-index: -1;
+    width: 200px;
+    position: absolute;
+
+    top: -15px;
+    /* Adjust the top position based on your layout */
+    left: 50%;
+    /* Center the image horizontally */
+    transform: translateX(-50%);
+}
+
+.howitworks-subheader-container9 {
+    position: relative;
+}
+
+.howitworks-subheader-container8 ol {
+    list-style-position: inside;
+    text-align: center;
+    /* Center-align the list content */
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    /* Center the ordered list within the container */
+}
+
+.howitworks-subheader-container8 ol li {
+    text-align: left;
+    /* Reset text alignment for list items if needed */
+    color: #000;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

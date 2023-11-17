@@ -6,6 +6,49 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
+  <div class="fullNavStyle">
+      <ul class="navStyle">
+          <a class="navLink" href="{{ linklists.main-menu.links[0].url }}">
+          {{ linklists.main-menu.links[0].title }}
+          </a>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+          <circle cx="4" cy="4" r="2" fill="#354952"/>
+          </svg>
+
+          <a class="navLink" href="{{ linklists.main-menu.links[1].url }}">
+          {{ linklists.main-menu.links[1].title }}
+          </a>
+
+          <img src="{{ 'navigationLogo.svg' | asset_url }}" width="35dp"/>
+
+          <a class="navLink" href="{{ linklists.main-menu.links[2].url }}">
+          {{ linklists.main-menu.links[2].title }}
+          </a>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+          <circle cx="4" cy="4" r="2" fill="#354952"/>
+          </svg>
+
+          <a class="navLink" href="{{ linklists.main-menu.links[3].url }}">
+          {{ linklists.main-menu.links[3].title }}
+          </a>
+      </ul>
+
+      <div class="sideNavBarStyle">
+          {% if customer %}
+              {{ customer.first_name }} {{ 'Log out' | customer_logout_link }}
+          {% else %}
+              <div class="logInButton">
+                  {{ 'Log in' | customer_login_link }}
+              </div>
+              <div class="signUpButton">
+                  {{ 'Sign Up' | customer_register_link }}
+              </div>
+          {% endif %}
+      </div>
+  </div>
+{%- comment -%}
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
@@ -21,7 +64,7 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  {{- link.title | escape -}}
+                  {{- link.title | escape -}} 
                 </span>
                 {% render 'icon-caret' %}
               </summary>
@@ -100,4 +143,5 @@
       </li>
     {%- endfor -%}
   </ul>
+{%- endcomment -%}
 </nav>
