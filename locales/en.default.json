@@ -410,7 +410,7 @@
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",
-      "create_account": "Don't Have An Account? Register Here!",
+      "create_account": "Register Here!",
       "email": "Email",
       "forgot_password": "Forgot your password?",
       "guest_continue": "Continue",
