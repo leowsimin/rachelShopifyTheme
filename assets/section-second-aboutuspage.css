@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .howitworks-second-section {
     background-color: #FAF5EE;
     display: block;
@@ -63,4 +64,71 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+=======
+.howitworks-second-section {
+    background-color: #FAF5EE;
+    display: block;
+    align-items: center;
+
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.howitworks-header2-container {
+    display: block;
+    align-items: center;
+    position: relative;
+}
+
+.howitworks-subheader-container3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    margin-right: 10%;
+}
+
+.howitworks-subheader-container3 h5 {
+    padding: 0 0 0 2%;
+}
+
+.howitworks-subheader-container4 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.howitworks-image3 {
+    width: 140px;
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+
+.howitworks-second-section-description {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    margin-top: 2%;
+}
+
+.howitworks-image4 {
+    width: 220px;
+
+    margin-right: 3%;
+}
+
+.howitworks-second-section-description p {
+    width: 50%;
+
+    color: #000;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+>>>>>>> d7888bdff3c6018333ad73cfdd2dbb24b69f9569
 }
