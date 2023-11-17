@@ -164,7 +164,8 @@
 }
 
 .loginPageHelp {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 
     color: #0D2610;
@@ -367,7 +368,7 @@ Login Page HTML
               {{ 'customer.login_page.forgot_password' | t }}
             </a>
           </div>
-          
+
         {% endform %}
       </div>
 
