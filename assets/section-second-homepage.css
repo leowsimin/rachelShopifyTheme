@@ -53,9 +53,7 @@ h3 {
     text-align: center;
 }
 
-.homePageDescription p {
-    margin: 5px 0;
-}
+.homePageDescription p {}
 
 .homePageClosePeople {
     display: flex;
