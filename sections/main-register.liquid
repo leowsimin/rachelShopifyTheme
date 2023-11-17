@@ -270,10 +270,6 @@ Shopify Style Code
                 {% endif %}
                 autocomplete="given-name"
                 placeholder="{{ 'customer.register.first_name' | t }}" />
-
-                <label for="RegisterForm-FirstName">
-                  {{ 'customer.register.first_name' | t }}
-                </label>
             </div>
 
             <div class="registerPageNameInput">
@@ -288,9 +284,6 @@ Shopify Style Code
                 autocomplete="family-name"
                 placeholder="{{ 'customer.register.last_name' | t }}"
               >
-              <label for="RegisterForm-LastName">
-                {{ 'customer.register.last_name' | t }}
-              </label>
             </div>
           </div>
 
@@ -307,9 +300,6 @@ Shopify Style Code
               placeholder="{{ 'customer.register.phone_number' | t }}" 
               pattern="[0-9]{4}-[0-9]{4}"
               >
-              <label for="RegisterForm-PhoneNumber">
-              {{ 'customer.register.phone_number' | t }}
-            </label>
           </div>
 
           <div class="registerPageInput">
@@ -331,9 +321,6 @@ Shopify Style Code
               {% endif %}
               placeholder="{{ 'customer.register.email' | t }}"
             >
-            <label for="RegisterForm-email">
-              {{ 'customer.register.email' | t }}
-            </label>
           </div>
           {%- if form.errors contains 'email' -%}
             <span id="RegisterForm-email-error" class="form__message">
@@ -358,9 +345,6 @@ Shopify Style Code
               {% endif %}
               placeholder="{{ 'customer.register.password' | t }}"
             >
-            <label for="RegisterForm-password">
-              {{ 'customer.register.password' | t }}
-            </label>
           </div>
 
           <div class="registerPageInput">
