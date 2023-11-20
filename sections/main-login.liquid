@@ -444,9 +444,10 @@ Login Page HTML
 {%- javascript -%}
 document.addEventListener("DOMContentLoaded", function () {
   var openButton = document.getElementById("forgot-password-button");
-  var modal = document.getElementById("resetpage-container");
+  var modal = document.getElementById("resetpage-password");
 
   openButton.addEventListener("click", function () {
+    console.log("Button clicked");
     modal.style.display = "flex"; // Show the modal
   });
 
