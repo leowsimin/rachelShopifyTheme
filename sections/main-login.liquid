@@ -206,14 +206,6 @@
     color: #FAF5EE;
 }
 
-#recover.visible {
-  display: block;
-}
-
-#login.visible {
-  display: none;
-}
-
 {%- comment -%}
 Shopify Style Code
 {%- endcomment -%}
@@ -433,34 +425,3 @@ Login Page HTML
   ]
 }
 {% endschema %}
-
-<script>
-  // Wait for the DOM content to be loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get references to the recover and login sections
-    var recoverSection = document.getElementById("recover");
-    var loginSection = document.getElementById("login");
-
-    function showRecoverSection() {
-      recoverSection.classList.add("visible");
-      loginSection.classList.remove("visible");
-    }
-
-    function showLoginSection() {
-      recoverSection.classList.remove("visible");
-      loginSection.classList.add("visible");
-    }
-
-    // Attach click event listener to the "Forgot your password" link
-    document.querySelector('a[href="#recover"]').addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default behavior of the link
-      showRecoverSection();
-    });
-
-    // Attach click event listener to the "Cancel" link in the recover section
-    document.querySelector('a[href="#login"]').addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default behavior of the link
-      showLoginSection();
-    });
-  });
-</script>
