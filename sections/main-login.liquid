@@ -219,6 +219,11 @@
   z-index: 1;
 }
 
+.resetpage-subcontainer {
+  display: block;
+
+}
+
 {%- comment -%}
 Shopify Style Code
 {%- endcomment -%}
@@ -244,13 +249,10 @@ Recovery Page HTML
 <link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 
 <div class="resetpage-container" id="reset-password">
-  <h1 id="recover" tabindex="-1">
-    {{ 'customer.recover_password.title' | t }}
-  </h1>
-  <div>
-    <p>
-      {{ 'customer.recover_password.subtext' | t }}
-    </p>
+
+  <div class="resetpage-subcontainer">
+    <h1> {{ 'customer.recover_password.title' | t }} </h1>
+    <p> {{ 'customer.recover_password.subtext' | t }} </p>
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
@@ -270,12 +272,8 @@ Recovery Page HTML
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}"
         >
-        <label for="RecoverEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
       </div>
       {%- if form.errors -%}
-        {%- comment -%}
         <small id="RecoverEmail-email-error" class="form__message">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
             <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -285,13 +283,14 @@ Recovery Page HTML
           </svg>
           {{ form.errors.messages.form }}
         </small>
-        {%- endcomment -%}
       {%- endif -%}
 
       <button>
       <a id="resetpage-cancel-button" href="#login">
         {{ 'customer.login_page.cancel' | t }}
       </a>
+      </button>
+
     {%- endform -%}
   </div>
 </div>
