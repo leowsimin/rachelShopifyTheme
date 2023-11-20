@@ -267,6 +267,10 @@
   width: 80%;
 }
 
+.resetpage-submit {
+  
+}
+
 {%- comment -%}
 Shopify Style Code
 {%- endcomment -%}
@@ -329,11 +333,11 @@ Recovery Page HTML
         </small>
       {%- endif -%}
 
-      <button>
+      <button class="resetpage-submit">
         {{ 'customer.login_page.submit' | t }}
       </button>
 
-      <a id="resetpage-cancel-button" href="#login">
+      <a class="resetpage-cancel" id="resetpage-cancel-button" href="#login">
         {{ 'customer.login_page.cancel' | t }}
       </a>
 
