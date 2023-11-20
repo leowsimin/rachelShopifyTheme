@@ -239,6 +239,7 @@ error message
 
       <div class="registerPageBodyLeft">
         {% form 'create_customer' %}
+          {%- comment -%} ALL ERRORS DISPLAYED
           {%- if form.errors -%}
             <h2 class="form__message" tabindex="-1" autofocus>
               <svg aria-hidden="true" focusable="false">
@@ -261,6 +262,7 @@ error message
               {%- endfor -%}
             </ul>
           {%- endif -%}
+          {%- endcomment -%}
 
           <div class="registerPageName">
             <div class="registerPageNameInput">
