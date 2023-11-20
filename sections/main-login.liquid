@@ -425,3 +425,36 @@ Login Page HTML
   ]
 }
 {% endschema %}
+
+<script>
+  // Wait for the DOM content to be loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the recover and login sections
+    var recoverSection = document.getElementById("recover");
+    var loginSection = document.getElementById("login");
+
+    // Function to show the recover section and hide the login section
+    function showRecoverSection() {
+      recoverSection.style.display = "block";
+      loginSection.style.display = "none";
+    }
+
+    // Function to show the login section and hide the recover section
+    function showLoginSection() {
+      recoverSection.style.display = "none";
+      loginSection.style.display = "block";
+    }
+
+    // Attach click event listener to the "Forgot your password" link
+    document.querySelector('a[href="#recover"]').addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default behavior of the link
+      showRecoverSection();
+    });
+
+    // Attach click event listener to the "Cancel" link in the recover section
+    document.querySelector('a[href="#login"]').addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default behavior of the link
+      showLoginSection();
+    });
+  });
+</script>
