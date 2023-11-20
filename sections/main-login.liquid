@@ -323,10 +323,12 @@ Recovery Page HTML
       {%- endif -%}
 
       <button>
+        {{ 'customer.login_page.submit' | t }}
+      </button>
+      
       <a id="resetpage-cancel-button" href="#login">
         {{ 'customer.login_page.cancel' | t }}
       </a>
-      </button>
 
     {%- endform -%}
   </div>
