@@ -433,16 +433,14 @@ Login Page HTML
     var recoverSection = document.getElementById("recover");
     var loginSection = document.getElementById("login");
 
-    // Function to show the recover section and hide the login section
     function showRecoverSection() {
-      recoverSection.style.display = "block";
-      loginSection.style.display = "none";
+      recoverSection.classList.add("visible");
+      loginSection.classList.remove("visible");
     }
 
-    // Function to show the login section and hide the recover section
     function showLoginSection() {
-      recoverSection.style.display = "none";
-      loginSection.style.display = "block";
+      recoverSection.classList.remove("visible");
+      loginSection.classList.add("visible");
     }
 
     // Attach click event listener to the "Forgot your password" link
