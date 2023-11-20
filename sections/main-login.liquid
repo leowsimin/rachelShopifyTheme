@@ -235,7 +235,13 @@
 }
 
 .resetpage-subcontainer p {
-  
+  color: #0D2610;
+  text-align: center;
+  font-family: JejuMyeongjo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 {%- comment -%}
@@ -270,7 +276,7 @@ Recovery Page HTML
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-      <div class="field">
+      <div class="resetpage-input">
         <input
           type="email"
           value=""
@@ -285,6 +291,7 @@ Recovery Page HTML
             autofocus
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}"
+          class="resetpage-email-input"
         >
       </div>
       {%- if form.errors -%}
