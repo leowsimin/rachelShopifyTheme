@@ -230,7 +230,7 @@ Recovery Page HTML
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 
-<div class="customer login section-{{ section.id }}-padding">
+<div class="customer login section-{{ section.id }}">
   <h1 id="recover" tabindex="-1">
     {{ 'customer.recover_password.title' | t }}
   </h1>
@@ -283,7 +283,7 @@ Recovery Page HTML
     {%- endform -%}
   </div>
 
-  <div class=loginPageParentContainer>
+  <div  id="login" tabindex="-1" class=loginPageParentContainer>
     <div class=loginPageContainer >
 
       <div class=loginPageHeader>
