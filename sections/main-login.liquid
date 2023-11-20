@@ -384,7 +384,7 @@ Login Page HTML
             <a href="{{ routes.account_register_url }}">
               {{ 'customer.login_page.create_account' | t }}
             </a>
-            <a id="forgot-password" href="#recover">
+            <a id="forgot-password-button" href="#recover">
               {{ 'customer.login_page.forgot_password' | t }}
             </a>
           </div>
@@ -444,8 +444,8 @@ Login Page HTML
 {%- javascript -%}
 
 document.addEventListener("DOMContentLoaded", function () {
-  var openButton = document.getElementById("openRecoverModal");
-  var modal = document.getElementById("recoverModal");
+  var openButton = document.getElementById("forgot-password-button");
+  var modal = document.getElementById("resetpage-container");
 
   openButton.addEventListener("click", function () {
     modal.style.display = "flex"; // Show the modal
