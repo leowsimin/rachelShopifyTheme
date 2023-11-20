@@ -290,21 +290,6 @@ Shopify Style Code
 
           <div class="registerPageInput">
             <input 
-              class="registerPagePhoneNumber" 
-              type="tel" 
-              name="customer[phone_number]" 
-              id="RegisterForm-PhoneNumber"
-              {% if form.phone_number %}
-                  value="{{ form.phone_number }}"
-              {% endif %}
-              autocomplete="phone-number"
-              placeholder="{{ 'customer.register.phone_number' | t }}" 
-              pattern="[0-9]{4}-[0-9]{4}"
-              >
-          </div>
-
-          <div class="registerPageInput">
-            <input 
               class="registerPageEmail" 
               type="email"
               name="customer[email]"
