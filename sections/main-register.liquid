@@ -26,7 +26,7 @@
     display: block;
     text-align: center;
 
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .registerPageHeader h1 {
@@ -78,7 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 4%;
 
     flex: 6;
 }
@@ -286,6 +286,21 @@ Shopify Style Code
                 placeholder="{{ 'customer.register.last_name' | t }}"
               >
             </div>
+          </div>
+
+          <div class="registerPageInput">
+            <input 
+              class="registerPagePhoneNumber" 
+              type="tel" 
+              name="customer[phone_number]" 
+              id="RegisterForm-PhoneNumber"
+              {% if form.phone_number %}
+                  value="{{ form.phone_number }}"
+              {% endif %}
+              autocomplete="phone-number"
+              placeholder="{{ 'customer.register.phone_number' | t }}" 
+              pattern="[0-9]{4}-[0-9]{4}"
+              >
           </div>
 
           <div class="registerPageInput">
