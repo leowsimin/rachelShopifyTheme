@@ -285,9 +285,14 @@ Recovery Page HTML
 
   <div class=loginPageParentContainer>
     <div class=loginPageContainer >
+
       <h1 id="login" tabindex="-1">
-        {{ 'customer.login_page.title' | t }}
+        <div class=loginPageHeader>
+          <h1>hello</h1>
+          <h2>WELCOME BACK!</h2>
+        </div>
       </h1>
+      
       <div>
         {%- if recover_success == true -%}
           <h3 class="form__message" tabindex="-1" autofocus>
