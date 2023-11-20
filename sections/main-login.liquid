@@ -294,6 +294,13 @@ Recovery Page HTML
       </h1>
 
       <div class="loginPageBody">
+
+      <div class="loginPageBodyLeft">
+        <img class="loginPageGlobe" src="{{ 'loginPageGlobe.svg' | asset_url }}" />
+      </div>
+
+      <div class="loginPageBodyRight">
+
         {%- if recover_success == true -%}
           <h3 class="form__message" tabindex="-1" autofocus>
             <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
@@ -304,7 +311,8 @@ Recovery Page HTML
             {{ 'customer.recover_password.success' | t }}
           </h3>
         {%- endif -%}
-        {%- form 'customer_login', novalidate: 'novalidate' -%}
+
+        {% form 'customer_login', return_to: routes.collections_url , novalidate: 'novalidate' %}
           {%- if form.errors -%}
             <h2 class="form__message" tabindex="-1" autofocus>
               <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
@@ -319,9 +327,10 @@ Recovery Page HTML
             {{ form.errors | default_errors }}
           {%- endif -%}
 
-          <div class="field">
-            <input
-              type="email"
+          <div class="loginPageEmailInput">
+            <input 
+              type="email" 
+              class="loginPageEmail" 
               name="customer[email]"
               id="CustomerEmail"
               autocomplete="email"
@@ -330,17 +339,14 @@ Recovery Page HTML
               {% if form.errors contains 'form' %}
                 aria-invalid="true"
               {% endif %}
-              placeholder="{{ 'customer.login_page.email' | t }}"
-            >
-            <label for="CustomerEmail">
-              {{ 'customer.login_page.email' | t }}
-            </label>
+              placeholder="{{ 'customer.login_page.email' | t }}" />
           </div>
 
-          {%- if form.password_needed -%}
-            <div class="field">
-              <input
-                type="password"
+          {%-  if form.password_needed -%}
+            <div class="loginPageInput">
+              <input 
+                type="password" 
+                class="loginPagePassword" 
                 value=""
                 name="customer[password]"
                 id="CustomerPassword"
@@ -348,26 +354,26 @@ Recovery Page HTML
                 {% if form.errors contains 'form' %}
                   aria-invalid="true"
                 {% endif %}
-                placeholder="{{ 'customer.login_page.password' | t }}"
-              >
-              <label for="CustomerPassword">
-                {{ 'customer.login_page.password' | t }}
-              </label>
+                placeholder="{{ 'customer.login_page.password' | t }}" />
             </div>
+          {%- endif -%}
 
+          <div class="loginPageInput">
+            <button class="loginPageSubmit">
+              {{ 'customer.login_page.sign_in' | t }}
+            </button>
+          </div>
+
+          <div class="loginPageHelp">
+            <a href="{{ routes.account_register_url }}">
+              {{ 'customer.login_page.create_account' | t }}
+            </a>
             <a href="#recover">
               {{ 'customer.login_page.forgot_password' | t }}
             </a>
-          {%- endif -%}
+          </div>
 
-          <button>
-            {{ 'customer.login_page.sign_in' | t }}
-          </button>
-
-          <a href="{{ routes.account_register_url }}">
-            {{ 'customer.login_page.create_account' | t }}
-          </a>
-        {%- endform -%}
+        {% endform %}
       </div>
 
       {%- if shop.checkout.guest_login -%}
@@ -382,6 +388,7 @@ Recovery Page HTML
           {%- endform -%}
         </div>
       {%- endif -%}
+
     </div>
   </div>
 </div>
