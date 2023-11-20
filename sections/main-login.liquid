@@ -287,10 +287,7 @@ Recovery Page HTML
       {%- endif -%}
 
       <button>
-        {{ 'customer.login_page.submit' | t }}
-      </button>
-
-      <a href="#login">
+      <a id="resetpage-cancel-button" href="#login">
         {{ 'customer.login_page.cancel' | t }}
       </a>
     {%- endform -%}
@@ -445,15 +442,16 @@ Login Page HTML
 document.addEventListener("DOMContentLoaded", function () {
   var openButton = document.getElementById("forgot-password-button");
   var modal = document.getElementById("reset-password");
+  var cancelButton = document.getElementById("resetpage-cancel-button");
 
   openButton.addEventListener("click", function () {
     console.log("Button clicked");
     modal.style.display = "flex"; // Show the modal
   });
 
-  // Close the modal when clicking outside its content
-  modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
+  // Close the modal when "cancel" is clicked
+  cancelButton.addEventListener("click", function (event) {
+    if (event.target ===  cancelButton) {
       modal.style.display = "none"; // Hide the modal
     }
   });
