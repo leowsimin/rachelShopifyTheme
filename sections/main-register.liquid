@@ -422,8 +422,9 @@ error message
       }
     });
   });
+</script>
 
-  var hasEmailError = {% if form.errors contains 'email' %} true {% else %} false {% endif %};
+var hasEmailError = {% if form.errors contains 'email' %} true {% else %} false {% endif %};
 
   // Modify the styles of the otherElement
   if (hasEmailError) {
@@ -433,5 +434,5 @@ error message
       otherElement.style.padding_bottom = '4%';
     }
   }
-</script>
+  
 {%- endjavascript -%}
