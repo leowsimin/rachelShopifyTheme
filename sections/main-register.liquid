@@ -486,17 +486,22 @@ error message
   var confirmPasswordElement = document.getElementById("registerpage-confirm-password-input")
 
   function validatePasswordMatch() {
-      var password = passwordInput.value;
-      var confirmPassword = confirmPasswordInput.value;
+        var password = passwordInput.value;
+        var confirmPassword = confirmPasswordInput.value;
 
-      if (password === confirmPassword) {
-          passwordError.style.display = 'none'; // Hide the error message
-          confirmPasswordElement.style.paddingBottom = "6%";
-      } else {
-          passwordError.style.display = 'flex'; // Display the error message
-          confirmPasswordElement.style.paddingBottom = "1%";
-      }
-  }
+        if (confirmPassword) { // Check if Confirm Password is not empty
+            if (password === confirmPassword) {
+                passwordError.style.display = 'none'; // Hide the error message
+                confirmPasswordElement.style.paddingBottom = "6%";
+            } else {
+                passwordError.style.display = 'flex'; // Display the error message
+                confirmPasswordElement.style.paddingBottom = "1%";
+            }
+        } else {
+            passwordError.style.display = 'none'; // Hide the error message if Confirm Password is empty
+            confirmPasswordElement.style.paddingBottom = "6%";
+        }
+    }
 
   // Add input event listeners
   passwordInput.addEventListener('input', validatePasswordMatch);
