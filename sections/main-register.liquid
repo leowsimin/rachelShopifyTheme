@@ -470,12 +470,12 @@ error message
   Password Confirmation
   {%- endcomment -%}
 
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function(e) {
     var password = document.getElementById("registerpage-password-input");
     var confirmPassword = document.getElementById("registerpage-confirm-password-input");
 
     if (password !== confirmPassword) {
-      
+      e.preventDefault();
     }
   })
 
