@@ -324,7 +324,7 @@ error message
               >
           </div>
 
-          <div id= "registerpage-email-input">
+          <div id= "registerpage-email-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
             <input 
               class="registerPageEmail" 
               type="email"
@@ -433,10 +433,8 @@ error message
 {% endschema %}
 
 {%- javascript -%}
-
   document.addEventListener('DOMContentLoaded', function() {
-    console.log("hasError:", {{ form.errors contains 'email' | json }});
-    var hasErrorValue = {{ form.errors contains 'email' | json }};
+    var hasErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
 
     if (hasErrorValue) {
       var emailElement = document.getElementById("registerpage-email-input");
@@ -445,6 +443,4 @@ error message
       }
     }
   });
-  
-
 {%- endjavascript -%}
