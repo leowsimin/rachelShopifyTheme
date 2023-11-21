@@ -324,6 +324,12 @@ error message
               >
           </div>
 
+          {%- if form.errors contains 'email' -%}
+            <span id="RegisterForm-email-error" class="form__message">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}.
+            </span>
+          {%- endif -%}
           <div id= "registerpage-email-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
             <input 
               class="registerPageEmail" 
@@ -344,12 +350,6 @@ error message
               placeholder="{{ 'customer.register.email' | t }}"
             >
           </div>
-          {%- if form.errors contains 'email' -%}
-            <span id="RegisterForm-email-error" class="form__message">
-              {{ form.errors.translated_fields.email | capitalize }}
-              {{ form.errors.messages.email }}.
-            </span>
-          {%- endif -%}
 
           <div class="registerPageInput">
             <input 
