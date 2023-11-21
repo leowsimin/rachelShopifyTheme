@@ -417,10 +417,6 @@ Login Page HTML
 
         {% form 'customer_login', return_to: routes.collections_url , novalidate: 'novalidate' %}
           {%- if form.errors -%}
-            <h2 class="form__message" tabindex="-1" autofocus>
-              <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
-              {{ 'templates.contact.form.error_heading' | t }}
-            </h2>
             {{ form.errors | default_errors }}
           {%- endif -%}
 
