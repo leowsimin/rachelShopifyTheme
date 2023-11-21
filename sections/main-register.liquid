@@ -337,6 +337,12 @@ error message
               pattern="[0-9]{8}"
               >
           </div>
+          {%- if form.errors contains 'email' -%}
+            <span id="RegisterForm-email-error" class="form__message">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}.
+            </span>
+          {%- endif -%}
 
           <div id="registerpage-email-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
             <input 
