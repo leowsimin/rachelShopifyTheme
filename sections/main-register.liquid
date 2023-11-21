@@ -536,9 +536,8 @@ error message
   });
 
   passwordInput.addEventListener('input', function () {
-    // Hide password error message
     var passwordError = document.getElementById("RegisterForm-password-error");
-    if (passwordError) {
+    if (passwordError && passwordInput.value.trim() != "" ) {
       passwordError.style.display = 'none';
     }
   });
