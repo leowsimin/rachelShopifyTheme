@@ -422,5 +422,18 @@ error message
       }
     });
   });
+
+  var hasEmailError = {% if form.errors contains 'email' %} true {% else %} false {% endif %};
+
+  // Modify the styles of the otherElement
+  if (hasEmailError) {
+    var otherElement = document.getElementById('otherElement');
+    if (otherElement) {
+      // Update the styles as needed
+      otherElement.style.color = 'red';
+      otherElement.style.fontWeight = 'bold';
+      // Add more style modifications as necessary
+    }
+  }
 </script>
 {%- endjavascript -%}
