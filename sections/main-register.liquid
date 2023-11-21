@@ -437,6 +437,7 @@ error message
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
+    console.log("hasError:", {{ form.errors contains 'email' }});
     var hasError = {{ form.errors contains 'email'}};
 
     if (hasError) {
