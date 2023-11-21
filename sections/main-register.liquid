@@ -311,12 +311,6 @@ error message
                 autocomplete="given-name"
                 placeholder="{{ 'customer.register.first_name' | t }}" />
             </div>
-            {%- if form.errors contains 'first_name' -%}
-              <span id="RegisterForm-FirstName-error" class="form__message">
-                {{ form.errors.translated_fields.first_name | capitalize }}
-                {{ form.errors.messages.first_name }}.
-              </span>
-            {%- endif -%}
 
             <div class="registerPageNameInput">
               <input 
