@@ -390,9 +390,6 @@ error message
 
           {%- if form.errors contains 'password' -%}
             <span id="RegisterForm-password-error" class="form__message">
-              <svg aria-hidden="true" focusable="false">
-                <use href="#icon-error" />
-              </svg>
               {{ form.errors.translated_fields.password | capitalize }}
               {{ form.errors.messages.password }}.
             </span>
