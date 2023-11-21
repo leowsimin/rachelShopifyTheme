@@ -226,6 +226,7 @@
   line-height: normal;
 
   margin-left: 2%;
+  margin-top: 1%;
 }
 
 {%- comment -%}
@@ -337,12 +338,6 @@ error message
               >
           </div>
 
-          {%- if form.errors contains 'email' -%}
-            <span id="RegisterForm-email-error" class="form__message">
-              {{ form.errors.translated_fields.email | capitalize }}
-              {{ form.errors.messages.email }}.
-            </span>
-          {%- endif -%}
           <div id="registerpage-email-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
             <input 
               class="registerPageEmail" 
@@ -363,6 +358,12 @@ error message
               placeholder="{{ 'customer.register.email' | t }}"
             >
           </div>
+          {%- if form.errors contains 'email' -%}
+            <span id="RegisterForm-email-error" class="form__message">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}.
+            </span>
+          {%- endif -%}
 
           <div class="registerPageInput">
             <input 
@@ -450,9 +451,9 @@ error message
     var hasErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
 
     if (hasErrorValue) {
-      var numberElement = document.getElementById("registerpage-number-input");
-      if (numberElement) {
-        numberElement.style.paddingBottom = '1%';
+      var emailElement = document.getElementById("registerpage-email-input");
+      if (emailElement) {
+        emailElement.style.paddingBottom = '0';
       }
     }
   });
