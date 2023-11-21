@@ -215,6 +215,20 @@
     border: none;
 }
 
+#RegisterForm-email-error ,
+#RegisterForm-password-error {
+  color: #F00;
+  text-align: center;
+  font-family: JejuMyeongjo;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-left: 2%;
+  margin-bottom: 15px;
+}
+
 {%- comment -%}
 Shopify Style Code
 {%- endcomment -%}
@@ -387,6 +401,10 @@ error message
               {{ 'customer.register.submit' | t }}
             </button>
           </div>
+
+          <span id="registerpage-password-error">
+            Passwords do not match. Please try again.
+          </span>
         {% endform %}
 
 
@@ -462,11 +480,10 @@ error message
         var passwordError = document.getElementById("registerpage-password-error");
         console.log("Password:", password);
         console.log("Confirm Password:", confirmPassword);
-        console.log("Password Error:", passwordError);
 
         if (password !== confirmPassword) {
             e.preventDefault();
-            alert('Passwords do not match.');
+            passwordError.style.display()
         }
     });
 });
