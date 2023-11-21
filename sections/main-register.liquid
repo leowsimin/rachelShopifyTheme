@@ -465,16 +465,16 @@ error message
     // Error Messages
     var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
     var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
+    var emailElement = document.getElementById("registerpage-email-input");
+    var passwordElement = document.getElementById("registerpage-password-input");
 
     if (hasEmailErrorValue) {
-      var emailElement = document.getElementById("registerpage-email-input");
       if (emailElement) {
         emailElement.style.paddingBottom = '1%';
       }
     }
 
     if (hasPasswordErrorValue) {
-      var passwordElement = document.getElementById("registerpage-password-input");
       if (passwordElement) {
         passwordElement.style.paddingBottom = '1%';
       }
