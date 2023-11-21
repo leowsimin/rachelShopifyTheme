@@ -466,10 +466,13 @@ error message
     }
 
   // Password Confirmation
-  $(function () {
-    $('#create_customer').submit(function (e) {
-        var password = $('input[name="customer[password]"]').val();
-        var confirmPassword = $('input[name="customer[password_confirmation]"]').val();
+    var form = document.getElementById("create_customer");
+
+    form.addEventListener('submit', function(e) {
+        var password = document.getElementById("RegisterForm-password").value;
+        var confirmPassword = document.getElementById("RegisterForm-confirm-password").value;
+        console.log("Password:", password);
+        console.log("Confirm Password:", confirmPassword);
 
         if (password !== confirmPassword) {
             e.preventDefault();
@@ -477,5 +480,4 @@ error message
         }
     });
 });
-
 {%- endjavascript -%}
