@@ -396,6 +396,11 @@ error message
               placeholder="Confirm Password"
               id="RegisterForm-confirm-password">
           </div>
+          {%- if form.errors contains 'password' -%}
+            <span id="registerpage-password-error">
+            Passwords do not match. Please try again.
+          </span>
+          {%- endif -%}
 
           <div class="registerPageInput">
             <button class="registerPageSubmit">
@@ -403,11 +408,6 @@ error message
             </button>
           </div>
 
-          {%- if form.errors contains 'password' -%}
-            <span id="registerpage-password-error">
-            Passwords do not match. Please try again.
-          </span>
-          {%- endif -%}
         {% endform %}
 
 
