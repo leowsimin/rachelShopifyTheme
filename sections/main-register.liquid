@@ -514,7 +514,7 @@ error message
 
       if (password !== confirmPassword) {
           e.preventDefault();
-          passwordError.style.cssText = 'display: block; text-align: left;';
+          passwordError.style.display = "flex";
       }
   });
 });
