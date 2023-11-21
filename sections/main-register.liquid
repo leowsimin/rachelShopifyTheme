@@ -529,9 +529,8 @@ error message
 
   // Add input event listeners to email and password fields
   emailInput.addEventListener('input', function () {
-    // Hide email error message
     var emailError = document.getElementById("RegisterForm-email-error");
-    if (emailError) {
+    if (emailError && emailInput.val) {
       emailError.style.display = 'none';
     }
   });
