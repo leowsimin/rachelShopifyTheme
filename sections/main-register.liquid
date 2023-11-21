@@ -470,14 +470,17 @@ error message
   Password Confirmation
   {%- endcomment -%}
 
-  document.addEventListener('DOMContentLoaded', function(e) {
-    var password = document.getElementById("registerpage-password-input");
-    var confirmPassword = document.getElementById("registerpage-confirm-password-input");
+  $(function () {
+    $('#create_customer').submit(function (e) {
+        var password = $('input[name="customer[password]"]').val();
+        var confirmPassword = $('input[name="customer[password_confirmation]"]').val();
 
-    if (password !== confirmPassword) {
-      e.preventDefault();
-    }
-  })
+        if (password !== confirmPassword) {
+            e.preventDefault();
+            alert('Passwords do not match.');
+        }
+    });
+});
 
   
 {%- endjavascript -%}
