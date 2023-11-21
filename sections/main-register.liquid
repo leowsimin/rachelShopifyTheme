@@ -474,8 +474,8 @@ error message
     var form = document.getElementById("create_customer");
 
     form.addEventListener('submit', function(e) {
-        var password = document.getElementById("RegisterForm-password").value;
-        var confirmPassword = document.getElementById("RegisterForm-password_confirmation").value;
+        var password = document.getElementById("registerpage-password-input").value;
+        var confirmPassword = document.getElementById("registerpage-confirm-password-input").value;
 
         if (password !== confirmPassword) {
             e.preventDefault();
