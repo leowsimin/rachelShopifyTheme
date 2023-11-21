@@ -89,16 +89,6 @@
     margin-bottom: 5%;
 }
 
-.registerPageInput {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
-    width: 100%;
-    padding-bottom: 6%;
-}
-
 #registerpage-email-input {
     display: block;
     text-align: center;
@@ -111,7 +101,9 @@
 
 #registerpage-email-input,
 #registerpage-password-input,
-#registerpage-number-input {
+#registerpage-number-input,
+#registerpage-confirm-password-input ,
+##registerpage-submit {
     display: block;
     text-align: center;
     margin-left: auto;
@@ -216,8 +208,7 @@
 }
 
 #RegisterForm-email-error ,
-#RegisterForm-password-error ,
-#RegisterForm-submit{
+#RegisterForm-password-error {
   color: #F00;
   text-align: center;
   font-family: JejuMyeongjo;
@@ -402,7 +393,7 @@ error message
             </span>
           {%- endif -%}
 
-          <div id="registerpage-confirm-password-input" class="registerPageInput">
+          <div id="registerpage-confirm-password-input">
             <input 
               class="registerPageConfirmPassword" 
               type="password" 
@@ -415,7 +406,7 @@ error message
             Passwords do not match. Please try again.
           </span>
 
-          <div id="RegisterForm-submit">
+          <div id="registerpage-submit">
             <button class="registerPageSubmit">
               {{ 'customer.register.submit' | t }}
             </button>
