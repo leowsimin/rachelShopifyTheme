@@ -216,7 +216,8 @@
 }
 
 #RegisterForm-email-error ,
-#RegisterForm-password-error {
+#RegisterForm-password-error ,
+#RegisterForm-submit{
   color: #F00;
   text-align: center;
   font-family: JejuMyeongjo;
@@ -414,7 +415,7 @@ error message
             Passwords do not match. Please try again.
           </span>
 
-          <div class="registerPageInput">
+          <div id="RegisterForm-submit" class="registerPageInput">
             <button class="registerPageSubmit">
               {{ 'customer.register.submit' | t }}
             </button>
