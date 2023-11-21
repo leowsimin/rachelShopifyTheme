@@ -416,7 +416,7 @@ error message
 <script>
   $(function(){
     $('#create_customer').submit(function(e) {     
-      if ( $('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
+      if ($('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
         e.preventDefault();
         alert('Passwords do not match.');
       }
@@ -424,15 +424,17 @@ error message
   });
 </script>
 
-var hasEmailError = {% if form.errors contains 'email' %} true {% else %} false {% endif %};
+<script>
+  var hasEmailError = {% if form.errors contains 'email' %} true {% else %} false {% endif %};
 
-  // Modify the styles of the otherElement
+  // Modify the styles of the emailElement
   if (hasEmailError) {
     var emailElement = document.getElementById('registerpage-email-input');
     if (emailElement) {
       // Update the styles as needed
-      otherElement.style.padding_bottom = '4%';
+      emailElement.style.paddingBottom = '4%';
+      // Add more style modifications as necessary
     }
   }
-  
+</script>
 {%- endjavascript -%}
