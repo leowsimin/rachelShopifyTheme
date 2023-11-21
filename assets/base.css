@@ -1833,7 +1833,6 @@ input[type='checkbox'] {
   display: flex;
   font-size: 1.4rem;
   line-height: 1;
-  margin-top: 1rem;
 }
 
 .form__message--large {
