@@ -216,7 +216,8 @@
 }
 
 #RegisterForm-email-error ,
-#RegisterForm-password-error {
+#RegisterForm-password-error ,
+#registerpage-password-error {
   color: #F00;
   text-align: center;
   font-family: JejuMyeongjo;
@@ -401,9 +402,13 @@ error message
               {{ 'customer.register.submit' | t }}
             </button>
           </div>
+
+          <span id="registerpage-password-error">
+            Passwords do not match. Please try again.
+          </span>
         {% endform %}
 
-        
+
       </div>
 
       <div class="registerPageBodyRight">
@@ -473,12 +478,13 @@ error message
     form.addEventListener('submit', function(e) {
         var password = document.getElementById("RegisterForm-password").value;
         var confirmPassword = document.getElementById("RegisterForm-confirm-password").value;
+        var passwordError = document.getElementById("registerpage-password-error");
         console.log("Password:", password);
         console.log("Confirm Password:", confirmPassword);
 
         if (password !== confirmPassword) {
             e.preventDefault();
-            alert('Passwords do not match.');
+            passwordError.style.display()
         }
     });
 });
