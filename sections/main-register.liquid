@@ -377,7 +377,6 @@ error message
                 aria-describedby="RegisterForm-password-error"
               {% endif %}
               placeholder="{{ 'customer.register.password' | t }}"
-              id="password"
             >
           </div>
 
@@ -394,7 +393,7 @@ error message
               type="password" 
               name="customer[password_confirmation]" 
               placeholder="Confirm Password"
-              id="confirmPassword">
+              id="RegisterForm-connfirm-password">
           </div>
 
           <div class="registerPageInput">
@@ -470,8 +469,8 @@ error message
     var form = document.getElementById("create_customer");
 
     form.addEventListener('submit', function(e) {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirmPassword").value;
+        var password = document.getElementById("RegisterForm-password").value;
+        var confirmPassword = document.getElementById("RegisterForm-confirm-password").value;
         console.log("Password:", password);
         console.log("Confirm Password:", confirmPassword);
 
