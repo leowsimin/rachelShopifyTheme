@@ -418,7 +418,6 @@ Login Page HTML
         {% form 'customer_login', return_to: routes.collections_url , novalidate: 'novalidate' %}
           {%- if form.errors -%}
             {{ form.errors | default_errors }}
-            {{ form.errors.messages.email}}
           {%- endif -%}
 
           <div class="loginPageEmailInput">
