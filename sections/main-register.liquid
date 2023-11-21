@@ -434,12 +434,11 @@ error message
 
 {%- javascript -%}
 
-{% assign hasError = form.errors contains 'email' | json %}
-
+{% raw %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    console.log("hasError:", {{ hasError }});
-    var hasErrorValue = {{ hasError }};
+    console.log("hasError:", {{ form.errors contains 'email' | json }});
+    var hasErrorValue = {{ form.errors contains 'email' | json }};
 
     if (hasErrorValue) {
       var emailElement = document.getElementById("registerpage-email-input");
@@ -449,5 +448,7 @@ error message
     }
   });
 </script>
+{% endraw %}
+
 
 {%- endjavascript -%}
