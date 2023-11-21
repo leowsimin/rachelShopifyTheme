@@ -434,20 +434,21 @@ error message
 
 {%- javascript -%}
 
-<script>
-  {% raw %}
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("hasError:", {{ form.errors contains 'email' | json }});
-    var hasError = {{ form.errors contains 'email' | json }};
+{% assign hasError = form.errors contains 'email' | json %}
 
-    if (hasError) {
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("hasError:", {{ hasError }});
+    var hasErrorValue = {{ hasError }};
+
+    if (hasErrorValue) {
       var emailElement = document.getElementById("registerpage-email-input");
       if (emailElement) {
         emailElement.style.paddingBottom = '2%';
       }
     }
   });
-  {% endraw %}
 </script>
+
 
 {%- endjavascript -%}
