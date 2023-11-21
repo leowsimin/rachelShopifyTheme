@@ -476,6 +476,8 @@ error message
     form.addEventListener('submit', function(e) {
         var password = document.getElementById("registerpage-password-input").value;
         var confirmPassword = document.getElementById("registerpage-confirm-password-input").value;
+        console.log("Password:", password);
+        console.log("Confirm Password:", confirmPassword);
 
         if (password !== confirmPassword) {
             e.preventDefault();
