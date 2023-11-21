@@ -466,12 +466,15 @@ error message
     }
 
   // Password Confirmation
-  $(function(){
-    $('#create_customer').submit(function(e) {     
-      if ( $('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
-        e.preventDefault();
-        alert('Passwords do not match.');
-      }
+  $(function () {
+    $('#create_customer').submit(function (e) {
+        var password = $('input[name="customer[password]"]').val();
+        var confirmPassword = $('input[name="customer[password_confirmation]"]').val();
+
+        if (password !== confirmPassword) {
+            e.preventDefault();
+            alert('Passwords do not match.');
+        }
     });
-  });
+});
 {%- endjavascript -%}
