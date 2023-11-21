@@ -314,7 +314,7 @@ error message
               >
           </div>
 
-          <div class="registerPageInput">
+          <div id= "registerpage-email-input" class="registerPageInput">
             <input 
               class="registerPageEmail" 
               type="email"
@@ -423,5 +423,16 @@ error message
 {% endschema %}
 
 {%- javascript -%}
+
+<script>
+
+  var emailInputDiv = document.getElementById('registerpage-email-input');
+
+  if (emailInputDiv) {
+      // Adjust the styles dynamically
+      emailInputDiv.style.paddingBottom = '0'; // You can set this to 0 or adjust as needed
+  }
+
+</script>
 
 {%- endjavascript -%}
