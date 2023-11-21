@@ -438,9 +438,13 @@ error message
 
   document.addEventListener('DOMContentLoaded', function() {
     var emailElement = document.getElementByID("registerpage-email-input");
-    var hasError = {if form.errors contains 'email'}
+    var hasError = {{if form.errors contains 'email'}};
 
-    \
+    if (hasError) {
+      
+    }
+
+  
   })
 
 </script>
