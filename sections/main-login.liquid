@@ -420,6 +420,13 @@ Login Page HTML
             {{ form.errors | default_errors }}
           {%- endif -%}
 
+          {%- if form.errors contains 'password' -%}
+            <span id="RegisterForm-password-error" class="form__message">
+              {{ form.errors.translated_fields.password | capitalize }}
+              {{ form.errors.messages.password }}.
+            </span>
+          {%- endif -%}
+
           <div class="loginPageEmailInput">
             <input 
               type="email" 
