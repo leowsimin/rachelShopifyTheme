@@ -387,7 +387,7 @@ error message
             </span>
           {%- endif -%}
 
-          <div class="registerPageInput">
+          <div id="registerpage-confirm-password-input" class="registerPageInput">
             <input 
               class="registerPageConfirmPassword" 
               type="password" 
@@ -444,6 +444,9 @@ error message
 {% endschema %}
 
 {%- javascript -%}
+  {%- comment -%}
+  Error Messages
+  {%- endcomment -%}
   document.addEventListener('DOMContentLoaded', function() {
     var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
     var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
@@ -462,4 +465,17 @@ error message
       }
     }
   });
+
+  {%- comment -%}
+  Password Confirmation
+  {%- endcomment -%}
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var password = document.getElementById("registerpage-password-input");
+    var confirmPassword = document.getElementById("registerpage-confirm-password-input");
+
+    if (password )
+  })
+
+  
 {%- endjavascript -%}
