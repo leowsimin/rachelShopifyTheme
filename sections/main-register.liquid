@@ -434,6 +434,8 @@ error message
 
 {%- javascript -%}
 
+<script>
+
   document.addEventListener('DOMContentLoaded', function() {
     console.log("hasError:", {{ form.errors contains 'email' | json }});
     var hasError = {{ form.errors contains 'email' | json }};
@@ -445,6 +447,7 @@ error message
       }
     }
   })
-  
+
+</script>
 
 {%- endjavascript -%}
