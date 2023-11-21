@@ -440,7 +440,7 @@ error message
     var hasError = {{ form.errors contains 'email'}};
 
     if (hasError) {
-      var emailElement = document.getElementByID("registerpage-email-input");
+      var emailElement = document.getElementById("registerpage-email-input");
       if (emailElemet) {
         emailElement.style.paddingBottom = '2%';
       }
