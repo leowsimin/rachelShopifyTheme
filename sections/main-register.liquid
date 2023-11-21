@@ -523,4 +523,26 @@ error message
   });
 });
 
+ // Get email and password input elements
+  var emailInput = document.getElementById("RegisterForm-email");
+  var passwordInput = document.getElementById("RegisterForm-password");
+
+  // Add input event listeners to email and password fields
+  emailInput.addEventListener('input', function () {
+    // Hide email error message
+    var emailError = document.getElementById("RegisterForm-email-error");
+    if (emailError) {
+      emailError.style.display = 'none';
+    }
+  });
+
+  passwordInput.addEventListener('input', function () {
+    // Hide password error message
+    var passwordError = document.getElementById("RegisterForm-password-error");
+    if (passwordError) {
+      passwordError.style.display = 'none';
+    }
+  });
+
+
 {%- endjavascript -%}
