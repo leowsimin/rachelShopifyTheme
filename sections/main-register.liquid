@@ -484,25 +484,27 @@ error message
   var passwordInput = document.getElementById("RegisterForm-password");
   var confirmPasswordInput = document.getElementById("RegisterForm-confirm-password");
   var passwordError = document.getElementById("registerpage-password-error");
-  var confirmPasswordElement = document.getElementById("registerpage-confirm-password-input")
+  var confirmPasswordElement = document.getElementById("registerpage-confirm-password-input");
 
   function validatePasswordMatch() {
-        var password = passwordInput.value;
-        var confirmPassword = confirmPasswordInput.value;
+    var password = passwordInput.value;
+    var confirmPassword = confirmPasswordInput.value;
 
-        if (confirmPassword) { 
-            if (password === confirmPassword) {
-                passwordError.style.display = 'none'; // Hide the error message
-                confirmPasswordElement.style.paddingBottom = "6%";
-            } else {
-                passwordError.style.display = 'flex'; // Display the error message
-                confirmPasswordElement.style.paddingBottom = "1%";
-            }
-        } else {
-            passwordError.style.display = 'none'; // Hide the error message if Confirm Password is empty
-            confirmPasswordElement.style.paddingBottom = "6%";
-        }
+    // Check if Confirm Password is not empty
+    if (confirmPassword) {
+      // Check if passwords match
+      if (password === confirmPassword) {
+        passwordError.style.display = 'none'; // Hide the error message
+        confirmPasswordElement.style.paddingBottom = "6%";
+      } else {
+        passwordError.style.display = 'flex'; // Display the error message
+        confirmPasswordElement.style.paddingBottom = "1%";
+      }
+    } else {
+      passwordError.style.display = 'none'; // Hide the error message if Confirm Password is empty
+      confirmPasswordElement.style.paddingBottom = "6%";
     }
+  }
 
   // Add input event listeners
   passwordInput.addEventListener('input', validatePasswordMatch);
@@ -510,13 +512,14 @@ error message
 
   // Add submit event listener
   form.addEventListener('submit', function(e) {
-      var password = passwordInput.value;
-      var confirmPassword = confirmPasswordInput.value;
+    var password = passwordInput.value;
+    var confirmPassword = confirmPasswordInput.value;
 
-      if (password !== confirmPassword) {
-          e.preventDefault();
-          passwordError.style.display = "flex";
-      }
+    // Check if passwords don't match
+    if (password !== confirmPassword) {
+      e.preventDefault();
+      passwordError.style.display = "flex"; // Display the confirmation password error
+    }
   });
 });
 {%- endjavascript -%}
