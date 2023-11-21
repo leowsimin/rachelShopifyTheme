@@ -459,26 +459,25 @@ error message
 {% endschema %}
 
 {%- javascript -%}
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    // Error Messages
-    var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
-    var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
-    var emailElement = document.getElementById("registerpage-email-input");
-    var passwordElement = document.getElementById("registerpage-password-input");
+document.addEventListener('DOMContentLoaded', function () {
 
-    if (hasEmailErrorValue) {
-      if (emailElement) {
-        emailElement.style.paddingBottom = '1%';
-      }
-    }
+  // Error Messages
+  var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
+  var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
+  var emailElement = document.getElementById("registerpage-email-input");
+  var passwordElement = document.getElementById("registerpage-password-input");
 
-    if (hasPasswordErrorValue) {
-      if (passwordElement) {
-        passwordElement.style.paddingBottom = '1%';
-      }
+  if (hasEmailErrorValue) {
+    if (emailElement) {
+      emailElement.style.paddingBottom = '1%';
     }
+  }
+
+  if (hasPasswordErrorValue) {
+    if (passwordElement) {
+      passwordElement.style.paddingBottom = '1%';
+    }
+  }
 
   // Password Confirmation
   var form = document.getElementById("create_customer");
@@ -512,7 +511,7 @@ error message
   confirmPasswordInput.addEventListener('input', validatePasswordMatch);
 
   // Add submit event listener
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function (e) {
     var password = passwordInput.value;
     var confirmPassword = confirmPasswordInput.value;
 
@@ -522,9 +521,8 @@ error message
       passwordError.style.display = "flex"; // Display the confirmation password error
     }
   });
-});
 
- // Email and Password Error Fixed
+  // Email and Password Error Fixed
   var emailInput = document.getElementById("RegisterForm-email");
   var passwordInput = document.getElementById("RegisterForm-password");
 
@@ -539,11 +537,11 @@ error message
 
   passwordInput.addEventListener('input', function () {
     var passwordError = document.getElementById("RegisterForm-password-error");
-    if (passwordError && passwordInput.value.trim() != "" ) {
+    if (passwordError && passwordInput.value.trim() != "") {
       passwordError.style.display = 'none';
       passwordElement.style.paddingBottom = '6%';
     }
   });
-
+});
 
 {%- endjavascript -%}
