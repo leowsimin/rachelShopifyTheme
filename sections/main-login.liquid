@@ -530,6 +530,8 @@ Login Page HTML
 
 {%- javascript -%}
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Forgot Password Page
   var openButton = document.getElementById("forgot-password-button");
   var modal = document.getElementById("reset-password");
   var cancelButton = document.getElementById("resetpage-cancel-button");
@@ -545,5 +547,8 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = "none"; // Hide the modal
     }
   });
+
+// Email and Password required.
+
 });
 {%- endjavascript -%}
