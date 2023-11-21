@@ -110,7 +110,7 @@
 }
 
 #registerpage-email-input ,
-#registerpage-number-input {
+#registerpage-password-input {
     display: block;
     text-align: center;
     margin-left: auto;
@@ -216,7 +216,8 @@
     border: none;
 }
 
-#RegisterForm-email-error {
+#RegisterForm-email-error ,
+#RegisterForm-password-error {
   color: #F00;
   text-align: center;
   font-family: JejuMyeongjo;
@@ -365,7 +366,7 @@ error message
             </span>
           {%- endif -%}
 
-          <div class="registerPageInput">
+          <div id="registerpage-password-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
             <input 
               class="registerPagePassword" 
               type="password"
@@ -380,6 +381,13 @@ error message
             >
           </div>
 
+          {%- if form.errors contains 'password' -%}
+            <span id="RegisterForm-password-error" class="form__message">
+              {{ form.errors.translated_fields.password | capitalize }}
+              {{ form.errors.messages.password }}.
+            </span>
+          {%- endif -%}
+
           <div class="registerPageInput">
             <input 
               class="registerPageConfirmPassword" 
@@ -387,13 +395,6 @@ error message
               name="customer[password_confirmation]" 
               placeholder="Confirm Password">
           </div>
-
-          {%- if form.errors contains 'password' -%}
-            <span id="RegisterForm-password-error" class="form__message">
-              {{ form.errors.translated_fields.password | capitalize }}
-              {{ form.errors.messages.password }}.
-            </span>
-          {%- endif -%}
 
           <div class="registerPageInput">
             <button class="registerPageSubmit">
@@ -445,12 +446,20 @@ error message
 
 {%- javascript -%}
   document.addEventListener('DOMContentLoaded', function() {
-    var hasErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
+    var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
+    var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
 
-    if (hasErrorValue) {
+    if (hasEmailErrorValue) {
       var emailElement = document.getElementById("registerpage-email-input");
       if (emailElement) {
         emailElement.style.paddingBottom = '1%';
+      }
+    }
+
+    if (hasPasswordErrorValue) {
+      var passwordElement = document.getElementById("registerpage-password-input");
+      if (passwordElement) {
+        passwordElement.style.paddingBottom = '1%';
       }
     }
   });
