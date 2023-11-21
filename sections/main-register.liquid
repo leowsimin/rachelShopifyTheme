@@ -475,20 +475,36 @@ error message
     }
 
   // Password Confirmation
-    var form = document.getElementById("create_customer");
+  var form = document.getElementById("create_customer");
+  var passwordInput = document.getElementById("RegisterForm-password");
+  var confirmPasswordInput = document.getElementById("RegisterForm-confirm-password");
+  var passwordError = document.getElementById("registerpage-password-error");
 
-    form.addEventListener('submit', function(e) {
-        var password = document.getElementById("RegisterForm-password").value;
-        var confirmPassword = document.getElementById("RegisterForm-confirm-password").value;
-        var passwordError = document.getElementById("registerpage-password-error");
-        console.log("Password:", password);
-        console.log("Confirm Password:", confirmPassword);
+  function validatePasswordMatch() {
+      var password = passwordInput.value;
+      var confirmPassword = confirmPasswordInput.value;
 
-        if (password !== confirmPassword) {
-            e.preventDefault();
-            passwordError.style.display = 'block';
-        }
-    });
+      if (password === confirmPassword) {
+          passwordError.style.display = 'none'; // Hide the error message
+      } else {
+          passwordError.style.display = 'block'; // Display the error message
+      }
+  }
+
+  // Add input event listeners
+  passwordInput.addEventListener('input', validatePasswordMatch);
+  confirmPasswordInput.addEventListener('input', validatePasswordMatch);
+
+  // Add submit event listener
+  form.addEventListener('submit', function(e) {
+      var password = passwordInput.value;
+      var confirmPassword = confirmPasswordInput.value;
+
+      if (password !== confirmPassword) {
+          e.preventDefault();
+          passwordError.style.display = 'block'; // Display the error message
+      }
+  });
 });
 
 {%- endjavascript -%}
