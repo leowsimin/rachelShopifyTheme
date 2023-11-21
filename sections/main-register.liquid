@@ -304,7 +304,7 @@ error message
               >
           </div>
 
-          <div id="registerpage-email-input" class="registerPageInput">
+          <div class="registerPageInput">
             <input 
               class="registerPageEmail" 
               type="email"
@@ -417,28 +417,12 @@ error message
 <script>
   $(function(){
     $('#create_customer').submit(function(e) {     
-      if ($('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
+      if ( $('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
         e.preventDefault();
         alert('Passwords do not match.');
       }
     });
   });
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    var hasEmailError = {{ form.errors contains 'email' | capitalize }};
-
-    // Modify the styles of the emailElement
-    if (hasEmailError) {
-      var emailElement = document.getElementById('registerpage-email-input');
-      if (emailElement) {
-        // Update the styles as needed
-        emailElement.style.paddingBottom = '4%';
-        // Add more style modifications as necessary
-      }
-    }
-  });
 </script>
 
-
 {%- endjavascript -%}
-
