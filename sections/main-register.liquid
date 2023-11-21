@@ -402,9 +402,11 @@ error message
             </button>
           </div>
 
-          <span id="registerpage-password-error">
+          {%- if form.errors contains 'password' -%}
+            <span id="registerpage-password-error">
             Passwords do not match. Please try again.
           </span>
+          {%- endif -%}
         {% endform %}
 
 
@@ -483,7 +485,7 @@ error message
 
         if (password !== confirmPassword) {
             e.preventDefault();
-            passwordError.style.display()
+            passwordError.style.display = 'block';
         }
     });
 });
