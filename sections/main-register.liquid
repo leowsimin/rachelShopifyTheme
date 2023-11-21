@@ -315,7 +315,7 @@ error message
               >
           </div>
 
-          <div id ="registerpage-email-input">
+          <div id ="registerpage-email-input" class="registerPageInput {% if form.errors contains 'email' %}has-error{% endif %}">
             <input 
               class="registerPageEmail" 
               type="email"
