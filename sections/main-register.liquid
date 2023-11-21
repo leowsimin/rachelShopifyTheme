@@ -109,7 +109,8 @@
     padding-bottom: 6%;
 }
 
-#registerpage-email-input {
+#registerpage-email-input ,
+#registerpage-number-input, {
     display: block;
     text-align: center;
     margin-left: auto;
@@ -313,7 +314,7 @@ error message
             </div>
           </div>
 
-          <div class="registerPageInput">
+          <div id= "registerpage-number-input">
             <input 
               class="registerPagePhoneNumber" 
               type="text" 
@@ -330,7 +331,7 @@ error message
               {{ form.errors.messages.email }}.
             </span>
           {%- endif -%}
-          <div id= "registerpage-email-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
+          <div id="registerpage-email-input" data-has-error="{% if form.errors contains 'email' %}true{% else %}false{% endif %}">
             <input 
               class="registerPageEmail" 
               type="email"
@@ -437,9 +438,9 @@ error message
     var hasErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
 
     if (hasErrorValue) {
-      var emailElement = document.getElementById("registerpage-email-input");
-      if (emailElement) {
-        emailElement.style.paddingBottom = '2%';
+      var numberElement = document.getElementById("registerpage-number-input");
+      if (numberElement) {
+        numberElement.style.paddingBottom = '1%';
       }
     }
   });
