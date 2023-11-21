@@ -425,7 +425,7 @@ error message
   });
   
   document.addEventListener("DOMContentLoaded", function() {
-    var hasEmailError = {{ form.errors contains 'email' | json | capitalize }};
+    var hasEmailError = {{ form.errors contains 'email' | capitalize }};
 
     // Modify the styles of the emailElement
     if (hasEmailError) {
