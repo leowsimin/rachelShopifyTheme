@@ -337,10 +337,10 @@ error message
               pattern="[0-9]{8}"
               >
           </div>
-          {%- if form.errors contains 'Number' -%}
+          {%- if form.errors contains 'customer.Number' -%}
             <span id="RegisterForm-number-error" class="form__message">
-              {{ form.errors.translated_fields.Number | capitalize }}
-              {{ form.errors.messages.Number }}.
+              {{ form.errors.translated_fields['customer.Number'] | capitalize }}
+              {{ form.errors.messages['customer.Number'] }}.
             </span>
           {%- endif -%}
 
