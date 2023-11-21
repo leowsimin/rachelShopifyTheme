@@ -112,7 +112,6 @@
     padding-bottom: 6%;
 }
 
-
 .registerPageNameInput {
     width: 45%;
 
@@ -484,6 +483,7 @@ error message
   var passwordInput = document.getElementById("RegisterForm-password");
   var confirmPasswordInput = document.getElementById("RegisterForm-confirm-password");
   var passwordError = document.getElementById("registerpage-password-error");
+  var submitButton = document.getElementById("registerpage-submit")
 
   function validatePasswordMatch() {
       var password = passwordInput.value;
@@ -493,6 +493,7 @@ error message
           passwordError.style.display = 'none'; // Hide the error message
       } else {
           passwordError.style.display = 'flex'; // Display the error message
+          submitButton.style.paddingBottom = "1%";
       }
   }
 
