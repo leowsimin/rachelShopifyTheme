@@ -530,7 +530,7 @@ error message
   // Add input event listeners to email and password fields
   emailInput.addEventListener('input', function () {
     var emailError = document.getElementById("RegisterForm-email-error");
-    if (emailError && emailInput.val) {
+    if (emailError && emailInput.value.trim() != "") {
       emailError.style.display = 'none';
     }
   });
