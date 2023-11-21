@@ -437,7 +437,7 @@ error message
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
-    var hasError = {{if form.errors contains 'email'}};
+    var hasError = {{ form.errors contains 'email'}};
 
     if (hasError) {
       var emailElement = document.getElementByID("registerpage-email-input");
