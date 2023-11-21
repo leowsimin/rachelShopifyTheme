@@ -444,9 +444,8 @@ error message
 {% endschema %}
 
 {%- javascript -%}
-  {%- comment -%}
-  Error Messages
-  {%- endcomment -%}
+  
+  // Error Messages
   document.addEventListener('DOMContentLoaded', function() {
     var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
     var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
