@@ -460,8 +460,9 @@ error message
 
 {%- javascript -%}
   
-  // Error Messages
   document.addEventListener('DOMContentLoaded', function() {
+    
+    // Error Messages
     var hasEmailErrorValue = document.getElementById("registerpage-email-input").getAttribute("data-has-error") === 'true';
     var hasPasswordErrorValue = document.getElementById("registerpage-password-input").getAttribute("data-has-error") === 'true';
 
@@ -523,7 +524,7 @@ error message
   });
 });
 
- // Get email and password input elements
+ // Email and Password Error Fixed
   var emailInput = document.getElementById("RegisterForm-email");
   var passwordInput = document.getElementById("RegisterForm-password");
 
@@ -532,6 +533,7 @@ error message
     var emailError = document.getElementById("RegisterForm-email-error");
     if (emailError && emailInput.value.trim() != "") {
       emailError.style.display = 'none';
+      emailElement.style.paddingBottom = '6%';
     }
   });
 
@@ -539,6 +541,7 @@ error message
     var passwordError = document.getElementById("RegisterForm-password-error");
     if (passwordError && passwordInput.value.trim() != "" ) {
       passwordError.style.display = 'none';
+      passwordElement.style.paddingBottom = '6%';
     }
   });
 
