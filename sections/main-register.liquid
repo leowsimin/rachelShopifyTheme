@@ -426,7 +426,7 @@ error message
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-  var hasEmailError = {% if form.errors contains 'email' %} true {% else %} false {% endif %};
+  var hasEmailError = {%- if form.errors contains 'email' -%} true {%- else -%} false {%- endif -%};
 
   // Modify the styles of the emailElement
   if (hasEmailError) {
@@ -439,5 +439,6 @@ error message
     }
   });
 </script>
+
 {%- endjavascript -%}
 
