@@ -437,8 +437,8 @@ error message
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
-    console.log("hasError:", {{ form.errors contains 'email' }});
-    var hasError = {{ form.errors contains 'email'}};
+    console.log("hasError:", {{ form.errors contains 'email' | json }});
+    var hasError = {{ form.errors contains 'email' | json }};
 
     if (hasError) {
       var emailElement = document.getElementById("registerpage-email-input");
