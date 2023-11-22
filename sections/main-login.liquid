@@ -421,6 +421,14 @@ Login Page HTML
             {{ form.errors | default_errors }}
           {%- endif -%}
 
+          {%- if form.errors -%}
+            <ul class="custom-error-list">
+              {%- for error in form.errors -%}
+                <li>{{ error.message }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
           <div class="loginPageEmailInput">
             <input 
               type="email" 
