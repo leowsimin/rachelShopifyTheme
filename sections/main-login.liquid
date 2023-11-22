@@ -418,13 +418,7 @@ Login Page HTML
         {% form 'customer_login', return_to: routes.collections_url , novalidate: 'novalidate' %}
         
           {%- if form.errors -%}
-            <ul class="custom-error-list">
-              {%- for error in form.errors -%}
-                <li>{{ error.message }}</li>
-              {%- endfor -%}
-            </ul>
-          {%- else -%}
-            <p>No errors found.</p>
+            {{ form.errors | default_errors }}
           {%- endif -%}
 
           <div class="loginPageEmailInput">
