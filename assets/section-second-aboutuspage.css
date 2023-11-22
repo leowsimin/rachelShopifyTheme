@@ -1,4 +1,4 @@
-.howitworks-second-section {
+.aboutus-second-section {
     background-color: #FAF5EE;
     display: block;
     align-items: center;
@@ -7,13 +7,13 @@
     padding-bottom: 5%;
 }
 
-.howitworks-header2-container {
+.aboutus-header2-container {
     display: block;
     align-items: center;
     position: relative;
 }
 
-.howitworks-subheader-container3 {
+.aboutus-subheader-container3 {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -21,25 +21,25 @@
     margin-right: 10%;
 }
 
-.howitworks-subheader-container3 h5 {
+.aboutus-subheader-container3 h5 {
     padding: 0 0 0 2%;
 }
 
-.howitworks-subheader-container4 {
+.aboutus-subheader-container4 {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-left: 10%;
 }
 
-.howitworks-image3 {
+.aboutus-image3 {
     width: 140px;
     position: absolute;
     margin-left: 550px;
     margin-top: 50px;
 }
 
-.howitworks-second-section-description {
+.aboutus-second-section-description {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -47,13 +47,13 @@
     margin-top: 2%;
 }
 
-.howitworks-image4 {
+.aboutus-image4 {
     width: 220px;
 
     margin-right: 3%;
 }
 
-.howitworks-second-section-description p {
+.aboutus-second-section-description p {
     width: 50%;
 
     color: #000;
