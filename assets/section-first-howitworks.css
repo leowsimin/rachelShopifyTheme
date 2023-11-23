@@ -10,4 +10,6 @@
 .howitworks-luggages-image {
     position: absolute;
     width: 40%;
+
+    transform: translateX(-50%);
 }
