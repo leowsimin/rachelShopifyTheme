@@ -1,6 +1,8 @@
 .howitworks-header2-container1 {
     display: flex;
     align-items: center;
+
+    margin-left: 5%;
 }
 
 .howitworks-header2-container2 {
