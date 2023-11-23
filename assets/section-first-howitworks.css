@@ -9,8 +9,7 @@
 
 .howitworks-luggages-image {
     position: absolute;
-    width: 40%;
-    max-width: 100%;
+    width: 650px;
 
     transform: translateX(-50%);
 }
