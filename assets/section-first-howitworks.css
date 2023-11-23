@@ -80,7 +80,7 @@
     position: absolute;
     width: 160px;
 
-    transform: translate(-50%);
+    transform: translate(-50%, 10%);
     z-index: -1;
 }
 
