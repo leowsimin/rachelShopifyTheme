@@ -75,6 +75,8 @@
     position: relative;
 }
 
+.howitworks-subheader-container1 h4 {}
+
 .howitworks-tick-image {
     position: absolute;
     width: 100px;
