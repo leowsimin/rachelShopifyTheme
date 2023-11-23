@@ -11,6 +11,8 @@
 
 .howitworks-luggages-image {
     width: 600px;
+
+    padding-left:
 }
 
 .howitworks-header1-container1 h1 {
@@ -18,7 +20,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-right: 10px;
 
     color: #0D2610;
     text-align: center;
