@@ -104,6 +104,8 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1.5px;
+
+
 }
 
 .howitworks-arrow-image {
@@ -128,3 +130,5 @@
     width: 400px;
     transform: translate(-45%, 15%);
 }
+
+.howitworks-subheader-container2 p {}
