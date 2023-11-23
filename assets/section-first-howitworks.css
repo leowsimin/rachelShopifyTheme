@@ -68,7 +68,7 @@
     position: absolute;
     width: 650px;
 
-    transform: translateX(-50%);
+    transform: translate(-50%, 10%);
 }
 
 .howitworks-subheader-container1 {
