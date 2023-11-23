@@ -105,7 +105,8 @@
     line-height: normal;
     letter-spacing: -1.5px;
 
-
+    margin-right: 880px;
+    margin-top: 10%;
 }
 
 .howitworks-arrow-image {
@@ -131,4 +132,7 @@
     transform: translate(-45%, 15%);
 }
 
-.howitworks-subheader-container2 p {}
+.howitworks-subheader-container2 p {
+    margin-right: 0;
+    margin-top: 0;
+}
