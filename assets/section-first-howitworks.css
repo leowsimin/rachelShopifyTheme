@@ -101,10 +101,7 @@
 }
 
 .howitworks-subheader-container2 {
-    position: absolute;
-    right: 0;
-    top: 320px;
-    margin-right: 10%;
+    position: relative;
 }
 
 .howitworks-circle-image {
