@@ -4,6 +4,7 @@
 
 .howitworks-header2-container2 {
     display: flex;
+    flex-direction: row;
 }
 
 .howitwork-subheader-container6 {
