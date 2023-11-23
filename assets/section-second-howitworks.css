@@ -4,6 +4,8 @@
 
 .howitworks-header2-container2 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .howitwork-subheader-container6 {
