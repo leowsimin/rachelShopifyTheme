@@ -102,6 +102,10 @@
 
 .howitworks-subheader-container2 {
     position: relative;
+    right: 0;
+    /* Align to the right */
+    top: 160px;
+    /* Adjust based on your layout */
 }
 
 .howitworks-circle-image {
