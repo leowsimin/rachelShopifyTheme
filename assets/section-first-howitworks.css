@@ -137,3 +137,7 @@
 .howitworks-header1-container2 h5 {
     margin-top: 10%;
 }
+
+.howitworks-header1container3 {
+    display: flex;
+}
