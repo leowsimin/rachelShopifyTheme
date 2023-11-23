@@ -111,8 +111,7 @@
 .howitworks-arrow-image {
     position: absolute;
     width: 400px;
-
-    transform: translate(-45%, 15%);
+    transform: translate(-60%, 38%);
     z-index: -1;
 }
 
