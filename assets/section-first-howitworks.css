@@ -61,5 +61,6 @@
 }
 
 .howitworks-cycle-image {
+    position: absolute;
     width: 700px;
 }
