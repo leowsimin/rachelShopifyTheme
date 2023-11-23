@@ -39,11 +39,14 @@
     padding-left: 20px;
 }
 
-.howitworks-hygiene-image,
-.howitworks-maintanence-image {
+.howitworks-hygiene-image {
     width: 300px;
 }
 
 .howitworks-reimburse-image {
     width: 250px;
+}
+
+.howitworks-maintanence-image {
+    width: 27px;
 }
