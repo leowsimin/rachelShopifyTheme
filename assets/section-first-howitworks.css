@@ -113,6 +113,7 @@
     width: 400px;
 
     transform: translate(-45%, 15%);
+    z-index: -1;
 }
 
 .howitworks-subheader-container2 {
