@@ -116,7 +116,7 @@
     position: relative;
     margin-right: 50%;
 
-    transform: translate();
+    transform: translateX(20%);
 }
 
 .howitworks-subheader-container3 p {
