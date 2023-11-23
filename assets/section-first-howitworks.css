@@ -109,7 +109,7 @@
 
 .howitworks-circle-image {
     position: absolute;
-    width: 400px;
+    width: 350px;
 
     transform: translate(-50%, -20%);
     z-index: -1;
