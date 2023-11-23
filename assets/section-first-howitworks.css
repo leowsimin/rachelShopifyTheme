@@ -29,6 +29,10 @@
     transform: translateX(-50%);
 }
 
+.howitworks-subheader-container1 {
+    position: relative;
+}
+
 .howitworks-tick-image {
     position: absolute;
 }
