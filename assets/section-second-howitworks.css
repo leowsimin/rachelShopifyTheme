@@ -9,4 +9,5 @@
 .howitwork-subheader-container6 {
     display: block;
     text-align: center;
+    flex: 1;
 }
