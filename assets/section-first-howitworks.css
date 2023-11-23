@@ -80,4 +80,12 @@
     display: absolute;
 }
 
-.howitworks-header1container2 h4 {}
+.howitworks-header1container2 h4 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
