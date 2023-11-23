@@ -137,4 +137,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 220px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
