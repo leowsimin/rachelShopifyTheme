@@ -135,4 +135,5 @@
 
 .howitworks-header1container3 {
     display: flex;
+    flex-direction: space-between;
 }
