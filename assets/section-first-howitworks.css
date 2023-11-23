@@ -69,3 +69,7 @@
 .howitworks-subheader-container4 {
     display: block;
 }
+
+.howitworks-subheader-container5 {
+    display: flex;
+}
