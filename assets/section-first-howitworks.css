@@ -87,6 +87,10 @@
     line-height: normal;
 }
 
+.howitworks-subheader-container3 h4 {
+    margin-top: none;
+}
+
 .howitworks-tick-image {
     position: absolute;
     width: 150px;
