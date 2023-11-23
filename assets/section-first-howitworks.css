@@ -110,13 +110,13 @@
 .howitworks-circle-image {
     position: absolute;
     width: 400px;
+
+    transform: translateX(20%);
 }
 
 .howitworks-subheader-container3 {
     position: relative;
     margin-right: 50%;
-
-    transform: translateX(20%);
 }
 
 .howitworks-subheader-container3 p {
