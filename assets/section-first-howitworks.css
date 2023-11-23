@@ -40,4 +40,7 @@
     transform: translateX(-50%);
 }
 
-.howitworks-header1-container2 p {}
+.howitworks-header1-container2 p {
+    margin-right: 30%;
+    margin-top: 10%;
+}
