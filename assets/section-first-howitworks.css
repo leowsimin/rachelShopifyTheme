@@ -8,8 +8,10 @@
 }
 
 .howitworks-luggages-image {
-    position: absolute;
     width: 600px;
-
     transform: translateX(-50%);
+}
+
+.howitworks-header1-container1 h1 {
+    position: absolute;
 }
