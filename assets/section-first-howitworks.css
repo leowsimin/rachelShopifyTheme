@@ -17,3 +17,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+.howitworks-header1-container2 {
+    position: relative;
+}
+
+.howitworks-cycle-image {
+    position: absolute;
+    width: 700px;
+}
