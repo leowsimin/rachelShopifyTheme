@@ -125,7 +125,6 @@
 
 .howitworks-circle-image {
     position: absolute;
-    width: 450px;
-
-    transform: translate(-47%, 30%)
+    width: 400px;
+    transform: translate(-45%, 15%);
 }
