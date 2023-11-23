@@ -73,11 +73,11 @@
 }
 
 .howitworks-subheader-container1 {
-    display: relative;
+    position: relative;
 }
 
 .howitworks-tick-image {
-    display: absolute;
+    position: absolute;
     width: 180px;
 }
 
