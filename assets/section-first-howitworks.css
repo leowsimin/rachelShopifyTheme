@@ -58,9 +58,12 @@
 }
 
 .howitworks-subheader-container3 {
-    display: block;
     position: relative;
     margin-right: 50%;
+}
+
+.howitworks-subheader-container3 p {
+    margin: 0;
 }
 
 .howitworks-arrow-image {
