@@ -105,13 +105,14 @@
     line-height: normal;
     letter-spacing: -1.5px;
 
-    margin-right: 720px;
+    margin-right: 60%;
 }
 
 .howitworks-arrow-image {
     position: absolute;
     width: 400px;
-    transform: translate(-60%, 39%);
+
+    transform: translate(-45%, 15%);
     z-index: -1;
 }
 
