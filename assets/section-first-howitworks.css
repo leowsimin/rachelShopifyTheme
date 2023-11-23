@@ -75,7 +75,9 @@
     position: relative;
 }
 
-.howitworks-subheader-container1 h4 {
+.howitworks-subheader-container1 h4,
+.howitworks-subheader-container2 h4,
+.howitworks-subheader-container3 h4 {
     color: #0D2610;
     text-align: center;
     font-family: Syncopate;
