@@ -39,6 +39,8 @@
     padding-left: 20px;
 }
 
-.howitworks-hygiene-image {
+.howitworks-hygiene-image,
+.howitworks-reimburse-image,
+.howitworks-maintanence-image {
     width: 300px;
 }
