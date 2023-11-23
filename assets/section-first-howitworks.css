@@ -3,4 +3,11 @@
     text-align: center;
 }
 
-.howitworks-header1-container1 {}
+.howitworks-header1-container1 {
+    position: relative;
+}
+
+.howitworks-luggages-image {
+    position: absolute;
+    width: 220px;
+}
