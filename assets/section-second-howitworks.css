@@ -64,4 +64,13 @@
     line-height: normal;
 }
 
-.howitwork-subheader-container6 p {}
+.howitwork-subheader-container6 p {
+    color: #8A947F;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2px;
+}
