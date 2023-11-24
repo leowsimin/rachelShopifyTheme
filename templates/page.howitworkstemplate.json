@@ -17,11 +17,17 @@
       "type": "howitworkspage-second-section",
       "settings": {
       }
+    },
+    "b628f6f1-eb92-40a0-b390-b17592397eab": {
+      "type": "howitworkspage-third-section",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "9681d3b3-8630-4242-9ac1-e042659e9ef3",
-    "641e63c3-a774-4621-a7bf-f1aec753186c"
+    "641e63c3-a774-4621-a7bf-f1aec753186c",
+    "b628f6f1-eb92-40a0-b390-b17592397eab"
   ]
 }
