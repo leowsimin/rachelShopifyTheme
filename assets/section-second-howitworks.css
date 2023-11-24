@@ -68,13 +68,13 @@
     color: #8A947F;
     text-align: center;
     font-family: JejuMyeongjo;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -2px;
 
-    width: 30%;
+    width: 60%;
     margin: 0 auto;
     /* Center the paragraph horizontally */
 }
