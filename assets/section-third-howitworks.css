@@ -56,12 +56,10 @@
 }
 
 .howitworks-subheader-container11 {
-    flex: 2;
     text-align: end;
 }
 
 .howitworks-subheader-container12 {
-    flex: 8;
     text-align: start;
 }
 
@@ -76,10 +74,4 @@
 
     margin-left: 5%;
     width: 70%;
-}
-
-.howitworks-subheader-container14 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
