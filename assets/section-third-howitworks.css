@@ -46,27 +46,10 @@
     width: 60px;
 }
 
-.howitworks-subheader-container13 {
-    display: flex;
-    flex-direction: column;
-    flex: 7;
+.howitworks-subheader-container13 {}
 
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 5%;
-}
-
-.howitworks-subheader-container18 {
-    display: flex;
-    flex: 3;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
+.howitworks-subheader-container18 {}
 
 .howitworks-calendar-image {
     width: 500px;
-}
-
-.howitworks-description1 {
-    width: 70%;
 }
