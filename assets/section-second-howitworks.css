@@ -14,7 +14,9 @@
     margin-right: 10%;
 }
 
-.howitwork-subheader-container6 {
+.howitwork-subheader-container6,
+.howitwork-subheader-container7,
+.howitwork-subheader-container8 {
     margin-right: 70px;
     margin-left: 70px;
     /* Set a fixed margin between containers */
