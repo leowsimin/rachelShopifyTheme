@@ -14,4 +14,17 @@
     letter-spacing: -5px;
 }
 
-.howitworks-header3-container1 h2 {}
+.howitworks-header3-container1 h2 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.howitworks-swigglylines-image {
+    position: absolute;
+    width: 300px;
+}
