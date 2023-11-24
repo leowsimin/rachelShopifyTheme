@@ -15,7 +15,8 @@
 }
 
 .howitwork-subheader-container6 {
-    flex: 1;
+    margin-right: 20px;
+    /* Set a fixed margin between containers */
     text-align: center;
 }
 
