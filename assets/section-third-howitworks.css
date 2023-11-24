@@ -53,6 +53,7 @@
 
 .howitworks-subheader-container18 {
     flex: 3;
+    align-items: flex-end;
 }
 
 .howitworks-calendar-image {
