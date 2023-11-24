@@ -50,8 +50,6 @@
     width: 500px;
 }
 
-.howitworks-subheader-container10,
-.howitworks-subheader-container11,
-.howitworks-subheader-container12 {
+.howitworks-subheader-container10 {
     display: flex;
 }
