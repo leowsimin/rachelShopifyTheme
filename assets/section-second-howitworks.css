@@ -78,12 +78,9 @@
     margin-top: 30px;
 }
 
-.howitwork-subheader-container7 h3 {
-    margin-top: 40px;
-}
-
+.howitwork-subheader-container7 h3,
 .howitwork-subheader-container6 h3 {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .howitwork-subheader-container6 p,
