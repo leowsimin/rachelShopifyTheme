@@ -52,6 +52,7 @@
 }
 
 .howitworks-subheader-container18 {
+    display: flex;
     flex: 3;
     align-items: flex-end;
 }
