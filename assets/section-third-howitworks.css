@@ -3,6 +3,7 @@
     position: relative;
 
     align-items: center;
+    margin-left: 10%;
 }
 
 .howitworks-header3-container1 h1 {
@@ -11,7 +12,7 @@
     font-family: JejuMyeongjo;
     font-size: 60px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: -5px;
 }
