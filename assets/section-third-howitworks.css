@@ -38,10 +38,12 @@
 
 .howitworks-subheader-container9 {
     display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .howitworks-one-image {
-    width: 70px;
+    width: 60px;
 }
 
 .howitworks-subheader-container13 {
@@ -49,5 +51,6 @@
 }
 
 .howitworks-calendar-image {
-    width: 300px;
+    width: 500px;
+
 }
