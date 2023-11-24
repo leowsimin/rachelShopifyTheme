@@ -36,4 +36,14 @@
     transform: translate(58%, 130%);
 }
 
-.howitworks-subheader-container9 {}
+.howitworks-subheader-container9 {
+    display: flex;
+}
+
+.howitworks-one-image {
+    width: 100px;
+}
+
+.howitworks-subheader-container13 {
+    display: block;
+}
