@@ -63,6 +63,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    white-space: nowrap;
 }
 
 .howitwork-subheader-container6 p {
