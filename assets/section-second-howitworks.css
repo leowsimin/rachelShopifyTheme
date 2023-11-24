@@ -9,14 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .howitwork-subheader-container6 {
     flex: 1;
     text-align: center;
-
-    width: 40%;
-    height: 40%;
 }
 
 .howitworks-header2-container1 h1 {
