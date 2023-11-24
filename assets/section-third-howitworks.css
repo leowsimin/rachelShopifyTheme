@@ -56,6 +56,7 @@
 
 .howitworks-subheader-container11 {
     flex: 2;
+    justify-content: flex-end;
 }
 
 .howitworks-subheader-container12 {
