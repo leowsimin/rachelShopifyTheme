@@ -29,7 +29,7 @@
 
 .howitworks-swigglylines-image {
     position: absolute;
-    width: 300px;
+    width: 500px;
 
-    transform: translate(50%);
+    transform: translate(100%);
 }
