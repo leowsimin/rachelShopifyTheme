@@ -48,6 +48,11 @@
 
 .howitworks-subheader-container13 {
     display: block;
+    flex: 7;
+}
+
+.howitworks-subheader-container18 {
+    flex: 3;
 }
 
 .howitworks-calendar-image {
