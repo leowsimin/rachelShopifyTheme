@@ -47,7 +47,8 @@
 }
 
 .howitworks-subheader-container13 {
-    display: block;
+    display: flex;
+    flex-direction: column;
     flex: 7;
 
     justify-content: flex-start;
