@@ -56,7 +56,9 @@
     width: 250px;
 }
 
-.howitwork-subheader-container6 h3 {
+.howitwork-subheader-container6 h3,
+.howitwork-subheader-container7 h3,
+.howitwork-subheader-container8 h3 {
     color: #0D2610;
     text-align: center;
     font-family: Syncopate;
@@ -68,7 +70,9 @@
     white-space: nowrap;
 }
 
-.howitwork-subheader-container6 p {
+.howitwork-subheader-container6 p,
+.howitwork-subheader-container7 p,
+.howitwork-subheader-container8 p {
     color: #8A947F;
     text-align: center;
     font-family: JejuMyeongjo;
