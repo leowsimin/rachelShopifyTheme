@@ -37,14 +37,15 @@
 }
 
 .howitworks-header3-container2,
-.howitworks-header3-container4 {
+.howitworks-header3-container4,
+.howitworks-header3-container6 {
     display: flex;
     margin-top: 2%;
 }
 
 .howitworks-subheader3-container10,
 .howitworks-subheader3-container12,
-.howitworks-subheader3-container16 {
+.howitworks-subheader3-container15 {
     display: flex;
     width: 20%;
 
