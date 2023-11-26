@@ -69,7 +69,14 @@
 .howitworks-two-image,
 .howitworks-three-image {
     display: flex;
-    width: 70px;
+    size: 70px;
+
+    width: 100%;
+    /* Ensure child images take up 100% of the width */
+    margin: 0;
+    /* Reset margin to remove any default spacing */
+    padding: 0;
+    /* Reset padding to remove any default spacing */
 }
 
 .howitworks-two-image {
