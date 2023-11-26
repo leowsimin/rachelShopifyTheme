@@ -40,7 +40,7 @@
 .howitworks-header3-container4,
 .howitworks-header3-container6 {
     display: flex;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .howitworks-subheader3-container10,
@@ -130,4 +130,9 @@
 .howitworks-header3-container5 svg {
     margin-left: 2%;
     margin-right: 2%;
+}
+
+.howitworks-oncedone {
+    margin-bottom: 0;
+
 }
