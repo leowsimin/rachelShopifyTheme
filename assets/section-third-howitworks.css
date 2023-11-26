@@ -54,11 +54,11 @@
 .howitworks-subheader3-container11,
 .howitworks-subheader3-container13 {
     width: 75%;
-
     margin-left: 100px;
 }
 
-.howitworks-one-image {
+.howitworks-one-image,
+.howitworks-two-image {
     display: flex;
     width: 70px;
 }
