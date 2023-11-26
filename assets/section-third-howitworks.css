@@ -42,7 +42,6 @@
 
 .howitworks-one-image {
     display: flex;
-    flex: 2;
     width: 100px;
 
     justify-content: flex-start;
@@ -51,6 +50,5 @@
 
 .howitworks-calendar-image {
     display: flex;
-    flex: 8;
     width: 320px;
 }
