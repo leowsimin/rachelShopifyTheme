@@ -48,6 +48,9 @@
 .howitworks-subheader3-container15 {
     display: flex;
     width: 20%;
+
+    align-items: flex-start;
+    padding-left: 15%
 }
 
 .howitworks-subheader3-container11,
