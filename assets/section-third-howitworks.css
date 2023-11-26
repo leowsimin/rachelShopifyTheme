@@ -51,7 +51,8 @@
     align-items: flex-start;
 }
 
-.howitworks-subheader3-container11 {
+.howitworks-subheader3-container11,
+.howitworks-subheader3-container13 {
     width: 75%;
 
     margin-left: 100px;
