@@ -110,6 +110,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 5%;
 }
 
 .howitworks-header3-container5 svg {
