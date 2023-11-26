@@ -106,4 +106,8 @@
     height: 211px;
 }
 
-.howitworks-header3-container5 {}
+.howitworks-header3-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
