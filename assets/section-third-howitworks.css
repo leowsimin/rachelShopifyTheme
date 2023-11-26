@@ -77,6 +77,6 @@
 }
 
 .howitworks-header3-container3 {
-    width: 70%;
-    margin: auto 0;
+    display: block;
+    align-items: center;
 }
