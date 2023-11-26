@@ -36,6 +36,10 @@
     transform: translate(58%, 130%);
 }
 
+.howitworks-header3-container2 {
+    display: flex;
+}
+
 .howitworks-one-image {
     display: flex;
     flex: 2;
