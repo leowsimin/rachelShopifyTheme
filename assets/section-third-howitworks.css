@@ -99,4 +99,9 @@
     margin-left: 6%;
 }
 
-.howitworks-product-items {}
+.howitworks-product-items {
+    border-radius: 5px;
+    border: 2px solid #000;
+    width: 221px;
+    height: 211px;
+}
