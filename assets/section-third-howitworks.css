@@ -64,7 +64,8 @@
 }
 
 .howitworks-one-image,
-.howitworks-two-image {
+.howitworks-two-image,
+.howitworks-three-image {
     display: flex;
     width: 70px;
 }
