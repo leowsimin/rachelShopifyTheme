@@ -36,12 +36,14 @@
     transform: translate(58%, 130%);
 }
 
-.howitworks-header3-container2 {
+.howitworks-header3-container2,
+.howitworks-header3-container4 {
     display: flex;
     margin-top: 5%;
 }
 
-.howitworks-subheader3-container10 {
+.howitworks-subheader3-container10,
+.howitworks-subheader3-container12 {
     display: flex;
     width: 25%;
 
@@ -82,9 +84,4 @@
     text-align: left;
 
     margin-top: 2%;
-}
-
-.howitworks-header3-container4 {
-    display: flex;
-    margin-top: 5%;
 }
