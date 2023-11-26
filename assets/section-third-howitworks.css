@@ -78,7 +78,8 @@
     letter-spacing: -1.5px;
 }
 
-.howitworks-header3-container3 {
+.howitworks-header3-container3,
+.howitworks-subheader3-container13 {
     display: block;
     width: 50%;
     margin: 0 auto;
