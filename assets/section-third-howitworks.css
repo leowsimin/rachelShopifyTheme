@@ -68,13 +68,16 @@
 }
 
 .howitworks-subheader3-container11,
-.howitworks-subheader3-container16,
-.howitworks-subheader3-container18 {
+.howitworks-subheader3-container16 {
     width: 80%;
     margin-left: 160px;
 }
 
 .howitworks-subheader3-container13 {
+    width: 80%;
+}
+
+.howitworks-subheader3-container18 {
     width: 80%;
 }
 
