@@ -36,11 +36,8 @@
     transform: translate(58%, 130%);
 }
 
-.howitworks-header3-container2 {
-    display: flex;
-}
-
 .howitworks-one-image {
+    display: flex;
     flex: 2;
     width: 100px;
 
@@ -49,6 +46,7 @@
 }
 
 .howitworks-calendar-image {
+    display: flex;
     flex: 8;
     width: 320px;
 }
