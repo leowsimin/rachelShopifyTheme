@@ -43,7 +43,11 @@
 }
 
 .howitworks-subheader3-container10 {
+    display: flex;
     width: 25%;
+
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .howitworks-subheader3-container11 {
