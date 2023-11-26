@@ -91,9 +91,12 @@
     width: 520px;
 }
 
-.howitworks-order-receipt-image,
-.howitworks-successful-purchase-image {
+.howitworks-order-receipt-image {
     width: 520px;
+}
+
+.howitworks-successful-purchase-image {
+    width: 700px;
 }
 
 .howitworks-third-section p {
