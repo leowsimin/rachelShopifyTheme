@@ -40,12 +40,17 @@
     display: flex;
 }
 
+.howitworks-subheader3-container10 {
+    width: 20%;
+}
+
+.howitworks-subheader3-container11 {
+    width: 80%;
+}
+
 .howitworks-one-image {
     display: flex;
     width: 70px;
-
-    justify-content: flex-start;
-    align-items: flex-start;
 }
 
 .howitworks-calendar-image {
