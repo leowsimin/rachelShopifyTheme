@@ -37,10 +37,14 @@
 }
 
 .howitworks-header3-container2,
-.howitworks-header3-container4,
 .howitworks-header3-container6 {
     display: flex;
     margin-top: 4%;
+}
+
+.howitworks-header3-container4 {
+    display: flex;
+    margin-top: 2%;
 }
 
 .howitworks-subheader3-container10,
