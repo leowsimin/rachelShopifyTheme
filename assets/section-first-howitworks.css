@@ -4,6 +4,7 @@
     text-align: center;
 
     padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .howitworks-header1-container1 {
@@ -154,4 +155,6 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: -2.5px;
+
+    margin-bottom: 0;
 }
