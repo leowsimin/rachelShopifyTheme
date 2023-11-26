@@ -51,10 +51,13 @@
     align-items: flex-start;
 }
 
-.howitworks-subheader3-container11,
-.howitworks-subheader3-container13 {
+.howitworks-subheader3-container11 {
     width: 80%;
     margin-left: 200px;
+}
+
+..howitworks-subheader3-container13 {
+    width: 80%;
 }
 
 .howitworks-one-image,
