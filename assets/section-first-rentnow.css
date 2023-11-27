@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.rentnow-subheader-container2 {
+    display: flex;
+}
+
 .rentnow-lines-image {
     position: absolute;
     width: 300px;
