@@ -63,6 +63,8 @@
 .rentnow-lines-image {
     position: absolute;
     width: 300px;
+
+    transform: translateY(50%);
 }
 
 .rentnow-arrow-image {
