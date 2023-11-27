@@ -91,25 +91,15 @@
 }
 
 .rentnow-header1-container2 {
-    width: 100%;
-    height: 500px;
     position: relative;
+
+    width: 100vh;
+    height: 50px;
 }
 
-.rentnow-header1-container2 .half {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-}
+.rentnow-top-color {
+    height: 50%;
+    width: 100%;
 
-.rentnow-header1-container2 .color1 {
-    left: 0;
-    background-color: #FAF5EE;
-    /* Replace with your desired color code for the first half */
-}
-
-.rentnow-header1-container2 .color2 {
-    right: 0;
-    background-color: #FFFCF8;
-    /* Replace with your desired color code for the second half */
+    background-color: ;
 }
