@@ -89,3 +89,13 @@
 .rentnow-question-mark-image {
     width: 40px;
 }
+
+.rentnow-header1-container2 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top,
+            pink 0%,
+            pink 50%,
+            paleturquoise 50%,
+            paleturquoise 100%);
+}
