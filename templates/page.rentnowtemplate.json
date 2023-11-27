@@ -7,9 +7,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "f24762a8-10a1-49df-8b2f-181266ac39b1": {
+      "type": "rentnow-first-section",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "f24762a8-10a1-49df-8b2f-181266ac39b1"
   ]
 }
