@@ -9,5 +9,10 @@
 
 .rentnow-lines-image {
     position: absolute;
-    width:
+    width: 300px;
+}
+
+.rentnow-arrow-image {
+    position: absolute;
+    width: 300px;
 }
