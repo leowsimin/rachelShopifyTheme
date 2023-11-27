@@ -90,6 +90,12 @@
     width: 40px;
 }
 
+.rentnow-header1-container2 {
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
 .rentnow-header1-container2 .half {
     width: 50%;
     height: 100%;
