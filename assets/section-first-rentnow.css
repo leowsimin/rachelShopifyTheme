@@ -65,7 +65,7 @@
     width: 300px;
 
     top: 100%;
-    t
+    transform: translateY(-10px);
 }
 
 .rentnow-arrow-image {
