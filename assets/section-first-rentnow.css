@@ -22,6 +22,17 @@
     line-height: normal;
 }
 
+.rentnow-header1-container1 h3 {
+    color: #0D2610;
+    font-family: Syncopate;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.rentnow-header1-container1 h4 {}
+
 .rentnow-subheader-container1 {
     display: flex;
     position: relative;
