@@ -89,3 +89,9 @@
 .rentnow-question-mark-image {
     width: 40px;
 }
+
+.rentnow-header1-container2 .half {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
