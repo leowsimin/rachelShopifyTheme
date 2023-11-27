@@ -64,14 +64,14 @@
     position: absolute;
     width: 300px;
 
-    transform: translateY(50%);
+    transform: translateY(-50%);
 }
 
 .rentnow-arrow-image {
     position: absolute;
     width: 300px;
 
-    transform: translate(-50%);
+    transform: translate(-50%, 20%);
 }
 
 .rentnow-question-mark-image {
