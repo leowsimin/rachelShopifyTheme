@@ -1,7 +1,7 @@
 .rentnow-header1-container1 {
     display: block;
 
-    padding: 3% 15% 3% 15%;
+    padding: 5% 15% 5% 15%;
 }
 
 .rentnow-header1-container1 h1 {
@@ -14,6 +14,7 @@
     letter-spacing: -3.5px;
 
     text-align: left;
+    margin: 0;
 }
 
 .rentnow-header1-container1 h2 {
@@ -23,6 +24,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    margin: 0;
 }
 
 .rentnow-header1-container1 h3 {
