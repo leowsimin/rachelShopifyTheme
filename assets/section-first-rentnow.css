@@ -98,8 +98,10 @@
     height: 50px;
 }
 
-.rentnow-top-color {
-    height: 50%;
+.rentnow-top-color,
+.rentnow-bottom-color {
     width: 100%;
-    background-color: #FAF5EE;
+    height: 50%;
+    position: absolute;
+    top: 0;
 }
