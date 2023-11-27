@@ -70,7 +70,10 @@
 
 .rentnow-arrow-image {
     position: absolute;
-    width: 300px;
+    width: 500px;
+    top: 100%;
+    transform: translate(70%, -95%);
+    z-index: -1;
 }
 
 .rentnow-question-mark-image {
