@@ -92,6 +92,7 @@
 
 .rentnow-header1-container2 {
     position: relative;
+    overflow: hidden;
 
     width: 100vh;
     height: 50px;
