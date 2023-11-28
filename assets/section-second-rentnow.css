@@ -1,1 +1,14 @@
-.rentnow-second-section h1 {}
+.rentnow-second-section {
+    display: block;
+    text-align: center;
+}
+
+.rentnow-second-section h1 {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -3px;
+}
