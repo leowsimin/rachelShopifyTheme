@@ -140,3 +140,8 @@
     line-height: normal;
     letter-spacing: -1.5px;
 }
+
+.rentnow-subheader-container5 svg {
+    vertical-align: middle;
+    /* Add this line */
+}
