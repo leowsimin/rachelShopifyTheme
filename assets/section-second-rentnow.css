@@ -188,6 +188,6 @@
 }
 
 .rentnow-end-date {
-    stroke-width: 1px;
-    stroke: #FFA665;
+    border: 1px solid #FFA665;
+    border-radius: 50%;
 }
