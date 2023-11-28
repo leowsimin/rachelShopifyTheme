@@ -178,4 +178,8 @@
     padding-top: 13px;
 }
 
-.rentnow-start-date {}
+.rentnow-start-date {
+    background-color: #FFA665;
+}
+
+.rentnow-end-date {}
