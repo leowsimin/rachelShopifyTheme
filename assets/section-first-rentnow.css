@@ -101,4 +101,10 @@
             #FFFCF8 50%,
             #FAF5EE 50%,
             #FAF5EE 100%);
+
+    position: relative;
+}
+
+.rentnow-subheader-container3 {
+    position: absolute;
 }
