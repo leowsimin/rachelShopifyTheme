@@ -101,7 +101,7 @@
     letter-spacing: -1px;
 }
 
-.rentnow-first-days p,
+.rentnow-first-days div,
 .rentnow-second-days p {
     display: flex;
     justify-content: center;
