@@ -74,5 +74,9 @@
 
     padding-left: 10%;
     padding-right: 10%;
+}
 
+.rentnow-first-days {
+    display: flex;
+    flex-wrap: wrap;
 }
