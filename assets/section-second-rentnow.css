@@ -22,5 +22,9 @@
     border-radius: 10px;
     border: 1px solid #000;
     background: #FAF5EE;
+}
 
+.rentnow-first-calendar .rentnow-second-calendar {
+    width: 355px;
+    height: 320px;
 }
