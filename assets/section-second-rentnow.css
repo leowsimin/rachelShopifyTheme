@@ -123,11 +123,12 @@
 .rentnow-calendar-legend {
     display: flex;
     flex-direction: column;
-
+    padding-left: 30px;
 }
 
 .rentnow-subheader-container5 {
     display: flex;
+    text-align: center;
 }
 
 .rentnow-subheader-container5 h2 {
