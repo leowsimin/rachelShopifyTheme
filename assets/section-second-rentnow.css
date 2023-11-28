@@ -153,6 +153,8 @@
     display: flex;
     text-align: center;
     justify-content: center;
+
+    margin-top: 5px;
 }
 
 .rentnow-header2-container2 p {
