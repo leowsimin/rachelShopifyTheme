@@ -24,6 +24,10 @@
     background: #FAF5EE;
 }
 
+.rentnow-calendar-group {
+    display: flex;
+}
+
 .rentnow-first-calendar,
 .rentnow-second-calendar {
     width: 355px;
