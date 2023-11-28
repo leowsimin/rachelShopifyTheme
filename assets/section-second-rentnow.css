@@ -44,9 +44,6 @@
 .rentnow-first-months {
     justify-content: center;
     text-align: center;
-
-    margin: 0;
-    margin-top: 5px;
 }
 
 .rentnow-first-months p {
@@ -57,4 +54,7 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -2px;
+
+    margin: 0;
+    margin-top: 5px;
 }
