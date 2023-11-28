@@ -79,6 +79,8 @@
 .rentnow-first-days {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 
     color: #0D2610;
     font-family: JejuMyeongjo;
