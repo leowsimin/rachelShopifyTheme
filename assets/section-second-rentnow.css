@@ -41,4 +41,12 @@
     background: #FFFCF8;
 }
 
-.rentnow-first-months p {}
+.rentnow-first-months p {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2px;
+}
