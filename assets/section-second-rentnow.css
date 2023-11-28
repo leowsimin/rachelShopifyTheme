@@ -90,6 +90,9 @@
 }
 
 .rentnow-first-days p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     width: 46px;
 
 }
