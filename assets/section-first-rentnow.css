@@ -130,5 +130,7 @@
     line-height: normal;
     letter-spacing: -3px;
 
+    margin-left: 12%;
+    margin-right: 12%;
     z-index: 2;
 }
