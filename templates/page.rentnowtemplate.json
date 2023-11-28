@@ -12,10 +12,16 @@
       "type": "rentnow-first-section",
       "settings": {
       }
+    },
+    "0f329577-40ae-4889-9ef2-e445a7af4966": {
+      "type": "rentnow-second-section",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "f24762a8-10a1-49df-8b2f-181266ac39b1"
+    "f24762a8-10a1-49df-8b2f-181266ac39b1",
+    "0f329577-40ae-4889-9ef2-e445a7af4966"
   ]
 }
