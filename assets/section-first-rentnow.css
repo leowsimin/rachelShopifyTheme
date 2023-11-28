@@ -118,6 +118,10 @@
 
 .rentnow-subheader-container4 {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    display: flex;
     text-align: center;
     font-family: JejuMyeongjo;
     font-size: 60px;
