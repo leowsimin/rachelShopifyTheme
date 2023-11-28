@@ -107,5 +107,6 @@
 
 .rentnow-subheader-container3 {
     position: absolute;
-
+    display: flex;
+    justify-content: space-between;
 }
