@@ -41,6 +41,11 @@
     background: #FFFCF8;
 }
 
+.rentnow-first-months {
+    justify-content: center;
+    text-align: center;
+}
+
 .rentnow-first-months p {
     color: #0D2610;
     font-family: JejuMyeongjo;
