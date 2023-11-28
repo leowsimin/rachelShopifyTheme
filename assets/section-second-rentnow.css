@@ -1,6 +1,8 @@
 .rentnow-second-section {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .rentnow-second-section h1 {
@@ -14,8 +16,8 @@
 }
 
 .rentnow-header2-container1 {
-    width: 900px;
-    height: 550px;
+    width: 700px;
+    height: 750px;
 
     border-radius: 10px;
     border: 1px solid #000;
