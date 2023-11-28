@@ -129,6 +129,8 @@
 .rentnow-subheader-container5 {
     display: flex;
     text-align: center;
+
+    margin-bottom: 20px;
 }
 
 .rentnow-subheader-container5 h2 {
