@@ -182,4 +182,7 @@
     background-color: #FFA665;
 }
 
-.rentnow-end-date {}
+.rentnow-end-date {
+    stroke-width: 1px;
+    stroke: #FFA665;
+}
