@@ -192,4 +192,6 @@
     border-radius: 50%;
 }
 
-.rentnow-selected-date {}
+.rentnow-selected-date {
+    background-color: #FFA665;
+}
