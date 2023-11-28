@@ -118,6 +118,9 @@
 .rentnow-subheader-container4 {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .rentnow-subheader-container4 {
