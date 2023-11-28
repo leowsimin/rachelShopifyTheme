@@ -41,12 +41,14 @@
     background: #FFFCF8;
 }
 
-.rentnow-first-months {
+.rentnow-first-months,
+.rentnow-second-months {
     justify-content: center;
     text-align: center;
 }
 
-.rentnow-first-months p {
+.rentnow-first-months p,
+.rentnow-second-months p {
     color: #0D2610;
     font-family: JejuMyeongjo;
     font-size: 30px;
@@ -60,7 +62,8 @@
     margin-bottom: 15px;
 }
 
-.rentnow-first-weekdays {
+.rentnow-first-weekdays,
+.rentnow-second-weekdays {
     display: flex;
     color: #0D2610;
     font-family: JejuMyeongjo;
@@ -82,7 +85,8 @@
     border-bottom: solid 1px #000;
 }
 
-.rentnow-first-days {
+.rentnow-first-days,
+.rentnow-second-days {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -97,7 +101,8 @@
     letter-spacing: -1px;
 }
 
-.rentnow-first-days p {
+.rentnow-first-days p,
+.rentnow-second-days p {
     display: flex;
     justify-content: center;
     text-align: center;
