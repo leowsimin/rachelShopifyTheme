@@ -110,4 +110,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-left: 18%;
+    padding-right: 18%;
 }
