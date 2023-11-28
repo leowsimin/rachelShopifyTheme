@@ -193,7 +193,9 @@
 }
 
 .rentnow-selected-date {
-    background: rgba(255, 166, 101, 0.50);
+    background-color: rgba(255, 166, 101, 0.50);
 }
 
-.rentnow-free-date {}
+.rentnow-free-date {
+    background-color: rgba(138, 148, 127, 0.50);
+}
