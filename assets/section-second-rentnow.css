@@ -119,3 +119,12 @@
     line-height: normal;
     letter-spacing: -1px;
 }
+
+.rentnow-calendar-legend {
+    display: flex;
+    flex-direction: column;
+}
+
+.rentnow-subheader-container4 {
+    display: flex;
+}
