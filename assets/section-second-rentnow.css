@@ -107,6 +107,10 @@
     justify-content: center;
     text-align: center;
     width: 45px;
+
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .rentnow-nextdays,
