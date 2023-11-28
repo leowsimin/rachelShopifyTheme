@@ -115,4 +115,6 @@
     padding-right: 10%;
 }
 
-.rentnow-subheader-container4 {}
+.rentnow-subheader-container4 {
+    display: flex;
+}
