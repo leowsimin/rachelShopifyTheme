@@ -103,5 +103,14 @@
             #FAF5EE 100%);
 }
 
+.rentnow-subheader-container3 {
+    position: relative;
+}
 
-.rentnow-subheader-container3 {}
+.rentnow-subheader-container3 svg {
+    position: absolute;
+}
+
+.rentnow-subheader-container3 p {
+    position: absolute;
+}
