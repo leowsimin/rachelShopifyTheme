@@ -24,7 +24,8 @@
     background: #FAF5EE;
 }
 
-.rentnow-first-calendar .rentnow-second-calendar {
+.rentnow-first-calendar,
+.rentnow-second-calendar {
     width: 355px;
     height: 320px;
 
