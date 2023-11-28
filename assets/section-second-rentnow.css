@@ -157,4 +157,12 @@
     margin-top: 20px;
 }
 
-.rentnow-header2-container2 p {}
+.rentnow-header2-container2 p {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
