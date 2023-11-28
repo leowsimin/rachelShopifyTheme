@@ -92,4 +92,6 @@
     padding-right: 10%;
 }
 
-.rentnow-first-days p {}
+.rentnow-first-days p {
+    width: 46px;
+}
