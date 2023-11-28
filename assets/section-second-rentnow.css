@@ -17,7 +17,7 @@
 
 .rentnow-header2-container1 {
     width: 730px;
-    height: 450px;
+    height: 480px;
 
     border-radius: 10px;
     border: 1px solid #000;
@@ -26,7 +26,7 @@
 
 .rentnow-calendar-group {
     display: flex;
-    padding: 10px 20px 10px 20px;
+    padding: 20px;
 
     justify-content: space-between;
 }
