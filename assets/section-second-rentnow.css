@@ -151,5 +151,6 @@
 
 .rentnow-header2-container2 {
     display: flex;
-
+    text-align: center;
+    justify-content: center;
 }
