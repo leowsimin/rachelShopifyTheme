@@ -221,7 +221,7 @@ months.forEach((month, index) => {
 
 // Event listener for dropdown change
 dropdown.addEventListener('change', function() {
-  const selectedMonth = dropdown.value;
+  const selectedMonth = dropdown.text;
   document.querySelector('.rentnow-first-month-select').textContent = selectedMonth;
 });
 
