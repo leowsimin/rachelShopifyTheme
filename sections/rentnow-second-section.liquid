@@ -223,13 +223,7 @@ const months = [
 document.querySelector('.rentnow-first-month-select').innerHTML = months[date.getMonth()];
 
 const rentNowFirstMonthLabel = document.getElementById('rentNowFirstMonthLabel');
-
-const dropdownMonth = document.getElementById('rentnow-first-month-dropdownmenu');
-months.forEach((month, index) => {
-  const option = document.createElement('option');
-  option.value = month;
-  dropdownMonth.add(option);
-});
+const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu");
 
 // Event listener for label click
 rentNowFirstMonthLabel.addEventListener('click', function() {
