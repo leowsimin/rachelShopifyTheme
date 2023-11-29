@@ -43,6 +43,7 @@
 
 .rentnow-first-months,
 .rentnow-second-months {
+    display: flex;
     justify-content: center;
     text-align: center;
 }
