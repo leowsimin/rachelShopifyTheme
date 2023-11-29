@@ -254,14 +254,14 @@ months.forEach((month, index) => {
 });
 
 // Event listener for label click
-rentNowFirstMonthLabel.addEventListener('click', function() {
+rentNowFirstYearLabel.addEventListener('click', function() {
   dropdown.style.display = 'block';  
 });
 
 // Event listener for dropdown change
 dropdown.addEventListener('change', function() {
-  const selectedMonth = dropdown.value;
-  rentNowFirstMonthLabel.textContent = selectedMonth;
+  const selectedYear = dropdown.value;
+  rentNowFirstYearLabel.textContent = selectedYear;
   dropdown.style.display = 'none';
 });
 
