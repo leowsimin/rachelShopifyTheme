@@ -14,18 +14,18 @@
         <div class="rentnow-first-months">
           <label for="rentnow-first-month-dropdownmenu" class="rentnow-first-month-select" id="rentNowFirstLabel"></label> 
           <select id="rentnow-first-month-dropdownmenu"> 
-              <option value="january">January</option> 
-              <option value="february">February</option> 
-              <option value="march">March</option> 
-              <option value="april">April</option>
-              <option value="may">May</option> 
-              <option value="june">June</option> 
-              <option value="july">July</option> 
-              <option value="august">August</option> 
-              <option value="september">September</option> 
-              <option value="october">October</option> 
-              <option value="november">November</option>
-              <option value="december">December</option> 
+              <option value="January">January</option> 
+              <option value="February">February</option> 
+              <option value="March">March</option> 
+              <option value="April">April</option>
+              <option value="May">May</option> 
+              <option value="June">June</option> 
+              <option value="July">July</option> 
+              <option value="August">August</option> 
+              <option value="September">September</option> 
+              <option value="October">October</option> 
+              <option value="November">November</option>
+              <option value="December">December</option> 
           </select>
           <p class="rentnow-first-month-select"></p>
           <p class="rentnow-first-year-select">&nbsp;2023</p>
@@ -228,7 +228,7 @@ rentNowFirstLabel.addEventListener('click', function() {
 
 // Event listener for dropdown change
 dropdown.addEventListener('change', function() {
-  const selectedMonth = dropdown.value.charAt(0).toUpperCase() + dropdown.value.slice(1).toLowerCase();
+  const selectedMonth = dropdown.value;
   rentNowFirstLabel.textContent = selectedMonth;
   dropdown.style.display = 'none';
 });
