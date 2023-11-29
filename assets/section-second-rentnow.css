@@ -219,3 +219,11 @@
     border: 1px solid #000;
     background-color: #FFFCF8;
 }
+
+#rentnow-first-month-dropdownmenu {
+    transform: translate()
+}
+
+#rentnow-second-month-dropdownmenu {
+    transform: translate()
+}
