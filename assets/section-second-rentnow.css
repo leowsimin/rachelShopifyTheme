@@ -221,9 +221,9 @@
 }
 
 #rentnow-first-month-dropdownmenu {
-    transform: translate()
+    transform: translate(10%, 15%);
 }
 
 #rentnow-second-month-dropdownmenu {
-    transform: translate()
+    transform: translate(10%, 15%);
 }
