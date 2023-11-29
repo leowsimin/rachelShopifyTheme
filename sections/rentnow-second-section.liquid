@@ -216,8 +216,7 @@ document.querySelector('.rentnow-first-month-select').innerHTML = months[date.ge
 const dropdown = document.getElementById('rentnow-first-month-dropdownmenu');
 months.forEach((month, index) => {
   const option = document.createElement('option');
-  option.value = month.toLowerCase();
-  option.text = month;
+  option.value = month;
   dropdown.add(option);
 });
 
@@ -228,7 +227,7 @@ rentNowFirstLabel.addEventListener('click', function() {
 
 // Event listener for dropdown change
 dropdown.addEventListener('change', function() {
-  const selectedMonth = dropdown.options[dropdown.selectedIndex].text;
+  const selectedMonth = dropdown.value;
   rentNowFirstLabel.textContent = selectedMonth;
   dropdown.style.display = 'none';
 });
