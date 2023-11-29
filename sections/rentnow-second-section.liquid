@@ -27,8 +27,21 @@
               <option value="November">November</option>
               <option value="December">December</option> 
           </select>
-          <p class="rentnow-first-month-select"></p>
-          <p class="rentnow-first-year-select">&nbsp;2023</p>
+          <label for="rentnow-first-year-dropdownmenu" class="rentnow-first-year-select" id="rentNowFirstLabel"></label> 
+          <select id="rentnow-first-month-dropdownmenu"> 
+              <option value="January">January</option> 
+              <option value="February">February</option> 
+              <option value="March">March</option> 
+              <option value="April">April</option>
+              <option value="May">May</option> 
+              <option value="June">June</option> 
+              <option value="July">July</option> 
+              <option value="August">August</option> 
+              <option value="September">September</option> 
+              <option value="October">October</option> 
+              <option value="November">November</option>
+              <option value="December">December</option> 
+          </select>
         </div>
         <div class="rentnow-first-weekdays">
           <p>Su</p>
@@ -192,7 +205,7 @@
 
 {% javascript %}
 
-const rentNowFirstLabel = document.getElementById('rentNowFirstLabel');
+//Inserting Current Month/Year
 
 const date = new Date();
 
@@ -212,6 +225,12 @@ const months = [
 ];
 
 document.querySelector('.rentnow-first-month-select').innerHTML = months[date.getMonth()];
+
+console.log("date")
+console.log(date.getYear())
+
+// DropDown Menu for First Month
+const rentNowFirstLabel = document.getElementById('rentNowFirstLabel');
 
 const dropdown = document.getElementById('rentnow-first-month-dropdownmenu');
 months.forEach((month, index) => {
