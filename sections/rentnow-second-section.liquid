@@ -224,29 +224,29 @@ document.querySelector('.rentnow-first-month-select').innerHTML = months[date.ge
 
 const rentNowFirstMonthLabel = document.getElementById('rentNowFirstMonthLabel');
 
-const dropdown = document.getElementById('rentnow-first-month-dropdownmenu');
+const dropdownMonth = document.getElementById('rentnow-first-month-dropdownmenu');
 months.forEach((month, index) => {
   const option = document.createElement('option');
   option.value = month;
-  dropdown.add(option);
+  dropdownMonth.add(option);
 });
 
 // Event listener for label click
 rentNowFirstMonthLabel.addEventListener('click', function() {
-  dropdown.style.display = 'block';  
+  dropdownMonth.style.display = 'block';  
 });
 
 // Event listener for dropdown change
-dropdown.addEventListener('change', function() {
+dropdownMonth.addEventListener('change', function() {
   const selectedMonth = dropdown.value;
   rentNowFirstMonthLabel.textContent = selectedMonth;
-  dropdown.style.display = 'none';
+  dropdownMonth.style.display = 'none';
 });
 
 // DropDown Menu for First Year
 const rentNowFirstYearLabel = document.getElementById('rentNowFirstYearLabel');
 
-const dropdown = document.getElementById('rentnow-first-year-dropdownmenu');
+const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 
 // Get the current year
 const currentYear = new Date().getFullYear();
@@ -256,19 +256,19 @@ for (let year = currentYear; year <= currentYear + 10; year++) {
   const option = document.createElement('option');
   option.value = year.toString();
   option.text = year.toString();
-  dropdown.add(option);
+  dropdownYear.add(option);
 }
 
 // Event listener for label click
 rentNowFirstYearLabel.addEventListener('click', function() {
-  dropdown.style.display = 'block';  
+  dropdownYear.style.display = 'block';  
 });
 
 // Event listener for dropdown change
-dropdown.addEventListener('change', function() {
+dropdownYear.addEventListener('change', function() {
   const selectedYear = dropdown.value;
   rentNowFirstYearLabel.textContent = selectedYear;
-  dropdown.style.display = 'none';
+  dropdownYear.style.display = 'none';
 });
 
 
