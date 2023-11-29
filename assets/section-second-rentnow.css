@@ -216,5 +216,6 @@
     font-weight: 400;
     line-height: normal;
 
-    background-color: ;
+    border: 1px solid #000;
+    background-color: #FFFCF8;
 }
