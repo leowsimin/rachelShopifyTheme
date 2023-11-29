@@ -209,6 +209,9 @@
 
 const date = new Date();
 
+console.log(date)
+console.log(date.getFullYear())
+
 const months = [
   "January",
   "February",
@@ -225,9 +228,6 @@ const months = [
 ];
 
 document.querySelector('.rentnow-first-month-select').innerHTML = months[date.getMonth()];
-
-console.log(date)
-console.log(date.getFullYear())
 
 // DropDown Menu for First Month
 const rentNowFirstLabel = document.getElementById('rentNowFirstLabel');
