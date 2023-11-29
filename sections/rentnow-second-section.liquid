@@ -225,4 +225,10 @@ dropdown.addEventListener('change', function() {
   document.querySelector('.rentnow-first-month-select').textContent = selectedMonth;
 });
 
+// Event listener for label click
+dropdownLabel.addEventListener('click', function() {
+  // Toggle the visibility of the dropdown menu
+  dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+});
+
 {% endjavascript %}

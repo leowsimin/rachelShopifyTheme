@@ -200,3 +200,7 @@
 .rentnow-free-date {
     background-color: rgba(138, 148, 127, 0.50);
 }
+
+#rentnow-first-month-dropdownmenu {
+    display: none;
+}
