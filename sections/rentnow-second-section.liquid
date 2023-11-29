@@ -211,4 +211,18 @@ const months = [
 
 document.querySelector('.rentnow-first-month-select').innerHTML = months[date.getMonth()];
 
+const dropdown = document.getElementById('rentnow-first-month-dropdownmenu');
+months.forEach((month, index) => {
+  const option = document.createElement('option');
+  option.value = month.toLowerCase();
+  option.text = month;
+  dropdown.add(option);
+});
+
+// Event listener for dropdown change
+dropdown.addEventListener('change', function() {
+  const selectedMonth = dropdown.value;
+  document.querySelector('.rentnow-first-month-select').textContent = selectedMonth;
+});
+
 {% endjavascript %}
