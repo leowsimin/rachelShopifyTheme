@@ -227,7 +227,9 @@ const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu"
 
 // Event listener for label click
 rentNowFirstMonthLabel.addEventListener('click', function() {
-  dropdownMonth.style.display = 'block';  
+  dropdownMonth.style.display = 'block'; 
+  dropdownMonth.size= "5";
+  dropdownMonth.click();
 });
 
 // Event listener for dropdown change
@@ -246,9 +248,8 @@ const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 // Event listener for label click
 rentNowFirstYearLabel.addEventListener('click', function(event) {
   dropdownYear.style.display = 'block';
-  dropdownYear.size = 5; // Set the desired number of visible options
+  dropdownYear.size = 5;
   dropdownYear.click();
-  console.log("i opened lol")
 });
 
 // Event listener for dropdown change
