@@ -245,10 +245,10 @@ const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 
 // Event listener for label click
 rentNowFirstYearLabel.addEventListener('click', function(event) {
-  console.log("Label clicked");
   dropdownYear.style.display = 'block';
-  console.log("menu clicked");
+  dropdownYear.size = 5; // Set the desired number of visible options
   dropdownYear.click();
+  console.log("i opened lol")
 });
 
 // Event listener for dropdown change
