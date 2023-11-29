@@ -208,5 +208,13 @@
     display: none;
     position: absolute;
 
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
+    background-color: ;
 }
