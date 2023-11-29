@@ -61,6 +61,8 @@
     margin: 0;
     margin-top: 15px;
     margin-bottom: 15px;
+
+    position: relative;
 }
 
 .rentnow-first-weekdays,
@@ -204,4 +206,7 @@
 #rentnow-first-month-dropdownmenu,
 #rentnow-first-year-dropdownmenu {
     display: none;
+    position: absolute;
+
+
 }
