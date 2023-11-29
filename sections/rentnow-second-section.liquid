@@ -12,7 +12,7 @@
     <div class="rentnow-calendar-group">
       <div class="rentnow-first-calendar">
         <div class="rentnow-first-months">
-          <label for="rentnow-first-month-dropdownmenu" class="rentnow-first-month-select"></label> 
+          <label for="rentnow-first-month-dropdownmenu" class="rentnow-first-month-select" id="rentnow-first-label"></label> 
           <select id="rentnow-first-month-dropdownmenu"> 
               <option value="january">January</option> 
               <option value="february">February</option> 
@@ -226,8 +226,7 @@ dropdown.addEventListener('change', function() {
 });
 
 // Event listener for label click
-dropdownLabel.addEventListener('click', function() {
-  // Toggle the visibility of the dropdown menu
+rentnow-first-label.addEventListener('click', function() {
   dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
 });
 
