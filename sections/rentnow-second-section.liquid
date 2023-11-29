@@ -228,7 +228,7 @@ rentNowFirstLabel.addEventListener('click', function() {
 
 // Event listener for dropdown change
 dropdown.addEventListener('change', function() {
-  const selectedMonth = dropdown.value;
+  const selectedMonth = dropdown.value.charAt(0).toUpperCase() + dropdown.value.slice(1).toLowerCase();
   rentNowFirstLabel.textContent = selectedMonth;
   dropdown.style.display = 'none';
 });
