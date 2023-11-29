@@ -247,6 +247,7 @@ const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 rentNowFirstYearLabel.addEventListener('click', function(event) {
   dropdownYear.style.display = 'block';
   if (event.target === rentNowFirstYearLabel) {
+    console.log("menu clicked")
     dropdownYear.click();
   }
 });
