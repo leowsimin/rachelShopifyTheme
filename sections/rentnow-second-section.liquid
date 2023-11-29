@@ -219,21 +219,19 @@ months.forEach((month, index) => {
   dropdown.add(option);
 });
 
-// Event listener for dropdown change
-dropdown.addEventListener('change', function() {
-  const selectedMonth = dropdown.value;
-  dropdownLabel.textContent = "Selected Month: " + selectedMonth;
-  dropdownLabel.style.display = 'none';  // Hide the label after selecting an option
-});
-
 // Event listener for label click
 rentNowFirstLabel.addEventListener('click', function() {
-  dropdown.style.display = 'block';  // Always show the dropdown when the label is clicked
+  dropdown.style.display = 'block';  
 });
 
-// Event listener for option click
+// Event listener for dropdown change
+dropdown.addEventListener('change', function() {
+  const selectedMonth = dropdown.text;
+  rentNowFirstLabel.textContent = selectedMonth;
+});
+
 dropdown.addEventListener('click', function() {
-  dropdownLabel.style.display = 'block';  // Show the label when an option is clicked
+  dropdownLabel.style.display = 'none';  // Show the label when an option is clicked
 });
 
 {% endjavascript %}
