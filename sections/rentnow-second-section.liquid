@@ -243,17 +243,6 @@ document.querySelector('.rentnow-first-year-select').innerHTML = "&nbsp;" + date
 
 const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 
-// Get the current year
-const currentYear = new Date().getFullYear();
-
-// Populate the dropdown with a range of years
-for (let year = currentYear; year <= currentYear + 10; year++) {
-  const option = document.createElement('option');
-  option.value = year.toString();
-  option.text = year.toString();
-  dropdownYear.add(option);
-}
-
 // Event listener for label click
 rentNowFirstYearLabel.addEventListener('click', function() {
   dropdownYear.style.display = 'block';  
@@ -262,7 +251,7 @@ rentNowFirstYearLabel.addEventListener('click', function() {
 // Event listener for dropdown change
 dropdownYear.addEventListener('change', function() {
   const selectedYear = dropdownYear.value;
-  rentNowFirstYearLabel.textContent = selectedYear;
+  rentNowFirstYearLabel.textContent = "&nbsp;" + selectedYear;
   dropdownYear.style.display = 'none';
 });
 
