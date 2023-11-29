@@ -220,6 +220,12 @@
     background-color: #FFFCF8;
 }
 
+#rentnow-first-month-dropdownmenu option,
+#rentnow-first-year-dropdownmenu option {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 #rentnow-first-month-dropdownmenu {
     transform: translate(-32px, 30%);
 }
