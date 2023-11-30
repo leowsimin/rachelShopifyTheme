@@ -206,7 +206,6 @@ dropdownMonth.addEventListener('change', function() {
   // Date change with Month
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
-  console.log(selectedMonthIndex);
 
     // Dates before Month
   const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
@@ -280,8 +279,5 @@ dropdownYear.addEventListener('change', function() {
   rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
   dropdownYear.style.display = 'none';
 });
-
-
-
 
 {% endjavascript %}
