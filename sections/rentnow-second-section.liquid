@@ -239,7 +239,7 @@ const firstFirstDayIndex = date.getDay();
 
 let days = "";
 
-for (let x = firstFirstDayIndex; x > 0; x--) {
+for (let x = firstFirstDayIndex - 1; x > 0; x--) {
   days += `<p class="rentnow-prev-days">${firstPrevLastDay - x +  1}</p>`; 
 }
 
