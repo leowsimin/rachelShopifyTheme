@@ -263,7 +263,7 @@ dropdownYear.addEventListener('change', function() {
 const firstMonthDays = document.querySelector(".rentnow-first-days");
 let days = "";
 
-const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 for (let i = 1; i <= lastDay; i++) {
   days += `<p>${i}</p>`;
