@@ -228,8 +228,28 @@
 
 #rentnow-first-month-dropdownmenu {
     transform: translate(-32px, 30%);
+    scrollbar-width: thin;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
 }
 
 #rentnow-first-year-dropdownmenu {
     transform: translate(63px, 42%);
+    scrollbar-width: thin;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+#rentnow-first-month-dropdownmenu::-webkit-scrollbar,
+#rentnow-first-year-dropdownmenu::-webkit-scrollbar {
+    width: 5px;
+    /* Set a width for Webkit browsers (Chrome, Safari, etc.) */
+}
+
+#rentnow-first-month-dropdownmenu::-webkit-scrollbar-thumb,
+#rentnow-first-year-dropdownmenu::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Make the thumb (the draggable part) transparent */
 }
