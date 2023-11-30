@@ -219,6 +219,14 @@ dropdownMonth.addEventListener('change', function() {
     days += `<p>${i}</p>`;
   }
 
+  // Dates after Month
+  const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
+  const firstNextDays = 14 - firstLastDayIndex - 1;
+
+  for (let j = 1; j<= firstNextDays; j++) {
+    days += `<p class="rentnow-nextdays">${j}</p>`;
+  }
+  
   firstMonthDays.innerHTML = days;
 
 });
