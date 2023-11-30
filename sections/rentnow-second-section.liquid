@@ -240,8 +240,9 @@ const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDat
 
 for (let x = firstFirstDayIndex; x > 0; x--) {
   prevMonthContent += `<p class="rentnow-prev-days">${firstPrevLastDay - x + 1}</p>`;
-  firstMonthDays.innerHTML = prevMonthContent;
 }
+
+firstMonthDays.innerHTML = prevMonthContent;
 
 // Dates correspond to Month and Year
 let days = "";
