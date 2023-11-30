@@ -281,7 +281,7 @@ dropdownYear.addEventListener('change', function() {
   rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
   dropdownYear.style.display = 'none';
 
-  
+  date.setFullYear(selectedYear);
 });
 
 {% endjavascript %}
