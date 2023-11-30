@@ -162,8 +162,6 @@
 
 const date = new Date();
 
-date.setFullYear(2023);
-
 const months = [
   "January",
   "February",
@@ -282,6 +280,8 @@ dropdownYear.addEventListener('change', function() {
   const selectedYear = dropdownYear.value;
   rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
   dropdownYear.style.display = 'none';
+
+  
 });
 
 {% endjavascript %}
