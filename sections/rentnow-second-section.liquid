@@ -238,7 +238,9 @@ function updateCalendar() {
   }
 
   firstMonthDays.innerHTML = days;
-};
+}
+
+updateCalendar();
 
 // Dates before Month
 const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
