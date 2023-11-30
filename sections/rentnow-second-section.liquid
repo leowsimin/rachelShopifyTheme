@@ -196,7 +196,9 @@ dropdownMonth.addEventListener('change', function() {
   dropdownMonth.style.display = 'none';
 
   // Date change with Month
-  const selectedMonthIndex = months.indexO
+  const selectedMonthIndex = months.indexOf(selectedMonth);
+  date.setMonth(selectedMonthIndex);
+  console.log(selectedMonthIndex);
 });
 
 // DropDown Menu for First Year
