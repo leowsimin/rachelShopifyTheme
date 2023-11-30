@@ -202,6 +202,8 @@ dropdownMonth.addEventListener('change', function() {
 
   // Dates correspond to Month and Year
   const firstMonthDays = document.querySelector(".rentnow-first-days");
+  let days = "";
+
   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
   for (let i = 1; i <= lastDay; i++) {
@@ -231,15 +233,16 @@ dropdownYear.addEventListener('change', function() {
   dropdownYear.style.display = 'none';
 });
 
-// Dates correspond to Month and Year
-const firstMonthDays = document.querySelector(".rentnow-first-days");
-let days = "";
+  // Dates correspond to Month and Year
+  const firstMonthDays = document.querySelector(".rentnow-first-days");
+  let days = "";
 
-const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-for (let i = 1; i <= lastDay; i++) {
-  days += `<p>${i}</p>`;
-  firstMonthDays.innerHTML = days;
-}
+  for (let i = 1; i <= lastDay; i++) {
+    days += `<p>${i}</p>`;
+    firstMonthDays.innerHTML = days;
+  }
+
 
 {% endjavascript %}
