@@ -267,7 +267,7 @@ const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).g
 const firstNextDays = 14 - firstLastDayIndex - 1;
 
 for (let j = 1; j<= firstNextDays; j++) {
-  days += `<p>${j}</p>`;
+  days += `<p class="rentnow-nextdays">${j}</p>`;
   firstMonthDays.innerHTML = days;
 }
 
