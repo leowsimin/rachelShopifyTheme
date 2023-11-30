@@ -228,10 +228,8 @@
 
 #rentnow-first-month-dropdownmenu {
     transform: translate(-32px, 30%);
-    scrollbar-width: thin;
 }
 
 #rentnow-first-year-dropdownmenu {
     transform: translate(63px, 42%);
-    scrollbar-width: thin;
 }
