@@ -35,7 +35,10 @@
               <option value="2026">2026</option> 
               <option value="2027">2027</option>
               <option value="2028">2028</option> 
-              <option value="2029">2029</option> 
+              <option value="2029">2030</option>
+              <option value="2029">2031</option> 
+              <option value="2029">2032</option> 
+              <option value="2029">2033</option>  
           </select>
         </div>
         <div class="rentnow-first-weekdays">
@@ -174,11 +177,16 @@ const months = [
   "December",
 ];
 
-// DropDown Menu for First Month
+// DropDown Menu for First Month and Year
 document.querySelector('.rentnow-first-month-select').innerHTML = months[date.getMonth()];
 
 const rentNowFirstMonthLabel = document.getElementById('rentNowFirstMonthLabel');
 const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu");
+
+const rentNowFirstYearLabel = document.getElementById('rentNowFirstYearLabel');
+document.querySelector('.rentnow-first-year-select').innerHTML = "&nbsp;" + date.getFullYear();
+
+const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 
 // Event listener for label click
 rentNowFirstMonthLabel.addEventListener('click', function() {
@@ -231,26 +239,6 @@ dropdownMonth.addEventListener('change', function() {
 
 });
 
-// DropDown Menu for First Year
-const rentNowFirstYearLabel = document.getElementById('rentNowFirstYearLabel');
-document.querySelector('.rentnow-first-year-select').innerHTML = "&nbsp;" + date.getFullYear();
-
-const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
-
-// Event listener for label click
-rentNowFirstYearLabel.addEventListener('click', function(event) {
-  dropdownYear.style.display = 'block';
-  dropdownYear.size = 5;
-  dropdownYear.click();
-});
-
-// Event listener for dropdown change
-dropdownYear.addEventListener('change', function() {
-  const selectedYear = dropdownYear.value;
-  rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
-  dropdownYear.style.display = 'none';
-});
-
 // Dates before Month
 const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
 const firstFirstDayIndex = date.getDay();
@@ -278,5 +266,22 @@ for (let j = 1; j<= firstNextDays; j++) {
   days += `<p class="rentnow-nextdays">${j}</p>`;
   firstMonthDays.innerHTML = days;
 }
+
+// Event listener for label click
+rentNowFirstYearLabel.addEventListener('click', function(event) {
+  dropdownYear.style.display = 'block';
+  dropdownYear.size = 7;
+  dropdownYear.click();
+});
+
+// Event listener for dropdown change
+dropdownYear.addEventListener('change', function() {
+  const selectedYear = dropdownYear.value;
+  rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
+  dropdownYear.style.display = 'none';
+});
+
+
+
 
 {% endjavascript %}
