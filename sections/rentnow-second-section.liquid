@@ -199,29 +199,30 @@ rentNowFirstMonthLabel.addEventListener('click', function() {
 
 // Event listener for dropdown change
 dropdownMonth.addEventListener('change', function() {
-
-  // Month Title Change
   const selectedMonth = dropdownMonth.value;
   rentNowFirstMonthLabel.textContent = selectedMonth;
   dropdownMonth.style.display = 'none';
 
-  // Date change with Month
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
 
-    // Dates before Month
-  const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
-  const firstFirstDayIndex = date.getDay();
+  updateCalendar();
+});
 
+// Function to update the calendar
+function updateCalendar() {
+  const firstMonthDays = document.querySelector(".rentnow-first-days");
   let days = "";
 
-  for (let x = firstFirstDayIndex - 1; x > 0; x--) {
-    days += `<p class="rentnow-prevdays">${firstPrevLastDay - x +  1}</p>`; 
+  // Dates before Month
+  const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+  const lastDayPrevMonth = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+
+  for (let x = firstDay - 1; x >= 0; x--) {
+    days += `<p class="rentnow-prevdays">${lastDayPrevMonth - x}</p>`;
   }
 
   // Dates correspond to Month and Year
-  const firstMonthDays = document.querySelector(".rentnow-first-days");
-
   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
   for (let i = 1; i <= lastDay; i++) {
@@ -229,16 +230,15 @@ dropdownMonth.addEventListener('change', function() {
   }
 
   // Dates after Month
-  const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-  const firstNextDays = 7 - firstLastDayIndex - 1;
+  const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
+  const nextDays = 6 - lastDayIndex;
 
-  for (let j = 1; j<= firstNextDays; j++) {
+  for (let j = 1; j <= nextDays; j++) {
     days += `<p class="rentnow-nextdays">${j}</p>`;
   }
 
   firstMonthDays.innerHTML = days;
-
-});
+};
 
 // Dates before Month
 const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
