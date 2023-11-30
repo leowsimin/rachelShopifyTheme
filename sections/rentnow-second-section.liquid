@@ -260,13 +260,15 @@ const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 for (let i = 1; i <= lastDay; i++) {
   days += `<p>${i}</p>`;
-  firstMonthDays.innerHTML = days;
 }
 
 // Dates after Month
 const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
 const firstNextDays = 7 - firstLastDayIndex - 1;
 
-for (let j = 1; )
+for (let j = 1; j<= firstNextDays; j++) {
+  days += `<p>${j}</p>`;
+  firstMonthDays.innerHTML = days;
+}
 
 {% endjavascript %}
