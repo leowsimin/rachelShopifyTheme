@@ -231,20 +231,8 @@ dropdownYear.addEventListener('change', function() {
   dropdownYear.style.display = 'none';
 });
 
-// Dates Before actual Month
-const firstMonthDays = document.querySelector(".rentnow-first-days");
-
-let prevMonthContent = "";
-const firstFirstDayIndex = date.getDate();
-const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-
-for (let x = firstFirstDayIndex; x > 0; x--) {
-  prevMonthContent += `<p class="rentnow-prev-days">${firstPrevLastDay - x + 1}</p>`;
-}
-
-firstMonthDays.innerHTML = prevMonthContent;
-
 // Dates correspond to Month and Year
+const firstMonthDays = document.querySelector(".rentnow-first-days");
 let days = "";
 
 const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
@@ -253,7 +241,5 @@ for (let i = 1; i <= lastDay; i++) {
   days += `<p>${i}</p>`;
   firstMonthDays.innerHTML = days;
 }
-
-
 
 {% endjavascript %}
