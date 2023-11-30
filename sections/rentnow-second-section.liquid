@@ -243,11 +243,12 @@ for (let i = 1; i <= lastDay; i++) {
 }
 
 // Dates Before and After actual Month
+let prevMonthContent = ""; // Added this line
 const firstFirstDayIndex = date.getDate();
 const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 
 for (let x = firstFirstDayIndex; x > 0; x--) {
-  days += `<p class="rentnow-prev-days">${firstPrevLastDay - x + 1}</p>`
+  prevMonthContent += `<p class="rentnow-prev-days">${firstPrevLastDay - x + 1}</p>`
 }
 
 
