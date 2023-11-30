@@ -217,8 +217,9 @@ dropdownMonth.addEventListener('change', function() {
 
   for (let i = 1; i <= lastDay; i++) {
     days += `<p>${i}</p>`;
-    firstMonthDays.innerHTML = days;
   }
+
+  firstMonthDays.innerHTML = days;
 
 });
 
