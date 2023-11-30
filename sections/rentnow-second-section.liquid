@@ -235,7 +235,7 @@ dropdownYear.addEventListener('change', function() {
 
 // Dates before Month
 
-const firstPrevLastDay
+const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(); 
 
 
 // Dates correspond to Month and Year
