@@ -201,18 +201,20 @@ dropdownMonth.addEventListener('change', function() {
   console.log(selectedMonthIndex);
 
   // Dates correspond to Month and Year
-  const firstMonthDays = document.querySelector(".rentnow-first-days");
-  let days = "";
-
+  function updateDays() {
+  const daysArray = [];
   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-  days = "";
   for (let i = 1; i <= lastDay; i++) {
-    days += `<p>${i}</p>`;
+    daysArray.push(`<p>${i}</p>`);
   }
 
-  firstMonthDays.innerHTML = days;
+  // Join the array and set the HTML content
+  firstMonthDays.innerHTML = daysArray.join('');
+  }
 
+  // Call the function initially
+  updateDays();
 });
 
 // DropDown Menu for First Year
