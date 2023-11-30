@@ -202,18 +202,9 @@ dropdownMonth.addEventListener('change', function() {
 
   // Dates correspond to Month and Year
   function updateDays() {
-  const fragment = document.createDocumentFragment();
   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-
-  for (let i = 1; i <= lastDay; i++) {
-    const dayElement = document.createElement('p');
-    dayElement.textContent = i;
-    fragment.appendChild(dayElement);
-  }
-
-  // Clear existing content and append the new content
-  firstMonthDays.innerHTML = '';
-  firstMonthDays.appendChild(fragment);
+  const daysHTML = Array.from({ length: lastDay }, (_, i) => `<p>${i + 1}</p>`).join('');
+  firstMonthDays.innerHTML = daysHTML;
   }
 
   // Call the function initially
