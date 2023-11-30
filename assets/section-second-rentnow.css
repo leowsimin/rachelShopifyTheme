@@ -229,9 +229,11 @@
 #rentnow-first-month-dropdownmenu {
     transform: translate(-32px, 30%);
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 #rentnow-first-year-dropdownmenu {
     transform: translate(63px, 42%);
     overflow: hidden;
+    overflow-y: scroll;
 }
