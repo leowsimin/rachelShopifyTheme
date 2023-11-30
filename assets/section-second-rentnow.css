@@ -237,3 +237,8 @@
 #rentnow-first-year-dropdownmenu {
     transform: translate(63px, 42%);
 }
+
+#rentnow-first-month-dropdownmenu::-webkit-scrollbar,
+#rentnow-first-year-dropdownmenu::-webkit-scrollbar {
+    width: 5px;
+}
