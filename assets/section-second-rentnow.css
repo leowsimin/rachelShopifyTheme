@@ -247,9 +247,3 @@
     width: 5px;
     /* Set a width for Webkit browsers (Chrome, Safari, etc.) */
 }
-
-#rentnow-first-month-dropdownmenu::-webkit-scrollbar-thumb,
-#rentnow-first-year-dropdownmenu::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    /* Make the thumb (the draggable part) transparent */
-}
