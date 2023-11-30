@@ -206,7 +206,6 @@ dropdownMonth.addEventListener('change', function() {
 
   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-  days = "";
   for (let i = 1; i <= lastDay; i++) {
     days += `<p>${i}</p>`;
   }
