@@ -92,7 +92,7 @@
 .rentnow-second-days {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
 
     color: #0D2610;
@@ -102,6 +102,7 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
+    margin-left: 18px;
 }
 
 .rentnow-first-days p,
@@ -240,5 +241,5 @@
 
 #rentnow-first-month-dropdownmenu::-webkit-scrollbar,
 #rentnow-first-year-dropdownmenu::-webkit-scrollbar {
-    width: 5px;
+    width: 1px;
 }
