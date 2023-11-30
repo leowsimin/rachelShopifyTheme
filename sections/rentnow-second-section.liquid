@@ -221,12 +221,12 @@ dropdownMonth.addEventListener('change', function() {
 
   // Dates after Month
   const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-  const firstNextDays = 14 - firstLastDayIndex - 1;
+  const firstNextDays = 7 - firstLastDayIndex - 1;
 
   for (let j = 1; j<= firstNextDays; j++) {
     days += `<p class="rentnow-nextdays">${j}</p>`;
   }
-  
+
   firstMonthDays.innerHTML = days;
 
 });
@@ -272,7 +272,7 @@ for (let i = 1; i <= lastDay; i++) {
 
 // Dates after Month
 const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-const firstNextDays = 14 - firstLastDayIndex - 1;
+const firstNextDays = 7 - firstLastDayIndex - 1;
 
 for (let j = 1; j<= firstNextDays; j++) {
   days += `<p class="rentnow-nextdays">${j}</p>`;
