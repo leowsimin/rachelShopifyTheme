@@ -260,12 +260,12 @@ dropdownYear.addEventListener('change', function() {
 });
 
 // Dates in the months
-const firstMonthDays = document.querySelector()
+const firstMonthDays = document.querySelector(".rentnow-first-days");
 let days = "";
 
 for (let i = 1; i <= 31; i++) {
   days += `<p>${i}</p>`;
-  
+  firstMonthDays.innerHTML = days;
 }
 
 
