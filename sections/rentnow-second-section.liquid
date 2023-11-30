@@ -278,39 +278,6 @@ dropdownYear.addEventListener('change', function() {
   const selectedYear = dropdownYear.value;
   rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
   dropdownYear.style.display = 'none';
-
-  // Update the year in the date object
-  date.setFullYear(parseInt(selectedYear));
-
-  // Dates before Month
-  const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
-  const firstFirstDayIndex = date.getDay();
-
-  let days = "";
-
-  for (let x = firstFirstDayIndex - 1; x > 0; x--) {
-    days += `<p class="rentnow-prevdays">${firstPrevLastDay - x +  1}</p>`; 
-  }
-
-  // Dates correspond to Month and Year
-  const firstMonthDays = document.querySelector(".rentnow-first-days");
-
-  const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-
-  for (let i = 1; i <= lastDay; i++) {
-    days += `<p>${i}</p>`;
-  }
-
-  // Dates after Month
-  const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-  const firstNextDays = 7 - firstLastDayIndex - 1;
-
-  for (let j = 1; j<= firstNextDays; j++) {
-    days += `<p class="rentnow-nextdays">${j}</p>`;
-  }
-
-  firstMonthDays.innerHTML = days;
 });
-
 
 {% endjavascript %}
