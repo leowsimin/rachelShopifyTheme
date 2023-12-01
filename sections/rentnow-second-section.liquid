@@ -287,8 +287,15 @@ dropdownYear.addEventListener('change', function() {
 });
 
 // Event Listener for Date selection
-firstMonthdays.addEventListener("click", function() {
-  
-})
+const dateElements = document.querySelectorAll(".rentnow-first-days p");
+dateElements.forEach((element) => {
+  element.addEventListener("click", function () {
+    // Remove the class from all date elements
+    dateElements.forEach((el) => el.classList.remove("rentnow-selected-day"));
+
+    // Add the class to the clicked date
+    element.classList.add("rentnow-selected-day");
+  });
+});
 
 {% endjavascript %}
