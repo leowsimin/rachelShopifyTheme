@@ -256,7 +256,7 @@ const firstMonthDays = document.querySelector(".rentnow-first-days");
 const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 for (let i = 1; i <= lastDay; i++) {
-  days += `<p>${i}</p>`;
+  days += `<p id="firstMonthDays">${i}</p>`;
 }
 
 // Dates after Month
@@ -287,6 +287,8 @@ dropdownYear.addEventListener('change', function() {
 });
 
 // Event Listener for Date selection
-
+firstMonthdays.addEventListener("click", function() {
+  
+})
 
 {% endjavascript %}
