@@ -290,6 +290,7 @@ dropdownYear.addEventListener('change', function() {
 const dateElements = document.querySelectorAll(".rentnow-first-days p");
 dateElements.forEach((element) => {
   element.addEventListener("click", function () {
+    console.log("element cliked");
     // Remove the class from all date elements
     dateElements.forEach((el) => el.classList.remove("rentnow-selected-day"));
 
