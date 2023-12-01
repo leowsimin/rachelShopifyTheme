@@ -286,17 +286,4 @@ dropdownYear.addEventListener('change', function() {
   updateCalendar();
 });
 
-// Event Listener for Date selection
-const dateElements = document.querySelectorAll(".rentnow-first-days p");
-dateElements.forEach((element) => {
-  element.addEventListener("click", function () {
-    console.log("element cliked");
-    // Remove the class from all date elements
-    dateElements.forEach((el) => el.classList.remove("rentnow-selected-day"));
-
-    // Add the class to the clicked date
-    element.classList.add("rentnow-selected-day");
-  });
-});
-
 {% endjavascript %}
