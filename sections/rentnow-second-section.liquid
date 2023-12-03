@@ -363,11 +363,9 @@ function getDatesBetween(startDate, endDate) {
   const dates = [];
   let afterDate = new Date(startDate);
   afterDate.setDate(afterDate.getDate() + 1);
-  afterDate.classList.add("rentnow-selected-first-date");
 
   let beforeDate = new Date(endDate);
   beforeDate.setDate(beforeDate.getDate() - 1);
-  beforeDate.classList.add("rentnow-selected-first-date")
 
   while (afterDate <= beforeDate) {
     dates.push(new Date(afterDate));
