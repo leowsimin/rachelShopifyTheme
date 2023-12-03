@@ -375,11 +375,11 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
         if (freeElement) {
 
-          if (index === 0 || index === 2) {
+          if (index === 1 || index === 2) {
             freeElement.classList.add("rentnow-free-first-date");
           }
 
-          else if (index === 1 || index === 3) {
+          else if (index === 0 || index === 3) {
             freeElement.classList.add("rentnow-free-last-date");
           }
         }
@@ -407,7 +407,7 @@ function getDatesBetween(startDate, endDate) {
 
 function getFreeDates (startDate, endDate) {
 
-  console.log('imrunningAGAIn');
+  console.log('imrunningAGAInYESSSS');
   const dates = [];
   let firstTwoDates = new Date(startDate);
   firstTwoDates.setDate(firstTwoDates.getDate() - 1);
