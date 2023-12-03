@@ -192,7 +192,9 @@
     border-radius: 50%;
 }
 
-.rentnow-selected-date {
+.rentnow-selected-date,
+.rentnow-selected-first-date,
+.rentnow-selected-last-date {
     background-color: rgba(255, 166, 101, 0.50);
 }
 
@@ -200,7 +202,11 @@
     background-color: rgba(138, 148, 127, 0.50);
 }
 
-.rentnow- #rentnow-first-month-dropdownmenu,
+.rentnow-selected-first-date {
+    border-radius: ;
+}
+
+#rentnow-first-month-dropdownmenu,
 #rentnow-first-year-dropdownmenu {
     display: none;
     position: absolute;
