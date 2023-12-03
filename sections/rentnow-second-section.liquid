@@ -416,10 +416,10 @@ function getFreeDates (startDate, endDate) {
   dates.push(new Date(firstTwoDates));
 
   let lastTwoDates = new Date(endDate);
-  LastTwoDates.setDate(LastTwoDates.getDate() + 1);
-  dates.push(new Date(LastTwoDates));
-  LastTwoDates.setDate(LastTwoDates.getDate() + 1);
-  dates.push(new Date(LastTwoDates));
+  lastTwoDates.setDate(lastTwoDates.getDate() + 1);
+  dates.push(new Date(lastTwoDates));
+  lastTwoDates.setDate(lastTwoDates.getDate() + 1);
+  dates.push(new Date(lastTwoDates));
 
   return dates;
 }
