@@ -336,7 +336,12 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         });
 
         if (dayElement) {
-          dayElement.classList.add("rentnow-selected-date");
+          // Add the class only to the first and last elements in the date range
+          if (index === 0) {
+            dayElement.classList.add("rentnow-selected-first-date");
+          } else if (index === array.length - 1) {
+            dayElement.classList.add("rentnow-selected-last-date");
+          }
         }
       });
     }
