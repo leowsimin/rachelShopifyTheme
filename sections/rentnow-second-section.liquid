@@ -330,6 +330,10 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
             dayElement = paragraph;
           }
         });
+
+        if (dayElement) {
+          dayElement.classList.add("rentnow-selected-date");
+        }
       });
   }
 });
