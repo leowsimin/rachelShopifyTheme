@@ -319,12 +319,13 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       event.target.classList.add("rentnow-end-date");
 
       // Selection of dates.
-      console.log(startDate);
-      console.log(endDate);
-
-      for (let k = startDate + 1 , k < endDate, k++) {
-        
-      }
+      const dateRange = getDatesBetween(startDate, endDate);
+      dateRange.forEach((date) => {
+        const dayElement = document.querySelector(`.rentnow-first-days p:contains('${date.getDate()}')`);
+        if (dayElement) {
+          dayElement.classList.add("rentnow-selected-date");
+        }
+      });
 
     }
   }
