@@ -299,6 +299,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
   // Check if the clicked date is a valid number
   if (!isNaN(selectedDate)) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
+    console.log(currentDate);
 
     // If start date is not set, set it
     if (startDate === null) {
