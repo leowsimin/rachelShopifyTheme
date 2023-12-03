@@ -210,6 +210,10 @@
     border-radius: 0 50% 50% 0;
 }
 
+.rentnow-selected-one-date {
+    border-radius: 50%;
+}
+
 #rentnow-first-month-dropdownmenu,
 #rentnow-first-year-dropdownmenu {
     display: none;

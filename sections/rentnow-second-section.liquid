@@ -324,7 +324,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       console.log(dateRange);
       const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
 
-      dateRange.forEach((date, index, array) => {
+      dateRange.forEach((date, index) => {
         let dayElement;
 
         allParagraphs.forEach((paragraph) => {
@@ -338,7 +338,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
         if (dayElement) {
 
-          console.log ("are you changing ... GRRR");
+          console.log ("PLS SA changing ... GRRR");
 
           if (index === 0) {
             dayElement.classList.add("rentnow-selected-first-date");
@@ -349,6 +349,8 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
             dayElement.classList.add("rentnow-selected-last-date");
             dayElement.classList.add("rentnow-selected-date");
           }
+
+          else if ()
 
           else {
           dayElement.classList.add("rentnow-selected-date");
