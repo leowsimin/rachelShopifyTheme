@@ -299,7 +299,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
   console.log(selectedDate);
 
   // Check if the clicked date is a valid number
-  if (!isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
+  if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
     if (startDate !== null && endDate !== null) {
