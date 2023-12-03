@@ -320,32 +320,34 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       // Selection of dates.
       const dateRange = getDatesBetween(startDate, endDate);
-      const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
-      let dayElement;
-      dateRange.forEach((date) => {
-        allParagraphs.forEach((paragraph) => {
-          if (paragraph.textContent.trim() === date.getDate().toString()) {
-            dayElement = paragraph;
-            if (dayElement) {
-            dayElement.classList.add("rentnow-selected-date");
-          }
-          }
-        });
-      });
+const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
 
-      function getDatesBetween(startDate, endDate) {
-      const dates = [];
-      let currentDate = new Date(startDate);
+dateRange.forEach((date) => {
+  let dayElement;
 
-      while (currentDate <= endDate) {
-        dates.push(new Date(currentDate));
-        currentDate.setDate(currentDate.getDate() + 1);
-      }
-
-        return dates;
-      }
+  allParagraphs.forEach((paragraph) => {
+    if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+      dayElement = paragraph;
     }
+  });
+
+  // Check if dayElement is found before adding the class
+  if (dayElement) {
+    dayElement.classList.add("rentnow-selected-date");
   }
 });
+
+function getDatesBetween(startDate, endDate) {
+  const dates = [];
+  let currentDate = new Date(startDate);
+
+  while (currentDate <= endDate) {
+    dates.push(new Date(currentDate));
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  return dates;
+}
+
 
 {% endjavascript %}
