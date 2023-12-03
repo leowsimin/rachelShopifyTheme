@@ -302,14 +302,12 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
     document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
       day.classList.remove("rentnow-start-date", "rentnow-end-date");
-      console.log("removed!")
     });
 
     // If start date is not set, set it
     if (startDate === null) {
       startDate = currentDate;
       event.target.classList.add("rentnow-start-date");
-      console.log("start date clicked");
     } else if (endDate === null && currentDate > startDate) {
       // If start date is set, and end date is not set, set end date only if it's after start date
       endDate = currentDate;
