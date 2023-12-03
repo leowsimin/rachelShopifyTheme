@@ -295,7 +295,6 @@ let endDate = null;
 // Event listener for date click
 document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
   const selectedDate = event.target.textContent;
-  console.log(selectedDate);
 
   // Check if the clicked date is a valid number
   if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
@@ -320,7 +319,9 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       event.target.classList.add("rentnow-end-date");
 
       // Selection of dates.
-      
+      console.log(startDate);
+      console.log(endDate);
+
     }
   }
 });
