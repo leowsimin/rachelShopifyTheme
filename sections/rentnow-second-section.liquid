@@ -288,7 +288,7 @@ dropdownYear.addEventListener('change', function() {
   updateCalendar();
 });
 
-// Selection of Start and Endd Date
+// Selection of Start and End Date
 let startDate = null;
 let endDate = null;
 
@@ -300,18 +300,16 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
   if (!isNaN(selectedDate)) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
-    document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
-      day.classList.remove("rentnow-start-date", "rentnow-end-date");
-    });
-
     // If start date is not set, set it
     if (startDate === null) {
       startDate = currentDate;
-      event.target.classList.add("rentnow-start-date");
+      event.target.classList.toggle("rentnow-start-date");
+      console.log("Start date clicked");
     } else if (endDate === null && currentDate > startDate) {
       // If start date is set, and end date is not set, set end date only if it's after start date
       endDate = currentDate;
-      event.target.classList.add("rentnow-end-date");
+      event.target.classList.toggle("rentnow-end-date");
+      console.log("End date clicked");
 
       // Now, you can perform any necessary actions with the selected start and end dates
       console.log("Start Date:", startDate);
@@ -320,11 +318,16 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Reset start and end dates for the next selection
       startDate = null;
       endDate = null;
-
-      // Remove the highlighting from the previous selection
-      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
-        day.classList.remove("selected-start-date", "selected-end-date");
-      });
+    } else if (currentDate >= startDate && currentDate <= endDate) {
+      // Toggle classes if the clicked date is within the range of start and end dates
+      event.target.classList.toggle("rentnow-start-date");
+      event.target.classList.toggle("rentnow-end-date");
+      console.log("Date within range toggled");
+    } else {
+      // If neither start nor end date is set, set the clicked date as the start date
+      startDate = currentDate;
+      event.target.classList.toggle("rentnow-start-date");
+      console.log("Start date clicked");
     }
   }
 });
