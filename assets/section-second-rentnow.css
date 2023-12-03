@@ -192,6 +192,7 @@
 }
 
 .rentnow-end-date {
+    box-sizing: border-box;
     border: 1px solid #FFA665;
     border-radius: 50%;
 }
