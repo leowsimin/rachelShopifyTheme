@@ -160,8 +160,6 @@
 
 //Inserting Current Month/Year
 
-const date = new Date();
-
 console.log(date);
 
 const months = [
@@ -323,7 +321,6 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       // Selection of Dates
       const dateRange = getDatesBetween(startDate, endDate);
-      console.log(dateRange);
       const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
 
       dateRange.forEach((date, index) => {
@@ -339,8 +336,6 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         });
 
         if (dayElement) {
-
-          console.log ("im a lil tired AAAAAAAAAAA");
 
           if (index === 0 && dateRange.length !== 1 ) {
             dayElement.classList.add("rentnow-selected-first-date");
@@ -362,6 +357,46 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         }
 
       });
+
+      // Free Dates
+      const freeDateRange = getFreeDates(startDate, endDate);
+      console.log(freeDateRange)
+
+      freeDateRange.forEach((date) => {
+        let freeElement;
+
+        allParagraphs.forEach((paragraph) => {
+          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
+            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+              freeElement = paragraph;
+            }
+          }
+        });
+
+        if (freeElement) {
+
+          if (index === 0 && dateRange.length !== 1 ) {
+            dayElement.classList.add("rentnow-selected-first-date");
+            dayElement.classList.add("rentnow-selected-date");
+          }
+
+          else if (index === dateRange.length - 1 && dateRange.length !== 1) {
+            dayElement.classList.add("rentnow-selected-last-date");
+            dayElement.classList.add("rentnow-selected-date");
+          }
+
+          else if (dateRange.length === 1) {
+            dayElement.classList.add("rentnow-selected-one-date");
+          }
+
+          else {
+            dayElement.classList.add("rentnow-selected-date");
+          }
+        }
+
+      });
+
     }
   }
 });
@@ -379,6 +414,23 @@ function getDatesBetween(startDate, endDate) {
     dates.push(new Date(afterDate));
     afterDate.setDate(afterDate.getDate() + 1);
   }
+  return dates;
+}
+
+function getFreeDates (startDate, endDate) {
+  const dates = [];
+  let firstTwoDates = new Date(startDate);
+  firstTwoDates.setDate(firstTwoDates.getDate() - 1);
+  dates.push(new Date(firstTwoDates));
+  firstTwoDates.setDate(firstTwoDates.getDate() - 1);
+  dates.push(new Date(firstTwoDates));
+
+  let lastTwoDates = new Date(endDate);
+  LastTwoDates.setDate(LastTwoDates.getDate() + 1);
+  dates.push(new Date(LastTwoDates));
+  LastTwoDates.setDate(LastTwoDates.getDate() + 1);
+  dates.push(new Date(LastTwoDates));
+
   return dates;
 }
 {% endjavascript %}
