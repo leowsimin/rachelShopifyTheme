@@ -322,8 +322,15 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       const dateRange = getDatesBetween(startDate, endDate);
       const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
 
-      
-    }
+      dateRange.forEach((date) => {
+        let dayElement;
+
+        allParagraphs.forEach((paragraph) => {
+          if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+            dayElement = paragraph;
+          }
+        });
+      });
   }
 });
 
