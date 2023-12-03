@@ -199,10 +199,6 @@
     background-color: rgba(255, 166, 101, 0.50);
 }
 
-.rentnow-free-date {
-    background-color: rgba(138, 148, 127, 0.50);
-}
-
 .rentnow-selected-first-date {
     border-radius: 50% 0 0 50%;
 }
@@ -213,6 +209,10 @@
 
 .rentnow-selected-one-date {
     border-radius: 50%;
+}
+
+.rentnow-free-date {
+    background-color: rgba(138, 148, 127, 0.50);
 }
 
 #rentnow-first-month-dropdownmenu,
