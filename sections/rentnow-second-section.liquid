@@ -302,6 +302,15 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
   if (!isNaN(selectedDate)) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
+    if (startDate !== null && endDate !== null) {
+      startDate = null;
+      endDate = null;
+
+      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
+        day.classList.remove("rentnow-start-date", "rentnow-end-date");
+      });
+    }
+
     // If start date is not set, set it
     if (startDate === null) {
       startDate = currentDate;
@@ -314,15 +323,6 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Now, you can perform any necessary actions with the selected start and end dates
       console.log("Start Date:", startDate);
       console.log("End Date:", endDate);
-
-      // Reset start and end dates for the next selection
-      startDate = null;
-      endDate = null;
-
-      // Remove the highlighting from the previous selection
-      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
-        day.classList.remove("selected-start-date", "selected-end-date");
-      });
     }
   }
 });
