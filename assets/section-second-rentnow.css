@@ -200,7 +200,7 @@
     background-color: rgba(138, 148, 127, 0.50);
 }
 
-#rentnow-first-month-dropdownmenu,
+.rentnow- #rentnow-first-month-dropdownmenu,
 #rentnow-first-year-dropdownmenu {
     display: none;
     position: absolute;
