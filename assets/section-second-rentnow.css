@@ -203,7 +203,11 @@
 }
 
 .rentnow-selected-first-date {
-    border-radius: ;
+    border-radius: 50% 0 0 50%;
+}
+
+.rentnow-selected-second-date {
+    border-radius: 50% 0 0 50%;
 }
 
 #rentnow-first-month-dropdownmenu,
