@@ -300,14 +300,9 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
   if (!isNaN(selectedDate)) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
-    // Add a log statement to check if the click event is being processed
-    console.log("Clicked on date:", currentDate);
-
-    // Remove previous selections
     document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
       day.classList.remove("rentnow-start-date", "rentnow-end-date");
     });
-    console.log("Removed previous selections!");
 
     // If start date is not set, set it
     if (startDate === null) {
