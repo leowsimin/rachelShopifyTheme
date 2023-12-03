@@ -340,7 +340,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
           console.log ("did you change say yes");
 
-          if (index === 0) {
+          if (index === 0 && dateRange.length !=== 1 ) {
             dayElement.classList.add("rentnow-selected-first-date");
             dayElement.classList.add("rentnow-selected-date");
           }
