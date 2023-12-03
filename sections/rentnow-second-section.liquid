@@ -288,29 +288,27 @@ dropdownYear.addEventListener('change', function() {
   updateCalendar();
 });
 
-// Selection of Start and End Date
+// Selection of Start and Endd Date
 let startDate = null;
 let endDate = null;
 
 // Event listener for date click
 document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
   const selectedDate = event.target.textContent;
+  console.log(selectedDate);
 
   // Check if the clicked date is a valid number
   if (!isNaN(selectedDate)) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
     // If start date is not set, set it
-    
     if (startDate === null) {
       startDate = currentDate;
-      event.target.classList.toggle("rentnow-start-date");
-      console.log("Start date clicked");
+      event.target.classList.add("selected-start-date");
     } else if (endDate === null && currentDate > startDate) {
       // If start date is set, and end date is not set, set end date only if it's after start date
       endDate = currentDate;
-      event.target.classList.toggle("rentnow-end-date");
-      console.log("End date clicked");
+      event.target.classList.add("selected-end-date");
 
       // Now, you can perform any necessary actions with the selected start and end dates
       console.log("Start Date:", startDate);
@@ -319,16 +317,11 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Reset start and end dates for the next selection
       startDate = null;
       endDate = null;
-    } else if (currentDate >= startDate && currentDate <= endDate) {
-      // Toggle classes if the clicked date is within the range of start and end dates
-      event.target.classList.toggle("rentnow-start-date");
-      event.target.classList.toggle("rentnow-end-date");
-      console.log("Date within range toggled");
-    } else {
-      // If neither start nor end date is set, set the clicked date as the start date
-      startDate = currentDate;
-      event.target.classList.toggle("rentnow-start-date");
-      console.log("Start date clicked");
+
+      // Remove the highlighting from the previous selection
+      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
+        day.classList.remove("selected-start-date", "selected-end-date");
+      });
     }
   }
 });
