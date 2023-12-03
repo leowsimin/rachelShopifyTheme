@@ -288,12 +288,11 @@ dropdownYear.addEventListener('change', function() {
   updateCalendar();
 });
 
-// Selection of Start and Endd Date
+// Selection of Start and End Date
 let startDate = null;
 let endDate = null;
 
 // Event listener for date click
-
 document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
   const selectedDate = event.target.textContent;
   console.log(selectedDate);
@@ -320,9 +319,8 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       endDate = currentDate;
       event.target.classList.add("rentnow-end-date");
 
-      // Now, you can perform any necessary actions with the selected start and end dates
-      console.log("Start Date:", startDate);
-      console.log("End Date:", endDate);
+      // Selection of dates.
+      
     }
   }
 });
