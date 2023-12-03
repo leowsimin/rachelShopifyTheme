@@ -187,6 +187,7 @@
 }
 
 .rentnow-start-date {
+    box-sizing: border-box;
     background-color: #FFA665;
     border-radius: 50%;
 }
