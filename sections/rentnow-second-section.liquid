@@ -320,13 +320,15 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       // Selection of dates.
       const dateRange = getDatesBetween(startDate, endDate);
+      const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
+      let dayElement;
       dateRange.forEach((date) => {
         const dayElement = document.querySelector(`.rentnow-first-days p:contains('${date.getDate()}')`);
         if (dayElement) {
           dayElement.classList.add("rentnow-selected-date");
         }
       });
-      
+
       function getDatesBetween(startDate, endDate) {
       const dates = [];
       let currentDate = new Date(startDate);
