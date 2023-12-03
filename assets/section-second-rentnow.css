@@ -188,12 +188,14 @@
 
 .rentnow-start-date {
     box-sizing: border-box;
+    display: inline-block;
     background-color: #FFA665;
     border-radius: 50%;
 }
 
 .rentnow-end-date {
     box-sizing: border-box;
+    display: inline-block;
     border: 1px solid #FFA665;
     border-radius: 50%;
 }
