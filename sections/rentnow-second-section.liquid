@@ -355,7 +355,6 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
             dayElement.classList.add("rentnow-selected-date");
           }
         }
-
       });
 
       // Free Dates
@@ -376,25 +375,14 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
         if (freeElement) {
 
-          if (index === 0 && dateRange.length !== 1 ) {
-            dayElement.classList.add("rentnow-selected-first-date");
-            dayElement.classList.add("rentnow-selected-date");
+          if (index === 0 && index === 2) {
+            freeElement.classList.add("rentnow-free-first-date");
           }
 
-          else if (index === dateRange.length - 1 && dateRange.length !== 1) {
-            dayElement.classList.add("rentnow-selected-last-date");
-            dayElement.classList.add("rentnow-selected-date");
-          }
-
-          else if (dateRange.length === 1) {
-            dayElement.classList.add("rentnow-selected-one-date");
-          }
-
-          else {
-            dayElement.classList.add("rentnow-selected-date");
+          else if (index === 1 && index === 3) {
+            freeElement.classList.add("rentnow-free-last-date");
           }
         }
-
       });
 
     }
