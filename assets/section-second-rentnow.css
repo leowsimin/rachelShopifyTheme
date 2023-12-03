@@ -186,13 +186,9 @@
     padding-top: 13px;
 }
 
-.rentnow-start-date {
-    background-color: #FFA665;
-    border-radius: 50%;
-}
-
+.rentnow-start-date,
 .rentnow-end-date {
-    border: 1px solid #FFA665;
+    background-color: #FFA665;
     border-radius: 50%;
 }
 
