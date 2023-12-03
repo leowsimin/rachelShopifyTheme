@@ -350,10 +350,12 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
             dayElement.classList.add("rentnow-selected-date");
           }
 
-          else if (dateRange.length === 1)
+          else if (dateRange.length === 1) {
+            dayElement.classList.add("rentnow-selected-one-date");
+          }
 
           else {
-          dayElement.classList.add("rentnow-selected-date");
+            dayElement.classList.add("rentnow-selected-date");
           }
         }
 
