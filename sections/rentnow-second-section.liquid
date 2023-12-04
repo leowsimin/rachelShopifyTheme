@@ -204,6 +204,18 @@ dropdownMonth.addEventListener('change', function() {
   updateCalendar();
 });
 
+// Event listener for dropdown change
+dropdownSecondMonth.addEventListener('change', function() {
+  const selectedMonth = dropdownMonth.value;
+  rentNowSecondMonthLabel.textContent = selectedMonth;
+  dropdownSecondMonth.style.display = 'none';
+
+  const selectedMonthIndex = months.indexOf(selectedMonth);
+  date.setMonth(selectedMonthIndex);
+
+  updateCalendar();
+});
+
 // Function to update the calendar
 function updateCalendar() {
   const firstMonthDays = document.querySelector(".rentnow-first-days");
