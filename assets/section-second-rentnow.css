@@ -260,6 +260,14 @@
     /* IE and Edge */
 }
 
+#rentnow-second-month-dropdownmenu {
+    transform: translate(-32px, 30%);
+    scrollbar-width: thin;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
 #rentnow-first-year-dropdownmenu {
     transform: translate(50px, 30%);
 }
