@@ -167,6 +167,9 @@ const secondMonth = new Date();
 secondMonth.setMonth(secondMonth.getMonth() + 1);
 document.querySelector(".rentnow-second-month-select").innerHTML = months[secondMonth.getMonth()];
 
+const rentNowSecondYearLabel = document.getElementById('rentNowSecondYearLabel');
+document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
 // DropDown Menu for First Month and Year
 const rentNowFirstMonthLabel = document.getElementById('rentNowFirstMonthLabel');
 const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu");
@@ -196,6 +199,7 @@ dropdownMonth.addEventListener('change', function() {
 
   secondMonth.setMonth(selectedMonthIndex + 1);
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
+  document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
   
   updateCalendar();
 });
@@ -419,16 +423,12 @@ function getFreeDates (startDate, endDate) {
 
 // Second Calendar
 
-const rentNowSecondYearLabel = document.getElementById('rentNowSecondYearLabel');
-document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
-
 // Second Month Dropdown Menu
 
 const rentNowSecondMonthLabel = document.getElementById('rentNowSecondMonthLabel');
 const dropdownSecondMonth = document.getElementById("rentnow-second-month-dropdownmenu");
 
 rentNowSecondMonthLabel.addEventListener("click", function() {
-  console.log("I am being clicked");
   dropdownSecondMonth.style.display = 'block'; 
   dropdownSecondMonth.size= "7";
   dropdownSecondMonth.click();
@@ -436,7 +436,6 @@ rentNowSecondMonthLabel.addEventListener("click", function() {
 })
 
 dropdownSecondMonth.addEventListener('change', function() {
-  console.log("I am being changed YAY");
   const selectedMonth = dropdownSecondMonth.value;
   rentNowSecondMonthLabel.textContent = selectedMonth;
   dropdownSecondMonth.style.display = 'none';
