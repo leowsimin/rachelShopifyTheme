@@ -337,22 +337,54 @@ let startDate = null;
 let endDate = null;
 
 // Event listener for date click
+// Event listener for date click
 document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
   const selectedDate = event.target.textContent;
 
   // Check if the clicked date is a valid number
-  if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
+  if (
+    event.target.closest(".rentnow-first-days") &&
+    !isNaN(selectedDate) &&
+    !event.target.classList.contains("rentnow-prevdays") &&
+    !event.target.classList.contains("rentnow-nextdays")
+  ) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
     if (startDate !== null && endDate !== null) {
       startDate = null;
       endDate = null;
 
-      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
-        day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
-        "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
-        "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
-      });
+      document
+        .querySelectorAll(".rentnow-first-days p")
+        .forEach((day) => {
+          day.classList.remove(
+            "rentnow-start-date",
+            "rentnow-end-date",
+            "rentnow-selected-date",
+            "rentnow-selected-first-date",
+            "rentnow-selected-last-date",
+            "rentnow-selected-one-date",
+            "rentnow-free-date",
+            "rentnow-free-first-date",
+            "rentnow-free-last-date"
+          );
+        });
+
+      document
+        .querySelectorAll(".rentnow-second-days p")
+        .forEach((day) => {
+          day.classList.remove(
+            "rentnow-start-date",
+            "rentnow-end-date",
+            "rentnow-selected-date",
+            "rentnow-selected-first-date",
+            "rentnow-selected-last-date",
+            "rentnow-selected-one-date",
+            "rentnow-free-date",
+            "rentnow-free-first-date",
+            "rentnow-free-last-date"
+          );
+        });
     }
 
     // If start date is not set, set it
@@ -366,89 +398,74 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       // Selection of Dates
       const dateRange = getDatesBetween(startDate, endDate);
-      const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
+      const allFirstParagraphs = document.querySelectorAll('.rentnow-first-days p');
+      const allSecondParagraphs = document.querySelectorAll('.rentnow-second-days p');
 
       dateRange.forEach((date, index) => {
-        let dayElement;
+        let firstDayElement;
+        let secondDayElement;
 
-        allParagraphs.forEach((paragraph) => {
+        allFirstParagraphs.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
           if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
             if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              dayElement = paragraph;
+              firstDayElement = paragraph;
             }
           }
         });
 
-        if (dayElement) {
-
-          if (index === 0 && dateRange.length !== 1 ) {
-            dayElement.classList.add("rentnow-selected-first-date");
-            dayElement.classList.add("rentnow-selected-date");
+        allSecondParagraphs.forEach((paragraph) => {
+          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
+            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+              secondDayElement = paragraph;
+            }
           }
+        });
 
-          else if (index === dateRange.length - 1 && dateRange.length !== 1) {
-            dayElement.classList.add("rentnow-selected-last-date");
-            dayElement.classList.add("rentnow-selected-date");
-          }
+        if (firstDayElement && secondDayElement) {
+          if (index === 0 && dateRange.length !== 1) {
+            firstDayElement.classList.add("rentnow-selected-first-date");
+            firstDayElement.classList.add("rentnow-selected-date");
 
-          else if (dateRange.length === 1) {
-            dayElement.classList.add("rentnow-selected-one-date");
-          }
+            secondDayElement.classList.add("rentnow-selected-first-date");
+            secondDayElement.classList.add("rentnow-selected-date");
+          } else if (index === dateRange.length - 1 && dateRange.length !== 1) {
+            firstDayElement.classList.add("rentnow-selected-last-date");
+            firstDayElement.classList.add("rentnow-selected-date");
 
-          else {
-            dayElement.classList.add("rentnow-selected-date");
+            secondDayElement.classList.add("rentnow-selected-last-date");
+            secondDayElement.classList.add("rentnow-selected-date");
+          } else if (dateRange.length === 1) {
+            firstDayElement.classList.add("rentnow-selected-one-date");
+            secondDayElement.classList.add("rentnow-selected-one-date");
+          } else {
+            firstDayElement.classList.add("rentnow-selected-date");
+            secondDayElement.classList.add("rentnow-selected-date");
           }
         }
       });
 
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
-      console.log(freeDateRange)
 
       freeDateRange.forEach((date, index) => {
-        let freeElement;
+        let firstFreeElement;
+        let secondFreeElement;
 
-        allParagraphs.forEach((paragraph) => {
+        allFirstParagraphs.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
           if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
             if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              freeElement = paragraph;
+              firstFreeElement = paragraph;
             }
           }
         });
 
-        if (freeElement) {
+        allSecondParagraphs.forEach((paragraph) => {
+          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+         
 
-          if (index === 1 || index === 2) {
-            freeElement.classList.add("rentnow-free-first-date");
-          }
-
-          else if (index === 0 || index === 3) {
-            freeElement.classList.add("rentnow-free-last-date");
-          }
-        }
-      });
-
-    }
-  }
-});
-
-// Function to get dates between start and end date
-function getDatesBetween(startDate, endDate) {
-  const dates = [];
-  let afterDate = new Date(startDate);
-  afterDate.setDate(afterDate.getDate() + 1);
-
-  let beforeDate = new Date(endDate);
-  beforeDate.setDate(beforeDate.getDate() - 1);
-
-  while (afterDate <= beforeDate) {
-    dates.push(new Date(afterDate));
-    afterDate.setDate(afterDate.getDate() + 1);
-  }
-  return dates;
-}
 
 function getFreeDates (startDate, endDate) {
 
