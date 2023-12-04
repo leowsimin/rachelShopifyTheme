@@ -258,18 +258,16 @@ function updateCalendar() {
     secondDays += `<p class="rentnow-prevdays">${lastDayPrevSecondMonth - t}</p>`;
   }
 
-  // Dates correspond to Month and Year
   const lastDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDate();
 
   for (let y = 1; y <= lastDaySecond; y++) {
     secondDays += `<p>${y}</p>`;
   }
 
-  // Dates after Month
   const lastDaySecondIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDay();
-  const nextDaysSecond = 6 - lastDaySecondIndex;
+  const secondNextDays = 6 - lastDaySecondIndex;
 
-  for (let p = 1; p <= nextDaysSecond; p++) {
+  for (let p = 1; p <= secondNextDays; p++) {
     secondDays += `<p class="rentnow-nextdays">${p}</p>`;
   }
 
@@ -515,7 +513,7 @@ dropdownSecondYear.addEventListener('change', function() {
   secondMonth.setFullYear(selectedYear);
 
   updateCalendar();
-  
+
 });
 
 // Dates before Month
