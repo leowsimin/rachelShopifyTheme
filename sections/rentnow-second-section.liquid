@@ -417,4 +417,8 @@ secondMonth.setMonth(secondMonth.getMonth() + 1);
 console.log(secondMonth);
 document.querySelector(".rentnow-second-month-select").innerHTML = months[secondMonth.getMonth()];
 
+const rentNowSecondYearLabel = document.getElementById('rentNowSecondYearLabel');
+document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
+
 {% endjavascript %}
