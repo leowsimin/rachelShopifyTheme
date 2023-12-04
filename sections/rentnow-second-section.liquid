@@ -158,24 +158,16 @@ const months = [
   "December",
 ];
 
-// DropDown Menu for First and Second Month and Year
+// DropDown Menu for First Month and Year
 document.querySelector('.rentnow-first-month-select').innerHTML = months[date.getMonth()];
-document.querySelector('.rentnow-second-month-select').innerHTML = months[date.getMonth()];
 
 const rentNowFirstMonthLabel = document.getElementById('rentNowFirstMonthLabel');
-const rentNowSecondMonthLabel = document.getElementById('rentNowSecondMonthLabel');
-
 const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu");
-const dropdownSecondMonth = document.getElementById("rentnow-second-month-dropdownmenu");
 
 const rentNowFirstYearLabel = document.getElementById('rentNowFirstYearLabel');
 document.querySelector('.rentnow-first-year-select').innerHTML = "&nbsp;" + date.getFullYear();
 
-const rentNowSecondYearLabel = document.getElementById('rentNowSecondYearLabel');
-document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + date.getFullYear();
-
 const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
-const dropdownSecondYear = document.getElementById('rentnow-second-year-dropdownmenu');
 
 // Event listener for label click
 rentNowFirstMonthLabel.addEventListener('click', function() {
@@ -185,30 +177,11 @@ rentNowFirstMonthLabel.addEventListener('click', function() {
   event.stopPropagation();
 });
 
-rentNowSecondMonthLabel.addEventListener('click', function() {
-  dropdownSecondMonth.style.display = 'block'; 
-  dropdownSecondMonth.size= "7";
-  dropdownSecondMonth.click();
-  event.stopPropagation();
-});
-
 // Event listener for dropdown change
 dropdownMonth.addEventListener('change', function() {
   const selectedMonth = dropdownMonth.value;
   rentNowFirstMonthLabel.textContent = selectedMonth;
   dropdownMonth.style.display = 'none';
-
-  const selectedMonthIndex = months.indexOf(selectedMonth);
-  date.setMonth(selectedMonthIndex);
-
-  updateCalendar();
-});
-
-// Event listener for dropdown change
-dropdownSecondMonth.addEventListener('change', function() {
-  const selectedMonth = dropdownMonth.value;
-  rentNowSecondMonthLabel.textContent = selectedMonth;
-  dropdownSecondMonth.style.display = 'none';
 
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
