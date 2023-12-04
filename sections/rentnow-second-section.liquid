@@ -218,6 +218,11 @@ function updateCalendar() {
   const firstMonthDays = document.querySelector(".rentnow-first-days");
   let days = "";
 
+  const secondMonthDays = document.querySelector(".rentnow-second-days");
+  let secondDays = "";
+
+  //First Calendar
+
   // Dates before Month
   const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
   const lastDayPrevMonth = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
@@ -242,6 +247,33 @@ function updateCalendar() {
   }
 
   firstMonthDays.innerHTML = days;
+
+  //Second Calendar
+
+  // Dates before Month
+  const firstDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 1).getDay();
+  const lastDayPrevSecondMonth = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 0).getDate();
+
+  for (let t = firstDaySecond - 1; t >= 0; t--) {
+    secondDays += `<p class="rentnow-prevdays">${lastDayPrevSecondMonth - t}</p>`;
+  }
+
+  // Dates correspond to Month and Year
+  const lastDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDate();
+
+  for (let y = 1; y <= lastDaySecond; y++) {
+    secondDays += `<p>${y}</p>`;
+  }
+
+  // Dates after Month
+  const lastDaySecondIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDay();
+  const nextDaysSecond = 6 - lastDaySecondIndex;
+
+  for (let p = 1; p <= nextDaysSecond; p++) {
+    secondDays += `<p class="rentnow-nextdays">${p}</p>`;
+  }
+
+  secondMonthDays.innerHTML = secondDays;
 }
 
 updateCalendar();
