@@ -186,7 +186,7 @@ rentNowFirstMonthLabel.addEventListener('click', function() {
 
 // Event listener for dropdown change
 dropdownMonth.addEventListener('change', function() {
-  console.log("Im changing!");
+
   const selectedMonth = dropdownMonth.value;
   rentNowFirstMonthLabel.textContent = selectedMonth;
   dropdownMonth.style.display = 'none';
@@ -194,10 +194,8 @@ dropdownMonth.addEventListener('change', function() {
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
 
-  console.log("Im being set!");
   secondMonth.setMonth(selectedMonthIndex + 1);
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
-  
   
   updateCalendar();
 });
