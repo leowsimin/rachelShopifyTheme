@@ -411,12 +411,15 @@ function getFreeDates (startDate, endDate) {
 
 // Second Calendar
 
+// Setting Default Month/Year
 const secondMonth = new Date();
 secondMonth.setMonth(secondMonth.getMonth() + 1);
 document.querySelector(".rentnow-second-month-select").innerHTML = months[secondMonth.getMonth()];
 
 const rentNowSecondYearLabel = document.getElementById('rentNowSecondYearLabel');
 document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
+
 
 
 
