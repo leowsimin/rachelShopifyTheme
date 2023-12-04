@@ -197,11 +197,18 @@ dropdownMonth.addEventListener('change', function() {
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
 
-  console.log("change is good");
+  console.log("change is beri good");
   
   secondMonth.setMonth(selectedMonthIndex + 1);
+
+  if (secondMonth.getMonth() === 0) {
+    secondMonth.setFullYear(secondMonth.getFullYear() + 1);
+    document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+  } else {
+    document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+  }
+
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
-  document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
   
   updateCalendar();
 });
