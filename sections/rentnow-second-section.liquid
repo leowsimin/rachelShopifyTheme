@@ -499,7 +499,7 @@ const secondMonthDays = document.querySelector(".rentnow-second-days");
 const lastDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDate();
 
 for (let y = 1; y <= lastDaySecond; y++) {
-  secondDays += `<p id="firstMonthDays">${i}</p>`;
+  secondDays += `<p id="firstMonthDays">${y}</p>`;
 }
 
 // Dates after Month
@@ -507,7 +507,7 @@ const secondLastDayIndex = new Date(secondMonth.getFullYear(), secondMonth.getMo
 const secondNextDays = 7 - secondLastDayIndex - 1;
 
 for (let p = 1; p <= secondNextDays; p++) {
-  secondDays += `<p class="rentnow-nextdays">${j}</p>`;
+  secondDays += `<p class="rentnow-nextdays">${p}</p>`;
   secondMonthDays.innerHTML = secondDays;
 }
 
