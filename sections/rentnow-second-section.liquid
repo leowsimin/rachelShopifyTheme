@@ -489,11 +489,12 @@ const secondPrevLastDay = new Date(secondMonth.getFullYear(), secondMonth.getMon
 const secondFirstDayIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 1).getDay();
 
 console.log(secondFirstDayIndex);
+console.log("HI DEAREST");
 
 
 let secondDays = "";
 
-for (let t = secondFirstDayIndex - 1; t > 0; t--) {
+for (let t = secondFirstDayIndex; t > 0; t--) {
   secondDays += `<p class="rentnow-prevdays">${secondPrevLastDay - t +  1}</p>`; 
 }
 
