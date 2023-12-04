@@ -189,7 +189,6 @@ rentNowFirstMonthLabel.addEventListener('click', function() {
 
 // Event listener for dropdown change
 dropdownMonth.addEventListener('change', function() {
-
   const selectedMonth = dropdownMonth.value;
   rentNowFirstMonthLabel.textContent = selectedMonth;
   dropdownMonth.style.display = 'none';
@@ -199,17 +198,20 @@ dropdownMonth.addEventListener('change', function() {
 
   const selectedYear = dropdownYear.value;
 
-
   secondMonth.setMonth(selectedMonthIndex + 1);
-  secondMonth.setYear(selectedYear);
+  secondMonth.setFullYear(selectedYear);
+
+  // Check if the month of the second calendar is January
   if (secondMonth.getMonth() === 0) {
-    secondMonth.setYear(secondMonth.getFullYear + 1);
+    secondMonth.setFullYear(secondMonth.getFullYear() + 1);
   }
-  rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth];
+
+  rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
   
   updateCalendar();
 });
+
 
 // Function to update the calendar
 function updateCalendar() {
