@@ -433,6 +433,7 @@ rentNowSecondMonthLabel.addEventListener("click", function() {
 })
 
 dropdownSecondMonth.addEventListener('change', function() {
+  console.log("I am being changed");
   const selectedMonth = dropdownSecondMonth.value;
   rentNowSecondMonthLabel.textContent = selectedMonth;
   dropdownMonth.style.display = 'none';
