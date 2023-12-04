@@ -464,9 +464,70 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
         allSecondParagraphs.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-         
+                    // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
+            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+              firstFreeElement = paragraph;
+            }
+          }
+        });
 
+        allSecondParagraphs.forEach((paragraph) => {
+          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
+            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+              secondFreeElement = paragraph;
+            }
+          }
+        });
 
+        if (firstFreeElement && secondFreeElement) {
+          if (index === 1 || index === 2) {
+            firstFreeElement.classList.add("rentnow-free-first-date");
+            secondFreeElement.classList.add("rentnow-free-first-date");
+          } else if (index === 0 || index === 3) {
+            firstFreeElement.classList.add("rentnow-free-last-date");
+            secondFreeElement.classList.add("rentnow-free-last-date");
+          }
+        }
+      });
+    }
+  }
+});
+
+// Function to get dates between start and end date
+function getDatesBetween(startDate, endDate) {
+  const dates = [];
+  let afterDate = new Date(startDate);
+  afterDate.setDate(afterDate.getDate() + 1);
+
+  let beforeDate = new Date(endDate);
+  beforeDate.setDate(beforeDate.getDate() - 1);
+
+  while (afterDate <= beforeDate) {
+    dates.push(new Date(afterDate));
+    afterDate.setDate(afterDate.getDate() + 1);
+  }
+  return dates;
+}
+
+function getFreeDates(startDate, endDate) {
+  const dates = [];
+  let firstTwoDates = new Date(startDate);
+  firstTwoDates.setDate(firstTwoDates.getDate() - 1);
+  dates.push(new Date(firstTwoDates));
+  firstTwoDates.setDate(firstTwoDates.getDate() - 1);
+  dates.push(new Date(firstTwoDates));
+
+  let lastTwoDates = new Date(endDate);
+  lastTwoDates.setDate(lastTwoDates.getDate() + 1);
+  dates.push(new Date(lastTwoDates));
+  lastTwoDates.setDate(lastTwoDates.getDate() + 1);
+  dates.push(new Date(lastTwoDates));
+
+  return dates;
+}
+  
 function getFreeDates (startDate, endDate) {
 
   console.log('sighs again');
