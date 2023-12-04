@@ -245,7 +245,9 @@
 }
 
 #rentnow-first-month-dropdownmenu option,
-#rentnow-first-year-dropdownmenu option {
+#rentnow-first-year-dropdownmenu option,
+#rentnow-second-month-dropdownmenu option,
+#rentnow-second-year-dropdownmenu option {
     margin-top: 5px;
     margin-bottom: 5px;
 }

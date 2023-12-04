@@ -431,20 +431,20 @@ rentNowSecondMonthLabel.addEventListener('click', function() {
 });
 
 // Event listener for dropdown change
-dropdownMonth.addEventListener('change', function() {
-  const selectedMonth = dropdownMonth.value;
-  rentNowFirstMonthLabel.textContent = selectedMonth;
-  dropdownMonth.style.display = 'none';
+dropdownSecondMonth.addEventListener('change', function() {
+  const selectedMonth = dropdownSecondMonth.value;
+  rentNowSecondMonthLabel.textContent = selectedMonth;
+  dropdownSecondMonth.style.display = 'none';
 
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
 
-  updateCalendar();
+  updateSecondCalendar();
 });
 
 // Function to update the calendar
-function updateCalendar() {
-  const firstMonthDays = document.querySelector(".rentnow-first-days");
+function updateSecondCalendar() {
+  const secondMonthDays = document.querySelector(".rentnow-second-days");
   let days = "";
 
   // Dates before Month
@@ -470,194 +470,55 @@ function updateCalendar() {
     days += `<p class="rentnow-nextdays">${j}</p>`;
   }
 
-  firstMonthDays.innerHTML = days;
+  secondMonthDays.innerHTML = days;
 }
 
 updateCalendar();
 
 // Dates before Month
-const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
-const firstFirstDayIndex = date.getDay();
+const secondPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
+const secondFirstDayIndex = date.getDay();
 
 let days = "";
 
-for (let x = firstFirstDayIndex - 1; x > 0; x--) {
-  days += `<p class="rentnow-prevdays">${firstPrevLastDay - x +  1}</p>`; 
+for (let x = secondFirstDayIndex - 1; x > 0; x--) {
+  days += `<p class="rentnow-prevdays">${secondPrevLastDay - x +  1}</p>`; 
 }
 
 // Dates correspond to Month and Year
-const firstMonthDays = document.querySelector(".rentnow-first-days");
+const secondMonthDays = document.querySelector(".rentnow-second-days");
 
 const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 for (let i = 1; i <= lastDay; i++) {
-  days += `<p id="firstMonthDays">${i}</p>`;
+  days += `<p id="secondMonthDays">${i}</p>`;
 }
 
 // Dates after Month
-const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-const firstNextDays = 7 - firstLastDayIndex - 1;
+const secondLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
+const secondNextDays = 7 - secondLastDayIndex - 1;
 
-for (let j = 1; j<= firstNextDays; j++) {
+for (let j = 1; j<= secondNextDays; j++) {
   days += `<p class="rentnow-nextdays">${j}</p>`;
-  firstMonthDays.innerHTML = days;
+  secondMonthDays.innerHTML = days;
 }
 
 // Event listener for label click
-rentNowFirstYearLabel.addEventListener('click', function(event) {
-  dropdownYear.style.display = 'block';
-  dropdownYear.size = 7;
-  dropdownYear.click();
+rentNowSecondYearLabel.addEventListener('click', function(event) {
+  dropdownSecondYear.style.display = 'block';
+  dropdownSecondYear.size = 7;
+  dropdownSecondYear.click();
   event.stopPropagation();
 });
 
 // Event listener for dropdown change
-dropdownYear.addEventListener('change', function() {
+dropdownSecondYear.addEventListener('change', function() {
   const selectedYear = dropdownYear.value;
-  rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
-  dropdownYear.style.display = 'none';
+  rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
+  dropdownSecondYear.style.display = 'none';
 
-  console.log(selectedYear);
   date.setFullYear(selectedYear);
-  updateCalendar();
+  updateSecondCalendar();
 });
-
-// Selection of Start and End Date
-let startDate = null;
-let endDate = null;
-
-// Event listener for date click
-document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
-  const selectedDate = event.target.textContent;
-
-  // Check if the clicked date is a valid number
-  if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
-    const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
-
-    if (startDate !== null && endDate !== null) {
-      startDate = null;
-      endDate = null;
-
-      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
-        day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
-        "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
-        "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
-      });
-    }
-
-    // If start date is not set, set it
-    if (startDate === null) {
-      startDate = currentDate;
-      event.target.classList.add("rentnow-start-date");
-    } else if (endDate === null && currentDate > startDate) {
-      // If start date is set, and end date is not set, set end date only if it's after start date
-      endDate = currentDate;
-      event.target.classList.add("rentnow-end-date");
-
-      // Selection of Dates
-      const dateRange = getDatesBetween(startDate, endDate);
-      const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
-
-      dateRange.forEach((date, index) => {
-        let dayElement;
-
-        allParagraphs.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              dayElement = paragraph;
-            }
-          }
-        });
-
-        if (dayElement) {
-
-          if (index === 0 && dateRange.length !== 1 ) {
-            dayElement.classList.add("rentnow-selected-first-date");
-            dayElement.classList.add("rentnow-selected-date");
-          }
-
-          else if (index === dateRange.length - 1 && dateRange.length !== 1) {
-            dayElement.classList.add("rentnow-selected-last-date");
-            dayElement.classList.add("rentnow-selected-date");
-          }
-
-          else if (dateRange.length === 1) {
-            dayElement.classList.add("rentnow-selected-one-date");
-          }
-
-          else {
-            dayElement.classList.add("rentnow-selected-date");
-          }
-        }
-      });
-
-      // Free Dates
-      const freeDateRange = getFreeDates(startDate, endDate);
-      console.log(freeDateRange)
-
-      freeDateRange.forEach((date, index) => {
-        let freeElement;
-
-        allParagraphs.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              freeElement = paragraph;
-            }
-          }
-        });
-
-        if (freeElement) {
-
-          if (index === 1 || index === 2) {
-            freeElement.classList.add("rentnow-free-first-date");
-          }
-
-          else if (index === 0 || index === 3) {
-            freeElement.classList.add("rentnow-free-last-date");
-          }
-        }
-      });
-
-    }
-  }
-});
-
-// Function to get dates between start and end date
-function getDatesBetween(startDate, endDate) {
-  const dates = [];
-  let afterDate = new Date(startDate);
-  afterDate.setDate(afterDate.getDate() + 1);
-
-  let beforeDate = new Date(endDate);
-  beforeDate.setDate(beforeDate.getDate() - 1);
-
-  while (afterDate <= beforeDate) {
-    dates.push(new Date(afterDate));
-    afterDate.setDate(afterDate.getDate() + 1);
-  }
-  return dates;
-}
-
-function getFreeDates (startDate, endDate) {
-
-  console.log('sighs again');
-  
-  const dates = [];
-  let firstTwoDates = new Date(startDate);
-  firstTwoDates.setDate(firstTwoDates.getDate() - 1);
-  dates.push(new Date(firstTwoDates));
-  firstTwoDates.setDate(firstTwoDates.getDate() - 1);
-  dates.push(new Date(firstTwoDates));
-
-  let lastTwoDates = new Date(endDate);
-  lastTwoDates.setDate(lastTwoDates.getDate() + 1);
-  dates.push(new Date(lastTwoDates));
-  lastTwoDates.setDate(lastTwoDates.getDate() + 1);
-  dates.push(new Date(lastTwoDates));
-
-  return dates;
-}
 
 {% endjavascript %}
