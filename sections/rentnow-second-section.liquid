@@ -292,6 +292,8 @@ dropdownYear.addEventListener('change', function() {
 
   secondMonth.setFullYear(selectedYear);
 
+  console.log("year is here hohoho");
+
   // Check if the month of the second calendar is January
   if (secondMonth.getMonth() === 0) {
     secondMonth.setFullYear(secondMonth.getFullYear() + 1);
