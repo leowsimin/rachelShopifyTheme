@@ -289,6 +289,16 @@ dropdownYear.addEventListener('change', function() {
   dropdownYear.style.display = 'none';
 
   date.setFullYear(selectedYear);
+
+  secondMonth.setFullYear(selectedYear);
+
+  // Check if the month of the second calendar is January
+  if (secondMonth.getMonth() === 0) {
+    secondMonth.setFullYear(secondMonth.getFullYear() + 1);
+  }
+
+  rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
+  document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
   updateCalendar();
 });
 
