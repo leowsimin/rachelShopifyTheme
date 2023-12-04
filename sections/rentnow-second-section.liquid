@@ -432,6 +432,15 @@ rentNowSecondMonthLabel.addEventListener("click", function() {
   event.stopPropagation();
 })
 
+dropdownSecondMonth.addEventListener('change', function() {
+  const selectedMonth = dropdownSecondMonth.value;
+  rentNowFirstMonthLabel.textContent = selectedMonth;
+  dropdownMonth.style.display = 'none';
+
+  const selectedMonthIndex = months.indexOf(selectedMonth);
+  date.setMonth(selectedMonthIndex);
+});
+
 
 
 {% endjavascript %}
