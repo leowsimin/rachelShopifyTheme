@@ -276,7 +276,6 @@ function updateCalendar() {
   console.log("work pls");
 }
 
-
 updateCalendar();
 
 // Dates before Month
@@ -494,6 +493,8 @@ dropdownSecondMonth.addEventListener('change', function() {
 
   const selectedMonthIndex = months.indexOf(selectedMonth);
   secondMonth.setMonth(selectedMonthIndex);
+
+  updateCalendar();
 });
 
 // Second Year Dropdown Menu
