@@ -248,11 +248,11 @@ updateCalendar();
 
 // Dates before Month
 const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
-const firstFirstDayIndex = date.getDay();
+const firstFirstDayIndex = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
 let days = "";
 
-for (let x = firstFirstDayIndex - 1; x > 0; x--) {
+for (let x = firstFirstDayIndex; x > 0; x--) {
   days += `<p class="rentnow-prevdays">${firstPrevLastDay - x +  1}</p>`; 
 }
 
