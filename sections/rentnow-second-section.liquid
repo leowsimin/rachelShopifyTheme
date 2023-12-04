@@ -453,4 +453,27 @@ dropdownSecondMonth.addEventListener('change', function() {
   secondMonth.setMonth(selectedMonthIndex);
 });
 
+// Second Year Dropdown Menu
+
+const rentNowSecondYearLabel = document.getElementById('rentNowSecondYearLabel');
+const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
+
+rentNowSecondYearLabel.addEventListener('click', function(event) {
+  dropdownSecondYear.style.display = 'block';
+  dropdownSecondYear.size = 7;
+  dropdownSecondYear.click();
+  event.stopPropagation();
+});
+
+// Event listener for dropdown change
+dropdownSecondYear.addEventListener('change', function() {
+  const selectedYear = dropdownSecondYear.value;
+  rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
+  dropdownSecondYear.style.display = 'none';
+
+  secondMonth.setFullYear(selectedYear);
+});
+
+
+
 {% endjavascript %}
