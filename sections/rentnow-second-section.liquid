@@ -486,7 +486,9 @@ dropdownSecondYear.addEventListener('change', function() {
 // Dates before Month
 
 const secondPrevLastDay = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 0).getDate(); 
-const secondFirstDayIndex = secondMonth.getDay();
+const secondFirstDayIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 1).getDay();
+
+console.log(secondFirstDayIndex);
 
 let secondDays = "";
 
