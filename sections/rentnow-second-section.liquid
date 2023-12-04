@@ -197,9 +197,14 @@ dropdownMonth.addEventListener('change', function() {
   const selectedMonthIndex = months.indexOf(selectedMonth);
   date.setMonth(selectedMonthIndex);
 
-  console.log("change is good");
-  
+  const selectedYear = dropdownYear.value;
+
   secondMonth.setMonth(selectedMonthIndex + 1);
+  secondMonth.setYear(selectedYear);
+  if (secondMonth.getMonth = 1) {
+    secondMonth.setYear(secondMonth.getFullYear + 1);
+    console.log("I increase!")
+  }
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
   
