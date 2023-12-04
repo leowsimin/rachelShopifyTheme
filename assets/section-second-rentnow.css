@@ -49,7 +49,7 @@
 }
 
 .rentnow-first-months label,
-.rentnow-second-months p {
+.rentnow-second-months label {
     color: #0D2610;
     font-family: JejuMyeongjo;
     font-size: 30px;
@@ -226,7 +226,9 @@
 }
 
 #rentnow-first-month-dropdownmenu,
-#rentnow-first-year-dropdownmenu {
+#rentnow-first-year-dropdownmenu,
+#rentnow-second-month-dropdownmenu,
+#rentnow-second-year-dropdownmenu {
     display: none;
     position: absolute;
 
