@@ -495,35 +495,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
 
-      freeDateRange.forEach((date) => {
-        const dayNumber = date.getDate();
-        const monthNumber = date.getMonth() + 1; // Months are zero-based, so add 1
-
-        // Apply to the second calendar
-        const secondDayElements = document.querySelectorAll(`.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)`);
-
-        secondDayElements.forEach((dayElement) => {
-          const elementDay = parseInt(dayElement.textContent.trim(), 10);
-          const elementMonth = secondMonth.getMonth() + 1;
-
-          if (elementDay === dayNumber && elementMonth === monthNumber) {
-            dayElement.classList.add("rentnow-free-date");
-          }
-        });
-
-        // Apply to the first calendar
-        const firstDayElements = document.querySelectorAll(`.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)`);
-
-        firstDayElements.forEach((dayElement) => {
-          const elementDay = parseInt(dayElement.textContent.trim(), 10);
-          const elementMonth = date.getMonth() + 1;
-
-          if (elementDay === dayNumber && elementMonth === monthNumber) {
-            dayElement.classList.add("rentnow-free-date");
-          }
-        });
-      });
-
     }
   }
 });
