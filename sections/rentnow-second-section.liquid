@@ -565,7 +565,7 @@ function getDatesBetween(startDate, endDate) {
     afterDate.setDate(afterDate.getDate() + 1);
   }
 
-  console.log(date);
+  console.log("Between Dates:", date);
   return dates;
 }
 
@@ -584,7 +584,7 @@ function getFreeDates (startDate, endDate) {
   lastTwoDates.setDate(lastTwoDates.getDate() + 1);
   dates.push(new Date(lastTwoDates));
 
-  console.log(dates);
+  console.log("Free Dates:", dates);
   return dates;
 }
 
