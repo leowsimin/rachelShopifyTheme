@@ -368,6 +368,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       const dateRange = getDatesBetween(startDate, endDate);
 
       const allParagraphsFirst = document.querySelectorAll('.rentnow-first-days p');
+      const allParagraphsSecond = document.querySelectorAll('.rentnow-second-days p');
 
       dateRange.forEach((date, index) => {
         let dayElement;
