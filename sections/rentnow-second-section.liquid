@@ -416,28 +416,37 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       console.log(startDate, endDate);
 
-      freeDateRange.forEach((date, index) => {
-        let freeElement;
+      freeDateRange.forEach((date) => {
+        const dayNumber = date.getDate();
+        const monthNumber = date.getMonth() + 1;
 
-        allParagraphs.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              freeElement = paragraph;
-            }
+        // Apply to the second calendar
+        const secondDayElements = document.querySelectorAll(`.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)`);
+
+        secondDayElements.forEach((dayElement) => {
+          const elementDay = parseInt(dayElement.textContent.trim(), 10);
+          const elementMonth = secondMonth.getMonth() + 1;
+
+          const isInRange = elementMonth === monthNumber && elementDay === dayNumber;
+
+          if (isInRange) {
+            dayElement.classList.add("rentnow-free-date");
           }
         });
 
-        if (freeElement) {
+        // Apply to the first calendar
+        const firstDayElements = document.querySelectorAll(`.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)`);
 
-          if (index === 1 || index === 2) {
-            freeElement.classList.add("rentnow-free-first-date");
-          }
+        firstDayElements.forEach((dayElement) => {
+          const elementDay = parseInt(dayElement.textContent.trim(), 10);
+          const elementMonth = date.getMonth() + 1;
 
-          else if (index === 0 || index === 3) {
-            freeElement.classList.add("rentnow-free-last-date");
+          const isInRange = elementMonth === monthNumber && elementDay === dayNumber;
+
+          if (isInRange) {
+            dayElement.classList.add("rentnow-free-date");
           }
-        }
+        });
       });
 
     }
@@ -523,29 +532,39 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       console.log(startDate, endDate);
 
 
-      freeDateRange.forEach((date, index) => {
-        let freeElement;
+      freeDateRange.forEach((date) => {
+        const dayNumber = date.getDate();
+        const monthNumber = date.getMonth() + 1;
 
-        allParagraphs.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              freeElement = paragraph;
-            }
+        // Apply to the second calendar
+        const secondDayElements = document.querySelectorAll(`.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)`);
+
+        secondDayElements.forEach((dayElement) => {
+          const elementDay = parseInt(dayElement.textContent.trim(), 10);
+          const elementMonth = secondMonth.getMonth() + 1;
+
+          const isInRange = elementMonth === monthNumber && elementDay === dayNumber;
+
+          if (isInRange) {
+            dayElement.classList.add("rentnow-free-date");
           }
         });
 
-        if (freeElement) {
+        // Apply to the first calendar
+        const firstDayElements = document.querySelectorAll(`.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)`);
 
-          if (index === 1 || index === 2) {
-            freeElement.classList.add("rentnow-free-first-date");
-          }
+        firstDayElements.forEach((dayElement) => {
+          const elementDay = parseInt(dayElement.textContent.trim(), 10);
+          const elementMonth = date.getMonth() + 1;
 
-          else if (index === 0 || index === 3) {
-            freeElement.classList.add("rentnow-free-last-date");
+          const isInRange = elementMonth === monthNumber && elementDay === dayNumber;
+
+          if (isInRange) {
+            dayElement.classList.add("rentnow-free-date");
           }
-        }
+        });
       });
+
 
     }
   }
