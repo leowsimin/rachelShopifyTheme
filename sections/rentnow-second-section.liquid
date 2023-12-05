@@ -448,8 +448,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
   if (event.target.closest(".rentnow-second-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
-    console.log("second calendar valid number!")
-
     if (startDate !== null && endDate !== null) {
       startDate = null;
       endDate = null;
@@ -477,7 +475,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
       console.log(startDate);
       console.log(endDate);
-      
 
       dateRange.forEach((date, index) => {
         let dayElement;
