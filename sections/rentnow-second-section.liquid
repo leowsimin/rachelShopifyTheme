@@ -355,6 +355,12 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
         "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
       });
+
+      document.querySelectorAll(".rentnow-second-days p").forEach((day) => {
+        day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
+        "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
+        "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
+      });
     }
 
 
@@ -451,6 +457,12 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       endDate = null;
 
       document.querySelectorAll(".rentnow-second-days p").forEach((day) => {
+        day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
+        "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
+        "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
+      });
+
+      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
         day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
         "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
         "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
