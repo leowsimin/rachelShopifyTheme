@@ -414,6 +414,8 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
 
+      console.log(startDate, endDate);
+
       freeDateRange.forEach((date, index) => {
         let freeElement;
 
@@ -517,6 +519,8 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
+
+      console.log(startDate, endDate);
 
       freeDateRange.forEach((date, index) => {
         let freeElement;
