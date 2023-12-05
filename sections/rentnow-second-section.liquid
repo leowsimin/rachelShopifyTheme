@@ -359,7 +359,9 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
     if (startDate === null) {
       startDate = currentDate;
       event.target.classList.add("rentnow-start-date");
-    } else if (endDate === null && currentDate > startDate) {
+    } 
+    
+    else if (endDate === null && currentDate > startDate) {
       // If start date is set, and end date is not set, set end date only if it's after start date
       endDate = currentDate;
       event.target.classList.add("rentnow-end-date");
