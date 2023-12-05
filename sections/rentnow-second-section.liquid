@@ -414,6 +414,9 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
 
+      console.log(startDate, endDate);
+
+
       freeDateRange.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
@@ -445,8 +448,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
             dayElement.classList.add("rentnow-free-date");
           }
         });
-});
-
+      });
 
 
 document.querySelector(".rentnow-second-days").addEventListener("click", function (event) {
