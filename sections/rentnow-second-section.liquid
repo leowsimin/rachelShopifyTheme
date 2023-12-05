@@ -357,31 +357,12 @@ function handleDateClick(event, currentCalendarClass, otherCalendarClass) {
   ) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
 
-    console.log("Current Date:", currentDate);
-
-    if (startDate !== null && endDate !== null) {
-      startDate = null;
-      endDate = null;
-
-      document.querySelectorAll(`${currentCalendarClass} p`).forEach((day) => {
-        day.classList.remove(
-          "rentnow-start-date",
-          "rentnow-end-date",
-          "rentnow-selected-date",
-          "rentnow-selected-first-date",
-          "rentnow-selected-last-date",
-          "rentnow-selected-one-date",
-          "rentnow-free-date",
-          "rentnow-free-first-date",
-          "rentnow-free-last-date"
-        );
-      });
-    }
-
     if (startDate === null) {
+      // If start date is not set, set it
       startDate = currentDate;
       event.target.classList.add("rentnow-start-date");
     } else if (endDate === null && currentDate > startDate) {
+      // If start date is set, and end date is not set, set end date only if it's after start date
       endDate = currentDate;
       event.target.classList.add("rentnow-end-date");
 
@@ -446,9 +427,14 @@ function handleDateClick(event, currentCalendarClass, otherCalendarClass) {
           }
         }
       });
+
+      // Reset start and end dates after processing
+      startDate = null;
+      endDate = null;
     }
   }
 }
+
 
 // Function to get dates between start and end date
 function getDatesBetween(startDate, endDate) {
