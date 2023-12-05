@@ -527,19 +527,17 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
         allParagraphs.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
           if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === secondMonth.getDate()) {
+            // Compare against the text content of the paragraph
+            if (paragraph.textContent.trim() === date.getDate().toString()) {
               freeElement = paragraph;
             }
           }
         });
 
         if (freeElement) {
-
           if (index === 1 || index === 2) {
             freeElement.classList.add("rentnow-free-first-date");
-          }
-
-          else if (index === 0 || index === 3) {
+          } else if (index === 0 || index === 3) {
             freeElement.classList.add("rentnow-free-last-date");
           }
         }
