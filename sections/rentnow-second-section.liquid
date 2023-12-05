@@ -420,19 +420,17 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         allParagraphs.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
           if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+            // Compare against the text content of the paragraph
+            if (paragraph.textContent.trim() === date.getDate().toString()) {
               freeElement = paragraph;
             }
           }
         });
 
         if (freeElement) {
-
           if (index === 1 || index === 2) {
             freeElement.classList.add("rentnow-free-first-date");
-          }
-
-          else if (index === 0 || index === 3) {
+          } else if (index === 0 || index === 3) {
             freeElement.classList.add("rentnow-free-last-date");
           }
         }
@@ -519,7 +517,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       const freeDateRange = getFreeDates(startDate, endDate);
 
       console.log(startDate, endDate);
-
 
       freeDateRange.forEach((date, index) => {
         let freeElement;
