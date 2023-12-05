@@ -366,13 +366,13 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       // Selection of Dates
       const dateRange = getDatesBetween(startDate, endDate);
-      
-      const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
+
+      const allParagraphsFirst = document.querySelectorAll('.rentnow-first-days p');
 
       dateRange.forEach((date, index) => {
         let dayElement;
 
-        allParagraphs.forEach((paragraph) => {
+        allParagraphsFirst.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
           if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
             if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
@@ -410,7 +410,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       freeDateRange.forEach((date, index) => {
         let freeElement;
 
-        allParagraphs.forEach((paragraph) => {
+        allParagraphsFirst.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
           if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
             if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
