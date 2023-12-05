@@ -403,7 +403,7 @@ function handleDateClick(event, currentCalendarClass, otherCalendarClass) {
 
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
-      console.log(freeDateRange);
+      console.log("free dates:", freeDateRange);
 
       freeDateRange.forEach((date, index) => {
         let freeElement;
@@ -449,6 +449,8 @@ function getDatesBetween(startDate, endDate) {
     dates.push(new Date(afterDate));
     afterDate.setDate(afterDate.getDate() + 1);
   }
+
+  console.log("dates between:", dates);
   return dates;
 }
 
