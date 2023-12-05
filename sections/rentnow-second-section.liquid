@@ -354,6 +354,104 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
       });
     }
+
+
+    // If start date is not set, set it
+    if (startDate === null) {
+      startDate = currentDate;
+      event.target.classList.add("rentnow-start-date");
+    } else if (endDate === null && currentDate > startDate) {
+      // If start date is set, and end date is not set, set end date only if it's after start date
+      endDate = currentDate;
+      event.target.classList.add("rentnow-end-date");
+
+      // Selection of Dates
+      const dateRange = getDatesBetween(startDate, endDate);
+      const allParagraphs = document.querySelectorAll('.rentnow-first-days p');
+
+      dateRange.forEach((date, index) => {
+        let dayElement;
+
+        allParagraphs.forEach((paragraph) => {
+          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
+            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+              dayElement = paragraph;
+            }
+          }
+        });
+
+        if (dayElement) {
+
+          if (index === 0 && dateRange.length !== 1 ) {
+            dayElement.classList.add("rentnow-selected-first-date");
+            dayElement.classList.add("rentnow-selected-date");
+          }
+
+          else if (index === dateRange.length - 1 && dateRange.length !== 1) {
+            dayElement.classList.add("rentnow-selected-last-date");
+            dayElement.classList.add("rentnow-selected-date");
+          }
+
+          else if (dateRange.length === 1) {
+            dayElement.classList.add("rentnow-selected-one-date");
+          }
+
+          else {
+            dayElement.classList.add("rentnow-selected-date");
+          }
+        }
+      });
+
+      // Free Dates
+      const freeDateRange = getFreeDates(startDate, endDate);
+      console.log(freeDateRange)
+
+      freeDateRange.forEach((date, index) => {
+        let freeElement;
+
+        allParagraphs.forEach((paragraph) => {
+          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
+          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
+            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
+              freeElement = paragraph;
+            }
+          }
+        });
+
+        if (freeElement) {
+
+          if (index === 1 || index === 2) {
+            freeElement.classList.add("rentnow-free-first-date");
+          }
+
+          else if (index === 0 || index === 3) {
+            freeElement.classList.add("rentnow-free-last-date");
+          }
+        }
+      });
+
+    }
+  }
+});
+
+document.querySelector(".rentnow-second-days").addEventListener("click", function (event) {
+  const selectedDate = event.target.textContent;
+
+  // Check if the clicked date is a valid number
+  if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
+    const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
+
+    if (startDate !== null && endDate !== null) {
+      startDate = null;
+      endDate = null;
+
+      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
+        day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
+        "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
+        "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
+      });
+    }
     
 
     // If start date is not set, set it
