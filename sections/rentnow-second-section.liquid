@@ -414,29 +414,6 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
 
-      freeDateRange.forEach((date, index) => {
-        let freeElement;
-
-        allParagraphs.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              freeElement = paragraph;
-            }
-          }
-        });
-
-        if (freeElement) {
-
-          if (index === 1 || index === 2) {
-            freeElement.classList.add("rentnow-free-first-date");
-          }
-
-          else if (index === 0 || index === 3) {
-            freeElement.classList.add("rentnow-free-last-date");
-          }
-        }
-      });
 
     }
   }
@@ -517,33 +494,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
-
-      console.log(startDate, endDate);
-
-
-      freeDateRange.forEach((date, index) => {
-        let freeElement;
-
-        allParagraphs.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === secondMonth.getDate()) {
-              freeElement = paragraph;
-            }
-          }
-        });
-
-        if (freeElement) {
-
-          if (index === 1 || index === 2) {
-            freeElement.classList.add("rentnow-free-first-date");
-          }
-
-          else if (index === 0 || index === 3) {
-            freeElement.classList.add("rentnow-free-last-date");
-          }
-        }
-      });
 
     }
   }
