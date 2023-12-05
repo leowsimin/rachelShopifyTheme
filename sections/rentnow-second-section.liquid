@@ -442,11 +442,11 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 document.querySelector(".rentnow-second-days").addEventListener("click", function (event) {
   const selectedDate = event.target.textContent;
 
-  console.log("second calendar clicked!");
+  console.log("second calendar clicked!!");
 
   // Check if the clicked date is a valid number
   if (event.target.closest(".rentnow-second-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
-    const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
+    const currentDate = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), selectedDate);
 
     if (startDate !== null && endDate !== null) {
       startDate = null;
