@@ -409,7 +409,6 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
 
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
-      console.log(freeDateRange)
 
       freeDateRange.forEach((date, index) => {
         let freeElement;
@@ -474,14 +473,13 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
       // Selection of Dates
       const dateRange = getDatesBetween(startDate, endDate);
-      console.log(startDate);
-      console.log("im changed");
-      console.log(endDate);
       const allParagraphs = document.querySelectorAll('.rentnow-second-days p');
+
+      console.log(startDate);
+      console.log(endDate);
 
       dateRange.forEach((date, index) => {
         let dayElement;
-
 
         allParagraphs.forEach((paragraph) => {
           // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
@@ -516,7 +514,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
-      console.log(freeDateRange)
 
       freeDateRange.forEach((date, index) => {
         let freeElement;
