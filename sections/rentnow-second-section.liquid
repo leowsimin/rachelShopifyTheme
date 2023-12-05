@@ -550,6 +550,8 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
 // Function to get dates between start and end date
 function getDatesBetween(startDate, endDate) {
+  console.log(startDate);
+  console.log(endDate);
   const dates = [];
   let afterDate = new Date(startDate);
   afterDate.setDate(afterDate.getDate() + 1);
