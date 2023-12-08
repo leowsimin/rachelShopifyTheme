@@ -436,7 +436,7 @@ document.querySelectorAll('.rentnow-first-days, .rentnow-second-days').forEach((
 
         // Highlight the range between start and end dates
         let currentDay = startDate;
-        while (currentDay !== endDate) {
+        while (currentDay && currentDay !== endDate) {
           currentDay = currentDay.nextElementSibling;
           if (currentDay) {
             currentDay.classList.add('rentnow-selected-date');
