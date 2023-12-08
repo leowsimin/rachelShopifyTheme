@@ -340,11 +340,11 @@ let endDate = null;
 document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
   const selectedDate = event.target.textContent;
 
+  console.log("first calendar is being clicked");
+
   // Check if the clicked date is a valid number
   if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
     const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
-    console.log(date);
-    console.log(currentDate);
 
     if (startDate !== null && endDate !== null) {
       startDate = null;
@@ -362,6 +362,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
       });
     }
+
 
     // If start date is not set, set it
     if (startDate === null) {
@@ -413,14 +414,14 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       // Free Dates
       const freeDateRange = getFreeDates(startDate, endDate);
 
+      console.log(startDate, endDate);
+
       freeDateRange.forEach((date) => {
         const dayNumber = date.getDate();
-        const monthNumber = date.getMonth() + 1;
-        console.log("monthNumber:", monthNumber);
+        const monthNumber = date.getMonth() + 1; // Months are zero-based, so we add 1
 
         // Apply to the second calendar
         const secondMonthLabel = months[secondMonth.getMonth()]; // Get the label of the second calendar month
-        console.log("secondMonthLabel:", secondMonthLabel);
 
         if (secondMonthLabel === months[monthNumber - 1]) {
           const secondDayElements = document.querySelectorAll('.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
@@ -435,11 +436,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         }
 
         // Apply to the first calendar
-
-        const selectedFirstMonth = dropdownMonth.value;
-        const firstMonthLabel = months.indexOf(selectedFirstMonth) !== -1 ? selectedFirstMonth : months[date.getMonth()];
-
-        console.log("Selected First Month:", selectedFirstMonth);
+        const firstMonthLabel = months[date.getMonth()]; // Get the label of the first calendar month
 
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
@@ -540,11 +537,9 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       freeDateRange.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1; // Months are zero-based, so we add 1
-        console.log("monthNumber:", monthNumber);
 
         // Apply to the second calendar
         const secondMonthLabel = months[secondMonth.getMonth()]; // Get the label of the second calendar month
-        console.log("secondMonthLabel:", secondMonthLabel);
 
         if (secondMonthLabel === months[monthNumber - 1]) {
           const secondDayElements = document.querySelectorAll('.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
@@ -559,12 +554,7 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
         }
 
         // Apply to the first calendar
-
-        const selectedFirstMonth = dropdownMonth.value;
-        const firstMonthLabel = months.indexOf(selectedFirstMonth) !== -1 ? selectedFirstMonth : months[date.getMonth()];
-
-        console.log("Selected First Month:", selectedFirstMonth);
-        
+        const firstMonthLabel = months[date.getMonth()]; // Get the label of the first calendar month
 
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
