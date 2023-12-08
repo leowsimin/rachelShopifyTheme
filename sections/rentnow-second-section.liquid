@@ -511,6 +511,7 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       freeDateRangeSecond.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
+        console.log("Second Calendar:", monthNumber);
         const secondMonthLabel = months[secondMonth.getMonth()];
         
         if (secondMonthLabel === months[monthNumber - 1]) {
