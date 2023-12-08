@@ -224,8 +224,8 @@ function updateCalendar() {
   //First Calendar
 
   // Dates before Month
-  const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-  const lastDayPrevMonth = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+  const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
+  const lastDayPrevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
 
   for (let x = firstDay - 1; x >= 0; x--) {
     days += `<p class="rentnow-prevdays">${lastDayPrevMonth - x}</p>`;
