@@ -415,6 +415,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
       freeDateRangeFirst.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
+        console.log("First Calendar:", monthNumber)
         const firstMonthLabel = months[date.getMonth()];
         
         if (firstMonthLabel === months[monthNumber - 1]) {
