@@ -409,12 +409,46 @@ for (let p = 1; p <= secondNextDays; p++) {
   secondMonthDays.innerHTML = secondDays;
 }
 
-// Selection of Dates on both calendar
+// Variables to track selected dates
 let startDate = null;
 let endDate = null;
 
-const firstCalendarDays = document.querySelector("rentnow-first-days").addEventListener("click", function(event) {
+// Event listener for date selection
+document.querySelectorAll('.rentnow-first-days, .rentnow-second-days').forEach((calendarDays) => {
+  calendarDays.addEventListener('click', function (event) {
+    const clickedDay = event.target;
 
-})
+    // Check if the clicked element is a day (not a previous/next day)
+    if (!clickedDay.classList.contains('rentnow-prevdays') && !clickedDay.classList.contains('rentnow-nextdays')) {
+      // Clear previous selection
+      document.querySelectorAll('.rentnow-start-date, .rentnow-end-date').forEach((selectedDate) => {
+        selectedDate.classList.remove('rentnow-start-date', 'rentnow-end-date');
+      });
+
+      // If no start date is set, set the start date
+      if (!startDate) {
+        startDate = clickedDay;
+        startDate.classList.add('rentnow-start-date');
+      } else {
+        // Set end date
+        endDate = clickedDay;
+        endDate.classList.add('rentnow-end-date');
+
+        // Highlight the range between start and end dates
+        let currentDay = startDate;
+        while (currentDay !== endDate) {
+          currentDay = currentDay.nextElementSibling;
+          if (currentDay) {
+            currentDay.classList.add('rentnow-start-date');
+          }
+        }
+
+        // Reset selection for the next interaction
+        startDate = null;
+        endDate = null;
+      }
+    }
+  });
+});
 
 {% endjavascript %}
