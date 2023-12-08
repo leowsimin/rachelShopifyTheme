@@ -409,78 +409,49 @@ for (let p = 1; p <= secondNextDays; p++) {
   secondMonthDays.innerHTML = secondDays;
 }
 
-// Selection of Start and End Date
+// Variables to track selected dates
 let startDate = null;
 let endDate = null;
 
-// Event listener for date click
-document.querySelector(".rentnow-first-days").addEventListener("click", function (event) {
-  const selectedDate = event.target.textContent;
+// Event listener for date selection
+document.querySelectorAll('.rentnow-first-days, .rentnow-second-days').forEach((calendarDays) => {
+  calendarDays.addEventListener('click', function (event) {
+    const clickedDay = event.target;
 
-  // Check if the clicked date is a valid number
-  if (event.target.closest(".rentnow-first-days") && !isNaN(selectedDate) && !event.target.classList.contains("rentnow-prevdays") && !event.target.classList.contains("rentnow-nextdays")) {
-    const currentDate = new Date(date.getFullYear(), date.getMonth(), selectedDate);
-
-    if (startDate !== null && endDate !== null) {
-      startDate = null;
-      endDate = null;
-
-      document.querySelectorAll(".rentnow-first-days p").forEach((day) => {
-        day.classList.remove("rentnow-start-date", "rentnow-end-date", "rentnow-selected-date", 
-        "rentnow-selected-first-date", "rentnow-selected-last-date", "rentnow-selected-one-date",
-        "rentnow-free-date","rentnow-free-first-date","rentnow-free-last-date");
+    // Check if the clicked element is a day (not a previous/next day)
+    if (!clickedDay.classList.contains('rentnow-prevdays') && !clickedDay.classList.contains('rentnow-nextdays')) {
+      // Clear previous selection
+      document.querySelectorAll('.rentnow-start-date, .rentnow-end-date').forEach((selectedDate) => {
+        selectedDate.classList.remove('rentnow-start-date', 'rentnow-end-date');
       });
-    }
 
-    // If start date is not set, set it
-    if (startDate === null) {
-      startDate = currentDate;
-      event.target.classList.add("rentnow-start-date");
-    } 
-    
-    else if (endDate === null && currentDate > startDate) {
-      // If start date is set, and end date is not set, set end date only if it's after start date
-      endDate = currentDate;
-      event.target.classList.add("rentnow-end-date");
+      // If no start date is set, set the start date
+      if (!startDate) {
+        startDate = clickedDay;
+        startDate.classList.add('rentnow-start-date');
+      } else {
+        // Set end date
+        endDate = clickedDay;
+        endDate.classList.add('rentnow-end-date');
 
-      // Selection of Dates
-      const dateRange = getDatesBetween(startDate, endDate);
-
-      const allParagraphsFirst = document.querySelectorAll('.rentnow-first-days p');
-      const allParagraphsSecond = document.querySelectorAll('.rentnow-second-days p');
-
-      dateRange.forEach((date, index) => {
-        let dayElement;
-
-        allParagraphsFirst.forEach((paragraph) => {
-          // Exclude dates with "rentnow-prevdays" and "rentnow-nextdays" classes
-          if (!paragraph.classList.contains("rentnow-prevdays") && !paragraph.classList.contains("rentnow-nextdays")) {
-            if (parseInt(paragraph.textContent.trim()) === date.getDate()) {
-              dayElement = paragraph;
-            }
-          }
-        });
-
-        if (dayElement) {
-
-          if (index === 0 && dateRange.length !== 1 ) {
-            dayElement.classList.add("rentnow-selected-first-date");
-            dayElement.classList.add("rentnow-selected-date");
-          }
-
-          else if (index === dateRange.length - 1 && dateRange.length !== 1) {
-            dayElement.classList.add("rentnow-selected-last-date");
-            dayElement.classList.add("rentnow-selected-date");
-          }
-
-          else if (dateRange.length === 1) {
-            dayElement.classList.add("rentnow-selected-one-date");
-          }
-
-          else {
-            dayElement.classList.add("rentnow-selected-date");
+        // Highlight the range between start and end dates
+        let currentDay = startDate;
+        while (currentDay && currentDay !== endDate) {
+          currentDay = currentDay.nextElementSibling;
+          if (currentDay) {
+            currentDay.classList.add('rentnow-selected-date');
           }
         }
-    });
+
+        console.log("Start Date:", startDate);
+        console.log("End Date:", endDate);
+
+        // Reset selection for the next interaction
+        startDate = null;
+        endDate = null;
+      }
+    }
+  });
+});
 
 {% endjavascript %}
