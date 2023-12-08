@@ -549,10 +549,9 @@ function getDatesBetween(startDate, endDate) {
   return dates;
 }
 
-function getFreeDates (startDate, endDate) {
-  
+function getFreeDates(startDate, endDate, baseDate) {
   const dates = [];
-  let firstTwoDates = new Date(startDate);
+  let firstTwoDates = new Date(baseDate);
   firstTwoDates.setDate(firstTwoDates.getDate() - 1);
   dates.push(new Date(firstTwoDates));
   firstTwoDates.setDate(firstTwoDates.getDate() - 1);
