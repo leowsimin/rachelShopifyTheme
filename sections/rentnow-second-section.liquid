@@ -491,8 +491,8 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       freeDateRangeSecond.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
-        console.log("Second Calendar:", monthNumber);
         const secondMonthLabel = months[secondMonth.getMonth()];
+        console.log("secondMonthLabel:", secondMonthLabel);
         
         if (secondMonthLabel === months[monthNumber - 1]) {
           const secondDayElements = document.querySelectorAll('.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
@@ -511,8 +511,8 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       freeDateRangeFirst.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
-        console.log("First Calendar:", monthNumber);
         const firstMonthLabel = months[date.getMonth()];
+        console.log("firstMonthLabel:", firstMonthLabel);
         
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
