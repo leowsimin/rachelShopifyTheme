@@ -305,6 +305,39 @@ for (let j = 1; j<= firstNextDays; j++) {
 }
 
 // Event listener for label click
+rentNowFirstMonthLabel.addEventListener('click', function() {
+  dropdownMonth.style.display = 'block';
+  dropdownMonth.size = "7";
+  dropdownMonth.click();
+  event.stopPropagation();
+});
+
+// Event listener for dropdown change
+dropdownMonth.addEventListener('change', function() {
+  const selectedMonth = dropdownMonth.value;
+  rentNowFirstMonthLabel.textContent = selectedMonth;
+  dropdownMonth.style.display = 'none';
+
+  const selectedMonthIndex = months.indexOf(selectedMonth);
+  date.setMonth(selectedMonthIndex);
+
+  const selectedYear = dropdownYear.value;
+
+  secondMonth.setMonth(selectedMonthIndex + 1);
+  secondMonth.setFullYear(selectedYear);
+
+  // Check if the month of the second calendar is January
+  if (secondMonth.getMonth() === 0) {
+    secondMonth.setFullYear(secondMonth.getFullYear() + 1);
+  }
+
+  rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
+  document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
+  updateCalendar();
+});
+
+// Event listener for label click
 rentNowFirstYearLabel.addEventListener('click', function(event) {
   dropdownYear.style.display = 'block';
   dropdownYear.size = 7;
@@ -329,8 +362,14 @@ dropdownYear.addEventListener('change', function() {
 
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
+  // Reset firstMonthLabel to the current month
+  const currentMonth = months[date.getMonth()];
+  rentNowFirstMonthLabel.textContent = currentMonth;
+
   updateCalendar();
 });
+
 
 // Selection of Start and End Date
 let startDate = null;
@@ -554,7 +593,7 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
 
         // Apply to the first calendar
         const firstMonthLabel = months[date.getMonth()]; // Get the label of the first calendar month
-        
+
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
 
