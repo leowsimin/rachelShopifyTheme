@@ -487,13 +487,12 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       });
 
       // Free Dates for the second calendar
-      const freeDateRangeSecond = getFreeDates(startDate, endDate, date);
+      const freeDateRangeSecond = getFreeDates(startDate, endDate, secondMonth);
       freeDateRangeSecond.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
         const secondMonthLabel = months[secondMonth.getMonth()];
-        console.log("secondMonthLabel:", secondMonthLabel);
-        console.log("I changed");
+        console.log("secondMonthLabel:", secondMonthLabel, "Month number:", monthNumber);
 
         if (secondMonthLabel === months[monthNumber - 1]) {
           const secondDayElements = document.querySelectorAll('.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
@@ -506,7 +505,6 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
           });
         }
       });
-      
 
       // Free Dates for the first calendar
       const freeDateRangeFirst = getFreeDates(startDate, endDate, date);
@@ -514,7 +512,7 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
         const firstMonthLabel = months[date.getMonth()];
-        console.log("firstMonthLabel:", firstMonthLabel);
+        console.log("firstMonthLabel:", firstMonthLabel, "Month number:", monthNumber);
 
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
