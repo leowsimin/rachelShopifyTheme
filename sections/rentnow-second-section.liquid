@@ -559,8 +559,12 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
         }
 
         // Apply to the first calendar
-        const firstMonthLabel = months[date.getMonth()]; // Get the label of the first calendar month
-        console.log("firstMonthLabel:", firstMonthLabel);
+
+        const selectedFirstMonth = dropdownMonth.value;
+        const firstMonthLabel = months.indexOf(selectedFirstMonth) !== -1 ? selectedFirstMonth : months[date.getMonth()];
+
+        console.log("Selected First Month:", selectedFirstMonth);
+
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
 
