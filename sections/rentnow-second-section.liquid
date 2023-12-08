@@ -493,6 +493,7 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
         const monthNumber = date.getMonth() + 1;
         const secondMonthLabel = months[secondMonth.getMonth()];
         console.log("secondMonthLabel:", secondMonthLabel);
+        console.log("I changed");
 
         if (secondMonthLabel === months[monthNumber - 1]) {
           const secondDayElements = document.querySelectorAll('.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
@@ -505,6 +506,7 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
           });
         }
       });
+      
 
       // Free Dates for the first calendar
       const freeDateRangeFirst = getFreeDates(startDate, endDate, date);
