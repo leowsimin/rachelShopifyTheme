@@ -277,8 +277,8 @@ function updateCalendar() {
 updateCalendar();
 
 // Dates before Month
-const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
-const firstFirstDayIndex = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+const firstPrevLastDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate(); 
+const firstFirstDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
 
 let days = "";
 
