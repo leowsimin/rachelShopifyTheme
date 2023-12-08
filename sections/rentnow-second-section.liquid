@@ -487,16 +487,16 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       });
 
       // Free Dates for the second calendar
-      const freeDateRangeSecond = getFreeDates(startDate, endDate, new Date(date));
+      const freeDateRangeSecond = getFreeDates(startDate, endDate);
       freeDateRangeSecond.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
         const secondMonthLabel = months[secondMonth.getMonth()];
         console.log("secondMonthLabel:", secondMonthLabel);
-
+        
         if (secondMonthLabel === months[monthNumber - 1]) {
           const secondDayElements = document.querySelectorAll('.rentnow-second-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
-
+          
           secondDayElements.forEach((dayElement) => {
             const elementDay = parseInt(dayElement.textContent.trim(), 10);
             if (elementDay === dayNumber) {
@@ -507,16 +507,16 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
       });
 
       // Free Dates for the first calendar
-      const freeDateRangeFirst = getFreeDates(startDate, endDate, new Date(date));
+      const freeDateRangeFirst = getFreeDates(startDate, endDate);
       freeDateRangeFirst.forEach((date) => {
         const dayNumber = date.getDate();
         const monthNumber = date.getMonth() + 1;
         const firstMonthLabel = months[date.getMonth()];
-        console.log("firstMonthLabel:", firstMonthLabel);
-
+        console.log("firstMonthLabel:", MonthLabel);
+        
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
-
+          
           firstDayElements.forEach((dayElement) => {
             const elementDay = parseInt(dayElement.textContent.trim(), 10);
             if (elementDay === dayNumber) {
@@ -526,10 +526,10 @@ document.querySelector(".rentnow-second-days").addEventListener("click", functio
         }
       });
       
-      
     }
   }
 });
+
 
 // Function to get dates between start and end date
 function getDatesBetween(startDate, endDate) {
