@@ -440,6 +440,7 @@ document.querySelector(".rentnow-first-days").addEventListener("click", function
         const firstMonthLabel = months.indexOf(selectedFirstMonth) !== -1 ? selectedFirstMonth : months[date.getMonth()];
 
         console.log("Selected First Month:", selectedFirstMonth);
+        
 
         if (firstMonthLabel === months[monthNumber - 1]) {
           const firstDayElements = document.querySelectorAll('.rentnow-first-days p:not(.rentnow-prevdays):not(.rentnow-nextdays)');
