@@ -416,17 +416,17 @@ for (let p = 1; p <= secondNextDays; p++) {
 const firstCalendarDays = document.querySelector(".rentnow-first-days");
 const secondCalendarDays = document.querySelector(".rentnow-second-days");
 
-[firstCalendarDays, secondCalendarDays].forEach(element => {
-    element.addEventListener('click', selectionOfDays);
+[firstCalendarDays, secondCalendarDays].forEach(container => {
+    container.querySelectorAll('p').forEach(pElement => {
+        pElement.addEventListener('click', selectionOfDays);
+    });
 });
 
 function selectionOfDays() {
+    console.log("Text Content 1st:", rentNowFirstMonthLabel.textContent);
+    console.log("Text Content 2nd:", rentNowSecondMonthLabel.textContent); 
 
-  // Prints out December and January Correctly
-  console.log("Text Content 1st:", rentNowFirstMonthLabel.textContent);
-  console.log("Text Content 2nd:", rentNowSecondMonthLabel.textContent); 
-
-  
+    console.log("")
 }
 
 {% endjavascript %}
