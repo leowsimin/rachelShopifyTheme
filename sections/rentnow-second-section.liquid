@@ -473,7 +473,7 @@ function selectionOfDays(event) {
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
     console.log("bOOOo");
-    
+
 }
 
 function findMonthContainer(element) {
@@ -588,39 +588,7 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
-    // Parse day and month from the start date string
-    const [startDay, startMonth] = startDate.split(' ');
-    const startDateObj = { day: parseInt(startDay, 10), month: startMonth };
-    console.log("Start Date Object:", startDateObj);
-
-    // If start date is available, calculate one day before and apply class
-    if (startDateObj.day && startDateObj.month) {
-        const oneDayBeforeStart = { day: startDateObj.day - 1, month: startDateObj.month };
-        applyClassToDay(oneDayBeforeStart, 'rentnow-free-first-date');
-    }
-
-    // Parse day and month from the end date string
-    const [endDay, endMonth] = endDate.split(' ');
-    const endDateObj = { day: parseInt(endDay, 10), month: endMonth };
-    console.log("End Date Object:", endDateObj);
-
-    // If end date is available, calculate one day after and apply class
-    if (endDateObj.day && endDateObj.month) {
-        const oneDayAfterEnd = { day: endDateObj.day + 1, month: endDateObj.month };
-        applyClassToDay(oneDayAfterEnd, 'rentnow-free-last-date');
-    }
+  
 }
-
-function applyClassToDay(date, className) {
-    // Get the day and month from the date object
-    const { day, month } = date;
-
-    // Select the corresponding element and apply the class
-    const element = document.querySelector(`.rentnow-${month}-days .rentnow-day-${day}`);
-    if (element) {
-        element.classList.add(className);
-    }
-}
-
 
 {% endjavascript %}
