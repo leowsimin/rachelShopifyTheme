@@ -445,7 +445,10 @@ function selectionOfDays(event) {
       event.target.classList.add('rentnow-start-date');
     }
 
-    else if ()
+    else if (!endDate) {
+      endDate = clickedDay, clickedMonth;
+      event.target.classList.add('rentnow-end-date');
+    }
 
 }
 
