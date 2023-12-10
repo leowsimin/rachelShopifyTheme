@@ -418,7 +418,10 @@ const secondCalendarDays = document.querySelector(".rentnow-second-days");
 
 [firstCalendarDays, secondCalendarDays].forEach(container => {
     container.querySelectorAll('p').forEach(pElement => {
-        pElement.addEventListener('click', selectionOfDays);
+        // Exclude elements with classes "rentnow-prevdays" and "rentnow-nextdays"
+        if (!pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays')) {
+            pElement.addEventListener('click', selectionOfDays);
+        }
     });
 });
 
@@ -471,7 +474,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("whatup");
+    console.log("changed");
 
 }
 
