@@ -451,6 +451,7 @@ function selectionOfDays(event) {
         }
 
         applySelectedDates();
+        applyFreeDates();
     }
 
     else {
@@ -560,15 +561,6 @@ function applySelectedDates() {
                     element.classList.add('rentnow-selected-end-date');
                 }
             }
-
-            // Check if the current date is 2 days before the start date
-            const twoDaysBeforeStartDate = new Date(startDate);
-            twoDaysBeforeStartDate.setDate(twoDaysBeforeStartDate.getDate() - 2);
-
-            if (currentDateObj.getTime() === twoDaysBeforeStartDate.getTime()) {
-                // Apply class to the date 2 days before the start date
-                element.classList.add('rentnow-free-first-date');
-            }
         }
     });
 }
@@ -593,6 +585,10 @@ function isDateInRange(currentDate, startDate, endDate) {
         }
         return false;
     }
+}
+
+function applyFreeDates() {
+  
 }
 
 {% endjavascript %}
