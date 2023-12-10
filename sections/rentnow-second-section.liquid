@@ -439,7 +439,11 @@ function selectionOfDays(event) {
         const clickedMonth = monthContainer.textContent.trim();
         console.log("Month Clicked:", clickedMonth);
     }
-    
+
+    if (!startDate) {
+      startDate = clickedDay, clickedMonth;
+      
+    }
 
 }
 
