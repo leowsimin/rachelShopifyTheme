@@ -478,15 +478,6 @@ function selectionOfDays(event) {
         }
     }
 
-    // Function to check if the selected end date is a valid one
-    function isValidEndDate(selectedEndDate, startDate) {
-        const selectedEndDateObj = new Date(selectedEndDate);
-        const startDateObj = new Date(startDate);
-
-        // Check if the selected end date is after the start date
-        return selectedEndDateObj > startDateObj;
-    }
-
     else {
       // Remove existing classes to clear previous selection
        document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date').forEach(element => {
@@ -618,5 +609,14 @@ function isDateInRange(currentDate, startDate, endDate) {
         return false;
     }
 }
+
+// Function to check if the selected end date is a valid one
+    function isValidEndDate(selectedEndDate, startDate) {
+        const selectedEndDateObj = new Date(selectedEndDate);
+        const startDateObj = new Date(startDate);
+
+        // Check if the selected end date is after the start date
+        return selectedEndDateObj > startDateObj;
+    }
 
 {% endjavascript %}
