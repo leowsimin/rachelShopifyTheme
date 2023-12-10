@@ -431,6 +431,9 @@ function selectionOfDays(event) {
 
     const clickedDay = event.target.textContent;
     console.log("Day Clicked:", clickedDay);
+
+    const monthContainer = findMonthContainer(event.target);
+    console.log("Month Container:", monthContainer);
 }
 
 function findMonthContainer(element) {
