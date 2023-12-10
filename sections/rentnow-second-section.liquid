@@ -210,6 +210,9 @@ dropdownMonth.addEventListener('change', function() {
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
   
   updateCalendar();
+  attachEventListeners();
+  applySelectedDates();
+  applyFreeDates();
 });
 
 
@@ -329,8 +332,11 @@ dropdownYear.addEventListener('change', function() {
 
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
-  
+
   updateCalendar();
+  attachEventListeners();
+  applySelectedDates();
+  applyFreeDates();
 });
 
 // Second Calendar
@@ -356,6 +362,9 @@ dropdownSecondMonth.addEventListener('change', function() {
   secondMonth.setMonth(selectedMonthIndex);
 
   updateCalendar();
+  attachEventListeners();
+  applySelectedDates();
+  applyFreeDates();
 });
 
 // Second Year Dropdown Menu
@@ -378,6 +387,9 @@ dropdownSecondYear.addEventListener('change', function() {
   secondMonth.setFullYear(selectedYear);
 
   updateCalendar();
+  attachEventListeners();
+  applySelectedDates();
+  applyFreeDates();
 
 });
 
