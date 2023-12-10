@@ -502,22 +502,25 @@ function applySelectedDates() {
         !pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays')
     ));
 
-    // Add event listener to filtered date elements
+    let startSelected = false;
+    let endSelected = false;
+
     dateElements.forEach(pElement => {
-        pElement.addEventListener('click', selectionOfDays);
-    });
+        const currentDay = pElement.textContent;
+        const currentMonthContainer = findMonthContainer(pElement);
+        const currentDate = currentDay + ' ' + currentMonthContainer.textContent.trim();
 
-    // Iterate through the date elements
-    dateElements.forEach(element => {
-        const date = parseInt(element.textContent, 10);
-        const monthContainer = findMonthContainer(element);
-
-        if (monthContainer) {
-            const month = monthContainer.textContent.trim();
-            const currentDate = date + ' ' + month;
-
-            if (isDateInRange(currentDate, startDate, endDate)) {
-                element.classList.add('rentnow-selected-date');
+        if (isDateInRange(currentDate, startDate, endDate, ['rentnow-prevdays', 'rentnow-nextdays'])) {
+            if (!startSelected) {
+                // Apply class to the date after the start date
+                startSelected = true;
+            } else if (!endSelected) {
+                // Apply class to the date before the end date
+                endSelected = true;
+                pElement.classList.add('rentnow-selected-last-date');
+            } else {
+                // Additional dates between start and end
+                pElement.classList.add('rentnow-selected-date');
             }
         }
     });
