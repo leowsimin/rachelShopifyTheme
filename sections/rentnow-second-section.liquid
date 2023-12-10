@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("changed AGAIN.");
+    console.log("IM DONE RIGHT");
 }
 
 function findMonthContainer(element) {
@@ -587,16 +587,24 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
-    // Convert startDate to a Date object
     const startDateObj = new Date(startDate);
+    const endDateObj = new Date(endDate);
 
     // Calculate two days before the startDate
     const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
 
+    // Calculate two days before the endDate
+    const twoDaysBeforeEndDate = new Date(endDateObj);
+    twoDaysBeforeEndDate.setDate(endDateObj.getDate() - 2);
+
     // Calculate one day before the startDate
     const oneDayBeforeStartDate = new Date(startDateObj);
     oneDayBeforeStartDate.setDate(startDateObj.getDate() - 1);
+
+    // Calculate one day before the endDate
+    const oneDayBeforeEndDate = new Date(endDateObj);
+    oneDayBeforeEndDate.setDate(endDateObj.getDate() - 1);
 
     // Find all date elements
     const allDateElements = [
@@ -619,14 +627,20 @@ function applyFreeDates() {
             const currentDate = date + ' ' + month;
             const currentDateObj = new Date(currentDate);
 
-            // Check if the current date is two days before the startDate
             if (currentDateObj.getTime() === twoDaysBeforeStartDate.getTime()) {
-                element.classList.add('rentnow-free-date');
+                element.classList.add('rentnow-free-first-date');
             }
 
-            // Check if the current date is two days before the startDate
             else if (currentDateObj.getTime() === oneDayBeforeStartDate.getTime()) {
-                element.classList.add('rentnow-free-date');
+                element.classList.add('rentnow-free-last-date');
+            }
+
+            else if (currentDateObj.getTime() === oneDayBeforeEndDate.getTime()) {
+                element.classList.add('rentnow-free-first-date');
+            }
+
+            else if (currentDateObj.getTime() === twoDayBeforeEndDate.getTime()) {
+                element.classList.add('rentnow-free-last-date');
             }
         }
     });
