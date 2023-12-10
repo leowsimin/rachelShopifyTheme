@@ -440,9 +440,9 @@ function findMonthContainer(element) {
     while (element) {
         if (element.classList) {
             if (element.classList.contains('rentnow-first-calendar')) {
-                return rentNowFirstMonthLabel.textContent;
+                return document.querySelector('#rentNowFirstMonthLabel');
             } else if (element.classList.contains('rentnow-second-calendar')) {
-                return rentNowSecondMonthLabel.textContent
+                return document.querySelector('#rentNowSecondMonthLabel');
             }
         }
         element = element.parentNode;
