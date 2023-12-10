@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("hi");
+    console.log("no");
 
 }
 
@@ -536,8 +536,14 @@ function applySelectedDates() {
                     }
                 }
 
-                if (!endSelected) {
-                    // Apply class to the date before the end date
+                // Check if the current date is one day before the end date
+                const oneDayBeforeEndDate = new Date(endDate);
+                oneDayBeforeEndDate.setDate(oneDayBeforeEndDate.getDate() - 1);
+
+                const currentDateObj = new Date(currentDate);
+
+                if (currentDateObj.getTime() === oneDayBeforeEndDate.getTime()) {
+                    // Apply class to the date one day before the end date
                     endSelected = true;
                     element.classList.add('rentnow-selected-last-date');
                 }
@@ -545,6 +551,7 @@ function applySelectedDates() {
         }
     });
 }
+
 
 function isDateInRange(currentDate, startDate, endDate) {
     // Convert dates to JavaScript Date objects
