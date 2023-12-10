@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("hello");
+    console.log("hi");
 
 }
 
@@ -507,6 +507,9 @@ function applySelectedDates() {
         pElement.addEventListener('click', selectionOfDays);
     });
 
+    let startSelected = false;
+    let endSelected = false;
+
     // Iterate through the date elements
     dateElements.forEach(element => {
         const date = parseInt(element.textContent, 10);
@@ -519,11 +522,26 @@ function applySelectedDates() {
             if (isDateInRange(currentDate, startDate, endDate)) {
                 element.classList.add('rentnow-selected-date');
 
-                if (//currentDate one day after start date) {
-                  element.classList.add('rentnow-selected-first-date');
+                if (!startSelected) {
+                    // Check if the current date is one day after the start date
+                    const oneDayAfterStartDate = new Date(startDate);
+                    oneDayAfterStartDate.setDate(oneDayAfterStartDate.getDate() + 1);
+
+                    const currentDateObj = new Date(currentDate);
+
+                    if (currentDateObj.getTime() === oneDayAfterStartDate.getTime()) {
+                        // Apply class to the date one day after the start date
+                        startSelected = true;
+                        element.classList.add('rentnow-selected-first-date');
+                    }
+                }
+
+                if (!endSelected) {
+                    // Apply class to the date before the end date
+                    endSelected = true;
+                    element.classList.add('rentnow-selected-last-date');
                 }
             }
-
         }
     });
 }
