@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("heloooo");
+    console.log("no");
 
 }
 
@@ -587,8 +587,41 @@ function isDateInRange(currentDate, startDate, endDate) {
     }
 }
 
-function applyFreeDates() {
-  
+function applyFreeDates(startDate, endDate) {
+    // Parse the start and end dates
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    // Get the day and month of the start date
+    const startDay = start.getDate();
+    const startMonth = start.getMonth();
+
+    // Get the day and month of the end date
+    const endDay = end.getDate();
+    const endMonth = end.getMonth();
+
+    // Get the dates 2 days before the start date and 2 days after the end date
+    const twoDaysBeforeStart = new Date(start);
+    twoDaysBeforeStart.setDate(startDay - 2);
+
+    const twoDaysAfterEnd = new Date(end);
+    twoDaysAfterEnd.setDate(endDay + 2);
+
+    // Apply classes to the dates
+    applyClassToDay(twoDaysBeforeStart, 'rentnow-free-first-date');
+    applyClassToDay(twoDaysAfterEnd, 'rentnow-free-last-date');
+}
+
+function applyClassToDay(date, className) {
+    // Get the day and month of the date
+    const day = date.getDate();
+    const month = date.getMonth();
+
+    // Select the corresponding element and apply the class
+    const element = document.querySelector(`.rentnow-${month + 1}-days .rentnow-day-${day}`);
+    if (element) {
+        element.classList.add(className);
+    }
 }
 
 {% endjavascript %}
