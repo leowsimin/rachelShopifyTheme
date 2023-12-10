@@ -416,10 +416,13 @@ for (let p = 1; p <= secondNextDays; p++) {
 const firstCalendarDays = document.querySelector("rentnow-first-days");
 const secondCalendarDays = document.querySelector("rentnow-second-days");
 
+[firstCalendarDays, secondCalendarDays].forEach(element => {
+    element.addEventListener('click', selectionOfDays);
+});
 
-
-console.log(rentNowFirstMonthLabel);
-console.log(rentNowSecondMonthLabel);
-
+function selectionOfDays {
+  console.log(rentNowFirstMonthLabel);
+  console.log(rentNowSecondMonthLabel); 
+}
 
 {% endjavascript %}
