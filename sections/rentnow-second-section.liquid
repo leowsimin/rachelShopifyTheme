@@ -433,4 +433,17 @@ function selectionOfDays(event) {
     console.log("Day Clicked:", clickedDay);
 }
 
+function findMonthContainer(element) {
+    while (element) {
+        if (element.classList) {
+            if (element.classList.contains('rentnow-first-calendar')) {
+                return element.querySelector('.rentnow-first-months');
+            } else if (element.classList.contains('rentnow-second-calendar')) {
+                return element.querySelector('.rentnow-second-months');
+            }
+        }
+        element = element.parentNode;
+    }
+    return null;
+}
 {% endjavascript %}
