@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("go away pls");
+    console.log("changed.");
 }
 
 function findMonthContainer(element) {
@@ -594,6 +594,10 @@ function applyFreeDates() {
     const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
 
+    // Calculate one day before the startDate
+    const oneDayBeforeStartDate = new Date(startDateObj);
+    oneDaysBeforeStartDate.setDate(startDateObj.getDate() - 1);
+
     // Find all date elements
     const allDateElements = [
         ...firstCalendarDays.querySelectorAll('p'),
@@ -617,7 +621,11 @@ function applyFreeDates() {
 
             // Check if the current date is two days before the startDate
             if (currentDateObj.getTime() === twoDaysBeforeStartDate.getTime()) {
-                // Apply the class to the date two days before the startDate
+                element.classList.add('rentnow-free-date');
+            }
+
+            // Check if the current date is two days before the startDate
+            else if (currentDateObj.getTime() === oneDayBeforeStartDate.getTime()) {
                 element.classList.add('rentnow-free-date');
             }
         }
