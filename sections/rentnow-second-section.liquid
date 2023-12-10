@@ -440,13 +440,14 @@ function findMonthContainer(element) {
     while (element) {
         if (element.classList) {
             if (element.classList.contains('rentnow-first-calendar')) {
-                return element.querySelector('.rentnow-first-months');
+                return rentNowFirstMonthLabel.textContent;
             } else if (element.classList.contains('rentnow-second-calendar')) {
-                return element.querySelector('.rentnow-second-months');
+                return rentNowSecondMonthLabel.textContent
             }
         }
         element = element.parentNode;
     }
     return null;
 }
+
 {% endjavascript %}
