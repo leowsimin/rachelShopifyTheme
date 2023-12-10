@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("hello");
+    console.log("pls work!");
 
 }
 
@@ -509,26 +509,33 @@ function applySelectedDates() {
     });
 }
 
-function isDateInRange(currentDate, startDate, endDate) {
+function isDateInRange(currentDate, startDate, endDate, excludedClasses = []) {
     // Convert dates to JavaScript Date objects
     const current = new Date(currentDate);
     const start = new Date(startDate);
     const end = new Date(endDate);
 
-    // Check if the current date is within the range
-    if (start.getMonth() === end.getMonth()) {
-        return current > start && current < end;
+    // Check if the current date is within the range and not in the excluded classes
+    if (
+        start.getMonth() === end.getMonth() &&
+        current > start && current < end &&
+        !excludedClasses.some(className => current.classList.contains(className))
+    ) {
+        return true;
     } else {
         // Check if the current date is after the start date in the start month
-        if (current > start && current.getMonth() === start.getMonth()) {
+        if (current > start && current.getMonth() === start.getMonth() &&
+            !excludedClasses.some(className => current.classList.contains(className))) {
             return true;
         }
         // Check if the current date is before the end date in the end month
-        if (current < end && current.getMonth() === end.getMonth()) {
+        if (current < end && current.getMonth() === end.getMonth() &&
+            !excludedClasses.some(className => current.classList.contains(className))) {
             return true;
         }
         return false;
     }
 }
+
 
 {% endjavascript %}
