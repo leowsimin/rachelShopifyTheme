@@ -603,9 +603,11 @@ function applyFreeDates(startDate, endDate) {
     // Get the dates 2 days before the start date and 2 days after the end date
     const twoDaysBeforeStart = new Date(start);
     twoDaysBeforeStart.setDate(startDay - 2);
+    console.log("Two days before the Start Date:", twoDaysBeforeStart);
 
     const twoDaysAfterEnd = new Date(end);
     twoDaysAfterEnd.setDate(endDay + 2);
+    console.log("Two days after the End Date:", twoDaysAfterEnd);
 
     // Apply classes to the dates
     applyClassToDay(twoDaysBeforeStart, 'rentnow-free-first-date');
