@@ -518,7 +518,12 @@ function applySelectedDates() {
 
             if (isDateInRange(currentDate, startDate, endDate)) {
                 element.classList.add('rentnow-selected-date');
+
+                if (//currentDate one day after start date) {
+                  element.classList.add('rentnow-selected-first-date');
+                }
             }
+
         }
     });
 }
