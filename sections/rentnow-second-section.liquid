@@ -433,17 +433,17 @@ function selectionOfDays(event) {
     console.log("Day Clicked:", clickedDay);
 
     let clickedMonth = null;
-    const monthContainer = findMonthContainer(event.target);
-    console.log("Month Container:", monthContainer);
 
     if (!startDate) {
+        const monthContainer = findMonthContainer(event.target);
+        console.log("Month Container:", monthContainer);
 
-      if (monthContainer) {
-        const clickedMonth = monthContainer.textContent.trim();
-        console.log("Month Clicked:", clickedMonth);\
-        startDate = clickedDay + ' ' + clickedMonth;
-        event.target.classList.add('rentnow-start-date');
-      }
+        if (monthContainer) {
+            const clickedMonth = monthContainer.textContent.trim();
+            console.log("Month Clicked:", clickedMonth);
+            startDate = clickedDay + ' ' + clickedMonth;
+            event.target.classList.add('rentnow-start-date');
+        }
     }
 
     else if (!endDate) {
