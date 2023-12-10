@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("hello");
+    console.log("work plssss");
 
 }
 
@@ -491,22 +491,24 @@ function findMonthContainer(element) {
 
 function applySelectedDates() {
     // Find all date elements
-    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p, .rentnow-second-calendar .rentnow-second-days p');
+    if (!clickedDay.classList.contains('rentnow-prevdays') && !clickedDay.classList.contains('rentnow-nextdays')) {
+      const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p, .rentnow-second-calendar .rentnow-second-days p');
 
-    // Iterate through the date elements
-    dateElements.forEach(element => {
-        const date = parseInt(element.textContent, 10);
-        const monthContainer = findMonthContainer(element);
+      // Iterate through the date elements
+      dateElements.forEach(element => {
+          const date = parseInt(element.textContent, 10);
+          const monthContainer = findMonthContainer(element);
 
-        if (monthContainer) {
-            const month = monthContainer.textContent.trim();
-            const currentDate = date + ' ' + month;
+          if (monthContainer) {
+              const month = monthContainer.textContent.trim();
+              const currentDate = date + ' ' + month;
 
-            if (isDateInRange(currentDate, startDate, endDate)) {
-                element.classList.add('rentnow-selected-date');
-            }
-        }
-    });
+              if (isDateInRange(currentDate, startDate, endDate)) {
+                  element.classList.add('rentnow-selected-date');
+              }
+          }
+      });
+    }
 }
 
 function isDateInRange(currentDate, startDate, endDate) {
