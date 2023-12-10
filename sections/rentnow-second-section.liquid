@@ -416,15 +416,10 @@ for (let p = 1; p <= secondNextDays; p++) {
 const firstCalendarDays = document.querySelector(".rentnow-first-days");
 const secondCalendarDays = document.querySelector(".rentnow-second-days");
 
-// Select all <p> elements within the calendars excluding specific classes
-const dateElements = [
-    ...firstCalendarDays.querySelectorAll('p:not(.rentnow-prevdays):not(.rentnow-nextdays)'),
-    ...secondCalendarDays.querySelectorAll('p:not(.rentnow-prevdays):not(.rentnow-nextdays)')
-];
-
-// Add event listener to filtered date elements
-dateElements.forEach(pElement => {
-    pElement.addEventListener('click', selectionOfDays);
+[firstCalendarDays, secondCalendarDays].forEach(container => {
+    container.querySelectorAll('p').forEach(pElement => {
+        pElement.addEventListener('click', selectionOfDays);
+    });
 });
 
 let startDate = null;
@@ -476,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("changedddddd");
+    console.log("hello");
 
 }
 
