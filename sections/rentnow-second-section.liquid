@@ -444,7 +444,8 @@ function selectionOfDays(event) {
 }
 
 function findMonthContainer(element) {
-    while (element && !element.classList.contains('rentnow-first-months') && !element.classList.contains('rentnow-second-months')) {
+
+    while (element && (!element.classList || !element.classList.contains('rentnow-first-months') && !element.classList.contains('rentnow-second-months'))) {
         element = element.parentNode;
     }
     return element;
