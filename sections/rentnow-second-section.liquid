@@ -489,10 +489,47 @@ function findMonthContainer(element) {
 }
 
 function applySelectedDates() {
-  // if Start and End date have the same month
-  
-  // If start and end date dont have the same month
+    // Find all date elements
+    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p, .rentnow-second-calendar .rentnow-second-days p');
+
+    // Iterate through the date elements
+    dateElements.forEach(element => {
+        const date = parseInt(element.textContent, 10);
+        const monthContainer = findMonthContainer(element);
+
+        if (monthContainer) {
+            const month = monthContainer.textContent.trim();
+            const currentDate = date + ' ' + month;
+
+            if (isDateInRange(currentDate, startDate, endDate)) {
+                element.classList.add('rentnow-selected-date');
+            }
+        }
+    });
 }
+
+function isDateInRange(currentDate, startDate, endDate) {
+    // Convert dates to JavaScript Date objects
+    const current = new Date(currentDate);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    // Check if the current date is within the range
+    if (start.getMonth() === end.getMonth()) {
+        return current >= start && current <= end;
+    } else {
+        // Check if the current date is after the start date in the start month
+        if (current >= start && current.getMonth() === start.getMonth()) {
+            return true;
+        }
+        // Check if the current date is before the end date in the end month
+        if (current <= end && current.getMonth() === end.getMonth()) {
+            return true;
+        }
+        return false;
+    }
+}
+
 
 
 
