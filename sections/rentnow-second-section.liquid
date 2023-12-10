@@ -518,6 +518,9 @@ function isDateInRange(currentDate, startDate, endDate) {
     const current = new Date(currentDate);
     const start = new Date(startDate);
     const end = new Date(endDate);
+    console.log("Current:", current);
+    console.log("Start:", start);
+    console.log("End:", end);
 
     // Check if the current date is within the range
     return current >= start && current <= end;
