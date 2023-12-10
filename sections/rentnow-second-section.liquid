@@ -446,11 +446,28 @@ function selectionOfDays(event) {
 
         if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            endDate = clickedDay + ' ' + clickedMonth;
-            event.target.classList.add('rentnow-end-date');
-        }
+            const selectedEndDate = clickedDay + ' ' + clickedMonth;
 
-        applySelectedDates();
+            // Check if the selected end date is before the start date
+            if (new Date(selectedEndDate) < new Date(startDate)) {
+                // Reset start and end dates
+                startDate = null;
+                endDate = null;
+
+                // Clear existing classes
+                document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date').forEach(element => {
+                    element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date');
+                });
+
+                console.log("Invalid selection. End date cannot be before start date.");
+                return;
+            }
+
+            endDate = selectedEndDate;
+            event.target.classList.add('rentnow-end-date');
+
+            applySelectedDates();
+        }
     }
 
     else {
