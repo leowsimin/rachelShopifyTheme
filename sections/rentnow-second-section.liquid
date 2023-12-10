@@ -455,8 +455,8 @@ function selectionOfDays(event) {
 
     else {
       // Remove existing classes to clear previous selection
-       document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date').forEach(element => {
-            element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date');
+       document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date').forEach(element => {
+            element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date');
         });
 
        const monthContainer = findMonthContainer(event.target);
@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("no");
+    console.log("OKAY");
 
 }
 
