@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("bOOOo");
+    console.log("bOOOOOOO");
 
 }
 
@@ -588,7 +588,16 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
-  
+    // Convert startDate and endDate to Date objects
+    const startDateObj = new Date(startDate);
+    const endDateObj = new Date(endDate);
+
+    // Now you can use startDateObj and endDateObj as Date objects in your logic
+    // ...
+
+    // Example: Log the converted Date objects
+    console.log("Start Date (Date object):", startDateObj);
+    console.log("End Date (Date object):", endDateObj);
 }
 
 {% endjavascript %}
