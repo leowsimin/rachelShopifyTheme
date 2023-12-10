@@ -646,5 +646,15 @@ function applyFreeDates() {
     });
 }
 
+function attachEventListeners() {
+    const firstCalendarDays = document.querySelector(".rentnow-first-days");
+    const secondCalendarDays = document.querySelector(".rentnow-second-days");
+
+    [firstCalendarDays, secondCalendarDays].forEach(container => {
+        container.querySelectorAll('p').forEach(pElement => {
+            pElement.addEventListener('click', selectionOfDays);
+        });
+    });
+}
 
 {% endjavascript %}
