@@ -456,8 +456,8 @@ function selectionOfDays(event) {
 
     else {
       // Remove existing classes to clear previous selection
-       document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date').forEach(element => {
-            element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date');
+       document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
+            element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
         });
 
        const monthContainer = findMonthContainer(event.target);
@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("BRO NOW IM DONE RIGHT");
+    console.log("BRO NOW IM DONE RIGHT RIGHT");
 }
 
 function findMonthContainer(element) {
