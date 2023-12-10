@@ -426,11 +426,8 @@ let startDate = null;
 let endDate = null;
 
 function selectionOfDays(event) {
-    console.log("Text Content 1st:", rentNowFirstMonthLabel.textContent);
-    console.log("Text Content 2nd:", rentNowSecondMonthLabel.textContent);
 
     const clickedDay = event.target.textContent;
-    console.log("Day Clicked:", clickedDay);
 
     let clickedMonth = null;
 
@@ -475,7 +472,6 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("STITCHHH")
 }
 
 function findMonthContainer(element) {
