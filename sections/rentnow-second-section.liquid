@@ -432,9 +432,15 @@ function selectionOfDays(event) {
     const clickedDay = event.target.textContent;
     console.log("Day Clicked:", clickedDay);
 
-    const clickedMonthLabel = document.querySelector('#rentNowFirstMonthLabel');
-    const clickedMonth = clickedMonthLabel.textContent.trim();
-    console.log("Month Clicked:", clickedMonth);
+    const monthContainer = findMonthContainer(event.target);
+    console.log(monthContainer);
+
+    if (monthContainer) {
+        // Get the month label from the month container
+        const clickedMonthLabel = monthContainer.querySelector('label');
+        const clickedMonth = clickedMonthLabel.textContent.trim();
+        console.log("Month Clicked:", clickedMonth);
+    }
 }
 
 {% endjavascript %}
