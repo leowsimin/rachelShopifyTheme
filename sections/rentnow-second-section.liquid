@@ -272,8 +272,6 @@ function updateCalendar() {
   }
 
   secondMonthDays.innerHTML = secondDays;
-
-  // HERE.
 }
 
 updateCalendar();
@@ -331,10 +329,7 @@ dropdownYear.addEventListener('change', function() {
 
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
-
   updateCalendar();
-  applySelectedDates();
-  applyFreeDates();
 });
 
 // Second Calendar
@@ -360,8 +355,6 @@ dropdownSecondMonth.addEventListener('change', function() {
   secondMonth.setMonth(selectedMonthIndex);
 
   updateCalendar();
-  applySelectedDates();
-  applyFreeDates();
 });
 
 // Second Year Dropdown Menu
@@ -384,8 +377,6 @@ dropdownSecondYear.addEventListener('change', function() {
   secondMonth.setFullYear(selectedYear);
 
   updateCalendar();
-  applySelectedDates();
-  applyFreeDates();
 
 });
 
