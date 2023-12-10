@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("nooooo");
+    console.log("boo");
 }
 
 function findMonthContainer(element) {
@@ -586,31 +586,26 @@ function isDateInRange(currentDate, startDate, endDate) {
     }
 }
 
-function applyFreeDates(startDate, endDate) {
-    // Parse the start and end dates
-    const start = new Date(startDate);
-    const end = new Date(endDate);
+function applyFreeDates() {
+    // Parse day and month from the start date string
+    const [startDay, startMonth] = startDate.split(' ');
+    const startDateObj = { day: parseInt(startDay, 10), month: startMonth };
 
-    // Get the day and month of the start date
-    const startDay = start.getDate();
-    const startMonth = start.getMonth();
+    // If start date is available, calculate one day before and apply class
+    if (startDateObj.day && startDateObj.month) {
+        const oneDayBeforeStart = { day: startDateObj.day - 1, month: startDateObj.month };
+        applyClassToDay(oneDayBeforeStart, 'rentnow-free-first-date');
+    }
 
-    // Get the day and month of the end date
-    const endDay = end.getDate();
-    const endMonth = end.getMonth();
+    // Parse day and month from the end date string
+    const [endDay, endMonth] = endDate.split(' ');
+    const endDateObj = { day: parseInt(endDay, 10), month: endMonth };
 
-    // Get the dates 2 days before the start date and 2 days after the end date
-    const twoDaysBeforeStart = new Date(start);
-    twoDaysBeforeStart.setDate(startDay - 2);
-    console.log("Two days before the Start Date:", twoDaysBeforeStart);
-
-    const twoDaysAfterEnd = new Date(end);
-    twoDaysAfterEnd.setDate(endDay + 2);
-    console.log("Two days after the End Date:", twoDaysAfterEnd);
-
-    // Apply classes to the dates
-    applyClassToDay(twoDaysBeforeStart, 'rentnow-free-first-date');
-    applyClassToDay(twoDaysAfterEnd, 'rentnow-free-last-date');
+    // If end date is available, calculate one day after and apply class
+    if (endDateObj.day && endDateObj.month) {
+        const oneDayAfterEnd = { day: endDateObj.day + 1, month: endDateObj.month };
+        applyClassToDay(oneDayAfterEnd, 'rentnow-free-last-date');
+    }
 }
 
 function applyClassToDay(date, className) {
