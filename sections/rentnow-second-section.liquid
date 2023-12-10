@@ -472,7 +472,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("boo");
+    console.log("boooooo");
 }
 
 function findMonthContainer(element) {
@@ -609,15 +609,15 @@ function applyFreeDates() {
 }
 
 function applyClassToDay(date, className) {
-    // Get the day and month of the date
-    const day = date.getDate();
-    const month = date.getMonth();
+    // Get the day and month from the date object
+    const { day, month } = date;
 
     // Select the corresponding element and apply the class
-    const element = document.querySelector(`.rentnow-${month + 1}-days .rentnow-day-${day}`);
+    const element = document.querySelector(`.rentnow-${month}-days .rentnow-day-${day}`);
     if (element) {
         element.classList.add(className);
     }
 }
+
 
 {% endjavascript %}
