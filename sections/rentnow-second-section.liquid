@@ -441,17 +441,17 @@ function selectionOfDays(event) {
     }
 
     if (!startDate) {
-      startDate = clickedDay, clickedMonth;
+      startDate = clickedDay + ' ' + clickedMonth;
       event.target.classList.add('rentnow-start-date');
     }
 
     else if (!endDate) {
-      endDate = clickedDay, clickedMonth;
+      endDate = clickedDay + ' ' + clickedMonth;
       event.target.classList.add('rentnow-end-date');
     }
 
     else {
-       startDate = clickedDay, clickedMonth;
+       startDate = clickedDay + ' ' + clickedMonth;
        endDate = null;
 
         // Remove existing classes to clear previous selection
