@@ -446,34 +446,11 @@ function selectionOfDays(event) {
 
         if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            const selectedEndDate = clickedDay + ' ' + clickedMonth;
-
-            // Check if the selected end date is before the start date
-            if (new Date(selectedEndDate) < new Date(startDate)) {
-                // Reset start and end dates
-                startDate = null;
-                endDate = null;
-
-                // Clear existing classes
-                document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date').forEach(element => {
-                    element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date');
-                });
-
-                const monthContainer = findMonthContainer(event.target);
-
-                if (monthContainer) {
-                    const clickedMonth = monthContainer.textContent.trim();
-                    startDate = clickedDay + ' ' + clickedMonth;
-                    event.target.classList.add('rentnow-start-date');
-                    endDate = null;
-                }
-            }
-
-            endDate = selectedEndDate;
+            endDate = clickedDay + ' ' + clickedMonth;
             event.target.classList.add('rentnow-end-date');
-
-            applySelectedDates();
         }
+
+        applySelectedDates();
     }
 
     else {
@@ -494,8 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("change made!");
-
+    console.log("Gradient changed AGAIN");
 }
 
 function findMonthContainer(element) {
