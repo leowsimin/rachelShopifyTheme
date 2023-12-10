@@ -490,7 +490,10 @@ function findMonthContainer(element) {
 
 function applySelectedDates() {
     // Find all date elements
-    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p, .rentnow-second-calendar .rentnow-second-days p');
+    const dateElements = document.querySelectorAll('.rentnow-first-calendar 
+                                                    .rentnow-first-days p:not(.rentnow-prevdays p, .rentnow-nextdays p), 
+                                                    .rentnow-second-calendar .rentnow-second-days p:not(.rentnow-prevdays p, 
+                                                    .rentnow-nextdays p)');
 
     // Iterate through the date elements
     dateElements.forEach(element => {
@@ -500,6 +503,7 @@ function applySelectedDates() {
         if (monthContainer) {
             const month = monthContainer.textContent.trim();
             const currentDate = date + ' ' + month;
+            console.log("Current Date:" currentDate);
 
             // Check if the current date is within the range
             if (isDateInRange(currentDate, startDate, endDate)) {
