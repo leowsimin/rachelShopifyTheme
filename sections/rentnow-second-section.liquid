@@ -491,7 +491,21 @@ function findMonthContainer(element) {
 
 function applySelectedDates() {
     // Find all date elements
-    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p, .rentnow-second-calendar .rentnow-second-days p');
+    // Select all <p> elements within the calendars
+    const allDateElements = [
+        ...firstCalendarDays.querySelectorAll('p'),
+        ...secondCalendarDays.querySelectorAll('p')
+    ];
+
+    // Exclude elements with classes "rentnow-prevdays" and "rentnow-nextdays"
+    const dateElements = allDateElements.filter(pElement => (
+        !pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays')
+    ));
+
+    // Add event listener to filtered date elements
+    dateElements.forEach(pElement => {
+        pElement.addEventListener('click', selectionOfDays);
+    });
 
     // Iterate through the date elements
     dateElements.forEach(element => {
