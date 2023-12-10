@@ -594,17 +594,17 @@ function applyFreeDates() {
     const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
 
-    // Calculate two days before the endDate
+    // Calculate two days after the endDate
     const twoDaysBeforeEndDate = new Date(endDateObj);
-    twoDaysBeforeEndDate.setDate(endDateObj.getDate() - 2);
+    twoDaysBeforeEndDate.setDate(endDateObj.getDate() + 2);
 
     // Calculate one day before the startDate
     const oneDayBeforeStartDate = new Date(startDateObj);
     oneDayBeforeStartDate.setDate(startDateObj.getDate() - 1);
 
-    // Calculate one day before the endDate
+    // Calculate one day after the endDate
     const oneDayBeforeEndDate = new Date(endDateObj);
-    oneDayBeforeEndDate.setDate(endDateObj.getDate() - 1);
+    oneDayBeforeEndDate.setDate(endDateObj.getDate() + 1);
 
     // Find all date elements
     const allDateElements = [
