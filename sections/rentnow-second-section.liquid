@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("working");
+    console.log("whatup");
 
 }
 
@@ -491,7 +491,7 @@ function findMonthContainer(element) {
 
 function applySelectedDates() {
     // Find all date elements
-    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p:not(.rentnow-prevdays p):not(.rentnow-nextdays p), .rentnow-second-calendar .rentnow-second-days p:not(.rentnow-prevdays p):not(.rentnow-nextdays p)');
+    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p, .rentnow-second-calendar .rentnow-second-days p');
 
     // Iterate through the date elements
     dateElements.forEach(element => {
