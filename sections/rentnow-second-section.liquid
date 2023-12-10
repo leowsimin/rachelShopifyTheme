@@ -471,7 +471,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("OKAY");
+    console.log("OKAYYYYY");
 }
 
 function findMonthContainer(element) {
@@ -546,10 +546,19 @@ function applySelectedDates() {
                     endSelected = true;
                     element.classList.add('rentnow-selected-last-date');
                 }
+
+                // Check if the current date is the last day of the month
+                const lastDayOfMonth = new Date(currentDateObj.getFullYear(), currentDateObj.getMonth() + 1, 0);
+
+                if (currentDateObj.getTime() === lastDayOfMonth.getTime()) {
+                    // Apply class to the last day of the month
+                    element.classList.add('rentnow-selected-end-date');
+                }
             }
         }
     });
 }
+
 
 
 function isDateInRange(currentDate, startDate, endDate) {
