@@ -521,30 +521,34 @@ function applySelectedDates() {
             if (isDateInRange(currentDate, startDate, endDate)) {
                 element.classList.add('rentnow-selected-date');
 
-                if (!startSelected) {
-                    // Check if the current date is one day after the start date
-                    const oneDayAfterStartDate = new Date(startDate);
-                    oneDayAfterStartDate.setDate(oneDayAfterStartDate.getDate() + 1);
+                const currentDateObj = new Date(currentDate);
 
-                    const currentDateObj = new Date(currentDate);
+                // Check if the current date is one day after the start date
+                const oneDayAfterStartDate = new Date(startDate);
+                oneDayAfterStartDate.setDate(oneDayAfterStartDate.getDate() + 1);
 
-                    if (currentDateObj.getTime() === oneDayAfterStartDate.getTime()) {
-                        // Apply class to the date one day after the start date
-                        startSelected = true;
-                        element.classList.add('rentnow-selected-first-date');
-                    }
+                if (!startSelected && currentDateObj.getTime() === oneDayAfterStartDate.getTime()) {
+                    // Apply class to the date one day after the start date
+                    startSelected = true;
+                    element.classList.add('rentnow-selected-first-date');
                 }
 
                 // Check if the current date is one day before the end date
                 const oneDayBeforeEndDate = new Date(endDate);
                 oneDayBeforeEndDate.setDate(oneDayBeforeEndDate.getDate() - 1);
 
-                const currentDateObj = new Date(currentDate);
-
                 if (currentDateObj.getTime() === oneDayBeforeEndDate.getTime()) {
                     // Apply class to the date one day before the end date
                     endSelected = true;
                     element.classList.add('rentnow-selected-last-date');
+                }
+
+                // Check if the current date is the first day of the month
+                const firstDayOfMonth = new Date(currentDateObj.getFullYear(), currentDateObj.getMonth(), 1);
+
+                if (currentDateObj.getTime() === firstDayOfMonth.getTime()) {
+                    // Apply class to the first day of the month
+                    element.classList.add('rentnow-selected-start-date');
                 }
 
                 // Check if the current date is the last day of the month
@@ -558,8 +562,6 @@ function applySelectedDates() {
         }
     });
 }
-
-
 
 function isDateInRange(currentDate, startDate, endDate) {
     // Convert dates to JavaScript Date objects
