@@ -473,7 +473,6 @@ function selectionOfDays(event) {
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
     console.log("boooooo");
-    
 }
 
 function findMonthContainer(element) {
@@ -591,6 +590,7 @@ function applyFreeDates() {
     // Parse day and month from the start date string
     const [startDay, startMonth] = startDate.split(' ');
     const startDateObj = { day: parseInt(startDay, 10), month: startMonth };
+    console.log("Start Date Object:", startDateObj);
 
     // If start date is available, calculate one day before and apply class
     if (startDateObj.day && startDateObj.month) {
@@ -601,6 +601,7 @@ function applyFreeDates() {
     // Parse day and month from the end date string
     const [endDay, endMonth] = endDate.split(' ');
     const endDateObj = { day: parseInt(endDay, 10), month: endMonth };
+    console.log("End Date Object:", endDateObj);
 
     // If end date is available, calculate one day after and apply class
     if (endDateObj.day && endDateObj.month) {
