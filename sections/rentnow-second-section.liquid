@@ -587,13 +587,41 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
+    // Convert startDate to a Date object
     const startDateObj = new Date(startDate);
-    const endDateObj = new Date(endDate);
 
-    console.log("Start Date (Date object):", startDateObj);
-    console.log("End Date (Date object):", endDateObj);
+    // Calculate two days before the startDate
+    const twoDaysBeforeStartDate = new Date(startDateObj);
+    twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
 
-    
+    // Find all date elements
+    const allDateElements = [
+        ...firstCalendarDays.querySelectorAll('p'),
+        ...secondCalendarDays.querySelectorAll('p')
+    ];
+
+    // Exclude elements with classes "rentnow-prevdays" and "rentnow-nextdays"
+    const dateElements = allDateElements.filter(pElement => (
+        !pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays')
+    ));
+
+    // Iterate through the date elements
+    dateElements.forEach(element => {
+        const date = parseInt(element.textContent, 10);
+        const monthContainer = findMonthContainer(element);
+
+        if (monthContainer) {
+            const month = monthContainer.textContent.trim();
+            const currentDate = date + ' ' + month;
+            const currentDateObj = new Date(currentDate);
+
+            // Check if the current date is two days before the startDate
+            if (currentDateObj.getTime() === twoDaysBeforeStartDate.getTime()) {
+                // Apply the class to the date two days before the startDate
+                element.classList.add('rentnow-free-date');
+            }
+        }
+    });
 }
 
 {% endjavascript %}
