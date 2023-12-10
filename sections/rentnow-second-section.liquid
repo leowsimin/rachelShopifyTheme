@@ -455,8 +455,8 @@ function selectionOfDays(event) {
 
     else {
       // Remove existing classes to clear previous selection
-        document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date').forEach(element => {
-            element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date');
+        document.querySelectorAll('.rentnow-start-date, .rentnow-end-date).forEach(element => {
+            element.classList.remove('rentnow-start-date', 'rentnow-end-date');
         });
 
        const monthContainer = findMonthContainer(event.target);
@@ -471,7 +471,6 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("yayYYYY");
 }
 
 function findMonthContainer(element) {
@@ -487,42 +486,5 @@ function findMonthContainer(element) {
     }
     return null;
 }
-
-function applySelectedDates() {
-    // Find all date elements
-    const dateElements = document.querySelectorAll('.rentnow-first-calendar .rentnow-first-days p:not(.rentnow-prevdays p, .rentnow-nextdays p), .rentnow-second-calendar .rentnow-second-days p:not(.rentnow-prevdays p, .rentnow-nextdays p)');
-
-    // Iterate through the date elements
-    dateElements.forEach(element => {
-        const date = parseInt(element.textContent, 10);
-        const monthContainer = findMonthContainer(element);
-
-        if (monthContainer) {
-            const month = monthContainer.textContent.trim();
-            const currentDate = date + ' ' + month;
-            console.log("Current Date:", currentDate);
-
-            // Check if the current date is within the range
-            if (isDateInRange(currentDate, startDate, endDate)) {
-                element.classList.add('rentnow-selected-date');
-            }
-        }
-    });
-}
-
-
-function isDateInRange(currentDate, startDate, endDate) {
-    // Convert dates to JavaScript Date objects
-    const current = new Date(currentDate);
-    const start = new Date(startDate);
-    const end = new Date(endDate);
-    console.log("Current:", current);
-    console.log("Start:", start);
-    console.log("End:", end);
-
-    // Check if the current date is within the range
-    return current >= start && current <= end;
-}
-
 
 {% endjavascript %}
