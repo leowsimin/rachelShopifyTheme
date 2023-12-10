@@ -455,10 +455,10 @@ function selectionOfDays(event) {
 
     else {
       // Remove existing classes to clear previous selection
-        document.querySelectorAll('.rentnow-start-date, .rentnow-end-date).forEach(element => {
+       document.querySelectorAll('.rentnow-start-date, .rentnow-end-date').forEach(element => {
             element.classList.remove('rentnow-start-date', 'rentnow-end-date');
         });
-
+        
        const monthContainer = findMonthContainer(event.target);
 
         if (monthContainer) {
