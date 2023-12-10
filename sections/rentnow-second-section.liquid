@@ -431,24 +431,6 @@ function selectionOfDays(event) {
 
     const clickedDay = event.target.textContent;
     console.log("Day Clicked:", clickedDay);
-
-    const monthContainer = findMonthContainer(event.target);
-    console.log(monthContainer);
-
-    if (monthContainer) {
-        // Get the month label from the month container
-        const clickedMonthLabel = monthContainer.querySelector('label');
-        const clickedMonth = clickedMonthLabel.textContent.trim();
-        console.log("Month Clicked:", clickedMonth);
-    }
-}
-
-function findMonthContainer(element) {
-
-    while (element && (!element.classList || !element.classList.contains('rentnow-first-months') && !element.classList.contains('rentnow-second-months'))) {
-        element = element.parentNode;
-    }
-    return element;
 }
 
 {% endjavascript %}
