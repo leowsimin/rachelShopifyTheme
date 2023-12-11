@@ -682,6 +682,11 @@ function applyFreeDates() {
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
 
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        console.log("Invalid input");
+        return;  // Exit the function if invalid input
+    }
+
     // Calculate two days before the startDate
     const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
