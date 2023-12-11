@@ -375,7 +375,7 @@ dropdownSecondMonth.addEventListener('change', function() {
 
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
-  
+
 
   if ( (dropdownSecondYear.value >= dropdownYear.value)) {
     rentNowSecondMonthLabel.textContent = selectedMonth;
@@ -432,6 +432,8 @@ dropdownSecondYear.addEventListener('change', function() {
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
 
+  console.log("AAAAAAa");
+
   if ( (dropdownSecondYear.value >= dropdownYear.value)) {
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
@@ -444,7 +446,7 @@ dropdownSecondYear.addEventListener('change', function() {
     applyFreeDates();
   }
 
-  else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(selectedMonth) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
+  else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(rentNowSecondMonthLabel.textContent) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
 
