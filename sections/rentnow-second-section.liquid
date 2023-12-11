@@ -177,6 +177,8 @@ const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu"
 const rentNowFirstYearLabel = document.getElementById('rentNowFirstYearLabel');
 document.querySelector('.rentnow-first-year-select').innerHTML = "&nbsp;" + date.getFullYear();
 
+const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
+
 const options = dropdownSecondYear.getElementsByTagName('option');
 for (let i = 0; i < options.length; i++) {
   if (options[i].value == currentYear) {
@@ -373,8 +375,8 @@ dropdownSecondMonth.addEventListener('change', function() {
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
 
-  console.log("Im changed");
-  
+  console.log("Im changeDD");
+
 
     if (months.indexOf(selectedMonth) <= months.indexOf(rentNowFirstMonthLabel.textContent)) {
       rentNowSecondMonthLabel.textContent = selectedMonth;
@@ -391,8 +393,6 @@ dropdownSecondMonth.addEventListener('change', function() {
 });
 
 // Second Year Dropdown Menu
-
-const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
 
 rentNowSecondYearLabel.addEventListener('click', function(event) {
   dropdownSecondYear.style.display = 'block';
