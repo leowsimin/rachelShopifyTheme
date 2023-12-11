@@ -392,7 +392,6 @@ dropdownSecondMonth.addEventListener('change', function() {
   }
 
   else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(selectedMonth) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
-    console.log("im running");
     rentNowSecondMonthLabel.textContent = selectedMonth;
     dropdownSecondMonth.style.display = 'none';
 
