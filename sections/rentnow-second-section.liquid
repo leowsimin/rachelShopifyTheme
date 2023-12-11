@@ -430,7 +430,6 @@ dropdownSecondYear.addEventListener('change', function() {
   const selectedYear = dropdownSecondYear.value;
 
   if ( (dropdownSecondYear.value > dropdownYear.value)) {
-    console.log("running if");
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
     rentNowYearError.style.display = 'none';
@@ -457,7 +456,6 @@ dropdownSecondYear.addEventListener('change', function() {
   }
 
   else {
-    console.log("Invalid Input Year");
     rentNowYearError.style.display = 'flex';
   }
 
@@ -788,5 +786,7 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     }
     return false;
 }
+
+
 
 {% endjavascript %}
