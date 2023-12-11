@@ -157,15 +157,7 @@
     margin-right: 15px;
 }
 
-.rentnow-header2-container2 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-    margin-top: 5px;
-}
-
-.rentnow-header2-container2 p {
+.rentnow-second-section h3 {
     color: #0D2610;
     font-family: JejuMyeongjo;
     font-size: 20px;
@@ -175,15 +167,6 @@
     letter-spacing: -1.5px;
 
     margin-top: 40px;
-}
-
-.rentnow-start-circle-image {
-    margin: 0 10px 0px 15px;
-}
-
-.rentnow-end-circle-image {
-    margin: 0px 10px 0 0px;
-    padding-top: 13px;
 }
 
 .rentnow-start-date,
