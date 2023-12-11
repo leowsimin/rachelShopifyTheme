@@ -265,6 +265,8 @@
 }
 
 .rentnow-second-section h4 {
+    display: flex;
+
     color: #F00;
     text-align: center;
     font-family: JejuMyeongjo;
@@ -273,4 +275,5 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
+    margin-top: 5px;
 }
