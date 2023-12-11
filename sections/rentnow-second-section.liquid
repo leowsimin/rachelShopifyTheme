@@ -432,10 +432,10 @@ dropdownSecondYear.addEventListener('change', function() {
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
 
-  console.log("UGHHHH coding so hard");
+  console.log("UGHHHH");
 
 
-  if ( (dropdownSecondYear.value >= dropdownYear.value)) {
+  if ( (dropdownSecondYear.value > dropdownYear.value)) {
     console.log("running if");
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
