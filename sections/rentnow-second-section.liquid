@@ -355,16 +355,22 @@ rentNowSecondMonthLabel.addEventListener("click", function() {
 
 dropdownSecondMonth.addEventListener('change', function() {
   const selectedMonth = dropdownSecondMonth.value;
-  rentNowSecondMonthLabel.textContent = selectedMonth;
-  dropdownSecondMonth.style.display = 'none';
+  console.log("Selected Month:", selectedMonth);
+  console.log("Selected Month Index:", months[selectedMonth]);
+  console.log("First Month Label:", rentNowFirstMonthLabel);
 
-  const selectedMonthIndex = months.indexOf(selectedMonth);
-  secondMonth.setMonth(selectedMonthIndex);
+    if (months[selectedMonth] <= months[rentNowFirstMonthLabel.textContent]) {
+      rentNowSecondMonthLabel.textContent = selectedMonth;
+      dropdownSecondMonth.style.display = 'none';
 
-  updateCalendar();
-  attachEventListeners();
-  applySelectedDates();
-  applyFreeDates();
+      const selectedMonthIndex = months.indexOf(selectedMonth);
+      secondMonth.setMonth(selectedMonthIndex);
+
+      updateCalendar();
+      attachEventListeners();
+      applySelectedDates();
+      applyFreeDates();
+    }
 });
 
 // Second Year Dropdown Menu
