@@ -268,7 +268,7 @@
     display: flex;
 
     color: #F00;
-    text-align: center;
+    justify-content: center;
     font-family: JejuMyeongjo;
     font-size: 15px;
     font-style: normal;
