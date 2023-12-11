@@ -115,6 +115,7 @@
 
     <h4 id="rentNowMonthError">Ahhh, that is not possible,  please choose a later month! Thank you!</h4>
     <h4 id="rentNowYearError">Ahhh, that is not possible,  please choose a later year! Thank you!</h4>
+    <h4 id="rentNowDateError">Ahhh, that is not possible,  please choose a later date! Thank you!</h4>
   </div>
 
 </div>
@@ -576,6 +577,9 @@ function applySelectedDates() {
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         console.log("Invalid input");
+
+        const rentNowDateError = document.getElementById("rentNowDateError");
+        rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
     }
 
@@ -659,6 +663,8 @@ function isDateInRange(currentDate, startDate, endDate) {
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         console.log("Invalid input");
+        const rentNowDateError = document.getElementById("rentNowDateError");
+        rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
     }
 
@@ -684,6 +690,8 @@ function applyFreeDates() {
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         console.log("Invalid input");
+        const rentNowDateError = document.getElementById("rentNowDateError");
+        rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
     }
 

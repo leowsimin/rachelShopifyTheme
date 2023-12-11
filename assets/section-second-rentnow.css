@@ -291,3 +291,17 @@
     letter-spacing: -1px;
     margin-top: 5px;
 }
+
+#rentNowDateError {
+    display: none;
+
+    color: #F00;
+    justify-content: center;
+    font-family: JejuMyeongjo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    margin-top: 5px;
+}
