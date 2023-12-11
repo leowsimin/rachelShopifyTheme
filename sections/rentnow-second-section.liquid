@@ -579,7 +579,6 @@ function applySelectedDates() {
     rentNowDateError.style.display = "none";
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        console.log("Input Invalid");
         rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
     }
@@ -764,6 +763,10 @@ function attachEventListeners() {
 function isEndDateBeforeStartDate(endDate, startDate) {
     const endDateObj = new Date(endDate);
     const startDateObj = new Date(startDate);
+
+    console.log("End Date Obj:", endDateObj);
+    console.log("Start Date Obj:", startDateObj);
+    console.log(endDateObj.getTime() < startDateObj.getTime())
 
     // Compare the dates
     return endDateObj.getTime() < startDateObj.getTime();
