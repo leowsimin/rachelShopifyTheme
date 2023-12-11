@@ -662,7 +662,6 @@ function isDateInRange(currentDate, startDate, endDate) {
     const end = new Date(endDate);
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        console.log("Invalid input");
         const rentNowDateError = document.getElementById("rentNowDateError");
         rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
@@ -689,7 +688,6 @@ function applyFreeDates() {
     const endDateObj = new Date(endDate);
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        console.log("Invalid input");
         const rentNowDateError = document.getElementById("rentNowDateError");
         rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
