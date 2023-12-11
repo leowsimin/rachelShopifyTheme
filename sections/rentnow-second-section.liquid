@@ -388,8 +388,6 @@ dropdownSecondMonth.addEventListener('change', function() {
     attachEventListeners();
     applySelectedDates();
     applyFreeDates();
-
-    console.log("running if");
   }
 
   else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(selectedMonth) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
@@ -403,8 +401,6 @@ dropdownSecondMonth.addEventListener('change', function() {
     attachEventListeners();
     applySelectedDates();
     applyFreeDates();
-
-    console.log("running else if");
   }
 
   else {
