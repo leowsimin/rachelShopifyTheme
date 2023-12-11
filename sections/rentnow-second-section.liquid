@@ -578,6 +578,8 @@ function applySelectedDates() {
     const rentNowDateError = document.getElementById("rentNowDateError");
     rentNowDateError.style.display = "none";
 
+    console.log(isEndDateBeforeStartDate(endDate, startDate));
+
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
@@ -776,7 +778,7 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     console.log("startMonth:", startMonth);
     console.log("startDateDate:", startDateDate);
 
-    console.log("Im very tired");
+    console.log("Im tired);
 
     // Compare the year, month, and date
     if (endMonth < startMonth) {
