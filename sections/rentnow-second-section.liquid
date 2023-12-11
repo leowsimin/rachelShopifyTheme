@@ -764,12 +764,26 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     const endDateObj = new Date(endDate);
     const startDateObj = new Date(startDate);
 
-    console.log("End Date Obj:", endDateObj);
-    console.log("Start Date Obj:", startDateObj);
-    console.log(endDateObj.getTime() < startDateObj.getTime())
+    // Extract year, month, and date from the date objects
+    const endYear = endDateObj.getFullYear();
+    const startYear = startDateObj.getFullYear();
 
-    // Compare the dates
-    return endDateObj.getTime() < startDateObj.getTime();
+    const endMonth = endDateObj.getMonth();
+    const startMonth = startDateObj.getMonth();
+
+    const endDateDate = endDateObj.getDate();
+    const startDateDate = startDateObj.getDate();
+
+    // Compare the year, month, and date
+    if (endYear < startYear) {
+        return true;
+    } else if (endYear === startYear && endMonth < startMonth) {
+        return true;
+    } else if (endYear === startYear && endMonth === startMonth && endDateDate < startDateDate) {
+        return true;
+    }
+
+    return false;
 }
 
 {% endjavascript %}
