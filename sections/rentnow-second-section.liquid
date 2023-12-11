@@ -575,10 +575,11 @@ function applySelectedDates() {
     // Find all date elements
     // Select all <p> elements within the calendars
 
-    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        console.log("Invalid input!!!");
+    const rentNowDateError = document.getElementById("rentNowDateError");
+    rentNowDateError.style.display = "none";
 
-        const rentNowDateError = document.getElementById("rentNowDateError");
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        console.log("Invalid input");
         rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
     }
