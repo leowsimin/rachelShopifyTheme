@@ -376,7 +376,7 @@ dropdownSecondMonth.addEventListener('change', function() {
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
 
-  console.log("Changed.");
+  console.log("bro");
 
   if ( (dropdownSecondYear.value >= dropdownYear.value)) {
     rentNowSecondMonthLabel.textContent = selectedMonth;
@@ -421,6 +421,14 @@ rentNowSecondYearLabel.addEventListener('click', function(event) {
 // Event listener for dropdown change
 dropdownSecondYear.addEventListener('change', function() {
   const selectedYear = dropdownSecondYear.value;
+
+  console.log("Selected Month:", selectedMonth);
+  console.log("Selected Month Index:", months.indexOf(selectedMonth));
+  console.log("First Month Label:", rentNowFirstMonthLabel.textContent);
+  console.log("First Month Label Index:", months.indexOf(rentNowFirstMonthLabel.textContent));
+
+  console.log("Second Calendar Year:", dropdownSecondYear.value);
+  console.log("First Calendar Year:", dropdownYear.value);
 
   if ( (dropdownSecondYear.value >= dropdownYear.value)) {
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
