@@ -573,6 +573,12 @@ function findMonthContainer(element) {
 function applySelectedDates() {
     // Find all date elements
     // Select all <p> elements within the calendars
+
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        console.log("Invalid input");
+        return;  // Exit the function if invalid input
+    }
+    
     const allDateElements = [
         ...firstCalendarDays.querySelectorAll('p'),
         ...secondCalendarDays.querySelectorAll('p')
