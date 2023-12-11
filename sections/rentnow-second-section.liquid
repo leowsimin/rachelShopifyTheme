@@ -578,7 +578,7 @@ function applySelectedDates() {
         console.log("Invalid input");
         return;  // Exit the function if invalid input
     }
-    
+
     const allDateElements = [
         ...firstCalendarDays.querySelectorAll('p'),
         ...secondCalendarDays.querySelectorAll('p')
@@ -742,6 +742,17 @@ function attachEventListeners() {
             pElement.addEventListener('click', selectionOfDays);
         });
     });
+}
+
+function isEndDateBeforeStartDate(endDate, startDate) {
+    const endDateObj = new Date(endDate);
+    const startDateObj = new Date(startDate);
+
+    console.log(endDateObj);
+    console.log(startDateObj);
+
+    // Compare the dates
+    return endDateObj.getTime() < startDateObj.getTime();
 }
 
 {% endjavascript %}
