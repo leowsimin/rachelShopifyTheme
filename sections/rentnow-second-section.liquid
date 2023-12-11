@@ -175,9 +175,9 @@ const rentNowFirstMonthLabel = document.getElementById('rentNowFirstMonthLabel')
 const dropdownMonth = document.getElementById("rentnow-first-month-dropdownmenu");
 
 const rentNowFirstYearLabel = document.getElementById('rentNowFirstYearLabel');
-const currentYear = secondMonth.getFullYear();
 document.querySelector('.rentnow-first-year-select').innerHTML = "&nbsp;" + date.getFullYear();
 
+const currentYear = secondMonth.getFullYear();
 const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
 
 const options = dropdownSecondYear.getElementsByTagName('option');
@@ -220,6 +220,18 @@ dropdownMonth.addEventListener('change', function() {
 
   rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
   document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
+  const currentYear = secondMonth.getFullYear();
+  const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
+
+  const options = dropdownSecondYear.getElementsByTagName('option');
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].value == currentYear) {
+      options[i].selected = true;
+    } else {
+      options[i].selected = false;
+    }
+  }
   
   updateCalendar();
   attachEventListeners();
