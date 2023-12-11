@@ -629,14 +629,6 @@ function applySelectedDates() {
                     // Apply class to the date one day before the end date
                     endSelected = true;
                     element.classList.add('rentnow-selected-last-date');
-
-                    // Check if the end date is earlier than the start date
-                    if (isEndDateBeforeStartDate(endDate, startDate)) {
-                        // Change the color of rentnow-selected-end-date class
-                        element.style.color = '#DC4C4C'; // Specify the desired color
-                        console.log("im changing!");
-                        
-                    }
                 }
 
                 // Check if the current date is the first day of the month
