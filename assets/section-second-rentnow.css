@@ -265,7 +265,7 @@
 }
 
 #rentNowYearError {
-    display: none;
+    display: flex;
 
     color: #F00;
     justify-content: center;
@@ -279,7 +279,7 @@
 }
 
 #rentNowMonthError {
-    display: none;
+    display: flex;
 
     color: #F00;
     justify-content: center;
