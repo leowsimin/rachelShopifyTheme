@@ -265,7 +265,7 @@
 }
 
 .rentnow-second-section h4 {
-    display: flex;
+    display: none;
 
     color: #F00;
     justify-content: center;
