@@ -376,7 +376,7 @@ dropdownSecondMonth.addEventListener('change', function() {
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
 
-    if ( (dropdownSecondYear.value >= dropdownYear.value) && (months.indexOf(selectedMonth) <= months.indexOf(rentNowFirstMonthLabel.textContent))) {
+    if ( (dropdownSecondYear.value >= dropdownYear.value) && (months.indexOf(selectedMonth) < months.indexOf(rentNowFirstMonthLabel.textContent))) {
       rentNowSecondMonthLabel.textContent = selectedMonth;
       dropdownSecondMonth.style.display = 'none';
 
