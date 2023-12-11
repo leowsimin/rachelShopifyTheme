@@ -377,7 +377,7 @@ dropdownSecondMonth.addEventListener('change', function() {
   console.log("First Calendar Year:", dropdownYear.value);
 
   console.log("sad");
-  
+
 
   if ( (dropdownSecondYear.value > dropdownYear.value)) {
     rentNowSecondMonthLabel.textContent = selectedMonth;
@@ -390,6 +390,8 @@ dropdownSecondMonth.addEventListener('change', function() {
     attachEventListeners();
     applySelectedDates();
     applyFreeDates();
+
+    console.log("running if");
   }
 
   else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(selectedMonth) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
@@ -403,6 +405,8 @@ dropdownSecondMonth.addEventListener('change', function() {
     attachEventListeners();
     applySelectedDates();
     applyFreeDates();
+
+    console.log("running else if");
   }
 
   else {
