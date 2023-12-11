@@ -657,6 +657,11 @@ function isDateInRange(currentDate, startDate, endDate) {
     const start = new Date(startDate);
     const end = new Date(endDate);
 
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        console.log("Invalid input");
+        return;  // Exit the function if invalid input
+    }
+
     // Check if the current date is within the range
     if (start.getMonth() === end.getMonth()) {
         return current > start && current < end;
