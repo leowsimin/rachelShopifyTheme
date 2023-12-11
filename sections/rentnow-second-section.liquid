@@ -748,6 +748,8 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     const endDateObj = new Date(endDate);
     const startDateObj = new Date(startDate);
 
+    console.log(endDateObj.getTime() < startDateObj.getTime());
+
     // Compare the dates
     return endDateObj.getTime() < startDateObj.getTime();
 
