@@ -160,14 +160,15 @@
 }
 
 .rentnow-second-section h3 {
-    color: #0D2610;
+    color: #0d2610;
     font-family: JejuMyeongjo;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     line-height: normal;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.5px;
     margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .rentnow-start-date,
