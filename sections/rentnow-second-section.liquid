@@ -386,6 +386,7 @@ dropdownSecondMonth.addEventListener('change', function() {
 
     const selectedMonthIndex = months.indexOf(selectedMonth);
     secondMonth.setMonth(selectedMonthIndex);
+    rentNowMonthError.style.display = 'none';
 
     updateCalendar();
     attachEventListeners();
@@ -399,6 +400,7 @@ dropdownSecondMonth.addEventListener('change', function() {
 
     const selectedMonthIndex = months.indexOf(selectedMonth);
     secondMonth.setMonth(selectedMonthIndex);
+    rentNowMonthError.style.display = 'none';
 
     updateCalendar();
     attachEventListeners();
@@ -408,7 +410,6 @@ dropdownSecondMonth.addEventListener('change', function() {
 
   else {
     console.log("Invalid Input Month");
-    console.log("okayy");
     rentNowMonthError.style.display = 'flex';
   }
 
@@ -431,6 +432,7 @@ dropdownSecondYear.addEventListener('change', function() {
     console.log("running if");
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
+    rentNowYearError.style.display = 'none';
 
     secondMonth.setFullYear(selectedYear);
 
@@ -445,6 +447,7 @@ dropdownSecondYear.addEventListener('change', function() {
     dropdownSecondYear.style.display = 'none';
 
     secondMonth.setFullYear(selectedYear);
+    rentNowYearError.style.display = 'none';
 
     updateCalendar();
     attachEventListeners();
