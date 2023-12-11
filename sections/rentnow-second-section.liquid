@@ -113,8 +113,8 @@
       </div>
     </div>
 
-    <h4 class="rentnow-month-error">Ahhh, that is not possible,  please choose a later month! Thank you!</h4>
-    <h4 class="rentnow-yeear-error">Ahhh, that is not possible,  please choose a later year! Thank you!</h4>
+    <h4 id="rentNowMonthError">Ahhh, that is not possible,  please choose a later month! Thank you!</h4>
+    <h4 id="rentNowYearError">Ahhh, that is not possible,  please choose a later year! Thank you!</h4>
   </div>
 
 </div>
@@ -366,6 +366,9 @@ dropdownYear.addEventListener('change', function() {
 
 const rentNowSecondMonthLabel = document.getElementById('rentNowSecondMonthLabel');
 const dropdownSecondMonth = document.getElementById("rentnow-second-month-dropdownmenu");
+
+const rentNowMonthError = document.getElementById('rentNowMonthError');
+const rentNowYearError = document.getElementById('rentNowYearError');
 
 rentNowSecondMonthLabel.addEventListener("click", function() {
   dropdownSecondMonth.style.display = 'block'; 
