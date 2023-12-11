@@ -432,11 +432,11 @@ dropdownSecondYear.addEventListener('change', function() {
   console.log("Second Calendar Year:", dropdownSecondYear.value);
   console.log("First Calendar Year:", dropdownYear.value);
 
-  console.log("UGHHHH");
+  console.log("UGHHHH coding so hard");
 
 
   if ( (dropdownSecondYear.value >= dropdownYear.value)) {
-    console.log("running");
+    console.log("running if");
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
 
@@ -449,7 +449,7 @@ dropdownSecondYear.addEventListener('change', function() {
   }
 
   else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(rentNowSecondMonthLabel.textContent) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
-    console.log("running");
+    console.log("running else if");
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
 
