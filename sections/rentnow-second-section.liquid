@@ -770,7 +770,8 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     const endDateDate = endDateObj.getDate();
     const startDateDate = startDateObj.getDate();
 
-    const endYear = 
+    const endYear = findYearContainer();
+    const startYear = findYearContainer();
 
     console.log("endMonth:", endMonth);
     console.log("endDateDate:", endDateDate);
