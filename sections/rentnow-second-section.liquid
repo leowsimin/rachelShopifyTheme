@@ -611,11 +611,12 @@ function applySelectedDates() {
     ];
 
     console.log("apply Selected Date is running");
-    
+
 
     // Exclude elements with classes "rentnow-prevdays" and "rentnow-nextdays"
     const dateElements = allDateElements.filter(pElement => (
-        !pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays')
+        !pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays');
+        console.log("im removed");
     ));
 
     // Add event listener to filtered date elements
