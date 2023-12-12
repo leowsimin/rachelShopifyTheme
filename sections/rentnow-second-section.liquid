@@ -510,6 +510,11 @@ function selectionOfDays(event) {
 
     const clickedDay = event.target.textContent;
 
+    // Check if the clicked element has "rentnow-nextdays" or "rentnow-prevdays" class
+    if (event.target.classList.contains('rentnow-nextdays') || event.target.classList.contains('rentnow-prevdays')) {
+        return;  // Skip the selection logic for these dates
+    }
+
     let clickedMonth = null;
 
     if (!startDate) {
