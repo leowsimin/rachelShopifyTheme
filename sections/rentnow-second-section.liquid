@@ -568,7 +568,7 @@ function selectionOfDays(event) {
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
     console.log("working!!!!");
-    
+
 }
 
 function findMonthContainer(element) {
@@ -757,6 +757,28 @@ function attachEventListeners() {
     });
 }
 
+function isEndDateBeforeStartDate(endDate, startDate) {
+    const endDateObj = new Date(endDate);
+    const startDateObj = new Date(startDate);
 
+    const endMonth = endDateObj.getMonth();
+    const startMonth = startDateObj.getMonth();
 
+    const endDateDate = endDateObj.getDate();
+    const startDateDate = startDateObj.getDate();
+
+    const endYear = endDateObj.getFullYear();
+    const startYear = startDateObj.getFullYear();
+
+    // Compare the year, month, and date
+    if (endYear < startYear) {
+        return true;
+    } else if (endYear === startYear && endMonth < startMonth) {
+        return true;
+    } else if (endYear === startYear && endMonth === startMonth && endDateDate < startDateDate) {
+        return true;
+    }
+
+    return false;
+}
 {% endjavascript %}
