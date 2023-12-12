@@ -600,8 +600,6 @@ function applySelectedDates() {
     const rentNowDateError = document.getElementById("rentNowDateError");
     rentNowDateError.style.display = "none";
 
-    console.log(isEndDateBeforeStartDate(endDate, startDate));
-
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         rentNowDateError.style.display = "flex";
         return;  // Exit the function if invalid input
