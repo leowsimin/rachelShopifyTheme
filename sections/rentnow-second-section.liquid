@@ -567,7 +567,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("working!");
+    console.log("working!!!!");
 }
 
 function findMonthContainer(element) {
@@ -718,10 +718,12 @@ function applyFreeDates() {
     dateElements.forEach(element => {
         const date = parseInt(element.textContent, 10);
         const monthContainer = findMonthContainer(element);
+        const yearContainer = findYearContainer(element);
 
         if (monthContainer) {
             const month = monthContainer.textContent.trim();
-            const currentDate = date + ' ' + month;
+            const currentYear = yearContainer ? yearContainer.textContent.trim() : new Date().getFullYear();
+            const currentDate = date + ' ' + month + ' ' + currentYear;
             const currentDateObj = new Date(currentDate);
 
             if (currentDateObj.getTime() === twoDaysBeforeStartDate.getTime()) {
