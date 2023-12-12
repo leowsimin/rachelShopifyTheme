@@ -610,6 +610,8 @@ function applySelectedDates() {
         ...secondCalendarDays.querySelectorAll('p')
     ];
 
+    console.log("apply Selected Date is running");
+
     // Exclude elements with classes "rentnow-prevdays" and "rentnow-nextdays"
     const dateElements = allDateElements.filter(pElement => (
         !pElement.classList.contains('rentnow-prevdays') && !pElement.classList.contains('rentnow-nextdays')
