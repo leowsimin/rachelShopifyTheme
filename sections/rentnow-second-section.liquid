@@ -578,21 +578,6 @@ function findMonthContainer(element) {
     return null;
 }
 
-
-function findYearContainer(element) {
-    while (element) {
-        if (element.classList) {
-            if (element.classList.contains('rentnow-first-calendar')) {
-                return document.querySelector('#rentNowFirstYearLabel');
-            } else if (element.classList.contains('rentnow-second-calendar')) {
-                return document.querySelector('#rentNowSecondYearLabel');
-            }
-        }
-        element = element.parentNode;
-    }
-    return null;
-}
-
 function applySelectedDates() {
     // Find all date elements
     // Select all <p> elements within the calendars
@@ -780,31 +765,6 @@ function attachEventListeners() {
             pElement.addEventListener('click', selectionOfDays);
         });
     });
-}
-
-function isEndDateBeforeStartDate(endDate, startDate) {
-    const endDateObj = new Date(endDate);
-    const startDateObj = new Date(startDate);
-
-    const endMonth = endDateObj.getMonth();
-    const startMonth = startDateObj.getMonth();
-
-    const endDateDate = endDateObj.getDate();
-    const startDateDate = startDateObj.getDate();
-
-    const endYear = endDateObj.getFullYear();
-    const startYear = startDateObj.getFullYear();
-
-    // Compare the year, month, and date
-    if (endYear < startYear) {
-        return true;
-    } else if (endYear === startYear && endMonth < startMonth) {
-        return true;
-    } else if (endYear === startYear && endMonth === startMonth && endDateDate < startDateDate) {
-        return true;
-    }
-
-    return false;
 }
 
 {% endjavascript %}
