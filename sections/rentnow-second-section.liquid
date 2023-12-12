@@ -768,6 +768,11 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     const endYearContainer = findYearContainer(endDateObj);
     const startYearContainer = findYearContainer(startDateObj);
 
+    if (!endYearContainer || !startYearContainer) {
+        console.error("Could not find year container element");
+        return false;
+    }
+
     const endYear = parseInt(endYearContainer.textContent.trim(), 10);
     const startYear = parseInt(startYearContainer.textContent.trim(), 10);
 
@@ -779,7 +784,6 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 
     console.log("End Year:", endYear);
     console.log("Start Year:", startYear);
-    
 
     // Compare the year, month, and date
     if (endYear < startYear) {
