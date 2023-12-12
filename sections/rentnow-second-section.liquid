@@ -515,7 +515,7 @@ function selectionOfDays(event) {
     if (!startDate) {
         const monthContainer = findMonthContainer(event.target);
 
-        if (monthContainer && yearContainer) {
+        if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
 
             startDate = clickedDay + ' ' + clickedMonth;
@@ -671,7 +671,7 @@ function isDateInRange(currentDate, startDate, endDate) {
 function applyFreeDates() {
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
-    
+
     // Calculate two days before the startDate
     const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
