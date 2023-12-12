@@ -768,6 +768,9 @@ function isEndDateBeforeStartDate(endDate, startDate) {
     const endYearContainer = findYearContainer(endDateObj);
     const startYearContainer = findYearContainer(startDateObj);
 
+    console.log("end Year Container:", endYearContainer);
+    console.log("start Year COntainer:", startYearContainer);
+
     if (!endYearContainer || !startYearContainer) {
         console.error("Could not find year container element");
         return false;
