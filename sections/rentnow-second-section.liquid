@@ -522,8 +522,8 @@ function selectionOfDays(event) {
         const yearContainer = findYearContainer(event.target);
 
         if (monthContainer) {
-            const clickedMonth = monthContainer.textContent.trim();
-            const clickedYear = yearContainer.textContent.trim();
+            clickedMonth = monthContainer.textContent.trim();
+            clickedYear = yearContainer.textContent.trim();
 
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
@@ -535,8 +535,8 @@ function selectionOfDays(event) {
         const yearContainer = findYearContainer(event.target);
 
         if (monthContainer) {
-            const clickedMonth = monthContainer.textContent.trim();
-            const clickedYear = yearContainer.textContent.trim();
+            clickedMonth = monthContainer.textContent.trim();
+            clickedYear = yearContainer.textContent.trim();
 
             endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-end-date');
@@ -556,8 +556,8 @@ function selectionOfDays(event) {
        const yearContainer = findYearContainer(event.target);
 
         if (monthContainer) {
-            const clickedMonth = monthContainer.textContent.trim();
-            const clickedYear = yearContainer.textContent.trim();
+            clickedMonth = monthContainer.textContent.trim();
+            clickedYear = yearContainer.textContent.trim();
 
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
@@ -567,7 +567,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("strange");
+    console.log("even stranger");
 }
 
 function findMonthContainer(element) {
