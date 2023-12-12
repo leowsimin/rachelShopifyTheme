@@ -678,20 +678,21 @@ function isDateInRange(currentDate, startDate, endDate) {
     const end = new Date(endDate);
 
     // Check if the current date is within the range
-    if (start.getMonth() === end.getMonth()) {
-        return current > start && current < end;
+    if (current >= start && current <= end) {
+        return true;
     } else {
         // Check if the current date is after the start date in the start month
-        if (current > start && current.getMonth() === start.getMonth()) {
+        if (current >= start && current.getMonth() === start.getMonth()) {
             return true;
         }
         // Check if the current date is before the end date in the end month
-        if (current < end && current.getMonth() === end.getMonth()) {
+        if (current <= end && current.getMonth() === end.getMonth()) {
             return true;
         }
         return false;
     }
 }
+
 
 function applyFreeDates() {
     const startDateObj = new Date(startDate);
