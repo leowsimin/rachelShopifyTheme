@@ -514,20 +514,26 @@ function selectionOfDays(event) {
 
     if (!startDate) {
         const monthContainer = findMonthContainer(event.target);
+        const yearContainer = findYearContainer(event.target);
 
-        if (monthContainer) {
+        if (monthContainer && yearContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            startDate = clickedDay + ' ' + clickedMonth;
+            const clickedYear = yearContainer.textContent.trim();
+
+            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
         }
     }
 
     else if (!endDate) {
         const monthContainer = findMonthContainer(event.target);
+        const yearContainer = findYearContainer(event.target);
 
-        if (monthContainer) {
+        if (monthContainer && yearContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            endDate = clickedDay + ' ' + clickedMonth;
+            const clickedYear = yearContainer.textContent.trim();
+
+            endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-end-date');
         }
 
@@ -542,10 +548,13 @@ function selectionOfDays(event) {
         });
 
        const monthContainer = findMonthContainer(event.target);
+       const yearContainer = findYearContainer(event.target);
 
         if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            startDate = clickedDay + ' ' + clickedMonth;
+            const clickedYear = yearContainer.textContent.trim();
+
+            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
             endDate = null;
         }
@@ -562,6 +571,20 @@ function findMonthContainer(element) {
                 return document.querySelector('#rentNowFirstMonthLabel');
             } else if (element.classList.contains('rentnow-second-calendar')) {
                 return document.querySelector('#rentNowSecondMonthLabel');
+            }
+        }
+        element = element.parentNode;
+    }
+    return null;
+}
+
+function findMonthContainer(element) {
+    while (element) {
+        if (element.classList) {
+            if (element.classList.contains('rentnow-first-calendar')) {
+                return document.querySelector('#rentNowFirstYearLabel');
+            } else if (element.classList.contains('rentnow-second-calendar')) {
+                return document.querySelector('#rentNowSecondYearLabel');
             }
         }
         element = element.parentNode;
@@ -783,22 +806,6 @@ function isEndDateBeforeStartDate(endDate, startDate, ) {
     }
 
     return false;
-}
-
-function findYearContainer(element) {
-
-  console.log("Element:", element);
-    while (element) {
-        if (element.classList) {
-            if (element.classList.contains('rentnow-first-calendar')) {
-                return document.querySelector('#rentNowFirstYearLabel');
-            } else if (element.classList.contains('rentnow-second-calendar')) {
-                return document.querySelector('#rentNowSecondYearLabel');
-            }
-        }
-        element = element.parentNode;
-    }
-    return null;
 }
 
 {% endjavascript %}
