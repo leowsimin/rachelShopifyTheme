@@ -429,6 +429,10 @@ rentNowSecondYearLabel.addEventListener('click', function(event) {
 dropdownSecondYear.addEventListener('change', function() {
   const selectedYear = dropdownSecondYear.value;
 
+  // Reset start and end dates
+        startDate = null;
+        endDate = null;
+
   document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
             element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
         });
@@ -572,7 +576,7 @@ function selectionOfDays(event) {
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
     console.log("removed!");
-    
+
 }
 
 function findMonthContainer(element) {
