@@ -623,6 +623,8 @@ function applySelectedDates() {
         const date = parseInt(element.textContent, 10);
         const monthContainer = findMonthContainer(element);
 
+        
+
         if (monthContainer) {
             const month = monthContainer.textContent.trim();
             const currentDate = date + ' ' + month;
