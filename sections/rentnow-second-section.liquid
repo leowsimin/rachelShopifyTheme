@@ -567,7 +567,7 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("working!!!!");
+    console.log("working!");
 
 }
 
@@ -600,6 +600,14 @@ function findYearContainer(element) {
 }
 
 function applySelectedDates() {
+
+    const rentNowDateError = document.getElementById("rentNowDateError");
+    rentNowDateError.style.display = "none";
+
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        rentNowDateError.style.display = "flex";
+        return;  // Exit the function if invalid input
+    }
 
     const allDateElements = [
         ...firstCalendarDays.querySelectorAll('p'),
