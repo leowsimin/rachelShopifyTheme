@@ -382,10 +382,12 @@ dropdownSecondMonth.addEventListener('change', function() {
   const selectedMonth = dropdownSecondMonth.value;
 
   if ( (dropdownSecondYear.value > dropdownYear.value)) {
-    
+
     document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
         element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
     });
+    
+    console.log("ye");
 
     rentNowSecondMonthLabel.textContent = selectedMonth;
     dropdownSecondMonth.style.display = 'none';
