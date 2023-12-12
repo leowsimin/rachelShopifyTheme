@@ -527,9 +527,11 @@ function selectionOfDays(event) {
 
     else if (!endDate) {
         const monthContainer = findMonthContainer(event.target);
+        const yearContainer = findYearContainer(event.target);
 
         if (monthContainer && yearContainer) {
             const clickedMonth = monthContainer.textContent.trim();
+            const clickedYear = yearContainer.textContent.trim();
 
             endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-end-date');
