@@ -567,7 +567,6 @@ function selectionOfDays(event) {
 
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    console.log("working!");
 
 }
 
@@ -693,6 +692,11 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
+
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        return; 
+    }
+
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
 
