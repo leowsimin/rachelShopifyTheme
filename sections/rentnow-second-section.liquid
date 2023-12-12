@@ -760,24 +760,9 @@ function attachEventListeners() {
     });
 }
 
-function isEndDateBeforeStartDate(endDate, startDate) {
+function isEndDateBeforeStartDate(endDate, startDate, ) {
     const endDateObj = new Date(endDate);
     const startDateObj = new Date(startDate);
-
-    // Pass the month label elements to findYearContainer
-    const endYearContainer = findYearContainer(endDateObj);
-    const startYearContainer = findYearContainer(startDateObj);
-
-    console.log("end Year Container:", endYearContainer);
-    console.log("start Year COntainer:", startYearContainer);
-
-    if (!endYearContainer || !startYearContainer) {
-        console.error("Could not find year container element");
-        return false;
-    }
-
-    const endYear = parseInt(endYearContainer.textContent.trim(), 10);
-    const startYear = parseInt(startYearContainer.textContent.trim(), 10);
 
     const endMonth = endDateObj.getMonth();
     const startMonth = startDateObj.getMonth();
