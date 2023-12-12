@@ -573,16 +573,6 @@ function findMonthContainer(element) {
 }
 
 function applySelectedDates() {
-    // Find all date elements
-    // Select all <p> elements within the calendars
-
-    const rentNowDateError = document.getElementById("rentNowDateError");
-    rentNowDateError.style.display = "none";
-
-    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        rentNowDateError.style.display = "flex";
-        return;  // Exit the function if invalid input
-    }
 
     const allDateElements = [
         ...firstCalendarDays.querySelectorAll('p'),
@@ -662,12 +652,6 @@ function isDateInRange(currentDate, startDate, endDate) {
     const start = new Date(startDate);
     const end = new Date(endDate);
 
-    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        const rentNowDateError = document.getElementById("rentNowDateError");
-        rentNowDateError.style.display = "flex";
-        return;  // Exit the function if invalid input
-    }
-
     // Check if the current date is within the range
     if (start.getMonth() === end.getMonth()) {
         return current > start && current < end;
@@ -687,13 +671,7 @@ function isDateInRange(currentDate, startDate, endDate) {
 function applyFreeDates() {
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
-
-    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        const rentNowDateError = document.getElementById("rentNowDateError");
-        rentNowDateError.style.display = "flex";
-        return;  // Exit the function if invalid input
-    }
-
+    
     // Calculate two days before the startDate
     const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
