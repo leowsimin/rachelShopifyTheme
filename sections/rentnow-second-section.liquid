@@ -394,9 +394,6 @@ dropdownSecondMonth.addEventListener('change', function() {
     secondCalendarElements.forEach(element => {
         element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
     });
-    
-    console.log("removing");
-
 
     rentNowSecondMonthLabel.textContent = selectedMonth;
     dropdownSecondMonth.style.display = 'none';
