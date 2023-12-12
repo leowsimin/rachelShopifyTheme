@@ -526,7 +526,7 @@ function selectionOfDays(event) {
     else if (!endDate) {
         const monthContainer = findMonthContainer(event.target);
 
-        if (monthContainer && yearContainer) {
+        if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
 
             endDate = clickedDay + ' ' + clickedMonth;
@@ -535,7 +535,7 @@ function selectionOfDays(event) {
 
         applySelectedDates();
         applyFreeDates();
-        
+
     }
 
     else {
