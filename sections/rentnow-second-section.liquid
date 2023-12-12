@@ -793,6 +793,8 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 }
 
 function findYearContainer(element) {
+
+  console.log("Element:", element);
     while (element) {
         if (element.classList) {
             if (element.classList.contains('rentnow-first-calendar')) {
