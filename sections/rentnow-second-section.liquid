@@ -577,6 +577,20 @@ function findMonthContainer(element) {
     return null;
 }
 
+function findYearContainer(element) {
+    while (element) {
+        if (element.classList) {
+            if (element.classList.contains('rentnow-first-calendar')) {
+                return document.querySelector('#rentNowFirstYearLabel');
+            } else if (element.classList.contains('rentnow-second-calendar')) {
+                return document.querySelector('#rentNowSecondYearLabel');
+            }
+        }
+        element = element.parentNode;
+    }
+    return null;
+}
+
 function applySelectedDates() {
 
     const allDateElements = [
@@ -743,5 +757,7 @@ function attachEventListeners() {
         });
     });
 }
+
+
 
 {% endjavascript %}
