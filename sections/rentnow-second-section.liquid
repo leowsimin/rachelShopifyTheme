@@ -430,6 +430,7 @@ dropdownSecondYear.addEventListener('change', function() {
   const selectedYear = dropdownSecondYear.value;
 
   if ( (dropdownSecondYear.value > dropdownYear.value)) {
+    console.log("running if");
     rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
     dropdownSecondYear.style.display = 'none';
     rentNowYearError.style.display = 'none';
@@ -456,6 +457,7 @@ dropdownSecondYear.addEventListener('change', function() {
   }
 
   else {
+    console.log("Invalid Input Year");
     rentNowYearError.style.display = 'flex';
   }
 
@@ -514,26 +516,20 @@ function selectionOfDays(event) {
 
     if (!startDate) {
         const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
 
-        if (monthContainer && yearContainer) {
+        if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            const clickedYear = yearContainer.textContent.trim();
-
-            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+            startDate = clickedDay + ' ' + clickedMonth;
             event.target.classList.add('rentnow-start-date');
         }
     }
 
     else if (!endDate) {
         const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
 
-        if (monthContainer && yearContainer) {
+        if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            const clickedYear = yearContainer.textContent.trim();
-
-            endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+            endDate = clickedDay + ' ' + clickedMonth;
             event.target.classList.add('rentnow-end-date');
         }
 
@@ -548,13 +544,10 @@ function selectionOfDays(event) {
         });
 
        const monthContainer = findMonthContainer(event.target);
-       const yearContainer = findYearContainer(event.target);
 
         if (monthContainer) {
             const clickedMonth = monthContainer.textContent.trim();
-            const clickedYear = yearContainer.textContent.trim();
-
-            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+            startDate = clickedDay + ' ' + clickedMonth;
             event.target.classList.add('rentnow-start-date');
             endDate = null;
         }
@@ -765,6 +758,32 @@ function attachEventListeners() {
             pElement.addEventListener('click', selectionOfDays);
         });
     });
+}
+
+function isEndDateBeforeStartDate(endDate, startDate) {
+    const endDateObj = new Date(endDate);
+    const startDateObj = new Date(startDate);
+
+    const endMonth = endDateObj.getMonth();
+    const startMonth = startDateObj.getMonth();
+
+    const endDateDate = endDateObj.getDate();
+    const startDateDate = startDateObj.getDate();
+
+    console.log("endMonth:", endMonth);
+    console.log("endDateDate:", endDateDate);
+
+    console.log("startMonth:", startMonth);
+    console.log("startDateDate:", startDateDate);
+
+    // Compare the year, month, and date
+    if (endMonth < startMonth) {
+        return true;
+    } else if (endMonth === startMonth && endDateDate < startDateDate) {
+        return true;
+    }
+
+    return false;
 }
 
 {% endjavascript %}
