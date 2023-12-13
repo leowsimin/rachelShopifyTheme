@@ -411,7 +411,6 @@ dropdownSecondMonth.addEventListener('change', function() {
   }
 
   else {
-    console.log("Invalid Input Month");
     rentNowMonthError.style.display = 'flex';
   }
 
@@ -566,12 +565,6 @@ function selectionOfDays(event) {
             endDate = null;
         }
     }
-
-    console.log("Start Date:", startDate);
-    console.log("End Date:", endDate);
-    console.log("removed?");
-
-
 }
 
 function findMonthContainer(element) {
