@@ -809,6 +809,9 @@ function updatingSection(startDate, endDate) {
   const diffDays = Math.round(timeDifference / oneDay) - 1;
 
   numberOfSelectedDates.textContent = `(${diffDays} day${diffDays !== 1 ? 's' : ''})`;
+
+  const rentNowRentalCost = document.getElementById("rentNowRentalCost");
+  rentNowRentalCost.textContent = "$1/day  x  ${diffDays - 2} days = $${diffDays - 2}";
   }
 
 {% endjavascript %}
