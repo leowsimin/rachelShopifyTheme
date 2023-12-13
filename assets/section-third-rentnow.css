@@ -30,7 +30,8 @@
     padding-right: 20px;
 }
 
-.rentnow-number-of-days-calculation {
+.rentnow-number-of-days-calculation,
+.rentnow-days-amount-calculation {
     padding-left: 20px;
 }
 
