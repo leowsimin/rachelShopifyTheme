@@ -14,6 +14,7 @@
 .rentnow-header3-container2,
 .rentnow-header3-container3 {
     display: flex;
+    justify-content: center;
 }
 
 .rentnow-subheader-container6 {
