@@ -24,4 +24,5 @@
 .rentnow-subheader-container7,
 .rentnow-subheader-container8 {
     display: flex;
+    align-items: center;
 }
