@@ -691,6 +691,13 @@ function isDateInRange(currentDate, startDate, endDate) {
 
 function applyFreeDates() {
 
+  console.log("im running");
+
+  const deliveryPickUp1 = getElementById("deliveryPickUp1");
+  const deliveryPickUp2 = getElementById("deliveryPickUp2");
+  const deliveryPickUp3 = getElementById("deliveryPickUp3");
+  const deliveryPickUp4 = getElementById("deliveryPickUp4");
+
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         return; 
     }
@@ -700,11 +707,19 @@ function applyFreeDates() {
 
     // Calculate two days before the startDate
     const twoDaysBeforeStartDate = new Date(startDateObj);
+    const formattedtwoDaysBeforeStartDate = `${(twoDaysBeforeStartDate.getDate() < 10 ? '0' : '') + twoDaysBeforeStartDate.getDate()}/${(twoDaysBeforeStartDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeStartDate.getMonth() + 1)}/${twoDaysBeforeStartDate.getFullYear().toString().slice(-2)}`;
+    
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
+    deliveryPickUp1.textContent = formattedtwoDaysBeforeStartDate + ": AM (11 a.m. - 2 p.m.)";
+    deliveryPickUp2.textContent = formattedtwoDaysBeforeStartDate + ": PM (2 p.m. - 5 p.m.)";
 
     // Calculate two days after the endDate
     const twoDaysBeforeEndDate = new Date(endDateObj);
+    const formattedtwoDaysBeforeEndDate = `${(twoDaysBeforeEndDate.getDate() < 10 ? '0' : '') + twoDaysBeforeEndDate.getDate()}/${(twoDaysBeforeEndDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeEndDate.getMonth() + 1)}/${twoDaysBeforeEndDate.getFullYear().toString().slice(-2)}`;
+
     twoDaysBeforeEndDate.setDate(endDateObj.getDate() + 2);
+    deliveryPickUp3.textContent = formattedtwoDaysBeforeEndDate + ": AM (11 a.m. - 2 p.m.)";
+    deliveryPickUp4.textContent = formattedtwoDaysBeforeEndDate + ": PM (2 p.m. - 5 p.m.)";
 
     // Calculate one day before the startDate
     const oneDayBeforeStartDate = new Date(startDateObj);
