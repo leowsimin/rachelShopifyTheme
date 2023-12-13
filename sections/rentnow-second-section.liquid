@@ -793,6 +793,11 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 
 function updatingSection(startDate, endDate) {
 
+  if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        rentNowDateError.style.display = "flex";
+        return;  // Exit the function if invalid input
+    }
+
   const startDateFormat = new Date(startDate);
   const endDateFormat = new Date(endDate);
 
