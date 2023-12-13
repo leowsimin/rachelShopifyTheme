@@ -12,7 +12,8 @@
 
 .rentnow-header3-container1,
 .rentnow-header3-container2,
-.rentnow-header3-container3 {
+.rentnow-header3-container3,
+.rentnow-header3-container5 {
     display: flex;
     align-items: center;
 }
@@ -31,7 +32,8 @@
 }
 
 .rentnow-number-of-days-calculation,
-.rentnow-days-amount-calculation {
+.rentnow-days-amount-calculation,
+.rentnow-total-amount-calculation {
     padding-left: 20px;
 }
 
