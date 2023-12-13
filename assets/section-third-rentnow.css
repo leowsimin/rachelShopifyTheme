@@ -1,8 +1,14 @@
-.rentnow-third-section {
+.rentnow-header3-container1,
+.rentnow-header3-container2,
+.rentnow-header3-container3 {
     display: flex;
-    flex-direction: column;
 }
 
-.rentnow-header3-container1 {
+.rentnow-subheader-container6 {
+    display: block;
+}
+
+.rentnow-subheader-container7,
+.rentnow-subheader-container8 {
     display: flex;
 }
