@@ -691,8 +691,8 @@ function isDateInRange(currentDate, startDate, endDate) {
 
 function applyFreeDates() {
 
-  console.log("im running!!!!");
-  
+  console.log("im running!!!! AGAIn");
+
 
   const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
   const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
@@ -707,18 +707,18 @@ function applyFreeDates() {
     const endDateObj = new Date(endDate);
 
     // Calculate two days before the startDate
-    const twoDaysBeforeStartDate = new Date(startDateObj);
-    const formattedtwoDaysBeforeStartDate = `${(twoDaysBeforeStartDate.getDate() < 10 ? '0' : '') + twoDaysBeforeStartDate.getDate()}/${(twoDaysBeforeStartDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeStartDate.getMonth() + 1)}/${twoDaysBeforeStartDate.getFullYear().toString().slice(-2)}`;
-    
+    const twoDaysBeforeStartDate = new Date(startDateObj);    
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
+
+    const formattedtwoDaysBeforeStartDate = `${(twoDaysBeforeStartDate.getDate() < 10 ? '0' : '') + twoDaysBeforeStartDate.getDate()}/${(twoDaysBeforeStartDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeStartDate.getMonth() + 1)}/${twoDaysBeforeStartDate.getFullYear().toString().slice(-2)}`;
     deliveryPickUp1.textContent = formattedtwoDaysBeforeStartDate + ": AM (11 a.m. - 2 p.m.)";
     deliveryPickUp2.textContent = formattedtwoDaysBeforeStartDate + ": PM (2 p.m. - 5 p.m.)";
 
     // Calculate two days after the endDate
     const twoDaysBeforeEndDate = new Date(endDateObj);
-    const formattedtwoDaysBeforeEndDate = `${(twoDaysBeforeEndDate.getDate() < 10 ? '0' : '') + twoDaysBeforeEndDate.getDate()}/${(twoDaysBeforeEndDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeEndDate.getMonth() + 1)}/${twoDaysBeforeEndDate.getFullYear().toString().slice(-2)}`;
-
     twoDaysBeforeEndDate.setDate(endDateObj.getDate() + 2);
+
+    const formattedtwoDaysBeforeEndDate = `${(twoDaysBeforeEndDate.getDate() < 10 ? '0' : '') + twoDaysBeforeEndDate.getDate()}/${(twoDaysBeforeEndDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeEndDate.getMonth() + 1)}/${twoDaysBeforeEndDate.getFullYear().toString().slice(-2)}`;
     deliveryPickUp3.textContent = formattedtwoDaysBeforeEndDate + ": AM (11 a.m. - 2 p.m.)";
     deliveryPickUp4.textContent = formattedtwoDaysBeforeEndDate + ": PM (2 p.m. - 5 p.m.)";
 
