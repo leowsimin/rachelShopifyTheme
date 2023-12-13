@@ -852,7 +852,9 @@ function collectionOptions() {
   rentNowNotClickedDelivery.addEventListener("click", function() {
     rentNowNotClickedDelivery.style.display = "none";
     rentNowClickedDelivery.style.display = "flex";
+
     rentNowClickedSelfCollect.style.display = "none";
+    rentNowNotClickedSelfCollect.style.display = "flex";
 
     deliveryTimeDate.style.display = "block";
   });
