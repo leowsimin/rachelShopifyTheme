@@ -1,1 +1,6 @@
-.rentnow-header3-container1 {}
+.rentnow-header3-container1,
+.rentnow-header3-container2,
+.rentnow-header3-container3 {
+    display: flex;
+
+}
