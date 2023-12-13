@@ -823,8 +823,6 @@ function updatingSection(startDate, endDate) {
   }
 
 function collectionOptions() {
-
-  console.log("Im clicked!");
   
   const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
   const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
@@ -837,11 +835,15 @@ function collectionOptions() {
   rentNowNotClickedSelfCollect.addEventListener("click", function() {
     rentNowNotClickedSelfCollect.style.display = "none";
     rentNowClickedSelfCollect.style.display = "flex";
+
+    deliveryTimeDate.style.display = "none";
   });
 
   rentNowClickedSelfCollect.addEventListener("click", function() {
     rentNowClickedSelfCollect.style.display = "none";
     rentNowNotClickedSelfCollect.style.display = "flex";
+
+    deliveryTimeDate.style.display = "none";
   });
 
   rentNowNotClickedDelivery.addEventListener("click", function() {
@@ -854,6 +856,8 @@ function collectionOptions() {
   rentNowClickedDelivery.addEventListener("click", function() {
     rentNowClickedDelivery.style.display = "none";
     rentNowNotClickedDelivery.style.display = "flex";
+
+    deliveryTimeDate.style.display = "none";
   });
 }
 
