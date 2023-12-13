@@ -824,7 +824,7 @@ function updatingSection(startDate, endDate) {
 
 function collectionOptions() {
 
-  console.log("hello");
+  console.log("hellooooo");
   
   const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
   const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
@@ -837,6 +837,7 @@ function collectionOptions() {
   rentNowNotClickedSelfCollect.addEventListener("click", function() {
     rentNowNotClickedSelfCollect.style.display = "none";
     rentNowClickedSelfCollect.style.display = "flex";
+    rentNowClickedDelivery.style.display = "none";
 
     deliveryTimeDate.style.display = "none";
   });
