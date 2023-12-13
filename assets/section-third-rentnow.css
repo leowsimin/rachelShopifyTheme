@@ -88,4 +88,13 @@
 }
 
 .rentnow-delivery-pickup1,
-.rentnow-delivery-pickup3 {}
+.rentnow-delivery-pickup3 {
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid #0D2610;
+}
+
+.rentnow-delivery-pickup2,
+.rentnow-delivery-pickup4 {
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid #0D2610;
+}
