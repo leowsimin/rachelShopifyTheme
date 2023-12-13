@@ -793,21 +793,24 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 
 function updatingSection(startDate, endDate) {
 
-  if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        rentNowDateError.style.display = "flex";
-        return;  // Exit the function if invalid input
-    }
-
   const startDateFormat = new Date(startDate);
   const endDateFormat = new Date(endDate);
+
+  const numberOfSelectedDates = document.getElementById("rentNowNumberOfSelectedDates");
+  const selectedDates = document.getElementById("rentNowSelectedDates");
+  const rentNowRentalCost = document.getElementById("rentNowRentalCost");
+
+  if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+        selectedDates.textContent = "";
+        numberOfSelectedDates.textContent = "";
+        rentNowRentalCost.textContent = "";
+        return;  
+    }
 
   const formattedStartDate = `${(startDateFormat.getDate() < 10 ? '0' : '') + startDateFormat.getDate()}/${(startDateFormat.getMonth() < 9 ? '0' : '') + (startDateFormat.getMonth() + 1)}/${startDateFormat.getFullYear().toString().slice(-2)}`;
   const formattedEndDate = `${(endDateFormat.getDate() < 10 ? '0' : '') + endDateFormat.getDate()}/${(endDateFormat.getMonth() < 9 ? '0' : '') + (endDateFormat.getMonth() + 1)}/${endDateFormat.getFullYear().toString().slice(-2)}`;
 
-  const selectedDates = document.getElementById("rentNowSelectedDates");
   selectedDates.textContent = formattedStartDate + " - " + formattedEndDate;
-
-  const numberOfSelectedDates = document.getElementById("rentNowNumberOfSelectedDates");
 
   const timeDifference = endDateFormat - startDateFormat;
   const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
@@ -815,10 +818,9 @@ function updatingSection(startDate, endDate) {
 
   numberOfSelectedDates.textContent = `(${diffDays} day${diffDays !== 1 ? 's' : ''})`;
 
-  const rentNowRentalCost = document.getElementById("rentNowRentalCost");
   rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
   }
 
-  console.log("yay");
+  console.log("Error");
 
 {% endjavascript %}
