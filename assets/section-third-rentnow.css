@@ -1,3 +1,8 @@
+.rentnow-third-section {
+    display: flex;
+    flex-direction: column;
+}
+
 .rentnow-header3-container1 {
     display: flex;
 }
