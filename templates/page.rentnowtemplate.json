@@ -17,11 +17,17 @@
       "type": "rentnow-second-section",
       "settings": {
       }
+    },
+    "7a5d4788-db7a-4abb-9907-66b24cd08296": {
+      "type": "rentnow-third-section",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "f24762a8-10a1-49df-8b2f-181266ac39b1",
-    "0f329577-40ae-4889-9ef2-e445a7af4966"
+    "0f329577-40ae-4889-9ef2-e445a7af4966",
+    "7a5d4788-db7a-4abb-9907-66b24cd08296"
   ]
 }
