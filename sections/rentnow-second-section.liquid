@@ -821,32 +821,32 @@ function updatingSection(startDate, endDate) {
   rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
   }
 
-function collectionOptions {
-  const rentNowNotClickedSelfCollect = getElementById("rentNowNotClickedSelfCollect");
-  const rentNowClickedSelfCollect = getElementById("rentNowClickedSelfCollect");
+function collectionOptions() {
+  const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
+  const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
 
-  const rentNowNotClickedDelivery = getElementById("rentNowNotClickedDelivery");
-  const rentNowClickedDelivery = getElementById("rentNowClickedDelivery");
+  const rentNowNotClickedDelivery = document.getElementById("rentNowNotClickedDelivery");
+  const rentNowClickedDelivery = document.getElementById("rentNowClickedDelivery");
   
-  rentNowNotClickedSelfCollect.addEventListener("clicked", function() {
+  rentNowNotClickedSelfCollect.addEventListener("click", function() {
     rentNowNotClickedSelfCollect.style.display = "none";
-    rentNowClickedSelfCollection.style.display = "flex";
-  })
+    rentNowClickedSelfCollect.style.display = "flex";
+  });
 
-  rentNowClickedSelfCollect.addEventListener("clicked", function() {
+  rentNowClickedSelfCollect.addEventListener("click", function() {
     rentNowClickedSelfCollect.style.display = "none";
-    rentNowNotClickedSelfCollection.style.display = "flex";
-  })
+    rentNowNotClickedSelfCollect.style.display = "flex";
+  });
 
-  rentNowNotClickedDelivery.addEventListener("clicked", function() {
+  rentNowNotClickedDelivery.addEventListener("click", function() {
     rentNowNotClickedDelivery.style.display = "none";
     rentNowClickedDelivery.style.display = "flex";
-  })
+  });
 
-  rentNowClickedDelivery.addEventListener("clicked", function() {
+  rentNowClickedDelivery.addEventListener("click", function() {
     rentNowClickedDelivery.style.display = "none";
     rentNowNotClickedDelivery.style.display = "flex";
-  })
+  });
 }
 
 {% endjavascript %}
