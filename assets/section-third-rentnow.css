@@ -17,6 +17,17 @@
     align-items: center;
 }
 
+.rentnow-third-section h1 {
+    color: #8A947F;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.5px;
+}
+
 .rentnow-subheader-container6 {
     display: block;
 }
@@ -26,3 +37,5 @@
     display: flex;
     align-items: center;
 }
+
+.rentnow-third-section p {}
