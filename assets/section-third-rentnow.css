@@ -60,6 +60,17 @@
     letter-spacing: -2px;
 }
 
+.rentnow-third-section h2 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
+
 .rentnow-selfcollection-image,
 .rentnow-delivery-image {
     width: 50px;
