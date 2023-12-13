@@ -829,6 +829,8 @@ function collectionOptions() {
 
   const rentNowNotClickedDelivery = document.getElementById("rentNowNotClickedDelivery");
   const rentNowClickedDelivery = document.getElementById("rentNowClickedDelivery");
+
+  const deliveryTimeDate = document.getElementById("rentNowHeader3Container4");
   
   rentNowNotClickedSelfCollect.addEventListener("click", function() {
     rentNowNotClickedSelfCollect.style.display = "none";
@@ -844,7 +846,7 @@ function collectionOptions() {
     rentNowNotClickedDelivery.style.display = "none";
     rentNowClickedDelivery.style.display = "flex";
 
-    rentnow-header3-container4.style.display = "flex";
+    deliveryTimeDate.style.display = "block";
   });
 
   rentNowClickedDelivery.addEventListener("click", function() {
