@@ -12,8 +12,7 @@
 
 .rentnow-header3-container1,
 .rentnow-header3-container2,
-.rentnow-header3-container3,
-.rentnow-header3-container4 {
+.rentnow-header3-container3 {
     display: flex;
     align-items: center;
 }
@@ -66,4 +65,13 @@
     width: 50px;
     margin-right: 20px;
     margin-left: 20px;
+}
+
+.rentnow-subheader-container9 {
+    display: flex;
+}
+
+.rentnow-subheader-container10,
+.rentnow-subheader-container11 {
+    display: block;
 }
