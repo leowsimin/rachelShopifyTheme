@@ -822,7 +822,31 @@ function updatingSection(startDate, endDate) {
   }
 
 function collectionOptions {
-  const 
+  const rentNowNotClickedSelfCollect = getElementById("rentNowNotClickedSelfCollect");
+  const rentNowClickedSelfCollect = getElementById("rentNowClickedSelfCollect");
+
+  const rentNowNotClickedDelivery = getElementById("rentNowNotClickedDelivery");
+  const rentNowClickedDelivery = getElementById("rentNowClickedDelivery");
+  
+  rentNowNotClickedSelfCollect.addEventListener("clicked", function() {
+    rentNowNotClickedSelfCollect.style.display = "none";
+    rentNowClickedSelfCollection.style.display = "flex";
+  })
+
+  rentNowClickedSelfCollect.addEventListener("clicked", function() {
+    rentNowClickedSelfCollect.style.display = "none";
+    rentNowNotClickedSelfCollection.style.display = "flex";
+  })
+
+  rentNowNotClickedDelivery.addEventListener("clicked", function() {
+    rentNowNotClickedDelivery.style.display = "none";
+    rentNowClickedDelivery.style.display = "flex";
+  })
+
+  rentNowClickedDelivery.addEventListener("clicked", function() {
+    rentNowClickedDelivery.style.display = "none";
+    rentNowNotClickedDelivery.style.display = "flex";
+  })
 }
 
 {% endjavascript %}
