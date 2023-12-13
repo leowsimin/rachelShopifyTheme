@@ -122,7 +122,7 @@
     color: #0D2610;
     text-align: center;
     font-family: JejuMyeongjo;
-    font-size: 30px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -131,5 +131,6 @@
     border-radius: 20px;
     border: 2px solid #0D2610;
 
-    margin-left: 50px;
+    margin-left: 100px;
+    padding: 20px;
 }
