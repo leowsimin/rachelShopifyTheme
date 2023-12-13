@@ -7,3 +7,8 @@
 .rentnow-subheader-container6 {
     display: block;
 }
+
+.rentnow-subheader-container7,
+.rentnow-subheader-container8 {
+    display: flex;
+}
