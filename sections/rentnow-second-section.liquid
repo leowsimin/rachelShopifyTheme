@@ -792,9 +792,18 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 }
 
 function updatingSection(startDate, endDate) {
-  console.log(startDate);
-  console.log(endDate);
+  // Parse the date strings
+  const startDateFormat = new Date(startDate);
+  const endDateFormat = new Date(endDate);
 
+  const formattedStartDate = `${(startDateFormat.getDate() < 10 ? '0' : '') + startDateFormat.getDate()}/${(startDateFormat.getMonth() < 9 ? '0' : '') + (startDateFormat.getMonth() + 1)}/${startDateFormat.getFullYear().toString().slice(-2)}`;
+  const formattedEndDate = `${(endDateFormat.getDate() < 10 ? '0' : '') + endDateFormat.getDate()}/${(endDateFormat.getMonth() < 9 ? '0' : '') + (endDateFormat.getMonth() + 1)}/${endDateFormat.getFullYear().toString().slice(-2)}`;
+
+  console.log(formattedStartDate);
+  console.log(formattedEndDate);
+
+  // Rest of your code
   const selectedDates = document.getElementById("rentNowSelectedDates");
+
 }
 {% endjavascript %}
