@@ -15,8 +15,6 @@
 .rentnow-header3-container3 {
     display: flex;
     align-items: center;
-
-    padding-right: 10px;
 }
 
 .rentnow-third-section h1 {
@@ -28,6 +26,8 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -2.5px;
+
+    padding-right: 10px;
 }
 
 .rentnow-header3-container3 h1 {
