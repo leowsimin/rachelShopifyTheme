@@ -890,14 +890,22 @@ function collectionOptions() {
 
 function applyDeliveryDateTime() {
 
-  console.log("colour change!!!");
+  console.log("colour change");
 
   const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
   const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
 
   deliveryPickUp1Container.addEventListener("clicked", function() {
-    deliveryPickUp1Container.style.backgroundColor = ""
+    deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+    deliveryPickUp2Container.style.backgroundColor = "transparent";
   })
+
+  deliveryPickUp2Container.addEventListener("clicked", function() {
+    deliveryPickUp1Container.style.backgroundColor = "transparent";
+    deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+  })
+
+
 
 }
 
