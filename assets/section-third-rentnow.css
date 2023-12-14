@@ -99,16 +99,16 @@
     margin-left: 25px;
 }
 
-.rentnow-delivery-pickup1,
-.rentnow-delivery-pickup3 {
+#deliveryPickUp1,
+#deliveryPickUp3 {
     border-radius: 10px 10px 0px 0px;
     border-top: 2px solid #0D2610;
     border-right: 2px solid #0D2610;
     border-left: 2px solid #0D2610;
 }
 
-.rentnow-delivery-pickup2,
-.rentnow-delivery-pickup4 {
+#deliveryPickUp2,
+#deliveryPickUp4 {
     border-radius: 0px 0px 10px 10px;
     border: 2px solid #0D2610;
 }
