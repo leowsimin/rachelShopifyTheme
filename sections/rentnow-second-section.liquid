@@ -506,6 +506,9 @@ const secondCalendarDays = document.querySelector(".rentnow-second-days");
 let startDate = null;
 let endDate = null;
 
+let collectionDate1 = null;
+let collectionDate2 = null;
+
 function selectionOfDays(event) {
 
     const clickedDay = event.target.textContent;
@@ -711,6 +714,8 @@ function applyFreeDates() {
     deliveryPickUp1.textContent = formattedtwoDaysBeforeStartDate + ": AM (11 a.m. - 2 p.m.)";
     deliveryPickUp2.textContent = formattedtwoDaysBeforeStartDate + ": PM (2 p.m. - 5 p.m.)";
 
+    collectionDate1 = formattedtwoDaysBeforeStartDate;
+
     // Calculate two days after the endDate
     const twoDaysBeforeEndDate = new Date(endDateObj);
     twoDaysBeforeEndDate.setDate(endDateObj.getDate() + 2);
@@ -718,6 +723,8 @@ function applyFreeDates() {
     const formattedtwoDaysBeforeEndDate = `${(twoDaysBeforeEndDate.getDate() < 10 ? '0' : '') + twoDaysBeforeEndDate.getDate()}/${(twoDaysBeforeEndDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeEndDate.getMonth() + 1)}/${twoDaysBeforeEndDate.getFullYear().toString().slice(-2)}`;
     deliveryPickUp3.textContent = formattedtwoDaysBeforeEndDate + ": AM (11 a.m. - 2 p.m.)";
     deliveryPickUp4.textContent = formattedtwoDaysBeforeEndDate + ": PM (2 p.m. - 5 p.m.)";
+
+    collectionDate2 = formattedtwoDaysBeforeEndDate;
 
     // Calculate one day before the startDate
     const oneDayBeforeStartDate = new Date(startDateObj);
@@ -767,6 +774,9 @@ function applyFreeDates() {
             }
         }
     });
+
+    console.log(collectionDate1);
+    console.log(collectionDate2);
 }
 
 function attachEventListeners() {
@@ -806,7 +816,6 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 }
 
 function updatingSection(startDate, endDate) {
-  
 
   const startDateFormat = new Date(startDate);
   const endDateFormat = new Date(endDate);
