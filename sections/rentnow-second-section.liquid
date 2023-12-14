@@ -908,6 +908,8 @@ function collectionOptions(diffDays) {
     rentNowNotClickedSelfCollect.style.display = "flex";
 
     deliveryTimeDate.style.display = "none";
+
+    totalAmountCalculation.textContent = `${diffDays} + $20 = ${diffDays + 20}`;
   });
 
   rentNowNotClickedDelivery.addEventListener("click", function() {
