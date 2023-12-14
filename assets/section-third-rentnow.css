@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.rentnow-header3-container5 {
+    position: relative;
+}
+
 .rentnow-third-section h1 {
     color: #8A947F;
     text-align: center;
@@ -140,6 +144,8 @@
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    position: absolute;
 }
 
 .rentnow-header3-container4 {
