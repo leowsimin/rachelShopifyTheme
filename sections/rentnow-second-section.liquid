@@ -896,6 +896,8 @@ function applyDeliveryDateTime(deliveryPickUp1, deliveryPickUp2, deliveryPickUp3
   const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
   const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
 
+  console.log(deliveryPickUp1.textContent);
+
   deliveryPickUp1Container.addEventListener("click", function() {
     deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
     deliveryPickUp2Container.style.backgroundColor = "transparent";
