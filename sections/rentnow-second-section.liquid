@@ -899,6 +899,8 @@ function applyDeliveryDateTime() {
   let isPickUp1Visible = true; 
 
   deliveryStartOption.addEventListener("click", function() {
+
+    console.log("im clicked!");
       if (isPickUp1Visible) {
           deliveryPickUp1Container.style.backgroundColor = "transparent";
           deliveryPickUp2Container.style.backgroundColor = "background: rgba(255, 166, 101, 0.50);";
