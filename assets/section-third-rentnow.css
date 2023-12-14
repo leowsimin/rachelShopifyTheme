@@ -147,10 +147,7 @@
 
     position: absolute;
     bottom: 0;
-    /* Adjust the positioning as needed */
-    right: -150;
-    /* Adjust the positioning as needed */
-    z-index: 2;
+    right: -150px;
 }
 
 .rentnow-header3-container4 {
