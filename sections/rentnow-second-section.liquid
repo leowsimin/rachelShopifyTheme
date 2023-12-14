@@ -902,6 +902,9 @@ function collectionOptions(diffDays) {
     rentNowClickedDelivery.style.display = "none";
     rentNowNotClickedDelivery.style.display = "flex";
 
+    rentNowConfirmButton.style.color = "#0D2610";
+    rentNowConfirmButton.style.border = "2px solid #0D2610";
+
     deliveryTimeDate.style.display = "none";
 
     totalAmountCalculation.textContent = `$${diffDays} + $0 = $${diffDays}`;
@@ -912,8 +915,6 @@ function collectionOptions(diffDays) {
     rentNowNotClickedSelfCollect.style.display = "flex";
 
     deliveryTimeDate.style.display = "none";
-    rentNowConfirmButton.style.color = "#0D2610";
-    rentNowConfirmButton.style.border = "2px solid #0D2610";
   });
 
   rentNowNotClickedDelivery.addEventListener("click", function() {
@@ -922,6 +923,9 @@ function collectionOptions(diffDays) {
 
     rentNowClickedSelfCollect.style.display = "none";
     rentNowNotClickedSelfCollect.style.display = "flex";
+
+    rentNowConfirmButton.style.color = "#0D2610";
+    rentNowConfirmButton.style.border = "2px solid #0D2610";
 
     deliveryTimeDate.style.display = "block";
 
@@ -933,10 +937,8 @@ function collectionOptions(diffDays) {
     rentNowNotClickedDelivery.style.display = "flex";
 
     deliveryTimeDate.style.display = "none";
-    rentNowConfirmButton.style.color = "#0D2610";
-    rentNowConfirmButton.style.border = "2px solid #0D2610";
   });
-  
+
 }
 
 {% endjavascript %}
