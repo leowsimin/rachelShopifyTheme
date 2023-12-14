@@ -889,17 +889,22 @@ function collectionOptions() {
 
 function applyDeliveryDateTime() {
 
+  const deliveryStartOption = document.getElementById("deliveryStartOption");
   const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
   const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
-  const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
-  const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
 
-  const deliveryStartOption = document.getElementById("deliveryStartOption");
-  const deliveryEndOption = document.getElementById("deliveryEndOption");
+  let isPickUp1Visible = true; 
 
-  deliveryStartOption.addEventListener("clicked" , function() {
-    
-  })
+  deliveryStartOption.addEventListener("click", function() {
+      if (isPickUp1Visible) {
+          deliveryPickUp1.style.display = "none";
+          deliveryPickUp2.style.display = "block";
+      } else {
+          deliveryPickUp1.style.display = "block";
+          deliveryPickUp2.style.display = "none";
+      }
+      isPickUp1Visible = !isPickUp1Visible;
+  });
 
 }
 
