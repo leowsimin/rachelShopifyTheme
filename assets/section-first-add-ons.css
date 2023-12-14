@@ -24,7 +24,8 @@
     line-height: normal;
 }
 
-.add-ons-header1-container1 {
+.add-ons-header1-container1,
+.add-ons-header1-container2 {
     position: relative;
 }
 
