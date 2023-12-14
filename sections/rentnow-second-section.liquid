@@ -509,6 +509,11 @@ let endDate = null;
 let collectionDate1 = null;
 let collectionDate2 = null;
 
+const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
+const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
+const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
+const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
+
 function selectionOfDays(event) {
 
     const clickedDay = event.target.textContent;
@@ -694,11 +699,6 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
-
-  const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
-  const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
-  const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
-  const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         return; 
@@ -888,18 +888,13 @@ function collectionOptions() {
   });
 }
 
-function applyDeliveryDateTime() {
+function applyDeliveryDateTime(deliveryPickUp1, deliveryPickUp2, deliveryPickUp3, deliveryPickUp4) {
 
   const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
   const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
 
   const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
   const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
-
-  const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
-  const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
-  const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
-  const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
 
   deliveryPickUp1Container.addEventListener("click", function() {
     deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
