@@ -509,11 +509,6 @@ let endDate = null;
 let collectionDate1 = null;
 let collectionDate2 = null;
 
-const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
-const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
-const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
-const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
-
 function selectionOfDays(event) {
 
     const clickedDay = event.target.textContent;
@@ -699,6 +694,11 @@ function isDateInRange(currentDate, startDate, endDate) {
 }
 
 function applyFreeDates() {
+
+  const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
+  const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
+  const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
+  const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         return; 
@@ -888,7 +888,7 @@ function collectionOptions() {
   });
 }
 
-function applyDeliveryDateTime(deliveryPickUp1, deliveryPickUp2, deliveryPickUp3, deliveryPickUp4) {
+function applyDeliveryDateTime() {
 
   const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
   const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
@@ -896,28 +896,19 @@ function applyDeliveryDateTime(deliveryPickUp1, deliveryPickUp2, deliveryPickUp3
   const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
   const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
 
-  console.log(deliveryPickUp1.textContent);
-  
-
   deliveryPickUp1Container.addEventListener("click", function() {
     deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
     deliveryPickUp2Container.style.backgroundColor = "transparent";
-
-    collectionDate1 = deliveryPickUp1.textContent;
   })
 
   deliveryPickUp2Container.addEventListener("click", function() {
     deliveryPickUp1Container.style.backgroundColor = "transparent";
     deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-
-    collectionDate1 = deliveryPickUp2.textContent;
   })
 
   deliveryPickUp3Container.addEventListener("click", function() {
     deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
     deliveryPickUp4Container.style.backgroundColor = "transparent";
-
-    collectionDate2 = deliveryPickUp3.textContent;
   })
 
   deliveryPickUp4Container.addEventListener("click", function() {
@@ -925,11 +916,7 @@ function applyDeliveryDateTime(deliveryPickUp1, deliveryPickUp2, deliveryPickUp3
     deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
 
     collectionDate2 = deliveryPickUp4.textContent;
-  })
-
-  console.log( "Start:", collectionDate1);
-  console.log("End:", collectionDate2);
-
+  })    
 }
 
 {% endjavascript %}
