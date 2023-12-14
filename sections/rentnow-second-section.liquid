@@ -892,6 +892,8 @@ function collectionOptions(diffDays) {
   const deliveryTimeDate = document.getElementById("rentNowHeader3Container4");
 
   const totalAmountCalculation = document.getElementById("totalAmountCalculation");
+
+  const rentNowConfirmButton = document.getElementById("rentNowConfirmButton");
   
   rentNowNotClickedSelfCollect.addEventListener("click", function() {
     rentNowNotClickedSelfCollect.style.display = "none";
@@ -910,6 +912,7 @@ function collectionOptions(diffDays) {
     rentNowNotClickedSelfCollect.style.display = "flex";
 
     deliveryTimeDate.style.display = "none";
+    rentNowConfirmButton.style.color = "#"
   });
 
   rentNowNotClickedDelivery.addEventListener("click", function() {
