@@ -884,6 +884,8 @@ function collectionOptions() {
   const rentNowClickedDelivery = document.getElementById("rentNowClickedDelivery");
 
   const deliveryTimeDate = document.getElementById("rentNowHeader3Container4");
+
+  const totalAmountCalculation = document.getElementByID("totalAmountCalculation");
   
   rentNowNotClickedSelfCollect.addEventListener("click", function() {
     rentNowNotClickedSelfCollect.style.display = "none";
@@ -917,6 +919,8 @@ function collectionOptions() {
     rentNowNotClickedDelivery.style.display = "flex";
 
     deliveryTimeDate.style.display = "none";
+
+    totalAmountCalculation.textContent = 
   });
 
   
