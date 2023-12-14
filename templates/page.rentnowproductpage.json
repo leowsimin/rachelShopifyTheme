@@ -7,9 +7,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "a73204df-fc54-4ea3-97c4-3478023e5010": {
+      "type": "add-ons-first-section",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "a73204df-fc54-4ea3-97c4-3478023e5010"
   ]
 }
