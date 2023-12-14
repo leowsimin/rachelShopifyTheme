@@ -569,9 +569,6 @@ function selectionOfDays(event) {
             endDate = null;
         }
     }
-
-    console.log("Start:", collectionDate1);
-    console.log("End:", collectionDate2);
 }
 
 function findMonthContainer(element) {
@@ -805,7 +802,10 @@ function applyFreeDates() {
       deliveryPickUp3Container.style.backgroundColor = "transparent";
       deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
       collectionDate2 = deliveryPickUp4.textContent;
-    })    
+    })
+
+    console.log("Start:", collectionDate1);
+    console.log("End:", collectionDate2);
 }
 
 function attachEventListeners() {
