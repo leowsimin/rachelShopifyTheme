@@ -778,6 +778,36 @@ function applyFreeDates() {
             }
         }
     });
+
+    // DELIVERY Options
+
+    const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
+    const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
+
+    const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
+    const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
+
+
+    deliveryPickUp1Container.addEventListener("click", function() {
+      deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+      deliveryPickUp2Container.style.backgroundColor = "transparent";
+    })
+
+    deliveryPickUp2Container.addEventListener("click", function() {
+      deliveryPickUp1Container.style.backgroundColor = "transparent";
+      deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+    })
+
+    deliveryPickUp3Container.addEventListener("click", function() {
+      deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+      deliveryPickUp4Container.style.backgroundColor = "transparent";
+    })
+
+    deliveryPickUp4Container.addEventListener("click", function() {
+      deliveryPickUp3Container.style.backgroundColor = "transparent";
+      deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+    })    
+
 }
 
 function attachEventListeners() {
@@ -889,37 +919,6 @@ function collectionOptions() {
 
     deliveryTimeDate.style.display = "none";
   });
-}
-
-function applyDeliveryDateTime() {
-
-  const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
-  const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
-
-  const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
-  const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
-
-  deliveryPickUp1Container.addEventListener("click", function() {
-    deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-    deliveryPickUp2Container.style.backgroundColor = "transparent";
-
-    collectionDate1 = 
-  })
-
-  deliveryPickUp2Container.addEventListener("click", function() {
-    deliveryPickUp1Container.style.backgroundColor = "transparent";
-    deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-  })
-
-  deliveryPickUp3Container.addEventListener("click", function() {
-    deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-    deliveryPickUp4Container.style.backgroundColor = "transparent";
-  })
-
-  deliveryPickUp4Container.addEventListener("click", function() {
-    deliveryPickUp3Container.style.backgroundColor = "transparent";
-    deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-  })    
 }
 
 {% endjavascript %}
