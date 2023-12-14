@@ -148,7 +148,7 @@
     position: absolute;
     bottom: 0;
     /* Adjust the positioning as needed */
-    right: 0;
+    right: -150;
     /* Adjust the positioning as needed */
     z-index: 2;
 }
