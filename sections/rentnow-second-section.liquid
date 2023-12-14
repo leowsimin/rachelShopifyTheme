@@ -548,7 +548,7 @@ function selectionOfDays(event) {
         applySelectedDates();
         applyFreeDates();
         updatingSection(startDate, endDate);
-        collectionOptions();
+        collectionOptions(diffDays);
     }
 
     else {
@@ -877,7 +877,7 @@ function updatingSection(startDate, endDate) {
   return diffDays;
   }
 
-function collectionOptions() {
+function collectionOptions(diffDays) {
   
   const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
   const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
