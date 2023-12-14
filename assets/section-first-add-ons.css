@@ -41,10 +41,11 @@
 .add-ons-left-sparkle-image {
     position: absolute;
     width: 150px;
-    transform: translate(50%, -50%);
+    transform: translate(-500px, -50px);
 }
 
 .add-ons-left-sparkle-image {
     position: absolute;
     width: 150px;
+    transform: translate(-500px, -50px);
 }
