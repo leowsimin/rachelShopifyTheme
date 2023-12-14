@@ -548,7 +548,10 @@ function selectionOfDays(event) {
         applySelectedDates();
         applyFreeDates();
         updatingSection(startDate, endDate);
-        collectionOptions(diffDays);
+
+        const daysDifference = updatingSection(startDate, endDate);
+
+        collectionOptions(daysDifference);
     }
 
     else {
