@@ -3,11 +3,22 @@
     text-align: center;
 }
 
-.add-ons-first-section {
+.add-ons-first-section h1 {
     color: #0D2610;
     text-align: center;
     font-family: JejuMyeongjo;
-    font-size: 150px;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -7.5px;
+}
+
+.add-ons-first-section h2 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 85px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
