@@ -896,24 +896,37 @@ function applyDeliveryDateTime() {
   const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
   const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
 
+  const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
+  const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
+  const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
+  const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
+
   deliveryPickUp1Container.addEventListener("click", function() {
     deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
     deliveryPickUp2Container.style.backgroundColor = "transparent";
+
+    collectionDate1 = deliveryPickUp1.textContent;
   })
 
   deliveryPickUp2Container.addEventListener("click", function() {
     deliveryPickUp1Container.style.backgroundColor = "transparent";
     deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+
+    collectionDate1 = deliveryPickUp2.textContent;
   })
 
   deliveryPickUp3Container.addEventListener("click", function() {
     deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
     deliveryPickUp4Container.style.backgroundColor = "transparent";
+
+    collectionDate2 = deliveryPickUp3.textContent;
   })
 
   deliveryPickUp4Container.addEventListener("click", function() {
     deliveryPickUp3Container.style.backgroundColor = "transparent";
     deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+
+    collectionDate2 = deliveryPickUp4.textContent;
   })
 }
 
