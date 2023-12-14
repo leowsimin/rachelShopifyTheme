@@ -146,7 +146,11 @@
     padding-bottom: 10px;
 
     position: absolute;
-    transform: translateX(100px);
+    bottom: 0;
+    /* Adjust the positioning as needed */
+    right: 0;
+    /* Adjust the positioning as needed */
+    z-index: 2;
 }
 
 .rentnow-header3-container4 {
