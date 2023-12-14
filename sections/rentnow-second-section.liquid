@@ -890,6 +890,8 @@ function collectionOptions() {
 
 function applyDeliveryDateTime() {
 
+  console.log("colour change!");
+
   const deliveryStartOption = document.getElementById("deliveryStartOption");
   const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
   const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
@@ -899,10 +901,10 @@ function applyDeliveryDateTime() {
   deliveryStartOption.addEventListener("click", function() {
       if (isPickUp1Visible) {
           deliveryPickUp1.style.backgroundColor = "transparent";
-          deliveryPickUp2.style.backggroundColor = "block";
+          deliveryPickUp2.style.backgroundColor = "background: rgba(255, 166, 101, 0.50);";
       } else {
-          deliveryPickUp1.style.display = "block";
-          deliveryPickUp2.style.display = "none";
+          deliveryPickUp1.style.backgroundColor = "background: rgba(255, 166, 101, 0.50);";
+          deliveryPickUp2.style.backgroundColor = "transparet";
       }
       isPickUp1Visible = !isPickUp1Visible;
   });
