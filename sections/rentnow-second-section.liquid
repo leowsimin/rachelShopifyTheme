@@ -925,15 +925,21 @@ function collectionOptions(diffDays) {
     totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
   });
 
-  rentNowConfirmButton.addEventListener("click", function() {
-    if (rentNowConfirmButton.style.color = "#0D2610";) {
-      //proceed to the ref
-    }
+  rentNowConfirmButton.addEventListener("click", function(event) {
+    
+    event.preventDefault();
 
-    else {
-      // error pops up 
+    var buttonColor = window.getComputedStyle(rentNowConfirmButton).getPropertyValue("color");
+
+    // Check if the color is equal to the desired color
+    if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
+      // Proceed to the next page
+      window.location.href = "https://tner-rental.myshopify.com/pages/rent-now-product-page";
+    } else {
+      // Display an error message (you can customize this part)
+      alert("Error: Please choose the correct color.");
     }
-  })
+  });
 }
 
 {% endjavascript %}
