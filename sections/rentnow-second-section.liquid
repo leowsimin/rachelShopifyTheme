@@ -902,7 +902,7 @@ function collectionOptions(diffDays) {
 
     deliveryTimeDate.style.display = "none";
 
-    totalAmountCalculation.textContent = `${diffDays} + $0 = ${diffDays}`;
+    totalAmountCalculation.textContent = `$${diffDays} + $0 = $${diffDays}`;
   });
 
   rentNowClickedSelfCollect.addEventListener("click", function() {
@@ -921,9 +921,9 @@ function collectionOptions(diffDays) {
 
     deliveryTimeDate.style.display = "block";
 
-    totalAmountCalculation.textContent = `${diffDays} + $20 = ${diffDays + 20}`;
+    totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
     console.log("hi im here");
-    
+
   });
 
   rentNowClickedDelivery.addEventListener("click", function() {
