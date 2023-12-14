@@ -717,8 +717,6 @@ function applyFreeDates() {
     deliveryPickUp1.textContent = formattedtwoDaysBeforeStartDate + ": AM (11 a.m. - 2 p.m.)";
     deliveryPickUp2.textContent = formattedtwoDaysBeforeStartDate + ": PM (2 p.m. - 5 p.m.)";
 
-    collectionDate1 = formattedtwoDaysBeforeStartDate;
-
     // Calculate two days after the endDate
     const twoDaysBeforeEndDate = new Date(endDateObj);
     twoDaysBeforeEndDate.setDate(endDateObj.getDate() + 2);
@@ -726,8 +724,6 @@ function applyFreeDates() {
     const formattedtwoDaysBeforeEndDate = `${(twoDaysBeforeEndDate.getDate() < 10 ? '0' : '') + twoDaysBeforeEndDate.getDate()}/${(twoDaysBeforeEndDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeEndDate.getMonth() + 1)}/${twoDaysBeforeEndDate.getFullYear().toString().slice(-2)}`;
     deliveryPickUp3.textContent = formattedtwoDaysBeforeEndDate + ": AM (11 a.m. - 2 p.m.)";
     deliveryPickUp4.textContent = formattedtwoDaysBeforeEndDate + ": PM (2 p.m. - 5 p.m.)";
-
-    collectionDate2 = formattedtwoDaysBeforeEndDate;
 
     // Calculate one day before the startDate
     const oneDayBeforeStartDate = new Date(startDateObj);
@@ -790,21 +786,25 @@ function applyFreeDates() {
     deliveryPickUp1Container.addEventListener("click", function() {
       deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
       deliveryPickUp2Container.style.backgroundColor = "transparent";
+      collectionDate1 = deliveryPickUp1.textContent;
     })
 
     deliveryPickUp2Container.addEventListener("click", function() {
       deliveryPickUp1Container.style.backgroundColor = "transparent";
       deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+      collectionDate1 = deliveryPickUp2.textContent;
     })
 
     deliveryPickUp3Container.addEventListener("click", function() {
       deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
       deliveryPickUp4Container.style.backgroundColor = "transparent";
+      collectionDate2 = deliveryPickUp3.textContent;
     })
 
     deliveryPickUp4Container.addEventListener("click", function() {
       deliveryPickUp3Container.style.backgroundColor = "transparent";
       deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+      collectionDate2 = deliveryPickUp4.textContent;
     })    
 }
 
