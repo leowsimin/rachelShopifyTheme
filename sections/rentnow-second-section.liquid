@@ -892,23 +892,12 @@ function applyDeliveryDateTime() {
 
   console.log("colour change!!!");
 
-  const deliveryStartOption = document.getElementById("deliveryStartOption");
   const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
   const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
 
-  let isPickUp1Visible = true; 
-
-  deliveryStartOption.addEventListener("click", function() {
-      console.log("im clicked!");
-      if (isPickUp1Visible) {
-          deliveryPickUp1Container.style.backgroundColor = "transparent";
-          deliveryPickUp2Container.style.backgroundColor = "background: rgba(255, 166, 101, 0.50);";
-      } else {
-          deliveryPickUp1Container.style.backgroundColor = "background: rgba(255, 166, 101, 0.50);";
-          deliveryPickUp2Container.style.backgroundColor = "transparet";
-      }
-      isPickUp1Visible = !isPickUp1Visible;
-  });
+  deliveryPickUp1Container.addEventListener("clicked", function() {
+    deliveryPickUp1Container.style.backgroundColor = ""
+  })
 
 }
 
