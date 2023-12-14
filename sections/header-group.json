@@ -19,15 +19,9 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "4c6a1045-6eda-451e-a979-e980b889ba87": {
-      "type": "add-ons-first-section",
-      "settings": {
-      }
     }
   },
   "order": [
-    "header",
-    "4c6a1045-6eda-451e-a979-e980b889ba87"
+    "header"
   ]
 }
