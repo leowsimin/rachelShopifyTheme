@@ -910,13 +910,6 @@ function collectionOptions(diffDays) {
     totalAmountCalculation.textContent = `$${diffDays} + $0 = $${diffDays}`;
   });
 
-  rentNowClickedSelfCollect.addEventListener("click", function() {
-    rentNowClickedSelfCollect.style.display = "none";
-    rentNowNotClickedSelfCollect.style.display = "flex";
-
-    deliveryTimeDate.style.display = "none";
-  });
-
   rentNowNotClickedDelivery.addEventListener("click", function() {
     rentNowNotClickedDelivery.style.display = "none";
     rentNowClickedDelivery.style.display = "flex";
@@ -927,18 +920,11 @@ function collectionOptions(diffDays) {
     rentNowConfirmButton.style.color = "#0D2610";
     rentNowConfirmButton.style.border = "2px solid #0D2610";
 
-    console.log("color change");
+    console.log("CLICKED");
 
     deliveryTimeDate.style.display = "block";
 
     totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
-  });
-
-  rentNowClickedDelivery.addEventListener("click", function() {
-    rentNowClickedDelivery.style.display = "none";
-    rentNowNotClickedDelivery.style.display = "flex";
-
-    deliveryTimeDate.style.display = "none";
   });
 }
 
