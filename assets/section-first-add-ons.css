@@ -22,6 +22,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    margin: 0;
 }
 
 .add-ons-header1-container1,
@@ -32,6 +34,7 @@
 .add-ons-left-sparkle-image {
     position: absolute;
     width: 200px;
+
 }
 
 .add-ons-left-sparkle-image {
