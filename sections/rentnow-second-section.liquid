@@ -570,10 +570,6 @@ function selectionOfDays(event) {
             endDate = null;
         }
     }
-
-    console.log(collectionDate1);
-    console.log(collectionDate2);
-    
 }
 
 function findMonthContainer(element) {
@@ -932,6 +928,10 @@ function applyDeliveryDateTime() {
 
     collectionDate2 = deliveryPickUp4.textContent;
   })
+
+  console.log( "Start:", collectionDate1);
+  console.log("End:", collectionDate2);
+
 }
 
 {% endjavascript %}
