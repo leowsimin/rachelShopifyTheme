@@ -57,3 +57,16 @@
     border: none;
     background-color: transparent;
 }
+
+.add-ons-header2-container1 input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.add-ons-header2-container1 [type="number"]::-webkit-inner-spin-button,
+.add-ons-header2-container1 input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    /* WebKit/Blink browsers */
+    margin: 0;
+    /* Remove the inner margin for WebKit/Blink */
+}
