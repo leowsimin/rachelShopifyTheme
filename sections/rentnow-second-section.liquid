@@ -879,10 +879,27 @@ function updatingSection(startDate, endDate) {
 
   rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
 
-  luggageAmountPerDay.textContent = `$${diffDays}.00`;
+  // Remove any existing content
+  luggageAmountPerDay.innerHTML = "";
+
+  const container = document.createElement("div");
+
+  const numericPrice = {{ numeric_price | default: 0 }}; // Get the numeric price
+
+  if (numericPrice > 0) {
+    // Render the price using Liquid
+    const liquidCode = `{% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}`;
+    container.innerHTML = liquidCode;
+  } else {
+    // Use the value from diffDays
+    container.textContent = `$${diffDays}.00`;
+  }
+
+  // Append the container to luggageAmountPerDay
+  luggageAmountPerDay.appendChild(container);
 
   return diffDays;
-  }
+}
 
 function collectionOptions(diffDays) {
   
