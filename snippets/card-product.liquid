@@ -23,6 +23,8 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
+{{ 'personal-product-collection.css' | asset_url | stylesheet_tag }}
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -202,6 +204,10 @@
             {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+
+            <div>
+            
+            </div>
 
           </div>
         </div>
