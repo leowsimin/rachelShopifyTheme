@@ -382,9 +382,8 @@ document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
     const container = element.closest('.add-ons-header2-container1');
     const quantityElement = container.querySelector('.addOnsQuantityValue');
 
-    console.log("Up arrow clicked");
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-    displayElement.textContent = quantityElement.value;
+    quantityElement.textContent = quantityElement.value;
   });
 });
 
