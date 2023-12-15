@@ -366,6 +366,9 @@
 {%- endif -%}
 
 <script>
-  luggageAmount.textContent = "hi";
-  console.log("luggageAmountPerDay:", luggageAmount.textContent);
+  document.addEventListener("DOMContentLoaded", function() {
+    const luggageAmount = document.getElementById("luggageAmount");
+    luggageAmount.textContent = "hi";
+    console.log("luggageAmountPerDay:", luggageAmount.textContent);
+  });
 </script>
