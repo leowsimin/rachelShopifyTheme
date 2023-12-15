@@ -36,14 +36,16 @@
 }
 
 .add-ons-header2-container1 input {
-    color: #0D2610;
+    color: #0d2610;
     text-align: center;
     font-family: JejuMyeongjo;
-    font-size: 20px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
+    width: 30px;
 
-    width: 300px;
+    border: none;
+    border-bottom:
 }
