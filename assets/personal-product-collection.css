@@ -19,6 +19,7 @@
 
 .add-ons-header2-container1 {
     display: flex;
+    position: relative;
 
     border-radius: 50px;
     border: 1px solid #0D2610;
