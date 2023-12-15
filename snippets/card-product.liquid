@@ -200,10 +200,10 @@
             {%- endif -%}
 
             {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
-            <span id="luggageAmountPerDay">YOOOOO</span>
+            <span id="luggageAmount">YOOOOO</span>
 
             <script>
-              const luggageAmountPerDay = document.getElementById("luggageAmountPerDay");
+              const luggageAmountPerDay = document.getElementById("luggageAmount");
               console.log("luggageAmountPerDay:", luggageAmountPerDay.textContent);
             </script>
 
