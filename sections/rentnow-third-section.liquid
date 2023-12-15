@@ -110,6 +110,11 @@
 {% endjavascript %}
 
 <script>
+  var confirmButton = document.getElementById("rentNowConfirmButton");
   var rentalCostValue = document.getElementById("rentNowRentalCost");
-  console.log(rentalCostValue.textContent);
+
+  confirmButton.addEventListener ("click", function() {
+    console.log(rentalCostValue.textContent);
+  })
+
 </script>
