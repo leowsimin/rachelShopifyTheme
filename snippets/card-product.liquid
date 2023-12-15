@@ -377,24 +377,29 @@
 
 <script>
 
-  const quantityElement = document.getElementById("addOnsQuantityValue");
-
-  document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
+document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
-    console.log("im clicked");
-    const quantityElement = element.closest('.add-ons-header2-container1').querySelector('.addOnsQuantityValue');
+    const container = element.closest('.add-ons-header2-container1');
+    const quantityElement = container.querySelector('.addOnsQuantityValue');
+    const displayElement = container.querySelector('.quantityDisplay');
+
+    console.log("Up arrow clicked");
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-    quantityElement.textContent = quantityElement.value;
+    displayElement.textContent = quantityElement.value;
   });
 });
 
 document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
-    console.log("im clicked");
-    const quantityElement = element.closest('.add-ons-header2-container1').querySelector('.addOnsQuantityValue');
+    const container = element.closest('.add-ons-header2-container1');
+    const quantityElement = container.querySelector('.addOnsQuantityValue');
+    const displayElement = container.querySelector('.quantityDisplay');
+
+    console.log("Down arrow clicked");
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-    quantityElement.textContent = quantityElement.value;
+    displayElement.textContent = quantityElement.value;
   });
 });
+
 
 </script>
