@@ -366,10 +366,11 @@
 {%- endif -%}
 
 <script>
+  console.log(startDate);
+  console.log(endDate);
+
   document.addEventListener("DOMContentLoaded", function() {
     const luggageAmount = document.getElementById("luggageAmount");
-    console.log(startDate);
-    console.log(endDate);
     console.log("luggageAmountPerDay:", luggageAmount.textContent);
   });
 </script>
