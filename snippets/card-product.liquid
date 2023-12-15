@@ -387,8 +387,11 @@
 const addOnsArrow = document.getElementById("addOnsArrowImage");
 const productOptions = document.getElementById("productOptions");
 
-addOnsArrow.addEventListener("click", function() {
+addOnsArrow.addEventListener("click", function(event) {
     productOptions.style.display = "flex";
+    productOptions.size= "7";
+    productOptions.click();
+    event.stopPropagation();
 })
 
 </script>
