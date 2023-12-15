@@ -377,46 +377,29 @@
 
 <script>
 
-// Function to add click event listeners
-function addClickEventListeners() {
-  document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
-    element.removeEventListener('click', handleUpArrowClick);
-    element.addEventListener('click', handleUpArrowClick);
+document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
+  element.addEventListener('click', function() {
+    const container = element.closest('.add-ons-header2-container1');
+    const quantityElement = container.querySelector('.addOnsQuantityValue');
+
+    console.log("Up arrow clicked");
+    quantityElement.value = +quantityElement.value + 1;
+    quantityElement.setAttribute('value', quantityElement.value);
+    quantityElement.textContent = quantityElement.value;
   });
+});
 
-  document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
-    element.removeEventListener('click', handleDownArrowClick);
-    element.addEventListener('click', handleDownArrowClick);
+document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
+  element.addEventListener('click', function() {
+    const container = element.closest('.add-ons-header2-container1');
+    const quantityElement = container.querySelector('.addOnsQuantityValue');
+
+    console.log("Down arrow clicked");
+    quantityElement.value = Math.max(+quantityElement.value - 1, 0);
+    quantityElement.setAttribute('value', quantityElement.value);
+    quantityElement.textContent = quantityElement.value;
   });
-}
+});
 
-// Click event handler for the up arrow
-function handleUpArrowClick() {
-  const container = this.closest('.add-ons-header2-container1');
-  const quantityElement = container.querySelector('.addOnsQuantityValue');
-  const displayElement = container.querySelector('.quantityDisplay');
-
-  console.log("Up arrow clicked");
-  quantityElement.value = +quantityElement.value + 1;
-  quantityElement.setAttribute('value', quantityElement.value);
-  quantityElement.textContent = quantityElement.value;
-  displayElement.textContent = quantityElement.value;
-}
-
-// Click event handler for the down arrow
-function handleDownArrowClick() {
-  const container = this.closest('.add-ons-header2-container1');
-  const quantityElement = container.querySelector('.addOnsQuantityValue');
-  const displayElement = container.querySelector('.quantityDisplay');
-
-  console.log("Down arrow clicked");
-  quantityElement.value = Math.max(+quantityElement.value - 1, 0);
-  quantityElement.setAttribute('value', quantityElement.value);
-  quantityElement.textContent = quantityElement.value;
-  displayElement.textContent = quantityElement.value;
-}
-
-// Initial setup to add click event listeners
-addClickEventListeners();
 
 </script>
