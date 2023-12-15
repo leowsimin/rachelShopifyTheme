@@ -353,6 +353,7 @@
 
 .card-information {
   width: 100%;
+  text-align: center;
 }
 
 .card-information>* {
