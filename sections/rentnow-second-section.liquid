@@ -882,6 +882,8 @@ function updatingSection(startDate, endDate) {
   // Remove any existing content
   luggageAmountPerDay.innerHTML = "";
 
+  console.log("luggageAmountPerDay:", luggageAmountPerDay");
+
   const container = document.createElement("div");
 
   const numericPrice = {{ numeric_price | default: 0 }}; // Get the numeric price
