@@ -368,7 +368,10 @@
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const luggageAmount = document.getElementById("luggageAmount");
-    luggageAmount.textContent = ;
+
+    const daysDifference = updatingSection(startDate, endDate);
+
+    luggageAmount.textContent = `$${daysDifference}.00` ;
     console.log("luggageAmountPerDay:", luggageAmount.textContent);
   });
 </script>
