@@ -24,6 +24,8 @@
     border: 1px solid #0D2610;
     text-align: center;
     justify-content: center;
+
+    z-index: 2;
 }
 
 .add-ons-header2-container1 h1 {
