@@ -383,13 +383,13 @@
   addOnsArrowImage.addEventListener("click", function() {
     console.log("im clicked");
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-    quantity.textContent = quantityElement.value;
+    quantityElement.textContent = quantityElement.value;
   });
 
   addOnsDownArrowImage.addEventListener("click", function() {
     console.log("im clicked");
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-    quantity.textContent = quantityElement.value;
+    quantityElement.textContent = quantityElement.value;
   });
 
 </script>
