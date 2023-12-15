@@ -202,6 +202,11 @@
             {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
             <span id="luggageAmountPerDay">YOOOOO</span>
 
+            <script>
+              const luggageAmountPerDay = document.getElementById("luggageAmountPerDay");
+              console.log("luggageAmountPerDay:", luggageAmountPerDay.textContent);
+            </script>
+
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -364,8 +369,3 @@
     </div>
   </div>
 {%- endif -%}
-
-<script>
-  const luggageAmountPerDay = document.getElementById("luggageAmountPerDay");
-  console.log("luggageAmountPerDay:", luggageAmountPerDay.textContent);
-</script>
