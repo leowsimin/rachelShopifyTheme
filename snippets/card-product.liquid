@@ -162,7 +162,13 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {%- assign has_price = card_product.price | money_without_currency | strip_html | strip_newlines != '' -%}
+
+            {%- if has_price -%}
+              {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {%- else -%}
+              <span>${{ diffDays }} per day</span>
+            {%- endif -%}
             
 
             {%- if card_product.quantity_price_breaks_configured? -%}
