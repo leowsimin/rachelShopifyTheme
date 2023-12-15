@@ -200,7 +200,8 @@
             {%- endif -%}
 
             {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
-            <span id="luggageAmount"></span>
+
+            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
           </div>
         </div>
@@ -364,4 +365,3 @@
     </div>
   </div>
 {%- endif -%}
-
