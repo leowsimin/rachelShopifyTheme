@@ -208,7 +208,7 @@
             <div class="add-ons-header2-container1">
               <h1>Add to Cart</h1>
               <input type="number" min="1" value="1">
-              <img class= "add-ons-arrow-image" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
+              <img id ="addOnsArrowImage" class= "add-ons-arrow-image" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
               <select id="productOptions" name="productOptions">
                 <option value="option1">1</option>
                 <option value="option2">2</option>
@@ -384,6 +384,11 @@
 
 <script>
 
-const options dropdownmenu
+const addOnsArrow = document.getElementById("addOnsArrowImage");
+const productOptions = document.getElementById("productOptions");
+
+addOnsArrow.addEventListener("click", function() {
+    productOptions.style.display: "flex";
+})
 
 </script>
