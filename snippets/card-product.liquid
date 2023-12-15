@@ -382,6 +382,7 @@
   document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
     console.log("im clicked");
+    const quantityElement = element.closest('.add-ons-header2-container1').querySelector('.addOnsQuantityValue');
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
   });
@@ -390,6 +391,7 @@
 document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
     console.log("im clicked");
+    const quantityElement = element.closest('.add-ons-header2-container1').querySelector('.addOnsQuantityValue');
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
     quantityElement.textContent = quantityElement.value;
   });
