@@ -162,12 +162,12 @@
               </p>
             {%- endif -%}
 
-            {%- assign has_price = card_product.price | money_without_currency | strip_html | strip_newlines != '' -%}
+            {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
 
-            {%- if has_price -%}
+            {%- if numeric_price > 0 -%}
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {%- else -%}
-              <span>${{ diffDays }} per day</span>
+              <span id="luggageAmountPerDay">${{ diffDays }}</span>
             {%- endif -%}
             
 

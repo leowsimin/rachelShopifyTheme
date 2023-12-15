@@ -857,7 +857,7 @@ function updatingSection(startDate, endDate) {
   const numberOfSelectedDates = document.getElementById("rentNowNumberOfSelectedDates");
   const selectedDates = document.getElementById("rentNowSelectedDates");
   const rentNowRentalCost = document.getElementById("rentNowRentalCost");
-  const 
+  const luggageAmountPerDay = document.getElementById("luggageAmountPerDay");
 
   if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         selectedDates.textContent = "";
@@ -878,6 +878,8 @@ function updatingSection(startDate, endDate) {
   numberOfSelectedDates.textContent = `(${diffDays} day${diffDays !== 1 ? 's' : ''})`;
 
   rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
+
+  luggageAmountPerDay.textContent = ``
 
   return diffDays;
   }
