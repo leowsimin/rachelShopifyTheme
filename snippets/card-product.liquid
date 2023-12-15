@@ -205,12 +205,14 @@
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
-            <div class="add-ons-header2-container1">
-              <h1>Add to Cart</h1>
-              <img id ="addOnsArrowImage" class= "add-ons-arrow-image" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
-              <input type="number" min="1" value="1" />
-              <img id ="addOnsDownArrowImage" class= "add-ons-down-arrow-image" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
-            </div>
+            <div class="add-ons-main-container">
+              <div class="add-ons-header2-container1">
+                <h1>Add to Cart</h1>
+                <img id ="addOnsArrowImage" class= "add-ons-arrow-image" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
+                <input type="number" min="1" value="1" />
+                <img id ="addOnsDownArrowImage" class= "add-ons-down-arrow-image" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
+              </div>
+            <div>
 
           </div>
         </div>
