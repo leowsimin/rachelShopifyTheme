@@ -552,6 +552,7 @@ function selectionOfDays(event) {
         const daysDifference = updatingSection(startDate, endDate);
 
         collectionOptions(daysDifference);
+
     }
 
     else {
@@ -850,6 +851,8 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 
 function updatingSection(startDate, endDate) {
 
+  console.log("hello");
+
   const startDateFormat = new Date(startDate);
   const endDateFormat = new Date(endDate);
 
@@ -878,30 +881,10 @@ function updatingSection(startDate, endDate) {
 
   rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
 
-  // Remove any existing content
-  luggageAmountPerDay.innerHTML = "";
-
-  console.log("luggageAmountPerDay:", luggageAmountPerDay);
-
-  const container = document.createElement("div");
-  
-
-  const numericPrice = {{ numeric_price | default: 0 }}; // Get the numeric price
-
-  if (numericPrice > 0) {
-    // Render the price using Liquid
-    const liquidCode = `{% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}`;
-    container.innerHTML = liquidCode;
-  } else {
-    // Use the value from diffDays
-    container.textContent = `$${diffDays}.00`;
-  }
-
-  // Append the container to luggageAmountPerDay
-  luggageAmountPerDay.appendChild(container);
+  luggageAmountPerDay.textContent = `$${diffDays}.00`;
 
   return diffDays;
-}
+  }
 
 function collectionOptions(diffDays) {
   
