@@ -366,11 +366,9 @@
 {%- endif -%}
 
 <script>
-  console.log("what");
-  console.log(startDate);
-  console.log(endDate);
-
   document.addEventListener("DOMContentLoaded", function() {
+    const rentalCost = document.getElementById("rentNowRentalCost");
+    console.log("Rental Cost",rentalCost.textConent);
     const luggageAmount = document.getElementById("luggageAmount");
     console.log("luggageAmountPerDay:", luggageAmount.textContent);
   });
