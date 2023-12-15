@@ -384,6 +384,7 @@ document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
 
     console.log("Up arrow clicked");
     quantityElement.value = +quantityElement.value + 1;
+    quantityElement.setAttribute('value', quantityElement.value);
     quantityElement.textContent = quantityElement.value;
   });
 });
@@ -395,6 +396,7 @@ document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
 
     console.log("Down arrow clicked");
     quantityElement.value = Math.max(+quantityElement.value - 1, 0);
+    \quantityElement.setAttribute('value', quantityElement.value);
     quantityElement.textContent = quantityElement.value;
   });
 });
