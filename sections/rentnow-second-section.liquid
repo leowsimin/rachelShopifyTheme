@@ -858,9 +858,6 @@ function updatingSection(startDate, endDate) {
   const selectedDates = document.getElementById("rentNowSelectedDates");
   const rentNowRentalCost = document.getElementById("rentNowRentalCost");
 
-  const luggageAmountPerDay = document.getElementById("luggageAmountPerDay");
-  console.log("luggageAmountPerDay:", luggageAmountPerDay.textContent);
-
   if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         selectedDates.textContent = "";
         numberOfSelectedDates.textContent = "";
