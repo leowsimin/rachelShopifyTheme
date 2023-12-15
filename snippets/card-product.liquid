@@ -396,7 +396,7 @@ document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
 
     console.log("Down arrow clicked");
     quantityElement.value = Math.max(+quantityElement.value - 1, 0);
-    \quantityElement.setAttribute('value', quantityElement.value);
+    quantityElement.setAttribute('value', quantityElement.value);
     quantityElement.textContent = quantityElement.value;
   });
 });
