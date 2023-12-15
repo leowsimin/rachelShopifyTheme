@@ -9,7 +9,10 @@
     letter-spacing: -3px;
 
     margin-top: 0;
-    max-width: 600px;
+    max-width: 500px;
+
     margin-left: auto;
     margin-right: auto;
+    border-bottom: 0.5px solid #0D2610;
+    padding-bottom: 20px;
 }
