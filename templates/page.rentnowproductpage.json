@@ -21,7 +21,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "",
+        "collection": "products",
         "products_to_show": 2,
         "columns_desktop": 4,
         "full_width": false,
