@@ -376,20 +376,23 @@
 {%- endif -%}
 
 <script>
-  const addOnsArrowImage = document.getElementById("addOnsArrowImage");
-  const addOnsDownArrowImage = document.getElementById("addOnsDownArrowImage");
+
   const quantityElement = document.getElementById("addOnsQuantityValue");
 
-  addOnsArrowImage.addEventListener("click", function() {
+  document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
+  element.addEventListener('click', function() {
     console.log("im clicked");
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
   });
+});
 
-  addOnsDownArrowImage.addEventListener("click", function() {
+document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
+  element.addEventListener('click', function() {
     console.log("im clicked");
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
     quantityElement.textContent = quantityElement.value;
   });
+});
 
 </script>
