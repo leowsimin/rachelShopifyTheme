@@ -377,34 +377,29 @@
 
 <script>
 
-function handleUpArrowClick() {
-  const container = this.closest('.add-ons-header2-container1');
-  const quantityElement = container.querySelector('.addOnsQuantityValue');
-
-  console.log("Up arrow clicked");
-  quantityElement.value = +quantityElement.value + 1;
-  quantityElement.setAttribute('value', quantityElement.value);
-  quantityElement.textContent = quantityElement.value;
-}
-
-function handleDownArrowClick() {
-  const container = this.closest('.add-ons-header2-container1');
-  const quantityElement = container.querySelector('.addOnsQuantityValue');
-
-  console.log("Down arrow clicked");
-  quantityElement.value = Math.max(+quantityElement.value - 1, 0);
-  quantityElement.setAttribute('value', quantityElement.value);
-  quantityElement.textContent = quantityElement.value;
-}
-
 document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
-  element.addEventListener('click', handleUpArrowClick);
+  element.addEventListener('click', function() {
+    const container = element.closest('.add-ons-header2-container1');
+    const quantityElement = container.querySelector('.addOnsQuantityValue');
+
+    console.log("Up arrow clicked");
+    quantityElement.value = +quantityElement.value + 1;
+    quantityElement.setAttribute('value', quantityElement.value);
+    quantityElement.textContent = quantityElement.value;
+  });
 });
 
 document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
-  element.addEventListener('click', handleDownArrowClick);
-});
+  element.addEventListener('click', function() {
+    const container = element.closest('.add-ons-header2-container1');
+    const quantityElement = container.querySelector('.addOnsQuantityValue');
 
+    console.log("Down arrow clicked");
+    quantityElement.value = Math.max(+quantityElement.value - 1, 0);
+    quantityElement.setAttribute('value', quantityElement.value);
+    quantityElement.textContent = quantityElement.value;
+  });
+});
 
 
 </script>
