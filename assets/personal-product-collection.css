@@ -17,4 +17,9 @@
     padding-bottom: 20px;
 }
 
-.add-ons-header2-container1 {}
+.add-ons-header2-container1 {
+    display: flex;
+
+    border-radius: 50px;
+    border: 1px solid #0D2610;
+}
