@@ -200,7 +200,7 @@
             {%- endif -%}
 
             {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
-            {%- if numeric_price === 0 -%}
+            {%- if numeric_price == 0 -%}
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {%- else -%}
               <span id="luggageAmountPerDay"></span>
