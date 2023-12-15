@@ -208,10 +208,10 @@
             <div class="add-ons-header2-container1">
               <h1>Add to Cart</h1>
               <img id ="addOnsArrowImage" class= "add-ons-arrow-image" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
-              <input type="number" min="1" value="1" />
+              <input id = "addOnsQuantityValue" type="number" min="1" value="1" />
               <img id ="addOnsDownArrowImage" class= "add-ons-down-arrow-image" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
             </div>
-            
+
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -376,5 +376,18 @@
 {%- endif -%}
 
 <script>
+  const addOnsArrowImage = document.getElementById("addOnsArrowImage");
+  const addOnsDownArrowImage = document.getElementById("addOnsDownArrowImage");
+  const quantityValue = document.getElementById("addOnsQuantityValue").value;
 
+  addOnsArrowImage.addEventListener("click", function() {
+    quantityValue += 1;
+  })
+
+  addOnsDownArrowImage.addEventListener("click", function() {
+
+    if (quantityValue > 0) {
+      quantityValue -= 1;
+    }
+  })
 </script>
