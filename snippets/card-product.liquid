@@ -378,16 +378,18 @@
 <script>
   const addOnsArrowImage = document.getElementById("addOnsArrowImage");
   const addOnsDownArrowImage = document.getElementById("addOnsDownArrowImage");
-  const quantityValue = document.getElementById("addOnsQuantityValue").value;
+  const quantityElement = document.getElementById("addOnsQuantityValue");
 
   addOnsArrowImage.addEventListener("click", function() {
     console.log("im clicked");
-    quantityValue.value = parseInt(quantityValue.value, 10) + 1;
+    quantityElement.value = parseInt(quantityElement.value, 10) + 1;
+    quantity.textContent = quantityElement.value;
   });
 
   addOnsDownArrowImage.addEventListener("click", function() {
     console.log("im clicked");
-    quantityValue.value = Math.max(parseInt(quantityValue.value, 10) - 1, 0);
+    quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
+    quantity.textContent = quantityElement.value;
   });
 
 </script>
