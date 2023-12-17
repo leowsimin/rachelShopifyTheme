@@ -380,7 +380,7 @@
 document.querySelectorAll('[class^="addOnsArrowImage-"]').forEach(function(element) {
   element.addEventListener('click', function() {
     console.log("im clicked");
-    const productTitle = element.classList[0].split('-').pop(); // Extract product title from the class
+    const productTitle = element.classList[0].split('-').pop();
     const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
