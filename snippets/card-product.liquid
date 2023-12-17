@@ -377,17 +377,19 @@
 
 <script>
 
-document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
+document.querySelectorAll('[class^="addOnsArrowImage-"]').forEach(function(element) {
   element.addEventListener('click', function() {
-    const quantityElement = element.closest('.card-information').querySelector('.addOnsQuantityValue');
+    const productTitle = element.classList[0].split('-').pop(); // Extract product title from the class
+    const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
   });
 });
 
-document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
+document.querySelectorAll('[class^="addOnsDownArrowImage-"]').forEach(function(element) {
   element.addEventListener('click', function() {
-    const quantityElement = element.closest('.card-information').querySelector('.addOnsQuantityValue');
+    const productTitle = element.classList[0].split('-').pop(); // Extract product title from the class
+    const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
     quantityElement.textContent = quantityElement.value;
   });
