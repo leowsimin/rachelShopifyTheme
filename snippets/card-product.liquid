@@ -377,24 +377,23 @@
 
 <script>
 
-document.querySelectorAll('[class^="addOnsArrowImage-"]').forEach(function(element) {
+document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
-    console.log("im clicked");
-    const productTitle = element.classList[0].split('-').pop();
-    const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
+    const productTitle = element.classList[1]; // Extract product title from the class
+    const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
   });
 });
 
-document.querySelectorAll('[class^="addOnsDownArrowImage-"]').forEach(function(element) {
-  console.log("im clicked");
+document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
-    const productTitle = element.classList[0].split('-').pop(); // Extract product title from the class
-    const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
+    const productTitle = element.classList[1]; // Extract product title from the class
+    const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
     quantityElement.textContent = quantityElement.value;
   });
 });
+
 
 </script>
