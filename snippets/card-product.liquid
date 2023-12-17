@@ -377,25 +377,28 @@
 
 <script>
 
-document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
-  element.addEventListener('click', function() {
+document.addEventListener('click', function(event) {
+  const clickedElement = event.target;
+  const cardInformation = clickedElement.closest('.card-information');
+
+  if (!cardInformation) {
+    return; // Clicked outside of any card-information, ignore
+  }
+
+  const productTitle = cardInformation.classList[1];
+
+  if (clickedElement.classList.contains('addOnsArrowImage')) {
     console.log("im print 1");
-    const productTitle = element.classList[1];
-    const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
+    const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
-  });
-});
-
-
-document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
-  element.addEventListener('click', function() {
+  } else if (clickedElement.classList.contains('addOnsDownArrowImage')) {
     console.log("im print 2");
-    const productTitle = element.classList[1]; // Extract product title from the class
-    const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
+    const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
     quantityElement.textContent = quantityElement.value;
-  });
+  }
 });
+
 
 </script>
