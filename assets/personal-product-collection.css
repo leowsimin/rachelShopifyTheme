@@ -43,7 +43,7 @@
     margin-right: 10px;
 }
 
-.add-ons-header2-container1 input {
+[class^="addOns-header2-container1"] input {
     color: #0d2610;
     text-align: center;
     font-family: JejuMyeongjo;
