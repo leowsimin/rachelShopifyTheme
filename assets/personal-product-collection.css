@@ -43,7 +43,7 @@
     margin-right: 10px;
 }
 
-[class^="addOns-header2-container1"] input {
+.addOns-header2-container1 input {
     color: #0d2610;
     text-align: center;
     font-family: JejuMyeongjo;
@@ -58,7 +58,7 @@
     background-color: transparent;
 }
 
-[class^="addOns-header2-container1"] input[type="number"] {
+.addOns-header2-container1 input[type="number"] {
     -moz-appearance: textfield;
     /* Firefox */
 }
