@@ -377,29 +377,24 @@
 
 <script>
 
-document.addEventListener('click', function(event) {
-  const clickedElement = event.target;
-  const cardInformation = clickedElement.closest('.card-information');
-
-  if (!cardInformation) {
-    return; // Clicked outside of any card-information, ignore
-  }
-
-  const productTitle = cardInformation.classList[1];
-
-  if (clickedElement.classList.contains('addOnsArrowImage')) {
+document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
+  element.addEventListener('click', function() {
     console.log("im print 1");
-    const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
+    const productTitle = element.closest('.card-information').classList[1];
+    const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
-  } else {
-    console.log("im print 2");
-    const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
-    quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-    quantityElement.textContent = quantityElement.value;
-  }
+  });
 });
 
-
+document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
+  element.addEventListener('click', function() {
+    console.log("im print 2");
+    const productTitle = element.closest('.card-information').classList[1];
+    const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
+    quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
+    quantityElement.textContent = quantityElement.value;
+  });
+});
 
 </script>
