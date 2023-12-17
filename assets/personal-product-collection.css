@@ -21,7 +21,7 @@
     display: flex;
 }
 
-.add-ons-header2-container1 input {
+.add-ons-add-to-cart {
     color: #0D2610;
     text-align: center;
     font-family: JejuMyeongjo;
@@ -40,5 +40,4 @@
     width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
     margin-top: 17px;
     margin-right: 10px;
-
 }
