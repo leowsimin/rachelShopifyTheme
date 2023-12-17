@@ -207,9 +207,9 @@
 
             <div class="add-ons-header2-container1">
               <h1>Add to Cart</h1>
-              <img class ="addOnsDownArrowImage" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
-              <input class = "addOnsQuantityValue" type="number" min="1" value="1" />
-              <img class ="addOnsArrowImage" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
+              <img class="addOnsDownArrowImage-{{ card_product.title | handleize }}" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
+              <input class="addOnsQuantityValue-{{ card_product.title | handleize }}" type="number" min="1" value="1" />
+              <img class="addOnsArrowImage-{{ card_product.title | handleize }}" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
             </div>
 
           </div>
