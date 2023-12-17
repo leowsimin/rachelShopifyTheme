@@ -394,3 +394,12 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  document.getElementById('addToCartForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Your custom JavaScript logic here
+    {% render 'cart-notification' %}
+    Shopify.addItemFromForm(event.target);
+  });
+</script>
