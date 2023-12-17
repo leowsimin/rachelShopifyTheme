@@ -205,12 +205,6 @@
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
-            <form class= "add-to-cart-form" method="post" action="/cart/add">
-              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-              <input min="1" type="number" id="quantity" name="quantity" value="1"/>
-              <input type="submit" value="Add to cart" class="btn" />
-            </form>
-
           </div>
         </div>
         {%- if show_quick_add -%}
