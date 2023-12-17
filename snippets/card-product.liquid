@@ -213,7 +213,6 @@
                 {{ 'products.product.sold_out' | t }}
               {%- endif -%}
               </span>
-              
               {% comment %} <img class="addOnsDownArrowImage" data-product="{{ card_product.title | handleize }}" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" /> {% endcomment %}
               <input class="addOnsQuantityValue" data-product="{{ card_product.title | handleize }}" type="number" min="0" value="0" />
               {% comment %} <img class="addOnsArrowImage" data-product="{{ card_product.title | handleize }}" src="{{ 'add-ons-arrow.svg' | asset_url }}" /> {% endcomment %}
