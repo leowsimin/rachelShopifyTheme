@@ -331,7 +331,7 @@
 <form method="post" action="/cart/add">
   <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
   <div class="add-ons-header2-container1">
-    <input type="button" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" onclick="addToCart()" />
+    <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
     <quantity-input class="quantity">
       <button class="quantity__button no-js-hidden" name="minus" type="button">
         <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
