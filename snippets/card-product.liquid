@@ -381,6 +381,9 @@ document.addEventListener('click', function(event) {
   const clickedElement = event.target;
   const cardInformation = clickedElement.closest('.add-ons-header2-container1');
 
+  console.log("clickedElement:", clickedElement);
+  console.log("cardInformation:", cardInformation);
+
   if (!cardInformation) {
     return; // Clicked outside of any card-information, ignore
   }
