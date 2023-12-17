@@ -379,6 +379,7 @@
 
 document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
+    console.log("im print 1");
     const productTitle = element.classList[1]; // Extract product title from the class
     const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
@@ -388,6 +389,7 @@ document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
 
 document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
   element.addEventListener('click', function() {
+    console.log("im print 2");
     const productTitle = element.classList[1]; // Extract product title from the class
     const quantityElement = document.querySelector('.addOnsQuantityValue.' + productTitle);
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
