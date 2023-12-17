@@ -382,7 +382,9 @@ document.addEventListener('click', function(event) {
   const clickedElement = event.target;
 
   // Check if the clicked element is one of the add-ons images
-  if (clickedElement.classList.contains('addOnsArrowImage') || clickedElement.classList.contains('addOnsDownArrowImage')) {
+  const isAddOnImage = clickedElement.classList.contains('addOnsArrowImage') || clickedElement.classList.contains('addOnsDownArrowImage');
+
+  if (isAddOnImage) {
     const productTitle = clickedElement.dataset.product;
     const quantityElement = document.querySelector(`.addOnsQuantityValue[data-product="${productTitle}"]`);
 
