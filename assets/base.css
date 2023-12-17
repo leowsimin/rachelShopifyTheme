@@ -565,6 +565,13 @@ hr {
   color: currentColor;
   display: block;
 
+  color: #0D2610;
+  font-family: JejuMyeongjo;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.5px;
 
 }
 
