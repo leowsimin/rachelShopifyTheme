@@ -379,6 +379,7 @@
 
 document.querySelectorAll('[class^="addOnsArrowImage-"]').forEach(function(element) {
   element.addEventListener('click', function() {
+    console.log("im clicked");
     const productTitle = element.classList[0].split('-').pop(); // Extract product title from the class
     const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
@@ -387,6 +388,7 @@ document.querySelectorAll('[class^="addOnsArrowImage-"]').forEach(function(eleme
 });
 
 document.querySelectorAll('[class^="addOnsDownArrowImage-"]').forEach(function(element) {
+  console.log("im clicked");
   element.addEventListener('click', function() {
     const productTitle = element.classList[0].split('-').pop(); // Extract product title from the class
     const quantityElement = document.querySelector('.addOnsQuantityValue-' + productTitle);
