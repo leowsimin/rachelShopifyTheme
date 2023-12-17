@@ -206,6 +206,7 @@
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
             <div class="add-ons-header2-container1">
+            
               {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
               {% comment %} <img class="addOnsDownArrowImage" data-product="{{ card_product.title | handleize }}" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" /> {% endcomment %}
               <input class="addOnsQuantityValue" data-product="{{ card_product.title | handleize }}" type="number" min="" value="0" />
