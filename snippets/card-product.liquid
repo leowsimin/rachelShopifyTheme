@@ -378,24 +378,4 @@
 
 <script>
 
-document.addEventListener('click', function(event) {
-  const clickedElement = event.target;
-
-  // Check if the clicked element is one of the add-ons images
-  if (clickedElement.classList.contains('addOnsArrowImage') || clickedElement.classList.contains('addOnsDownArrowImage')) {
-    const productTitle = clickedElement.dataset.product;
-    const quantityElement = document.querySelector(`.addOnsQuantityValue[data-product="${productTitle}"]`);
-
-    console.log("quantity ELement:", quantityElement);
-
-    if (!quantityElement) {
-      console.error('Quantity element not found.');
-      return;
-    }
-
-    
-  }
-});
-
-
 </script>
