@@ -205,11 +205,11 @@
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
-            <div class="add-ons-header2-container1 {{ card_product.title | handleize }}">
+            <div class="add-ons-header2-container1">
               <h1>Add to Cart</h1>
-              <img class="addOnsDownArrowImage" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
-              <input class="addOnsQuantityValue" type="number" min="1" value="1" />
-              <img class="addOnsArrowImage" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
+              <img class="addOnsDownArrowImage {{ card_product.title | handleize }}" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" />
+              <input class="addOnsQuantityValue {{ card_product.title | handleize }}" type="number" min="1" value="1" />
+              <img class="addOnsArrowImage {{ card_product.title | handleize }}" src="{{ 'add-ons-arrow.svg' | asset_url }}" />
             </div>
 
           </div>
@@ -376,35 +376,5 @@
 {%- endif -%}
 
 <script>
-
-document.addEventListener('click', function(event) {
-  const clickedElement = event.target;
-  const cardInformation = clickedElement.closest('.add-ons-header2-container1');
-
-  console.log("clickedElement:", clickedElement);
-  console.log("cardInformation:", cardInformation);
-
-  if (!cardInformation) {
-    return; // Clicked outside of any card-information, ignore
-  }
-
-  const productTitle = cardInformation.classList[1];
-  const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
-
-  if (!quantityElement) {
-    console.error('Quantity element not found.');
-    return;
-  }
-
-  if (clickedElement.classList.contains('addOnsArrowImage')) {
-    console.log("im print 1");
-    quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-    quantityElement.textContent = quantityElement.value;
-  } else if (clickedElement.classList.contains('addOnsDownArrowImage')) {
-    console.log("im print 2");
-    quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-    quantityElement.textContent = quantityElement.value;
-  }
-});
 
 </script>
