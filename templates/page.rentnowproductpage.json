@@ -68,12 +68,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "681b89cc-733f-4332-a1f7-1cfd0a3e17e3": {
+      "type": "main-cart-items-duplicate",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "a73204df-fc54-4ea3-97c4-3478023e5010",
     "fa235ab6-bf30-4cea-8d0c-d33743ff716f",
-    "505f5358-c2d2-452c-8a96-781bd39db4bc"
+    "505f5358-c2d2-452c-8a96-781bd39db4bc",
+    "681b89cc-733f-4332-a1f7-1cfd0a3e17e3"
   ]
 }
