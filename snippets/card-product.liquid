@@ -386,21 +386,14 @@ document.addEventListener('click', function(event) {
     const productTitle = clickedElement.dataset.product;
     const quantityElement = document.querySelector(`.addOnsQuantityValue[data-product="${productTitle}"]`);
 
+    console.log("quantity ELement:", quantityElement);
+
     if (!quantityElement) {
       console.error('Quantity element not found.');
       return;
     }
 
-    // Update the quantity based on the clicked image
-    if (clickedElement.classList.contains('addOnsArrowImage')) {
-      console.log("im print 1");
-      quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-      quantityElement.textContent = quantityElement.value;
-    } else if (clickedElement.classList.contains('addOnsDownArrowImage')) {
-      console.log("im print 2");
-      quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-      quantityElement.textContent = quantityElement.value;
-    }
+    
   }
 });
 
