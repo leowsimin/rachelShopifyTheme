@@ -378,10 +378,10 @@
 <script>
 
 // Variable to track whether the event listeners have been attached
-let eventListenersAttached = false;
+let eventListenersAttached_rentNowProductPage = false;
 
-function attachEventListeners() {
-  if (eventListenersAttached) {
+function attachEventListeners_rentNowProductPage() {
+  if (eventListenersAttached_rentNowProductPage) {
     return;
   }
 
@@ -434,13 +434,12 @@ function attachEventListeners() {
   });
 
   // Mark event listeners as attached
-  eventListenersAttached = true;
+  eventListenersAttached_rentNowProductPage = true;
 }
 
 // Attach the event listeners on document ready
 document.addEventListener('DOMContentLoaded', function() {
-  attachEventListeners();
+  attachEventListeners_rentNowProductPage();
 });
-
 
 </script>
