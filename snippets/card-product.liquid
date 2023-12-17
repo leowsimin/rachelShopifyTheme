@@ -378,30 +378,4 @@
 
 <script>
 
-document.addEventListener('click', function(event) {
-  const clickedElement = event.target;
-
-  // Check if the clicked element is one of the add-ons images
-  if (clickedElement.classList.contains('addOnsArrowImage') || clickedElement.classList.contains('addOnsDownArrowImage')) {
-    const productTitle = clickedElement.dataset.product;
-    const quantityElement = document.querySelector(`.addOnsQuantityValue[data-product="${productTitle}"]`);
-
-    if (!quantityElement) {
-      console.error('Quantity element not found.');
-      return;
-    }
-
-    // Update the quantity based on the clicked image
-    if (clickedElement.classList.contains('addOnsArrowImage') && quantityElement) {
-      console.log("im print 1");
-      quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-      quantityElement.textContent = quantityElement.value;
-    } else if (clickedElement.classList.contains('addOnsDownArrowImage')) {
-      console.log("im print 2");
-      quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-      quantityElement.textContent = quantityElement.value;
-    }
-  }
-});
-
 </script>
