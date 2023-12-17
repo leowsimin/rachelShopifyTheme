@@ -3597,7 +3597,6 @@ details-disclosure>details {
   display: none;
 }
 
-.header__icon--search,
 .header .header__icons,
 .header__icon--cart {
   display: flex;
