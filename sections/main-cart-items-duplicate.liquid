@@ -5,7 +5,7 @@
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
+{% comment %} {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -21,7 +21,7 @@
 
 {%- unless settings.cart_type == 'drawer' -%}
   <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{%- endunless -%}
+{%- endunless -%} {% endcomment %}
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
