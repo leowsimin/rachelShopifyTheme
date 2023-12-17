@@ -206,6 +206,13 @@
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
             <div class="add-ons-header2-container1">
+              <span>
+              {%- if card_product.selected_or_first_available_variant.available -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- else -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- endif -%}
+              </span>
               <h1>Add to Cart</h1>
               {% comment %} <img class="addOnsDownArrowImage" data-product="{{ card_product.title | handleize }}" src="{{ 'add-ons-down-arrow.svg' | asset_url }}" /> {% endcomment %}
               <input class="addOnsQuantityValue" data-product="{{ card_product.title | handleize }}" type="number" min="0" value="0" />
