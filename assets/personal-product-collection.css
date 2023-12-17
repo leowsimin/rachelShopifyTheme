@@ -63,8 +63,8 @@
     /* Firefox */
 }
 
-[class^="addOns-header2-container1"] [type="number"]::-webkit-inner-spin-button,
-[class^="addOns-header2-container1"] input[type="number"]::-webkit-outer-spin-button {
+.addOns-header2-container1 [type="number"]::-webkit-inner-spin-button,
+.addOns-header2-container1 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     /* WebKit/Blink browsers */
     margin: 0;
