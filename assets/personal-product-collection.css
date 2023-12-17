@@ -58,7 +58,7 @@
     background-color: transparent;
 }
 
-.add-ons-header2-container1 input[type="number"] {
+[class^="addOns-header2-container1"] input[type="number"] {
     -moz-appearance: textfield;
     /* Firefox */
 }
