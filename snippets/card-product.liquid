@@ -377,69 +377,69 @@
 
 <script>
 
-// Variable to track whether the event listeners have been attached
-let eventListenersAttached_rentNowProductPage = false;
+(function() {
+  // Variable to track whether the event listeners have been attached
+  let eventListenersAttached = false;
 
-function attachEventListeners_rentNowProductPage() {
-  if (eventListenersAttached_rentNowProductPage) {
-    return;
+  function attachEventListeners() {
+    if (eventListenersAttached) {
+      return;
+    }
+
+    document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
+      element.addEventListener('click', function() {
+        console.log("im print 2");
+        const cardInformation = element.closest('.add-ons-header2-container1');
+        
+        if (!cardInformation) {
+          console.error('Card information not found.');
+          return;
+        }
+
+        const productTitle = cardInformation.classList[1];
+        console.log('Product Title:', productTitle);
+
+        const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
+
+        if (quantityElement) {
+          quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
+          quantityElement.textContent = quantityElement.value;
+        } else {
+          console.error('Quantity element not found.');
+        }
+      });
+    });
+
+    document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
+      element.addEventListener('click', function() {
+        console.log("im print 1");
+        const cardInformation = element.closest('.add-ons-header2-container1');
+        
+        if (!cardInformation) {
+          console.error('Card information not found.');
+          return;
+        }
+
+        const productTitle = cardInformation.classList[1];
+        console.log('Product Title:', productTitle);
+
+        const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
+
+        if (quantityElement) {
+          quantityElement.value = parseInt(quantityElement.value, 10) + 1;
+          quantityElement.textContent = quantityElement.value;
+        } else {
+          console.error('Quantity element not found.');
+        }
+      });
+    });
+
+    // Mark event listeners as attached
+    eventListenersAttached = true;
   }
 
-  document.querySelectorAll('.addOnsDownArrowImage').forEach(function(element) {
-    element.addEventListener('click', function() {
-      console.log("im print 2");
-      const cardInformation = element.closest('.add-ons-header2-container1');
-      
-      if (!cardInformation) {
-        console.error('Card information not found.');
-        return;
-      }
-
-      const productTitle = cardInformation.classList[1];
-      console.log('Product Title:', productTitle);
-
-      const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
-
-      if (quantityElement) {
-        quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
-        quantityElement.textContent = quantityElement.value;
-      } else {
-        console.error('Quantity element not found.');
-      }
-    });
-  });
-
-  document.querySelectorAll('.addOnsArrowImage').forEach(function(element) {
-    element.addEventListener('click', function() {
-      console.log("im print 1");
-      const cardInformation = element.closest('.add-ons-header2-container1');
-      
-      if (!cardInformation) {
-        console.error('Card information not found.');
-        return;
-      }
-
-      const productTitle = cardInformation.classList[1];
-      console.log('Product Title:', productTitle);
-
-      const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
-
-      if (quantityElement) {
-        quantityElement.value = parseInt(quantityElement.value, 10) + 1;
-        quantityElement.textContent = quantityElement.value;
-      } else {
-        console.error('Quantity element not found.');
-      }
-    });
-  });
-
-  // Mark event listeners as attached
-  eventListenersAttached_rentNowProductPage = true;
-}
-
-// Attach the event listeners on document ready
-document.addEventListener('DOMContentLoaded', function() {
-  attachEventListeners_rentNowProductPage();
-});
+  // Attach the event listeners on document ready
+  document.addEventListener('DOMContentLoaded', attachEventListeners);
+})();
 
 </script>
