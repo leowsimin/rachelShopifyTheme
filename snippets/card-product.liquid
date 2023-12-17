@@ -426,24 +426,13 @@ document.addEventListener('click', function(event) {
   }
 });
 
-function addToCart() {
-  const productId = "{{ card_product.variants.first.id }}";
-  const quantity = document.getElementById('quantity').value;
+  // Include the Shopify cart script
+  {% include 'shopify-cart' %}
 
-  fetch(`/cart/add.js?q=${quantity}&id=${productId}`, {
-    method: 'POST',
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Handle the response data as needed
-    console.log(data);
-
-    // Show a notification or update the cart icon
-    alert('Product added to cart!');
-  })
-  .catch(error => {
-    console.error('Error:', error);
+  // Custom JavaScript to trigger the cart notification
+  document.getElementById('addToCartForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    Shopify.addItemFromForm(event.target);
   });
-}
 
 </script>
