@@ -43,7 +43,7 @@
     margin-right: 10px;
 }
 
-.addOns-header2-container1 input {
+.addOnsQuantityValue {
     color: #0d2610;
     text-align: center;
     font-family: JejuMyeongjo;
@@ -58,14 +58,14 @@
     background-color: transparent;
 }
 
-.addOns-header2-container1 input[type="number"] {
+.addOnsQuantityValue[type="number"] {
     -moz-appearance: textfield;
     /* Firefox */
 }
 
 
-.addOns-header2-container1 [type="number"]::-webkit-inner-spin-button,
-.addOns-header2-container1 input[type="number"]::-webkit-outer-spin-button {
+.addOnsQuantityValue::-webkit-inner-spin-button,
+.addOnsQuantityValue::-webkit-outer-spin-button {
     -webkit-appearance: none;
     /* WebKit/Blink browsers */
     margin: 0;
