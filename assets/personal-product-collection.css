@@ -69,5 +69,8 @@
     -webkit-appearance: none;
     /* WebKit/Blink browsers */
     margin: 0;
-    /* Remove the inner margin for WebKit/Blink */
+}
+
+.addOnsDownArrowImage .addOnsArrowImage {
+    z-index: 3;
 }
