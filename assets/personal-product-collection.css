@@ -19,4 +19,8 @@
 
 .add-ons-header2-container1 {
     display: flex;
+    border-radius: 50px;
+    border: 1px solid #0D2610;
+    align-items: center;
+    justify-content: center;
 }
