@@ -386,23 +386,20 @@ document.addEventListener('click', function(event) {
   }
 
   const productTitle = cardInformation.classList[1];
-  console.log("cardInformation:", cardInformation);
-  console.log("clickedElement:", clickedElement);
 
   if (clickedElement.classList.contains('addOnsArrowImage')) {
     console.log("im print 1");
     const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
     quantityElement.value = parseInt(quantityElement.value, 10) + 1;
     quantityElement.textContent = quantityElement.value;
-  } 
-  
-  else if (clickedElement.classList.contains('addOnsDownArrowImage')) {
+  } else {
     console.log("im print 2");
     const quantityElement = cardInformation.querySelector('.addOnsQuantityValue');
     quantityElement.value = Math.max(parseInt(quantityElement.value, 10) - 1, 0);
     quantityElement.textContent = quantityElement.value;
   }
 });
+
 
 
 </script>
