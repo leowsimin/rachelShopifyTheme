@@ -19,9 +19,6 @@
 
 .add-ons-header2-container1 {
     display: flex;
-
-    justify-content: center;
-    align-items: center;
 }
 
 .add-ons-add-to-cart {
@@ -50,4 +47,5 @@
     width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
     margin-top: 17px;
     margin-right: 10px;
+    text-align: center;
 }
