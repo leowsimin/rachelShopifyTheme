@@ -344,13 +344,12 @@
         </button>
       </quantity-input>
     </div>
-    <span id="itemAddedToCart" class="itemAddedToCartText" >Item Added to Cart!</span>
+    <span id="itemAddedToCart_{{ card_product.id }}" class="itemAddedToCartText" >Item Added to Cart!</span>
   </form> 
-  {% else %}
-
-{% comment %} <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0" href="{{ card_product.url | default: '#' }}"> Sold out</a> {% endcomment %}
-<a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
+{% else %}
+  <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
 {%- endif -%}
+
 
 {%- else -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
