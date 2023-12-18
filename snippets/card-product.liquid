@@ -360,7 +360,7 @@
         </button>
       </quantity-input>
     </div>
-    <span id="itemAddedToCart_{{ card_product.id }}" class="itemAddedToCartText" >Item Added to Cart!</span>
+    <span id="itemAddedToCart_{{ card_product.variants.first.id }}" class="itemAddedToCartText" >Item Added to Cart!</span>
   </form> 
 {% else %}
   <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
@@ -417,8 +417,7 @@
 $(document).ready(function() {
   $('form[action="/cart/add"]').submit(function(event) {
     // Extract the product ID from the form
-    var productInfoElement = document.getElementById('productInfo');
-    var productId = productInfoElement.getAttribute('data-product-id');
+    var productId = $(this).find('input[name="id"]').val();
     
     var messageSpanId = "itemAddedToCart_" + productId;
 
