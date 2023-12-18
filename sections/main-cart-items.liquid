@@ -32,7 +32,7 @@
   <div class="cartpage-main-container">
     <h1 class="order-receipt-text">ORDER RECEIPT</h1>
     <span id="currentDate"></span>
-    
+
     <div class="page-width">
       {% comment %} <div class="title-wrapper-with-link">
         <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
@@ -457,6 +457,14 @@
     </div>
   </div>
 </cart-items>
+
+<script>
+
+  var currentDate = new Date();
+  var formattedDate = currentDate.toLocaleDateString();
+
+  document.getElementById('currentDate').textContent = 'Date: ' + formattedDate;
+</script>
 
 
 {% schema %}
