@@ -398,10 +398,16 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-
   $(document).ready(function() {
     $('form[action="/cart/add"]').submit(function(event) {
-      const itemAddedToCartText = document.getElementById("itemAddedToCart");
+      // Extract the product ID from the form
+      var productId = $(this).find('input[name="id"]').val();
+      
+      // Construct the ID for the message span
+      var messageSpanId = "itemAddedToCart_" + productId;
+
+      // Get the message span by ID
+      const itemAddedToCartText = document.getElementById(messageSpanId);
 
       // Prevent the default form submission behavior
       event.preventDefault();
@@ -426,7 +432,6 @@
           // Show an alert
           itemAddedToCartText.style.display = "block";
 
-
           // Optionally, you can redirect to the cart page after the update
           // window.location.href = '/cart';
         },
@@ -435,11 +440,6 @@
         }
       });
     });
-
-    // Function to show an alert
-    function showAlert(message) {
-      alert(message);
-    }
   });
-
 </script>
+
