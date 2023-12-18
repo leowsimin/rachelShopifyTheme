@@ -74,8 +74,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
     padding-top: 30px;
-    padding-left: 30px;
+    padding-left: 50px;
     margin-bottom: 10px;
 
 }
@@ -99,5 +100,5 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
-    margin-left: 30px;
+    margin-left: 50px;
 }
