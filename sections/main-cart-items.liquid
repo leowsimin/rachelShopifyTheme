@@ -31,7 +31,7 @@
 <cart-items class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="cartpage-main-container">
     <h1 class="order-receipt-text">ORDER RECEIPT</h1>
-    <span id="currentDate"></span>
+    <span id="cartPageDate"></span>
 
     <div class="page-width">
       {% comment %} <div class="title-wrapper-with-link">
@@ -463,7 +463,7 @@
   var currentDate = new Date();
   var options = { day: 'numeric', month: 'long', year: 'numeric' };
   var formattedDate = new Intl.DateTimeFormat('en-US', options).format(currentDate);
-  document.getElementById('currentDate').textContent = formattedDate;
+  document.getElementById('cartPageDate').textContent = formattedDate;
 
 </script>
 
