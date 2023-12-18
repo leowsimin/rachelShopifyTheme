@@ -328,10 +328,10 @@
 {% if card_product.variants.size > 1 and card_product.available %}
   <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
-  <form id="addToCartForm" method="post" action="/cart/add">
+  <form id="addToCartForm" method="post" action="/cart/add" onsubmit="addToCart(); return false;">
     <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
     <div class="add-ons-header2-container1">
-      <input type="button" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" onclick="addToCart();" />
+      <button type="submit" class="add-ons-add-to-cart" style="margin-top: 17px">Add to cart</button>
       <quantity-input class="quantity">
         <button class="quantity__button no-js-hidden" name="minus" type="button">
           <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
@@ -394,24 +394,23 @@
 {%- endif -%}
 
 <script>
+  function addToCart() {
+    var form = document.getElementById('addToCartForm');
+    var formData = new FormData(form);
 
-function addToCart() {
-  var form = document.getElementById('addToCartForm');
-  var formData = new FormData(form);
-
-  fetch('/cart/add.js', {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    alert('Product added to cart!');
-  })
-  .catch(error => console.error('Error:', error));
-}
-
+    fetch('/cart/add.js', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Optionally handle the response, e.g., display a notification
+      alert('Product added to cart!');
+    })
+    .catch(error => console.error('Error:', error));
+  }
 </script>
