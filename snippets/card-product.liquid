@@ -325,26 +325,24 @@
     </div>
   </div>
 
+
 {% if card_product.variants.size > 1 and card_product.available %}
   <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
-  <form id="addToCartForm" method="post" action="/cart/add">
-    <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
-    <div class="add-ons-header2-container1">
-      <button type="button" class="add-ons-add-to-cart" style="margin-top: 17px" onclick="addToCart(event);">Add to cart</button>
-      <quantity-input class="quantity">
-        <button class="quantity__button no-js-hidden" name="minus" type="button">
-          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-          {% render 'icon-minus' %}
-        </button>
-        <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
-        <button class="quantity__button no-js-hidden" name="plus" type="button">
-          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-          {% render 'icon-plus' %}
-        </button>
-      </quantity-input>
-    </div>
-  </form>
+  <div class="add-ons-header2-container1">
+    <button type="button" class="add-ons-add-to-cart" style="margin-top: 17px" onclick="addToCart();">Add to cart</button>
+    <quantity-input class="quantity">
+      <button class="quantity__button no-js-hidden" name="minus" type="button">
+        <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+        {% render 'icon-minus' %}
+      </button>
+      <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
+      <button class="quantity__button no-js-hidden" name="plus" type="button">
+        <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+        {% render 'icon-plus' %}
+      </button>
+    </quantity-input>
+  </div>
 {% else %}
   <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
 {% endif %}
@@ -394,25 +392,13 @@
 {%- endif -%}
 
 <script>
-  function addToCart(event) {
-    event.preventDefault();
-    
-    var form = event.target;
-    var formData = new FormData(form);
+  function addToCart() {
+    var variantId = "{{ card_product.variants.first.id }}";
+    var quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
 
-    fetch('/cart/add.js', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
+    Shopify.addItem(variantId, quantity, function(item) {
       // Optionally handle the response, e.g., display a notification
       alert('Product added to cart!');
-    })
-    .catch(error => console.error('Error:', error));
+    });
   }
 </script>
