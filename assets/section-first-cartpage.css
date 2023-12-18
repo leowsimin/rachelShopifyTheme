@@ -30,6 +30,8 @@
 
 .cartpage-arrow-image {
     position: absolute;
+    width: 100px;
+    transform: translate(10px, 10px);
 }
 
 .cartpage-luggage-image {
