@@ -328,7 +328,7 @@
 {% if card_product.variants.size > 1 and card_product.available %}
 <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
-<form method="post" action="/cart/add" id="addToCartForm">
+<form method="post" action="/cart/add">
   <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
   <div class="add-ons-header2-container1">
     <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
@@ -396,26 +396,3 @@
   </div>
 {%- endif -%}
 
-<script>
-  document.getElementById('addToCartForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-
-    fetch('/cart/add.js', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data as needed
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  });
-</script>
