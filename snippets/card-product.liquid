@@ -25,6 +25,22 @@
 
 {{ 'personal-product-collection.css' | asset_url | stylesheet_tag }}
 
+<style>
+  #itemAddedToCart_{{ card_product.id }} {
+    display: none;
+    color: #000;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+</style>
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
