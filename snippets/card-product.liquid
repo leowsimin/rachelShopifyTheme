@@ -402,6 +402,7 @@
     $('form[action="/cart/add"]').submit(function(event) {
       // Extract the product ID from the form
       var productId = $(this).find('input[name="id"]').val();
+      console.log(productId);
       
       // Construct the ID for the message span
       var messageSpanId = "itemAddedToCart_" + productId;
