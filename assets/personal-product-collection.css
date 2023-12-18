@@ -105,8 +105,9 @@
     color: rgba(13, 38, 16, 0.50);
     text-align: center;
     font-family: JejuMyeongjo;
-    font-size: 15px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: -1px;
 }
