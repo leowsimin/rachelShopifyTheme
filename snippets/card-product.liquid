@@ -395,24 +395,36 @@
   </div>
 {%- endif -%}
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 <script>
-  function addToCart() {
-    const productId = "{{ card_product.variants.first.id }}";
-    const quantity = document.getElementById('quantity').value;
+  $(document).ready(function() {
+    $('form[action="/cart/add"]').submit(function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
 
-    fetch(`/cart/add.js?q=${quantity}&id=${productId}`, {
-      method: 'POST',
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data as needed
-      console.log(data);
+      // Get the form data
+      var formData = $(this).serialize();
 
-      // Show a notification or update the cart icon
-      alert('Product added to cart!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
+      // Make an asynchronous request to update the cart
+      $.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        data: formData,
+        dataType: 'json',
+        success: function(response) {
+          // Update the cart count or perform any other actions you need
+          console.log('Product added to cart:', response);
+
+          // You can also update the cart drawer or display a notification here
+
+          // Optionally, you can redirect to the cart page after the update
+          // window.location.href = '/cart';
+        },
+        error: function(error) {
+          console.error('Error adding product to cart:', error);
+        }
+      });
     });
-  }
+  });
 </script>
