@@ -414,45 +414,38 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-  $(document).ready(function() {
-    $('form[action="/cart/add"]').submit(function(event) {
-      // Extract the product ID from the form
-      var productId = document.getElementById('productInfo').getAttribute('data-product-id');
-      
-      // Construct the ID for the message span
-      var messageSpanId = "itemAddedToCart_" + productId;
+$(document).ready(function() {
+  $('form[action="/cart/add"]').submit(function(event) {
+    // Extract the product ID from the form
+    var productId = $(this).find('input[name="id"]').val();
+    
+    var messageSpanId = "itemAddedToCart_" + productId;
 
-      // Get the message span by ID
-      const itemAddedToCartText = document.getElementById(messageSpanId);
+    const itemAddedToCartText = document.getElementById(messageSpanId);
 
-      // Prevent the default form submission behavior
-      event.preventDefault();
+    event.preventDefault();
 
-      // Get the form data
-      var formData = $(this).serialize();
+    var formData = $(this).serialize();
 
-      // Reference to the current context
-      var self = this;
+    var self = this;
 
-      // Make an asynchronous request to update the cart
-      $.ajax({
-        type: 'POST',
-        url: '/cart/add.js',
-        data: formData,
-        dataType: 'json',
-        success: function(response) {
+    $.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: formData,
+      dataType: 'json',
+      success: function(response) {
+        
+        console.log('Product added to cart:', response);
+        console.log("Product ID", productId);
 
-          console.log('Product added to cart:', response);
-          console.log("Product ID",productId);
-
-          itemAddedToCartText.style.display = "block";
-
-        },
-        error: function(error) {
-          console.error('Error adding product to cart:', error);
-        }
-      });
+      },
+      error: function(error) {
+        console.error('Error adding product to cart:', error);
+      }
     });
   });
+});
+
 </script>
 
