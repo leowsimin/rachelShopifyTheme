@@ -395,23 +395,23 @@
 
 <script>
 
-  function addToCart() {
-    var form = document.getElementById('addToCartForm');
-    var formData = new FormData(form);
+function addToCart() {
+  var form = document.getElementById('addToCartForm');
+  var formData = new FormData(form);
 
-    fetch('/cart/add.js', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert('Product added to cart!');
-    })
-    .catch(error => console.error('Error:', error));
-  }
+  fetch('/cart/add.js', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert('Product added to cart!');
+  })
+  .catch(error => console.error('Error:', error));
+}
 
 </script>
