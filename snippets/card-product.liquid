@@ -418,8 +418,7 @@ $(document).ready(function() {
   $('form[action="/cart/add"]').submit(function(event) {
     // Extract the product ID from the form
     var productInfoElement = document.getElementById('productInfo');
-    
-    productInfoElement.setAttribute('data-product-id', '{{ card_product.id }}');
+    var productId = productInfoElement.getAttribute('data-product-id');
     
     var messageSpanId = "itemAddedToCart_" + productId;
 
