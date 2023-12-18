@@ -101,8 +101,7 @@
     letter-spacing: -1px;
 }
 
-.cartpage-header-text,
-.cartpage-quantity-header-text {
+.cartpage-header-text {
     color: rgba(13, 38, 16, 0.50);
     text-align: center;
     font-family: JejuMyeongjo;
@@ -111,10 +110,6 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
-}
-
-.cartpage-quantity-header-text {
-    padding-left: 10px;
 }
 
 .cartpage-item-name {
