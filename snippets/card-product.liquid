@@ -396,10 +396,23 @@
 {%- endif -%}
 
 <script>
-  document.getElementById('addToCartForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Your custom JavaScript logic here
-    alert('Item added to cart!'); // Replace this with your cart notification logic
-    Shopify.addItemFromForm(event.target);
-  });
+  function addToCart() {
+    const productId = "{{ card_product.variants.first.id }}";
+    const quantity = document.getElementById('quantity').value;
+
+    fetch(`/cart/add.js?q=${quantity}&id=${productId}`, {
+      method: 'POST',
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response data as needed
+      console.log(data);
+
+      // Show a notification or update the cart icon
+      alert('Product added to cart!');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
 </script>
