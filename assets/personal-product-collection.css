@@ -98,5 +98,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    margin-left: 30px;
 }
