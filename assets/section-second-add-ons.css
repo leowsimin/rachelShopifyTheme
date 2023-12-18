@@ -1,6 +1,6 @@
 .add-ons-second-section {
     display: flex;
-
+    justify-content: flex-end;
 
 }
 
