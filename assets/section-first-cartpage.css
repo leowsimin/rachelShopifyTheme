@@ -26,3 +26,11 @@
     font-weight: 700;
     line-height: normal;
 }
+
+.cartpage-arrow-image {
+    position: absolute;
+}
+
+.cartpage-luggage-image {
+    position: absolute;
+}
