@@ -51,7 +51,7 @@
     transform: translate(-340px, -50px);
 }
 
-.rentnow-header1-container2 {
+.cartpage-header1-container3 {
     display: flex;
     width: 100%;
     height: 160px;
@@ -65,7 +65,7 @@
     align-items: center;
 }
 
-.rentnow-subheader-container4 {
+.cartpage-subheader-container1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -84,7 +84,7 @@
     z-index: 2;
 }
 
-.rentnow-subheader-container3 {
+.cartpage-subheader-container2 {
     position: absolute;
     display: flex;
     justify-content: space-between;
