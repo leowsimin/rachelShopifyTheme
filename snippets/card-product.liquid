@@ -326,25 +326,25 @@
   </div>
 
 {% if card_product.variants.size > 1 and card_product.available %}
-  <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
+<a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
-  <form method="post" action="/cart/add" id="addToCartForm">
-    <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
-    <div class="add-ons-header2-container1">
-      <button type="button" onclick="addToCart()">Add to cart</button>
-      <quantity-input class="quantity">
-        <button class="quantity__button no-js-hidden" name="minus" type="button">
-          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-          {% render 'icon-minus' %}
-        </button>
-        <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
-        <button class="quantity__button no-js-hidden" name="plus" type="button">
-          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-          {% render 'icon-plus' %}
-        </button>
-      </quantity-input>
-    </div>
-  </form> 
+<form method="post" action="/cart/add">
+  <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
+  <div class="add-ons-header2-container1">
+    <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
+    <quantity-input class="quantity">
+      <button class="quantity__button no-js-hidden" name="minus" type="button">
+        <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+        {% render 'icon-minus' %}
+      </button>
+      <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
+      <button class="quantity__button no-js-hidden" name="plus" type="button">
+        <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+        {% render 'icon-plus' %}
+      </button>
+    </quantity-input>
+  </div>
+</form> 
 {% else %}
 
 {% comment %} <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0" href="{{ card_product.url | default: '#' }}"> Sold out</a> {% endcomment %}
