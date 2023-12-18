@@ -328,10 +328,10 @@
 {% if card_product.variants.size > 1 and card_product.available %}
   <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
-  <form id="addToCartForm" method="post" action="/cart/add" onsubmit="addToCart(); return false;">
+  <form id="addToCartForm" method="post" action="/cart/add">
     <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
     <div class="add-ons-header2-container1">
-      <button type="submit" class="add-ons-add-to-cart" style="margin-top: 17px">Add to cart</button>
+      <button type="button" class="add-ons-add-to-cart" style="margin-top: 17px" onclick="addToCart(event);">Add to cart</button>
       <quantity-input class="quantity">
         <button class="quantity__button no-js-hidden" name="minus" type="button">
           <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
