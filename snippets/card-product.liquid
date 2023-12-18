@@ -346,7 +346,7 @@
 {% elsif card_product.available %} 
   <form method="post" action="/cart/add" id="addToCartForm">
     <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
-    <div class="add-ons-header2-container1">
+    <div class="add-ons-header2-container1" id="productInfo" data-product-id="{{ card_product.id }}">
       <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
       <quantity-input class="quantity">
         <button class="quantity__button no-js-hidden" name="minus" type="button">
