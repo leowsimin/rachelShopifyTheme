@@ -435,10 +435,10 @@ $(document).ready(function() {
       data: formData,
       dataType: 'json',
       success: function(response) {
-        
         console.log('Product added to cart:', response);
         console.log("Product ID", productId);
 
+        itemAddedToCartText.style.display = "block";
       },
       error: function(error) {
         console.error('Error adding product to cart:', error);
