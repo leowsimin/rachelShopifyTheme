@@ -395,3 +395,11 @@
   </div>
 {%- endif -%}
 
+<script>
+  document.getElementById('addToCartForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Your custom JavaScript logic here
+    alert('Item added to cart!'); // Replace this with your cart notification logic
+    Shopify.addItemFromForm(event.target);
+  });
+</script>
