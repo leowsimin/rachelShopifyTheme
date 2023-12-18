@@ -18,4 +18,10 @@
 
     border-radius: 20px;
     border: 1px solid #0D2610;
+
+    background: transparent;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
