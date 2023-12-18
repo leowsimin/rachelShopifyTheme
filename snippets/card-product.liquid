@@ -441,15 +441,11 @@
         data: formData,
         dataType: 'json',
         success: function(response) {
-          // Update the cart count or perform any other actions you need
+
           console.log('Product added to cart:', response);
           console.log("byebyebye");
-
-          // Show an alert
+          
           itemAddedToCartText.style.display = "block";
-
-          // Optionally, you can redirect to the cart page after the update
-          // window.location.href = '/cart';
         },
         error: function(error) {
           console.error('Error adding product to cart:', error);
