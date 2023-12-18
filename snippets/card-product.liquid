@@ -394,23 +394,25 @@
 {%- endif -%}
 
 <script>
-  function addToCart() {
-    var form = document.getElementById('addToCartForm');
-    var formData = new FormData(form);
 
-    fetch('/cart/add.js', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Optionally handle the response, e.g., display a notification
-      alert('Product added to cart!');
-    })
-    .catch(error => console.error('Error:', error));
-  }
+function addToCart() {
+  var form = document.getElementById('addToCartForm');
+  var formData = new FormData(form);
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Optionally handle the response, e.g., display a notification
+    alert('Product added to cart!');
+  })
+  .catch(error => console.error('Error:', error));
+}
+
 </script>
