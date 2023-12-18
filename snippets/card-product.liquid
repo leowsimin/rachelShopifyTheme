@@ -403,7 +403,6 @@
   $(document).ready(function() {
     $('form[action="/cart/add"]').submit(function(event) {
 
-      const itemAddedToCartText = document.getElementById("itemAddedToCartText");
       // Prevent the default form submission behavior
       event.preventDefault();
 
@@ -424,7 +423,6 @@
           console.log('Product added to cart:', response);
 
           // Show an alert
-          itemAddedToCartText.style.display = "block";
 
           // Optionally, you can redirect to the cart page after the update
           // window.location.href = '/cart';
@@ -440,5 +438,5 @@
       alert(message);
     }
   });
-  
+
 </script>
