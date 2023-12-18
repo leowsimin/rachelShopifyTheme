@@ -112,4 +112,13 @@
     letter-spacing: -1px;
 }
 
-.cartpage-item-name {}
+.cartpage-item-name {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.5px;
+}
