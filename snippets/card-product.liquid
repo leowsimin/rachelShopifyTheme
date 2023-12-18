@@ -439,7 +439,9 @@ $(document).ready(function() {
         console.log("Product ID", productId);
         console.log("hi");
 
-        itemAddedToCartText.style.display = "block";
+        itemAddedToCartText.addEventListener ("click", function(
+          console.log("im clicked");
+        ))
       },
       error: function(error) {
         console.error('Error adding product to cart:', error);
