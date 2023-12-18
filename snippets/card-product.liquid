@@ -406,6 +406,9 @@
       // Get the form data
       var formData = $(this).serialize();
 
+      // Reference to the current context
+      var self = this;
+
       // Make an asynchronous request to update the cart
       $.ajax({
         type: 'POST',
@@ -416,7 +419,8 @@
           // Update the cart count or perform any other actions you need
           console.log('Product added to cart:', response);
 
-          // You can also update the cart drawer or display a notification here
+          // Show an alert
+          showAlert('Product is added');
 
           // Optionally, you can redirect to the cart page after the update
           // window.location.href = '/cart';
@@ -426,5 +430,10 @@
         }
       });
     });
+
+    // Function to show an alert
+    function showAlert(message) {
+      alert(message);
+    }
   });
 </script>
