@@ -325,12 +325,13 @@
     </div>
   </div>
 
-
 {% if card_product.variants.size > 1 and card_product.available %}
-  <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
+<a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
+<form method="post" action="/cart/add">
+  <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
   <div class="add-ons-header2-container1">
-    <button type="button" class="add-ons-add-to-cart" style="margin-top: 17px" onclick="addToCart();">Add to cart</button>
+    <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
     <quantity-input class="quantity">
       <button class="quantity__button no-js-hidden" name="minus" type="button">
         <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
@@ -343,9 +344,12 @@
       </button>
     </quantity-input>
   </div>
+</form> 
 {% else %}
-  <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
-{% endif %}
+
+{% comment %} <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0" href="{{ card_product.url | default: '#' }}"> Sold out</a> {% endcomment %}
+<a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
+{%- endif -%}
 
 {%- else -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
@@ -391,14 +395,4 @@
   </div>
 {%- endif -%}
 
-<script>
-  function addToCart() {
-    var variantId = "{{ card_product.variants.first.id }}";
-    var quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
 
-    Shopify.addItem(variantId, quantity, function(item) {
-      // Optionally handle the response, e.g., display a notification
-      alert('Product added to cart!');
-    });
-  }
-</script>
