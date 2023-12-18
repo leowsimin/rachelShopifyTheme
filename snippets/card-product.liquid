@@ -399,11 +399,15 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-
   $(document).ready(function() {
     $('form[action="/cart/add"]').submit(function(event) {
-
       const itemAddedToCartText = document.getElementById("itemAddedToCartText");
+
+      if (!itemAddedToCartText) {
+        console.error("Element with ID 'itemAddedToCartText' not found.");
+        return;
+      }
+
       // Prevent the default form submission behavior
       event.preventDefault();
 
@@ -434,10 +438,5 @@
         }
       });
     });
-
-    // Function to show an alert
-    function showAlert(message) {
-      alert(message);
-    }
   });
 </script>
