@@ -1,5 +1,10 @@
 {
   "sections": {
+    "fec5b4a6-78f9-4f47-b08a-71e6cceae99a": {
+      "type": "cartpage-first-section",
+      "settings": {
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -34,6 +39,7 @@
     }
   },
   "order": [
+    "fec5b4a6-78f9-4f47-b08a-71e6cceae99a",
     "cart-items",
     "cart-footer"
   ]
