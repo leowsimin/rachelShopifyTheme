@@ -67,6 +67,7 @@
 }
 
 #itemAddedToCartText {
+    display: none;
     color: #000;
     text-align: center;
     font-family: JejuMyeongjo;
@@ -75,6 +76,4 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
-
-    display: none;
 }
