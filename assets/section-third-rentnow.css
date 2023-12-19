@@ -1,0 +1,160 @@
+.rentnow-third-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.rentnow-main-container3 {
+    text-align: left;
+}
+
+.rentnow-header3-container1,
+.rentnow-header3-container2,
+.rentnow-header3-container3,
+.rentnow-header3-container5 {
+    display: flex;
+    align-items: center;
+}
+
+.rentnow-header3-container5 {
+    position: relative;
+}
+
+.rentnow-third-section h1 {
+    color: #8A947F;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.5px;
+
+    padding-right: 20px;
+}
+
+.rentnow-number-of-days-calculation {
+    padding-left: 20px;
+}
+
+.rentnow-header3-container3 h1 {
+    align-self: flex-start;
+}
+
+.rentnow-subheader-container6 {
+    display: block;
+}
+
+.rentnow-subheader-container7,
+.rentnow-subheader-container8 {
+    display: flex;
+    align-items: center;
+}
+
+.rentnow-third-section p {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2px;
+}
+
+.rentnow-third-section h2 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 30px;
+}
+
+.rentnow-selfcollection-image,
+.rentnow-delivery-image {
+    width: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.rentnow-subheader-container9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.rentnow-subheader-container10 {
+    display: block;
+    margin-right: 25px;
+}
+
+.rentnow-subheader-container11 {
+    display: block;
+    margin-left: 25px;
+}
+
+.rentnow-delivery-pickup1,
+.rentnow-delivery-pickup3 {
+    border-radius: 10px 10px 0px 0px;
+    border-top: 2px solid #0D2610;
+    border-right: 2px solid #0D2610;
+    border-left: 2px solid #0D2610;
+}
+
+.rentnow-delivery-pickup2,
+.rentnow-delivery-pickup4 {
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid #0D2610;
+}
+
+.rentnow-subheader-container9 p {
+    margin: 0;
+    padding: 20px;
+
+    font-size: 20px;
+}
+
+.rentnow-confirm-button {
+    color: rgba(13, 38, 16, 0.20);
+    background-color: transparent;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2px;
+
+    border-radius: 10px;
+    border: 2px solid rgba(13, 38, 16, 0.20);
+
+    margin-left: 200px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+}
+
+.rentnow-header3-container4 {
+    display: none;
+}
+
+#rentNowClickedDelivery,
+#rentNowClickedSelfCollect {
+    display: none;
+}

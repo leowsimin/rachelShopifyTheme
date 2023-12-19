@@ -23,6 +23,24 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
+{{ 'personal-product-collection.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #itemAddedToCart_{{ card_product.variants.first.id }} {
+    display: none;
+    color: #000;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+</style>
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -115,7 +133,7 @@
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
               >
-                {{ card_product.title | escape }}
+                {% comment %} {{ card_product.title | escape }} {% endcomment %}
               </a>
             </h3>
           </div>
@@ -199,12 +217,10 @@
               </p>
             {%- endif -%}
 
+            {%- assign numeric_price = card_product.price | money_without_currency | strip_html | strip_newlines | plus: 0 -%}
+
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-            {%- if card_product.quantity_price_breaks_configured? -%}
-              <div class="card__information-volume-pricing-note">
-                <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
-              </div>
-            {%- endif -%}
+
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -324,6 +340,33 @@
       </div>
     </div>
   </div>
+
+{% if card_product.variants.size > 1 and card_product.available %}
+  <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
+{% elsif card_product.available %} 
+  <form method="post" action="/cart/add" id="addToCartForm">
+    <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
+    <div class="add-ons-header2-container1" id="productInfo" data-product-id="{{ card_product.id }}">
+      <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
+      <quantity-input class="quantity">
+        <button class="quantity__button no-js-hidden" name="minus" type="button">
+          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+          {% render 'icon-minus' %}
+        </button>
+        <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
+        <button class="quantity__button no-js-hidden" name="plus" type="button">
+          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+          {% render 'icon-plus' %}
+        </button>
+      </quantity-input>
+    </div>
+    <span id="itemAddedToCart_{{ card_product.variants.first.id }}" class="itemAddedToCartText" >Item Added to Cart!</span>
+  </form> 
+{% else %}
+  <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
+{%- endif -%}
+
+
 {%- else -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
@@ -367,3 +410,36 @@
     </div>
   </div>
 {%- endif -%}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $('form[action="/cart/add"]').submit(function(event) {
+
+    var productId = $(this).find('input[name="id"]').val();
+    var messageSpanId = "itemAddedToCart_" + productId;
+    const itemAddedToCartText = document.getElementById(messageSpanId);
+    event.preventDefault();
+    var formData = $(this).serialize();
+    var self = this;
+
+    $.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: formData,
+      dataType: 'json',
+      success: function(response) {
+
+        itemAddedToCartText.style.display = "block";
+      },
+
+      error: function(error) {
+        console.error('Error adding product to cart:', error);
+      }
+    });
+  });
+});
+
+</script>
+

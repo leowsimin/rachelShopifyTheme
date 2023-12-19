@@ -411,7 +411,7 @@
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",
-      "create_account": "Create account",
+      "create_account": "Register Here!",
       "email": "Email",
       "forgot_password": "Forgot your password?",
       "guest_continue": "Continue",
@@ -458,8 +458,8 @@
       "none": "You haven't placed any orders yet."
     },
     "recover_password": {
-      "title": "Reset your password",
-      "subtext": "We will send you an email to reset your password",
+      "title": "RESET YOUR PASSWORD",
+      "subtext": "We will send to you an email to reset your password",
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {

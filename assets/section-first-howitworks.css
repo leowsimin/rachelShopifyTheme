@@ -1,0 +1,160 @@
+.howitworks-first-section {
+    background-color: #FAF5EE;
+    display: block;
+    text-align: center;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.howitworks-header1-container1 {
+    position: relative;
+}
+
+.howitworks-luggages-image {
+    width: 600px;
+
+    padding-left: 50px;
+}
+
+.howitworks-header1-container1 h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 7px;
+
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -5px;
+
+}
+
+.howitworks-header1-container1 h2 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.howitworks-header1-container1 h3 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2px;
+
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.howitworks-cycle-image {
+    position: absolute;
+    width: 700px;
+    transform: translate(-50%, 10%);
+}
+
+.howitworks-subheader-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 160px;
+}
+
+.howitworks-subheader-container1 {
+    position: relative;
+}
+
+.howitworks-tick-image {
+    position: absolute;
+    width: 160px;
+
+    transform: translate(-50%, -30%);
+    z-index: -1;
+}
+
+.howitworks-header1container2 h4 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 150px;
+}
+
+.howitworks-subheader-container4 p {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-right: 880px;
+    margin-top: 10%;
+}
+
+.howitworks-arrow-image {
+    position: absolute;
+    width: 400px;
+    transform: translate(-60%, -10%);
+    z-index: -1;
+}
+
+.howitworks-subheader-container2 {
+    position: relative;
+}
+
+.howitworks-subheader-container3 {
+    position: relative;
+    margin-left: 300px;
+
+}
+
+.howitworks-circle-image {
+    position: absolute;
+    width: 400px;
+    transform: translate(-45%, 15%);
+}
+
+.howitworks-subheader-container2 p {
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.howitworks-subheader-container2 h4 {
+    margin-bottom: 5px;
+    margin-top: 1px;
+}
+
+.howitworks-first-section h5 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -2.5px;
+
+    margin-bottom: 0;
+}

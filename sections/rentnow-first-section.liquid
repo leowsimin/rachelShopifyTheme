@@ -1,0 +1,65 @@
+{{ 'section-first-rentnow.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo" rel="stylesheet">
+
+<div class="rentnow-header1-container1">
+    <h1>Start Your</h1>
+    <div class="rentnow-subheader-container1">
+        <img class= "rentnow-arrow-image" src="{{ 'rentnow-arrow.svg' | asset_url }}" />
+        <h2>RENT JOURNEY</h2>
+        <img class= "rentnow-lines-image" src="{{ 'rentnow-lines.svg' | asset_url }}" />
+    </div>
+    <div class="rentnow-subheader-container2">
+        <h3>CONFUSED ON HOW THIS WORKS?</h3>
+        <img class= "rentnow-question-mark-image" src="{{ 'rentnow-question-mark.svg' | asset_url }}" />
+        <a href="https://tner-rental.myshopify.com/pages/how-it-works">
+            <h4>Click ME</h4>
+        </a>
+        <h1>Here!</h1>
+    </div>
+</div>
+
+<div class="rentnow-header1-container2">
+    <div class="rentnow-subheader-container4">
+        <p style="color: #FAF5EE; margin-left: 1px;">1</p>
+        <p style="color: #FAF5EE; -webkit-text-stroke: 0.5px rgba(13, 38, 16, 0.50); margin-left: 2px;">2</p>
+        <p style="color: #FAF5EE; -webkit-text-stroke: 0.5px rgba(13, 38, 16, 0.50); margin-left: 3px;">3</p>
+        <p style="color: #FAF5EE; -webkit-text-stroke: 0.5px rgba(13, 38, 16, 0.50); margin-right: 4px;">4</p>
+    </div>
+
+    <div class="rentnow-subheader-container3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="40" fill="#0D2610"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 150" fill="none">
+            <circle cx="75" cy="75" r="74.5" fill="#FFFCF8" stroke="#0D2610"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 150" fill="none">
+            <circle cx="75" cy="75" r="74.5" fill="#FFFCF8" stroke="#0D2610"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 150" fill="none">
+            <circle cx="75" cy="75" r="74.5" fill="#FFFCF8" stroke="#0D2610"/>
+        </svg>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "RentNow First Section",
+    "settings": [],
+    "presets": [
+        {
+            "name": "RentNow First Section"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

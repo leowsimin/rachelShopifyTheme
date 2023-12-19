@@ -564,6 +564,15 @@ hr {
   text-decoration: none;
   color: currentColor;
   display: block;
+
+  color: #0D2610;
+  font-family: JejuMyeongjo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.5px;
+
 }
 
 .placeholder {
@@ -900,6 +909,9 @@ summary::-webkit-details-marker {
   list-style: none;
   column-gap: var(--grid-mobile-horizontal-spacing);
   row-gap: var(--grid-mobile-vertical-spacing);
+
+  text-align: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 750px) {
@@ -1284,8 +1296,8 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+  /* box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background)); */
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -1833,7 +1845,6 @@ input[type='checkbox'] {
   display: flex;
   font-size: 1.4rem;
   line-height: 1;
-  margin-top: 1rem;
 }
 
 .form__message--large {
@@ -1901,7 +1912,8 @@ input[type='checkbox'] {
   bottom: var(--inputs-border-width);
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
-  border-radius: var(--inputs-radius);
+  /* border-radius: var(--inputs-radius); */
+  border-radius: 50px;
   box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
@@ -3581,6 +3593,15 @@ details-disclosure>details {
 
 .header__icon--search,
 .header .header__icons .header__icon--account,
-.header .header__icons .header__icon--cart {
+.header .header__icons {
   display: none;
+}
+
+.header .header__icons,
+.header__icon--cart {
+  display: flex;
+}
+
+.card-wrapper {
+  height: auto !important;
 }
