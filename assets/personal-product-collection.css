@@ -132,7 +132,8 @@
     letter-spacing: -2px;
 }
 
-.add-ons-price-container {
+.add-ons-price-container,
+.add-ons-subheader-container3 {
     display: block;
 }
 
@@ -168,3 +169,5 @@
     margin: 0;
     margin-top: 20px;
 }
+
+.add-ons-subheader-container3 span {}
