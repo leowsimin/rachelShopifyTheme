@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{ 'section-first-howitworks.css' | asset_url | stylesheet_tag }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,4 +68,75 @@
 {% endstylesheet %}
 
 {% javascript %}
+=======
+{{ 'section-first-howitworks.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo" rel="stylesheet">
+
+<div class="howitworks-first-section">
+
+    <div class="howitworks-header1-container1">
+        <img class="howitworks-luggages-image" src="{{ 'howitworks-luggages.svg' | asset_url }}" />
+        <h1>How:</h1>
+        <h2>DOES IT WORK?</h2>
+        <h3>Step-by-Step guide on how you can start saving the Earth!</h3>
+    </div>
+
+    <img class="howitworks-cycle-image" src="{{ 'howitworks-cycle.svg' | asset_url }}" />
+
+    <div class="howitworks-header1container2">
+
+        <div class="howitworks-subheader-container4">
+
+            <div class="howitworks-subheader-container1">
+                <img class="howitworks-tick-image" src="{{ 'howitworks-tick.svg' | asset_url }}" />
+                <h4>RENT</h4>
+            </div>
+
+            <p>7. Rent from us again.</p>
+
+            <div class="howitworks-subheader-container5">
+
+                <div class="howitworks-subheader-container2">
+                    <img class= "howitworks-arrow-image" src="{{ 'howitworks-arrow.svg' | asset_url }}" />
+                    <h4>RETURN</h4>
+                    <p>6. Return the luggage to us !</p>
+                </div>
+
+                <div class="howitworks-subheader-container3">
+                    <img class= "howitworks-circle-image" src="{{ 'howitworks-circle.svg' | asset_url }}" />
+                    <h4>COLLECT</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <h5>It's that simple.</h5>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "HowItWorks First Section",
+    "settings": [],
+    "presets": [
+        {
+            "name": "HowItWorks First Section"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+>>>>>>> 73493e19b0b40ff7d421465e2d71cd034f8e1a6b
 {% endjavascript %}

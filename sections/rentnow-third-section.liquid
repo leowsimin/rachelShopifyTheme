@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{ 'section-third-rentnow.css' | asset_url | stylesheet_tag }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,4 +108,115 @@
 {% endstylesheet %}
 
 {% javascript %}
+=======
+{{ 'section-third-rentnow.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo" rel="stylesheet">
+
+<div class="rentnow-third-section">
+
+  <div class="rentnow-main-container3">
+
+    <div class="rentnow-header3-container1">
+      <h1>Selected Dates:</h1>
+      <p id="rentNowSelectedDates"></p>
+      <p id="rentNowNumberOfSelectedDates"class="rentnow-number-of-days-calculation"></p>
+    </div>
+
+    <div class="rentnow-header3-container2">
+      <h1>Rental Cost:</h1>
+      <p id="rentNowRentalCost"></p>
+    </div>
+
+    <div class="rentnow-header3-container3">
+      <h1>Collection Method:</h1>
+      <div class="rentnow-subheader-container6">
+        <div class="rentnow-subheader-container7">
+          <svg id="rentNowNotClickedSelfCollect" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="17.5" stroke="#0D2610" stroke-width="3"/>
+          </svg>
+
+          <svg id="rentNowClickedSelfCollect" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="17.5" stroke="#FFA665" stroke-width="5"/>
+            <circle cx="20" cy="20" r="8" fill="#FFA665" stroke="#FFA665" stroke-width="4"/>
+          </svg>
+
+          <img class= "rentnow-selfcollection-image" src="{{ 'rentnow-selfcollection.svg' | asset_url }}" />
+          <p>Self-Collect ( Free )</p>
+        </div>
+
+        <div class="rentnow-subheader-container8">
+          <svg id="rentNowNotClickedDelivery" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="17.5" stroke="#0D2610" stroke-width="3"/>
+          </svg>
+
+          <svg id="rentNowClickedDelivery" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="17.5" stroke="#FFA665" stroke-width="5"/>
+            <circle cx="20" cy="20" r="8" fill="#FFA665" stroke="#FFA665" stroke-width="4"/>
+          </svg>
+
+          <img class= "rentnow-delivery-image" src="{{ 'rentnow-delivery.svg' | asset_url }}" />
+          <p>Delivery + $20</p>
+        </div>
+      </div>
+    </div>
+
+    <div id = "rentNowHeader3Container4" class="rentnow-header3-container4">
+      <h2>Please select your preferred collection and return timings respectively:</h2>
+      <div class="rentnow-subheader-container9">
+
+        <div id = "deliveryStartOption" class="rentnow-subheader-container10">
+          <div id = "deliveryPickUp1Container" class="rentnow-delivery-pickup1">
+            <p id="deliveryPickUp1"></p>
+          </div>
+
+          <div id = "deliveryPickUp2Container" class="rentnow-delivery-pickup2">
+            <p id="deliveryPickUp2"></p>
+          </div>
+        </div>
+
+        <div id = "deliveryEndOptioin" class="rentnow-subheader-container11">
+          <div id = "deliveryPickUp3Container" class="rentnow-delivery-pickup3">
+            <p id="deliveryPickUp3"></p>
+          </div>
+
+          <div id = "deliveryPickUp4Container" class="rentnow-delivery-pickup4">
+            <p id="deliveryPickUp4"></p>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <div class="rentnow-header3-container5">
+      <h1>Total Amount:</h1>
+      <p id="totalAmountCalculation"></p>
+
+      <a>
+        <button id="rentNowConfirmButton" class="rentnow-confirm-button">Confirm</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "RentNow Third Section",
+    "settings": [],
+    "presets": [
+        {
+            "name": "RentNow Third Section"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+>>>>>>> 73493e19b0b40ff7d421465e2d71cd034f8e1a6b
 {% endjavascript %}

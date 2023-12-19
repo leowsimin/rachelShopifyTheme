@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .howitworks-third-section {
     background-color: #FAF5EE;
     padding-bottom: 5%;
@@ -156,4 +157,164 @@
 
 .howitworks-oncedone {
     margin-bottom: 0;
+=======
+.howitworks-third-section {
+    background-color: #FAF5EE;
+    padding-bottom: 5%;
+}
+
+.howitworks-header3-container1 {
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    margin-left: 10%;
+}
+
+.howitworks-header3-container1 h1 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -5px;
+}
+
+.howitworks-header3-container1 h2 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+
+.howitworks-swigglylines-image {
+    position: absolute;
+    width: 570px;
+    transform: translate(58%, 130%);
+}
+
+.howitworks-header3-container2,
+.howitworks-header3-container6,
+.howitworks-header3-container8 {
+    display: flex;
+    margin-top: 5%;
+}
+
+.howitworks-header3-container4 {
+    display: flex;
+    margin-top: 3%;
+}
+
+.howitworks-subheader3-container10,
+.howitworks-subheader3-container12,
+.howitworks-subheader3-container15,
+.howitworks-subheader3-container17 {
+    display: flex;
+    width: 20%;
+
+    align-items: flex-start;
+    padding-left: 15%
+}
+
+.howitworks-subheader3-container12 {
+    margin-top: 20px;
+}
+
+.howitworks-subheader3-container11,
+.howitworks-subheader3-container16 {
+    width: 80%;
+    margin-left: 160px;
+}
+
+.howitworks-subheader3-container13 {
+    width: 80%;
+}
+
+.howitworks-subheader3-container18 {
+    width: 80%;
+    margin-left: 55px;
+}
+
+.howitworks-one-image,
+.howitworks-two-image,
+.howitworks-three-image,
+.howitworks-four-image {
+    display: flex;
+    width: 70px;
+}
+
+.howitworks-two-image {
+    margin-top: 10%;
+}
+
+.howitworks-calendar-image {
+    display: flex;
+    width: 520px;
+}
+
+.howitworks-order-receipt-image {
+    width: 520px;
+}
+
+.howitworks-successful-purchase-image {
+    width: 700px;
+}
+
+.howitworks-third-section p {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
+
+.howitworks-header3-container3,
+.howitworks-header3-container7,
+.howitworks-header3-container9 {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+
+    margin-top: 2%;
+}
+
+.howitworks-subheader3-container14 {
+    width: 65%;
+    margin-left: 6%;
+}
+
+.howitworks-product-items {
+    border-radius: 5px;
+    border: 2px solid #000;
+    width: 221px;
+    height: 211px;
+}
+
+.howitworks-header3-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.howitworks-header3-container5 svg {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.howitworks-oncedone {
+    margin-bottom: 0;
+>>>>>>> 73493e19b0b40ff7d421465e2d71cd034f8e1a6b
 }

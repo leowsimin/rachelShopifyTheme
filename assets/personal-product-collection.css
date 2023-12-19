@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .collection-title {
     color: #0D2610;
     text-align: center;
@@ -183,4 +184,191 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1.5px;
+=======
+.collection-title {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -3px;
+
+    margin-top: 0;
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 0.5px solid #0D2610;
+    padding-bottom: 20px;
+}
+
+.add-ons-header2-container1 {
+    display: flex;
+}
+
+.add-ons-add-to-cart {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+
+    background-color: transparent;
+    border: 1px solid #0D2610;
+    border-radius: 50px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-right: 20px;
+}
+
+.add-ons-header2-container1 quantity-input {
+    width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+    margin-top: 17px;
+    margin-right: 10px;
+
+    text-align: center;
+}
+
+.add-ons-sold-out {
+    border-radius: 50px;
+    border: 1px solid #FFA665;
+    background: #FFF2E8;
+
+    color: #FFA665;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+}
+
+.order-receipt-text {
+    color: #0D2610;
+    text-align: left;
+    font-family: Syncopate;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+.cartpage-main-container {
+    background: #FAF5EE;
+    margin: 20px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.25);
+}
+
+#cartPageDate {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+}
+
+.cartpage-header-text {
+    color: rgba(13, 38, 16, 0.50);
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+}
+
+.cartpage-item-name {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.5px;
+}
+
+.cartpage-price {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2px;
+}
+
+.add-ons-price-container {
+    display: block;
+}
+
+.add-ons-subheader-container3 {
+    display: block;
+    text-align: right;
+}
+
+.add-ons-header2-container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-ons-header2-container2 h1 {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.5px;
+}
+
+.add-ons-header2-container2 h2 {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -2.5px;
+}
+
+.add-ons-line {
+    width: 100%;
+    border-top: 1px solid rgba(13, 38, 16, 0.10);
+
+    margin: 0;
+    margin-top: 20px;
+}
+
+.add-ons-subheader-container3 span {
+    color: #8A947F;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+>>>>>>> 73493e19b0b40ff7d421465e2d71cd034f8e1a6b
 }
