@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .aboutus-first-section {
     background-color: #FAF5EE;
     display: block;
@@ -74,81 +73,4 @@ h5 {
 .aboutus-image2 {
     width: 600px;
     margin-top: 5%;
-=======
-.aboutus-first-section {
-    background-color: #FAF5EE;
-    display: block;
-    padding-top: 5%;
-
-    text-align: center;
-}
-
-.aboutus-header1-container {
-    display: block;
-}
-
-h4 {
-    color: #0D2610;
-    font-family: JejuMyeongjo;
-    font-size: 55px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -5px;
-
-    margin: 0;
-}
-
-.aboutus-subheader-container1 {
-    text-align: center;
-    margin-right: 30%;
-}
-
-.aboutus-subheader-container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-left: 10%;
-    position: relative;
-}
-
-h5 {
-    color: #0D2610;
-    font-family: Syncopate;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    margin: 0;
-    padding: 0 2% 0 3%;
-}
-
-.aboutus-image1 {
-    width: 340px;
-    position: absolute;
-
-    margin-right: 5%;
-    margin-bottom: 1%;
-}
-
-.aboutus-first-section-description p {
-    width: 70%;
-
-    margin: 0 auto;
-    margin-top: 5%;
-
-    color: #000;
-    font-family: JejuMyeongjo;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.aboutus-image2 {
-    width: 600px;
-    margin-top: 5%;
->>>>>>> 73493e19b0b40ff7d421465e2d71cd034f8e1a6b
 }
