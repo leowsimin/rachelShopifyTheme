@@ -441,7 +441,27 @@
                 </tbody>
               </table>
             {%- endif -%}
-            <h1>HERE</h1>
+            <div class="add-ons-price-container">  
+              <div class="add-ons-header2-container2">
+                <h1>Subtotal:</h1>
+                <h1>{{ cart.total_price | money_with_currency }}</h1>
+              </div>
+
+              <div class="add-ons-header2-container2">
+                <h1>Collection/Return Days:</h1>
+                <h1>xxx</h1>
+              </div>
+
+              <div class="add-ons-header2-container2">
+                <h1>Collection Method:</h1>
+                <h1>Self-Collect (Free) </h1>
+              </div>
+
+              <div class="add-ons-header2-container2">
+                <h2>Total:</h2>
+                <h2>{{ cart.total_price | money_with_currency }}</h2>
+              </div>
+            </div>
           </div>
         </div>
 
