@@ -160,3 +160,8 @@
     line-height: normal;
     letter-spacing: -2.5px;
 }
+
+.add-ons-line {
+    width: 100%;
+    border-top: 1px solid #000;
+}
