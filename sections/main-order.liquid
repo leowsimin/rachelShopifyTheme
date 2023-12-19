@@ -277,6 +277,7 @@
                   {{ shipping_method.price | money }}
                 </td>
               </tr> {% endcomment %}
+              <h1>yup</h1>
             
             {%- else -%}
                 <tr role="row">
@@ -292,7 +293,6 @@
                 </td>
               </tr>
             {%- endif -%}
-
           {%- endfor -%}
 
           {%- for tax_line in order.tax_lines -%}
