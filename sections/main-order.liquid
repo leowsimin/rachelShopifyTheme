@@ -264,19 +264,35 @@
           {%- endif -%}
 
           {%- for shipping_method in order.shipping_methods -%}
-            console.log(shipping_method)
-            <tr role="row">
-              <td id="RowShipping" role="rowheader" scope="row" colspan="4">
-                {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
-              </td>
-              <td
-                headers="RowShipping"
-                role="cell"
-                data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
-              >
-                {{ shipping_method.price | money }}
-              </td>
-            </tr>
+            {%- if shipping_method.title == "Delivery" -%}
+              {% comment %} <tr role="row">
+                <td id="RowShipping" role="rowheader" scope="row" colspan="4">
+                  {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
+                </td>
+                <td
+                  headers="RowShipping"
+                  role="cell"
+                  data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
+                >
+                  {{ shipping_method.price | money }}
+                </td>
+              </tr> {% endcomment %}
+            
+            {%- else -%}
+                <tr role="row">
+                <td id="RowShipping" role="rowheader" scope="row" colspan="4">
+                  {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
+                </td>
+                <td
+                  headers="RowShipping"
+                  role="cell"
+                  data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
+                >
+                  {{ shipping_method.price | money }}
+                </td>
+              </tr>
+            {%- endif -%}
+
           {%- endfor -%}
 
           {%- for tax_line in order.tax_lines -%}
