@@ -132,9 +132,13 @@
     letter-spacing: -2px;
 }
 
-.add-ons-price-container,
+.add-ons-price-container {
+    display: block;
+}
+
 .add-ons-subheader-container3 {
     display: block;
+    text-align: right;
 }
 
 .add-ons-header2-container2 {
@@ -170,4 +174,13 @@
     margin-top: 20px;
 }
 
-.add-ons-subheader-container3 span {}
+.add-ons-subheader-container3 span {
+    color: #8A947F;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
