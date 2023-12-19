@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .aboutus-second-section {
     background-color: #FAF5EE;
     display: block;
@@ -64,71 +63,4 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-=======
-.aboutus-second-section {
-    background-color: #FAF5EE;
-    display: block;
-    align-items: center;
-
-    padding-top: 3%;
-    padding-bottom: 5%;
-}
-
-.aboutus-header2-container {
-    display: block;
-    align-items: center;
-    position: relative;
-}
-
-.aboutus-subheader-container3 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-    margin-right: 10%;
-}
-
-.aboutus-subheader-container3 h5 {
-    padding: 0 0 0 2%;
-}
-
-.aboutus-subheader-container4 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-left: 10%;
-}
-
-.aboutus-image3 {
-    width: 140px;
-    position: absolute;
-    margin-left: 550px;
-    margin-top: 50px;
-}
-
-.aboutus-second-section-description {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-    margin-top: 2%;
-}
-
-.aboutus-image4 {
-    width: 220px;
-
-    margin-right: 3%;
-}
-
-.aboutus-second-section-description p {
-    width: 50%;
-
-    color: #000;
-    text-align: center;
-    font-family: JejuMyeongjo;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
->>>>>>> 73493e19b0b40ff7d421465e2d71cd034f8e1a6b
 }
