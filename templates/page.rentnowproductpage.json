@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "a73204df-fc54-4ea3-97c4-3478023e5010": {
+      "type": "add-ons-first-section",
+      "settings": {
+      }
+    },
+    "fa235ab6-bf30-4cea-8d0c-d33743ff716f": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "products",
+        "products_to_show": 2,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "505f5358-c2d2-452c-8a96-781bd39db4bc": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "add-ons",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "fc0c9d49-be0b-4b95-a4d3-19ff8406c3f7": {
+      "type": "add-ons-second-section",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a73204df-fc54-4ea3-97c4-3478023e5010",
+    "fa235ab6-bf30-4cea-8d0c-d33743ff716f",
+    "505f5358-c2d2-452c-8a96-781bd39db4bc",
+    "fc0c9d49-be0b-4b95-a4d3-19ff8406c3f7"
+  ]
+}
