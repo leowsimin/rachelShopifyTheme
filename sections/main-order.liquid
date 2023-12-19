@@ -263,9 +263,9 @@
             </tr>
           {%- endif -%}
 
-          {%- for shipping_method in order.shipping_methods -%}
+          {% comment %} {%- for shipping_method in order.shipping_methods -%}
             {%- if shipping_method.title == "Delivery" -%}
-              {% comment %} <tr role="row">
+                <tr role="row">
                 <td id="RowShipping" role="rowheader" scope="row" colspan="4">
                   {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
                 </td>
@@ -276,7 +276,7 @@
                 >
                   {{ shipping_method.price | money }}
                 </td>
-              </tr> {% endcomment %}
+              </tr>
               <h1>yup</h1>
             
             {%- else -%}
@@ -293,7 +293,7 @@
                 </td>
               </tr>
             {%- endif -%}
-          {%- endfor -%}
+          {%- endfor -%} {% endcomment %}
 
           {%- for tax_line in order.tax_lines -%}
             <tr role="row">
