@@ -1,4 +1,4 @@
-{{ 'customer.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -21,7 +21,7 @@
     </symbol>
   </svg>
   <div>
-    {% comment %} <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1> {% endcomment %}
+    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
     <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
   </div>
 
@@ -376,4 +376,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} {% endcomment %}
