@@ -263,37 +263,21 @@
             </tr>
           {%- endif -%}
 
-          {% comment %} {%- for shipping_method in order.shipping_methods -%}
-            {%- if shipping_method.title == "Delivery" -%}
-                <tr role="row">
-                <td id="RowShipping" role="rowheader" scope="row" colspan="4">
-                  {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
-                </td>
-                <td
-                  headers="RowShipping"
-                  role="cell"
-                  data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
-                >
-                  {{ shipping_method.price | money }}
-                </td>
-              </tr>
-              <h1>yup</h1>
-            
-            {%- else -%}
-                <tr role="row">
-                <td id="RowShipping" role="rowheader" scope="row" colspan="4">
-                  {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
-                </td>
-                <td
-                  headers="RowShipping"
-                  role="cell"
-                  data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
-                >
-                  {{ shipping_method.price | money }}
-                </td>
-              </tr>
-            {%- endif -%}
-          {%- endfor -%} {% endcomment %}
+          {%- for shipping_method in order.shipping_methods -%}
+            <tr role="row">
+              <td id="RowShipping" role="rowheader" scope="row" colspan="4">
+                {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
+              </td>
+              <td
+                headers="RowShipping"
+                role="cell"
+                data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
+              >
+                {{ shipping_method.price | money }}
+              </td>
+              <h1>HELLO</h1>
+            </tr>
+          {%- endfor -%}
 
           {%- for tax_line in order.tax_lines -%}
             <tr role="row">
