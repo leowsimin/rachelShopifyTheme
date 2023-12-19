@@ -262,6 +262,7 @@
               {%- endfor -%}
             </tr>
           {%- endif -%}
+          
           {%- for shipping_method in order.shipping_methods -%}
             <tr role="row">
               <td id="RowShipping" role="rowheader" scope="row" colspan="4">
@@ -276,6 +277,7 @@
               </td>
             </tr>
           {%- endfor -%}
+
           {%- for tax_line in order.tax_lines -%}
             <tr role="row">
               <td id="RowTax" role="rowheader" scope="row" colspan="4">
