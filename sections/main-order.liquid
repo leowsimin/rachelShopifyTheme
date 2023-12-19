@@ -273,9 +273,8 @@
                 role="cell"
                 data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
               >
-                {{ shipping_method.price | money }}
+                {% comment %} {{ shipping_method.price | money }} {% endcomment %}
               </td>
-              <h1>HELLO</h1>
             </tr>
           {%- endfor -%}
 
