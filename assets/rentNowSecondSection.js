@@ -739,9 +739,21 @@ function updatingSection(startDate, endDate) {
 
     rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
 
-    // Set the data attribute on the HTML element
+
+    // Get the addOnsLuggagePrice element
     const addOnsLuggagePrice = document.getElementById("addOnsLuggagePrice");
-    addOnsLuggagePrice.setAttribute("data-diff-days", diffDays);
+
+    // Get the current money price from the element
+    const currentMoneyPrice = addOnsLuggagePrice.textContent.trim();
+
+    // Check if the current money price is '0.00'
+    if (currentMoneyPrice === '0.00') {
+        // If the price is '0.00', set data-diff-days to diffDays
+        addOnsLuggagePrice.setAttribute("data-diff-days", diffDays);
+    } else {
+        // If the price is not '0.00', leave it as is
+        addOnsLuggagePrice.setAttribute("data-diff-days", currentMoneyPrice);
+    }
 
     return diffDays;
 }
