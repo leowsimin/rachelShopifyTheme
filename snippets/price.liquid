@@ -35,6 +35,16 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
+
+    # Extract diffDays value
+  assign diffDays = updatingSection(start_date, end_date)
+
+  # Check if money_price is 0.00
+  if money_price == 0.00
+    # Replace money_price with diffDays value
+    assign money_price = diffDays
+  endif
+  
 -%}
 
 <div
