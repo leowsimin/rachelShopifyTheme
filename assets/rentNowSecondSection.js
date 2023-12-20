@@ -1,6 +1,7 @@
 //Inserting Current Month/Year
 
-const date = new Date();
+export
+    const date = new Date();
 
 const months = [
     "January",
