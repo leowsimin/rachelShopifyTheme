@@ -3552,14 +3552,12 @@ details-disclosure>details {
 
 .fullNavStyle {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
 }
 
 .sideNavBarStyle {
   display: flex;
-  position: absolute;
   left: 86%;
 }
 
