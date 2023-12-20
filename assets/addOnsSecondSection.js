@@ -1,1 +1,1 @@
-import { date } from 
+import { date } from '.'
