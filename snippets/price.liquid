@@ -79,7 +79,9 @@
       {%- else -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
-          {% comment %} {{ money_price }} {% endcomment %}
+
+          <span id="addOnsLuggagePrice">{{ money_price }}</span>
+          
         </span>
       {%- endif -%}
     </div>
