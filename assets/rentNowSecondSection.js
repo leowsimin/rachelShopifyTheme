@@ -1,8 +1,8 @@
 //Inserting Current Month/Year
 
-export { date };
-
 const date = new Date();
+
+var hello = "hello";
 
 const months = [
     "January",
@@ -806,3 +806,5 @@ function collectionOptions(diffDays) {
     });
 
 }
+
+export { hello };

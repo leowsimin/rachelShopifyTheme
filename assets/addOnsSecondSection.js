@@ -1,3 +1,3 @@
-import { date } from './rentNowSecondSection.js';
+import { hello } from './rentNowSecondSection.js';
 
-console.log(date);
+console.log(hello);
