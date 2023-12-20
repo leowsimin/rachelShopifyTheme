@@ -118,7 +118,7 @@
     <h4 id="rentNowDateError">Ahhh, that is not possible,  please choose a later date! Thank you!</h4>
   </div>
 
- <script src="sections/rentNowSecondSection.js"></script>
+ {{ 'rentNowSecondSection.js' | asset_url | script_tag }}
 </div>
 
 {% schema %}
