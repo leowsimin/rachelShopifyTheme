@@ -740,9 +740,11 @@ function updatingSection(startDate, endDate) {
     rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
 
     const addOnsLuggagePrice = document.getElementById("addOnsLuggagePrice");
-    var LuggagePrice = '{{money_price}}';
+    var luggagePrice = '{{money_price}}';
 
-
+    if (addOnsLuggagePrice.textContent == 0.00) {
+        luggagePrice = diffDays
+    }
 
     return diffDays;
 }
