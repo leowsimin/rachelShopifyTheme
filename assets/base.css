@@ -3553,6 +3553,7 @@ details-disclosure>details {
 .fullNavStyle {
   display: flex;
   position: relative;
+
   align-items: center;
   justify-content: center;
   white-space: nowrap;
