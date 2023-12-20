@@ -739,12 +739,9 @@ function updatingSection(startDate, endDate) {
 
     rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
 
+    // Set the data attribute on the HTML element
     const addOnsLuggagePrice = document.getElementById("addOnsLuggagePrice");
-    var luggagePrice = '{{money_price}}';
-
-    if (addOnsLuggagePrice.textContent == 0.00) {
-        luggagePrice = diffDays
-    }
+    addOnsLuggagePrice.setAttribute("data-diff-days", diffDays);
 
     return diffDays;
 }
