@@ -2,8 +2,6 @@
 
 const date = new Date();
 
-var hello = "hello";
-
 const months = [
     "January",
     "February",
@@ -806,5 +804,3 @@ function collectionOptions(diffDays) {
     });
 
 }
-
-export { hello };
