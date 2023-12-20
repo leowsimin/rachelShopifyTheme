@@ -2,8 +2,6 @@
 
 const date = new Date();
 
-console.log("date");
-
 const months = [
     "January",
     "February",
