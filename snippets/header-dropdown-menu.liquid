@@ -52,17 +52,7 @@
       </ul>
 
       <div class="sideNavBarStyle">
-          {% if customer %}
-              {{ customer.first_name }} {{ 'Log out' | customer_logout_link }}
-          {% else %}
-              <div class="logInButton">
-                  {{ 'Log in' | customer_login_link }}
-              </div>
-              <div class="signUpButton">
-                  {{ 'Sign Up' | customer_register_link }}
-              </div>
-          {% endif %}
-
+      
           <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
             {%- liquid
               if cart == empty
@@ -81,6 +71,17 @@
               </div>
             {%- endif -%}
           </a>
+
+          {% if customer %}
+              {{ customer.first_name }} {{ 'Log out' | customer_logout_link }}
+          {% else %}
+              <div class="logInButton">
+                  {{ 'Log in' | customer_login_link }}
+              </div>
+              <div class="signUpButton">
+                  {{ 'Sign Up' | customer_register_link }}
+              </div>
+          {% endif %}
       </div>
     </div>
 
