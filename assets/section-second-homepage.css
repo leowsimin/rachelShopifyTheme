@@ -96,6 +96,16 @@ h3 {
     width: 97px;
 }
 
+.homepage-open-quote,
+.homepage-close-quote {
+    position: relative;
+}
+
+.homePageOpenQuote,
+.homePageCloseQuote {
+    position: absolute;
+}
+
 
 @media only screen and (max-width: 990px) {
     .homePageTestimony {
