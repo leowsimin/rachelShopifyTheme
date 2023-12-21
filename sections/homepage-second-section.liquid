@@ -3,15 +3,55 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 
-<div class="homepage-second-section">
-    <h1>What do people say about us?</h1>
+<div class="homePagePanel2">
+    <h2 class="homePageTestimony">What do people say about us?</h2>
 
-    <div>
-        <div>
+    <div class="homePageAllPeople">
+
+        <div class="homePageOpenPeople">
+            <img class="homePageOpenQuote" src="{{ 'openQuotation.svg' | asset_url }}"/>
+
+            <div class="homePagePeople1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                    <circle cx="75" cy="75" r="60" fill="#0D2610"/>
+                </svg>
+                <h3>ALBERT ONG</h3>
+                <div class="homePageDescription">
+                    <p>Repaired my luggage with Tner and really happy with Thomas's workmanship.Highly recommended!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="homePagePeople2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                <circle cx="75" cy="75" r="60" fill="#0D2610"/>
+            </svg>
+            <h3>JENNY TAY</h3>
+            <div class="homePageDescription">
+                <p>Tner is an interesting concept that I stumbled upon when I was researching on buying a luggage.
+                Never knew I can rent one! It was easy and fuss free, will rent again #supportlocal!</p>
+            </div>
+        </div>
+
+        <div class="homePageClosePeople">
+            <div class="homePagePeople3" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                    <circle cx="75" cy="75" r="60" fill="#0D2610"/>
+                </svg>
+                <h3>PANG LI SHIN</h3>
+                <div class="homePageDescription">
+                    <p>I was panicking for my last minute trip to Japan, feeling so unprepared. My friend recommended me 
+                    to rent a luggage with Tner and I realised that I can even buy disposable toothbrushes, one-time use 
+                    towels, make up remover capsules from them at the same time! If only the luggage can be delivered to me 
+                    for free, it would be 100% perfect.</p>
+                </div>
+            </div>
+
+            <img class="homePageCloseQuote" src="{{ 'closeQuotation.svg' | asset_url }}"/>
         </div>
     </div>
-
 </div>
+
 
 {% schema %}
   {
