@@ -2,6 +2,11 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "1535d88c-c4c4-4519-aceb-359a7b8d5357": {
+      "type": "footer-section",
+      "settings": {
+      }
+    },
     "footer": {
       "type": "footer",
       "disabled": true,
@@ -22,6 +27,7 @@
     }
   },
   "order": [
+    "1535d88c-c4c4-4519-aceb-359a7b8d5357",
     "footer"
   ]
 }
