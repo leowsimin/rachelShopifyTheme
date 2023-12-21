@@ -73,9 +73,12 @@ h3 {
     width: 80px;
 }
 
-.homePage-luggage2-image,
+.homePage-luggage2-image {
+    width: 95px;
+}
+
 .homePage-luggage1-image {
-    width: 90px;
+    width: 100px;
 }
 
 
