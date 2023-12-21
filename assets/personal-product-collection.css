@@ -184,3 +184,8 @@
     line-height: normal;
     letter-spacing: -1.5px;
 }
+
+.add-ons-add-to-cart-container {
+
+    justify-content: center;
+}
