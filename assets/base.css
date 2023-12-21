@@ -3543,9 +3543,10 @@ details-disclosure>details {
   padding-right: 30px;
 }
 
-.navLink:hover {
-  color: #FFA665;
-  font-size: 16px;
+.navLink:hover,
+{
+color: #FFA665;
+font-size: 16px;
 }
 
 .navStyle {
