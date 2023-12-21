@@ -933,17 +933,15 @@ function collectionOptions(diffDays) {
         // Check if the color is equal to the desired color
         if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
             // Proceed to the next page
-            redirectToWhatsapp(startDate, endDate, diffDays, );
+            redirectToWhatsapp(startDate, endDate);
         }
     });
 }
 
-function redirectToWhatsapp() {
+function redirectToWhatsapp(startDate, endDate) {
 
   document.getElementById('rentNowConfirmButton').addEventListener('click', function() {
 
-    
-    var userSelection = "A";
     var whatsappMessage = "Product chosen: " + userSelection + ". I'm interested!";
 
     var encodedMessage = encodeURIComponent(whatsappMessage);
