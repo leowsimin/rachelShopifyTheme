@@ -189,6 +189,7 @@
 
 .howitworks-subheader-container7 {
     display: flex;
+    justify-content: space-between;
 }
 
 .howitworks-subheader-container7 p {
