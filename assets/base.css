@@ -3607,7 +3607,8 @@ details-disclosure>details {
   height: auto !important;
 }
 
-.header-first-name {
+.header-first-name,
+.header-logout {
   color: #0D2610;
   text-align: center;
   font-family: JejuMyeongjo;
@@ -3615,4 +3616,8 @@ details-disclosure>details {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.header-first-name {
+  margin-right: 20px;
 }
