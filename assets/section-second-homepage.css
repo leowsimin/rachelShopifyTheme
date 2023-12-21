@@ -30,19 +30,13 @@ h3 {
     line-height: normal;
 }
 
-.homePagePeople1 {
-    display: block;
-    text-align: center;
-}
-
-.homePagePeople2 {
-    display: block;
-    text-align: center;
-}
-
+.homePagePeople1,
+.homePagePeople2,
 .homePagePeople3 {
     display: block;
     text-align: center;
+
+    width: 50%;
 }
 
 .homePageDescription p {
