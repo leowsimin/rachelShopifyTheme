@@ -966,7 +966,15 @@ function collectionOptions(diffDays) {
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
   var whatsappMessage = 
-  "hello! i am interested in renting a Tner luggage! here are my details:" + Start Date: ;
+  "hello! i am interested in renting a Tner luggage! here are my details:" + 
+  "Start Date:" + startDate +
+  "End Date:" + endDate +
+  "Amount Per Luggage: $" + diffDays +
+  "Collection Method:" + collectionMethod;
+
+  if (collectionMethod == "Delivery") {
+    whatsappMessage += "Collection Dates" + collectionDate1 + collectionDate2;
+  }
 
   var encodedMessage = encodeURIComponent(whatsappMessage);
   var whatsappUrl = "https://wa.me/93692997?text=" + encodedMessage;
