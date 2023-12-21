@@ -7,9 +7,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "46838507-6985-434c-8a59-6bd2386fd829": {
+      "type": "refurbishment-first-section",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "46838507-6985-434c-8a59-6bd2386fd829"
   ]
 }
