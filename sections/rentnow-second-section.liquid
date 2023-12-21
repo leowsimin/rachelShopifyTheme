@@ -904,30 +904,44 @@ function collectionOptions(diffDays) {
         deliveryPickUp2Container.style.backgroundColor = "transparent";
         collectionDate1 = deliveryPickUp1.textContent;
 
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+        }
     })
 
     deliveryPickUp2Container.addEventListener("click", function () {
         deliveryPickUp1Container.style.backgroundColor = "transparent";
         deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         collectionDate1 = deliveryPickUp2.textContent;
+
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+        }
     })
 
     deliveryPickUp3Container.addEventListener("click", function () {
         deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         deliveryPickUp4Container.style.backgroundColor = "transparent";
         collectionDate2 = deliveryPickUp3.textContent;
+
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+        }
     })
 
     deliveryPickUp4Container.addEventListener("click", function () {
         deliveryPickUp3Container.style.backgroundColor = "transparent";
         deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         collectionDate2 = deliveryPickUp4.textContent;
-    })
 
-    if (collectionDate1 && collectionDate 2 != null) {
-        rentNowConfirmButton.style.color = "#0D2610";
-        rentNowConfirmButton.style.border = "2px solid #0D2610";
-    }
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+        }
+    })
 
     rentNowConfirmButton.addEventListener("click", function (event) {
 
