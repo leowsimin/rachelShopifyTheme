@@ -172,9 +172,9 @@
 
     {% if customer %}
         <div class="header-first-name"> Welcome {{ customer.first_name }} ! </div>
-        <a href="{{ 'customer/logout' | shopify_url }}" title="Logout">
-          <img class="header-logout-image" src="{{ 'header-logout.svg' | asset_url }}" />
-        </a>
+        <div class="header-logout">
+          {{ '{{ 'header-logout.svg' | asset_url }}' | customer_logout_link }}
+        </div>
     {% else %}
         <div class="logInButton">
             {{ 'Log in' | customer_login_link }}
