@@ -50,39 +50,7 @@
           {{ linklists.main-menu.links[5].title }}
           </a>
       </ul>
-
-      <div class="sideNavBarStyle">
-          {% comment %} <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-            {%- liquid
-              if cart == empty
-                render 'icon-cart-empty'
-              else
-                render 'icon-cart'
-              endif
-            -%}
-            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-            {%- if cart != empty -%}
-              <div class="cart-count-bubble">
-                {%- if cart.item_count < 100 -%}
-                  <span aria-hidden="true">{{ cart.item_count }}</span>
-                {%- endif -%}
-                <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-              </div>
-            {%- endif -%}
-          </a> {% endcomment %}
-
-          {% if customer %}
-              {{ customer.first_name }} {{ 'Log out' | customer_logout_link }}
-          {% else %}
-              <div class="logInButton">
-                  {{ 'Log in' | customer_login_link }}
-              </div>
-              <div class="signUpButton">
-                  {{ 'Sign Up' | customer_register_link }}
-              </div>
-          {% endif %}
-      </div>
-  </div>
+    </div>
 
   {%- comment -%}
     <ul class="list-menu list-menu--inline" role="list">
@@ -181,3 +149,35 @@
     </ul>
   {%- endcomment -%}
 </nav>
+
+<div class="sideNavBarStyle">
+    {% comment %} <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {%- liquid
+        if cart == empty
+          render 'icon-cart-empty'
+        else
+          render 'icon-cart'
+        endif
+      -%}
+      <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+      {%- if cart != empty -%}
+        <div class="cart-count-bubble">
+          {%- if cart.item_count < 100 -%}
+            <span aria-hidden="true">{{ cart.item_count }}</span>
+          {%- endif -%}
+          <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        </div>
+      {%- endif -%}
+    </a> {% endcomment %}
+
+    {% if customer %}
+        {{ customer.first_name }} {{ 'Log out' | customer_logout_link }}
+    {% else %}
+        <div class="logInButton">
+            {{ 'Log in' | customer_login_link }}
+        </div>
+        <div class="signUpButton">
+            {{ 'Sign Up' | customer_register_link }}
+        </div>
+    {% endif %}
+</div>
