@@ -173,7 +173,7 @@
     {% if customer %}
         <div class="header-first-name"> Welcome {{ customer.first_name }} ! </div>
         <div class="header-logout">
-          {{ '{{ 'header-logout.svg' | asset_url }}' | customer_logout_link }}
+          {{ 'header-logout.svg' | asset_url | customer_logout_link }}
         </div>
     {% else %}
         <div class="logInButton">
