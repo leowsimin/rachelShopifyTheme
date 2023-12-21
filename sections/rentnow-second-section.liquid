@@ -882,6 +882,8 @@ function updatingSection(startDate, endDate) {
 
 function collectionOptions(diffDays) {
 
+    const collectionMethod = null;
+
     const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
     const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
 
@@ -907,6 +909,8 @@ function collectionOptions(diffDays) {
         deliveryTimeDate.style.display = "none";
 
         totalAmountCalculation.textContent = `$${diffDays} + $0 = $${diffDays}`;
+
+        collectionMethod = "Self-Collect";
     });
 
     rentNowNotClickedDelivery.addEventListener("click", function () {
@@ -922,6 +926,8 @@ function collectionOptions(diffDays) {
         deliveryTimeDate.style.display = "block";
 
         totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
+
+        collectionMethod = "Delivery";
     });
 
     rentNowConfirmButton.addEventListener("click", function (event) {
@@ -933,15 +939,18 @@ function collectionOptions(diffDays) {
         // Check if the color is equal to the desired color
         if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
             // Proceed to the next page
-            redirectToWhatsapp(startDate, endDate);
+            redirectToWhatsapp(startDate, endDate, collectionMethod);
         }
     });
 }
 
-function redirectToWhatsapp(startDate, endDate) {
+function redirectToWhatsapp(startDate, endDate, diffdays, collectionMethod) {
 
   document.getElementById('rentNowConfirmButton').addEventListener('click', function() {
-    console.log(startDate);
+    console.log("startDate:", startDate);
+    console.log("endDate:", endDate);
+    console.log("diffDays:", diffDays);
+    console.log("collection Method:", collectionMethod);
   });
   
 }
