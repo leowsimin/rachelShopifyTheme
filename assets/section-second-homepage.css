@@ -91,6 +91,10 @@ h3 {
     width: 80px;
 }
 
+.homePageDescription {
+    width: 30%;
+}
+
 
 @media only screen and (max-width: 990px) {
     .homePageTestimony {
