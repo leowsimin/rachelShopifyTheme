@@ -965,6 +965,14 @@ function collectionOptions(diffDays) {
 
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
+  var whatsappMessage = 
+  "hello! i am interested in renting a Tner luggage! here are my details:" + Start Date: ;
+
+  var encodedMessage = encodeURIComponent(whatsappMessage);
+  var whatsappUrl = "https://wa.me/93692997?text=" + encodedMessage;
+
+  window.location.href = whatsappUrl;
+
   console.log("startDate:", startDate);
   console.log("endDate:", endDate);
   console.log("diffDays:", diffDays);
