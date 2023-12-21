@@ -945,7 +945,7 @@ function redirectToWhatsapp() {
     var whatsappMessage = "Product chosen: " + userSelection + ". I'm interested!";
 
     var encodedMessage = encodeURIComponent(whatsappMessage);
-    var whatsappUrl = "https://wa.me/+6593692997" + encodedMessage;
+    var whatsappUrl = "https://wa.me/93692997?text=" + encodedMessage;
 
     window.location.href = whatsappUrl;
   });
