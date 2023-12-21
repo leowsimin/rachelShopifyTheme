@@ -939,12 +939,12 @@ function collectionOptions(diffDays) {
         // Check if the color is equal to the desired color
         if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
             collectionMethod = collectionMethod || "Self-Collect";
-            redirectToWhatsapp(startDate, endDate, collectionMethod);
+            redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod);
         }
     });
 }
 
-function redirectToWhatsapp(startDate, endDate, diffdays, collectionMethod) {
+function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod) {
 
   console.log("startDate:", startDate);
   console.log("endDate:", endDate);
