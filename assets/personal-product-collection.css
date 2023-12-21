@@ -19,6 +19,8 @@
 
 .add-ons-header2-container1 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-ons-add-to-cart {
