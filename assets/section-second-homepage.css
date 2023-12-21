@@ -94,32 +94,4 @@ h3 {
     margin-top: 350px;
 }
 
-@media only screen and (max-width: 990px) {
-    .homePageTestimony {
-        font-size: 40px;
-    }
-
-    h3 {
-        font-size: 13px;
-    }
-
-    .homePageDescription {
-        font-size: 13px;
-    }
-
-    .homePageAllPeople {
-        display: block;
-        text-align: center;
-    }
-
-    .homePagePeople1,
-    .homePagePeople2,
-    .homePagePeople3 {
-        text-align: center;
-    }
-
-    .homePagePanel2 {
-        height: auto;
-        background-color: #FFFCF8;
-    }
-}
+@media only screen and (max-width: 990px) {}
