@@ -85,6 +85,10 @@ h3 {
     background-color: #FAF5EE;
 }
 
+.homePage-luggage3-image {
+    width: 100px;
+}
+
 
 @media only screen and (max-width: 990px) {
     .homePageTestimony {
