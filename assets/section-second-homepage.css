@@ -123,4 +123,8 @@ h3 {
         align-self: flex-end;
         margin-right: 100px;
     }
+
+    .homePageTestimony {
+        padding-bottom: 5%;
+    }
 }
