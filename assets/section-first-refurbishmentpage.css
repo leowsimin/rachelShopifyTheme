@@ -4,7 +4,26 @@
     padding-bottom: 5%;
 }
 
-.aboutus-third-section h5 {}
+.aboutus-third-section h5 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.aboutus-third-section h4 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -5px;
+}
 
 .aboutus-header3-container1 {
     position: relative;
