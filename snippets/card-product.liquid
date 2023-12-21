@@ -302,11 +302,7 @@
                   >
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
-                        {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
-                        <a href="https://wa.me/93692997?text=Product%20Details%3A%20{{ card_product.title | url_encode }}">
-                        
-                          <span>Buy</span>
-                        </a>
+                        {{ 'products.product.add_to_cart' | t }}
                       {%- else -%}
                         {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
