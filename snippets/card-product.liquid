@@ -302,7 +302,10 @@
                   >
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
+                        {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
+                        <a ref"https://wa.me/93692997?text=">
+                          <span>Buy</span>
+                        </a>
                       {%- else -%}
                         {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
@@ -360,7 +363,7 @@
         </button>
       </quantity-input>
     </div>
-    <span id="itemAddedToCart_{{ card_product.variants.first.id }}" class="itemAddedToCartText" >Item Added to Cart!</span>
+    {% comment %} <span id="itemAddedToCart_{{ card_product.variants.first.id }}" class="itemAddedToCartText" >Item Added to Cart!</span> {% endcomment %}
   </form> 
 {% else %}
   <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
