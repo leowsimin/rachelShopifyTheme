@@ -118,33 +118,6 @@ h3 {
         text-align: center;
     }
 
-    .homePageOpenQuote {
-        position: absolute;
-        width: 60px;
-
-        right: 100%;
-        top: 45%;
-    }
-
-    .homePageCloseQuote {
-        position: absolute;
-        width: 60px;
-        left: 100%;
-        top: 40%;
-    }
-
-    .homePageClosePeople {
-        position: relative;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .homePageOpenPeople {
-        position: relative;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
     .homePagePanel2 {
         height: auto;
         background-color: #FFFCF8;
