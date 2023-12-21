@@ -3580,6 +3580,8 @@ details-disclosure>details {
   line-height: normal;
 }
 
+.logInButton a:hover {}
+
 .signUpButton a {
   text-decoration: none;
   border-radius: 5px;
