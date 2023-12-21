@@ -933,11 +933,7 @@ function collectionOptions(diffDays) {
         // Check if the color is equal to the desired color
         if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
             // Proceed to the next page
-            console.log("issa the colour");
-            window.location.href = "https://tner-rental.myshopify.com/pages/rent-now-product-page";
-        } else {
-            // Display an error message (you can customize this part)
-            alert("Error: Please choose the correct color.");
+            redirectToWhatsapp();
         }
     });
 }
@@ -953,7 +949,7 @@ function redirectToWhatsapp() {
 
     window.location.href = whatsappUrl;
   });
-  
+
 }
 
 {%- endjavascript -%}
