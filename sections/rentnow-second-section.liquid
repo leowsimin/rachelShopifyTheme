@@ -966,7 +966,8 @@ function collectionOptions(diffDays) {
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
   var whatsappMessage =
-      "Hello! I am interested in renting a Tner luggage! Here are my details:\n" +
+      "Hello! I am interested in renting a Tner luggage!\n" + 
+      "Here are my details:\n" +
       "Start Date: " + startDate + "\n" +
       "End Date: " + endDate + "\n" +
       "Amount Per Luggage: $" + diffDays + "\n" +
@@ -977,8 +978,6 @@ function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, coll
   }
 
   console.log(whatsappMessage);
-  
-
 }
 
 
