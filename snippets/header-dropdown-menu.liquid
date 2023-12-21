@@ -172,9 +172,10 @@
 
     {% if customer %}
         <div class="header-first-name">
-          {{ customer.first_name }} 
+          <span>Welcome</span>
+          {{ customer.first_name }} !
         </div>
-        <div class="header-first-name">
+        <div class="header-logout">
           {{ 'Log out' | customer_logout_link }}
       </div>
     {% else %}

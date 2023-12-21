@@ -3616,8 +3616,10 @@ details-disclosure>details {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  text-decoration: none;
 }
 
 .header-first-name {
-  margin-right: 20px;
+  margin-right: 10px;
 }
