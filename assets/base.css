@@ -3602,6 +3602,11 @@ details-disclosure>details {
   margin-left: 20px;
 }
 
+.signUpButton a:hover {
+  background-color: #FFA665;
+  color: ;
+}
+
 .header__icon--search,
 .header .header__icons .header__icon--account,
 .header .header__icons {
