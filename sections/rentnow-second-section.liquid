@@ -965,21 +965,25 @@ function collectionOptions(diffDays) {
 
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
-    var whatsappMessage =
-        "Hello! I am interested in renting a Tner luggage!\n" + 
-        "Here are my details:\n" +
-        "Start Date: " + startDate + "\n" +
-        "End Date: " + endDate + "\n" +
-        "Amount Per Luggage: $" + diffDays + "\n" +
-        "Collection Method: " + collectionMethod; 
+  var whatsappMessage =
+      "Hello! I am interested in renting a Tner luggage!\n" + 
+      "Here are my details:\n" +
+      "Start Date: " + startDate + "\n" +
+      "End Date: " + endDate + "\n" +
+      "Amount Per Luggage: $" + diffDays + "\n" +
+      "Collection Method: " + collectionMethod; 
 
-    if (collectionMethod == "Delivery") {
-        whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2 + "\n" + 
-        "Total Amount: $" + diffDays + " + $20 = $" + (diffDays + 20);
-    } else {
-        whatsappMessage += "\nTotal Amount: $" + diffDays;
-    }
+  if (collectionMethod == "Delivery") {
+      whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2 + "\n" + 
+      "Total Amount: $" + diffDays + " + $20 = $" + (diffDays + 20);
+  } else {
+      whatsappMessage += "\nTotal Amount: $" + diffDays;
+  }
 
+  var encodedMessage = encodeURIComponent(whatsappMessage);
+  var whatsappUrl = "https://wa.me/93692997?text=" + encodedMessage;
+
+  window.location.href = whatsappUrl;
 }
 
 {%- endjavascript -%}
