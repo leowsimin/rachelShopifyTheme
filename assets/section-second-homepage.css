@@ -115,10 +115,12 @@ h3 {
     .homePageOpenQuote {
         display: flex;
         align-self: flex-start;
+        margin-left: 20px;
     }
 
     .homePageCloseQuote {
         display: flex;
         align-self: flex-end;
+        margin-right: 20px;
     }
 }
