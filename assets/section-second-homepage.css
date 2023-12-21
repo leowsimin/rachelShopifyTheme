@@ -60,12 +60,6 @@ h3 {
     display: flex;
 }
 
-.homePageCloseQuote {
-    padding-left: 20px;
-
-    margin-top: 100%
-}
-
 .homePageContainer {
     height: 100vh;
     scroll-snap-type: y mandatory;
