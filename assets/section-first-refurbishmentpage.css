@@ -52,6 +52,8 @@
 .aboutus-image5 {
     position: absolute;
     width: 220px;
+
+    transform: translate(230px, 140px);
 }
 
 .aboutus-subheader-container5 h5 {
