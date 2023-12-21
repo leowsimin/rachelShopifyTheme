@@ -85,7 +85,9 @@ h3 {
     background-color: #FAF5EE;
 }
 
-.homePage-luggage3-image {
+.homePage-luggage3-image,
+.homePage-luggage2-image,
+.homePage-luggage1-image {
     width: 80px;
 }
 
