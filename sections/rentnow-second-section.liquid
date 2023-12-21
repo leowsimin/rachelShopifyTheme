@@ -883,9 +883,6 @@ function collectionOptions(diffDays) {
         rentNowClickedSelfCollect.style.display = "none";
         rentNowNotClickedSelfCollect.style.display = "flex";
 
-        rentNowConfirmButton.style.color = "#0D2610";
-        rentNowConfirmButton.style.border = "2px solid #0D2610";
-
         deliveryTimeDate.style.display = "block";
 
         totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
@@ -906,6 +903,7 @@ function collectionOptions(diffDays) {
         deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         deliveryPickUp2Container.style.backgroundColor = "transparent";
         collectionDate1 = deliveryPickUp1.textContent;
+
     })
 
     deliveryPickUp2Container.addEventListener("click", function () {
@@ -925,6 +923,11 @@ function collectionOptions(diffDays) {
         deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         collectionDate2 = deliveryPickUp4.textContent;
     })
+
+    if (collectionDate1 && collectionDate 2 != null) {
+        rentNowConfirmButton.style.color = "#0D2610";
+        rentNowConfirmButton.style.border = "2px solid #0D2610";
+    }
 
     rentNowConfirmButton.addEventListener("click", function (event) {
 
