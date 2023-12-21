@@ -941,13 +941,7 @@ function collectionOptions(diffDays) {
 function redirectToWhatsapp(startDate, endDate) {
 
   document.getElementById('rentNowConfirmButton').addEventListener('click', function() {
-
-    var whatsappMessage = "Product chosen: " + userSelection + ". I'm interested!";
-
-    var encodedMessage = encodeURIComponent(whatsappMessage);
-    var whatsappUrl = "https://wa.me/93692997?text=" + encodedMessage;
-
-    window.location.href = whatsappUrl;
+    console.log(startDate);
   });
 }
 
