@@ -971,10 +971,15 @@ function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, coll
       "Start Date: " + startDate + "\n" +
       "End Date: " + endDate + "\n" +
       "Amount Per Luggage: $" + diffDays + "\n" +
-      "Collection Method: " + collectionMethod;
+      "Collection Method: " + collectionMethod; 
 
   if (collectionMethod == "Delivery") {
-      whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2;
+      whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2 + "\n" + 
+      "Total Amount:" + "$" + "diffDays" + "$20" + "=" + "$" + (diffDays + 20);
+  }
+
+  else {
+    whatsappMessage += "\n" + "Total Amount:$" + "diffDays";
   }
 
   console.log(whatsappMessage);
