@@ -28,126 +28,124 @@
 
     margin: 0;
     position: relative;
-    z-index: 2;
-}
 
-.aboutus-header3-container1 {
-    position: relative;
-    display: block;
-    text-align: center;
+    .aboutus-header3-container1 {
+        position: relative;
+        display: block;
+        text-align: center;
 
-    margin-right: 30%;
-}
+        margin-right: 30%;
+    }
 
-.aboutus-subheader-container5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .aboutus-subheader-container5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.aboutus-subheader-container6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .aboutus-subheader-container6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.aboutus-image5 {
-    position: absolute;
-    width: 220px;
+    .aboutus-image5 {
+        position: absolute;
+        width: 220px;
 
-    transform: translate(230px, 100px);
-}
+        transform: translate(230px, 100px);
+    }
 
-.aboutus-subheader-container5 h5 {
-    position: relative;
-}
+    .aboutus-subheader-container5 h5 {
+        position: relative;
+    }
 
-.aboutus-subheader-container6 h4 {
-    margin-right: 40px;
-}
+    .aboutus-subheader-container6 h4 {
+        margin-right: 40px;
+    }
 
-.aboutus-header3-container2 {
-    display: flex;
-}
+    .aboutus-header3-container2 {
+        display: flex;
+    }
 
-.aboutus-subheader-container7 {
-    display: block;
-    position: relative;
+    .aboutus-subheader-container7 {
+        display: block;
+        position: relative;
 
-    margin-left: 20%;
-}
+        margin-left: 20%;
+    }
 
-.aboutus-subheader-container8 {
-    display: block;
-    text-align: center;
+    .aboutus-subheader-container8 {
+        display: block;
+        text-align: center;
 
-    margin-left: 10%;
-    margin-top: 230px;
-}
+        margin-left: 10%;
+        margin-top: 230px;
+    }
 
-.aboutus-image6 {
-    width: 600px;
-    position: absolute;
-}
+    .aboutus-image6 {
+        width: 600px;
+        position: absolute;
+    }
 
-.aboutus-image7 {
-    width: 150px;
-    margin-top: 440px;
-    margin-left: 120px;
-}
+    .aboutus-image7 {
+        width: 150px;
+        margin-top: 440px;
+        margin-left: 120px;
+    }
 
-.aboutus-image8 {
-    width: 230px;
-}
+    .aboutus-image8 {
+        width: 230px;
+    }
 
-.aboutus-subheader-container9 h6 {
+    .aboutus-subheader-container9 h6 {
 
-    color: #0D2610;
-    text-align: center;
-    font-family: Syncopate;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+        color: #0D2610;
+        text-align: center;
+        font-family: Syncopate;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
 
-    margin-top: 15%;
-    margin-bottom: 5%;
-}
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
 
-.aboutus-image9 {
-    z-index: -1;
-    width: 200px;
-    position: absolute;
+    .aboutus-image9 {
+        z-index: -1;
+        width: 200px;
+        position: absolute;
 
-    top: -15px;
-    /* Adjust the top position based on your layout */
-    left: 50%;
-    /* Center the image horizontally */
-    transform: translateX(-50%);
-}
+        top: -15px;
+        /* Adjust the top position based on your layout */
+        left: 50%;
+        /* Center the image horizontally */
+        transform: translateX(-50%);
+    }
 
-.aboutus-subheader-container9 {
-    position: relative;
-}
+    .aboutus-subheader-container9 {
+        position: relative;
+    }
 
-.aboutus-subheader-container8 ol {
-    list-style-position: inside;
-    text-align: center;
-    /* Center-align the list content */
-    width: 400px;
-    height: 150px;
-    margin: auto;
-    /* Center the ordered list within the container */
-}
+    .aboutus-subheader-container8 ol {
+        list-style-position: inside;
+        text-align: center;
+        /* Center-align the list content */
+        width: 400px;
+        height: 150px;
+        margin: auto;
+        /* Center the ordered list within the container */
+    }
 
-.aboutus-subheader-container8 ol li {
-    text-align: left;
-    /* Reset text alignment for list items if needed */
-    color: #000;
-    font-family: JejuMyeongjo;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 10px;
-}
+    .aboutus-subheader-container8 ol li {
+        text-align: left;
+        /* Reset text alignment for list items if needed */
+        color: #000;
+        font-family: JejuMyeongjo;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 10px;
+    }
