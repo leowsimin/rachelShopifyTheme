@@ -940,7 +940,20 @@ function collectionOptions(diffDays) {
             alert("Error: Please choose the correct color.");
         }
     });
+}
 
+function redirectToWhatsapp() {
+
+  document.getElementById('rentNowConfirmButton').addEventListener('click', function() {
+    var userSelection = "A";
+    var whatsappMessage = "Product chosen: " + userSelection + ". I'm interested!";
+
+    var encodedMessage = encodeURIComponent(whatsappMessage);
+    var whatsappUrl = "https://wa.me/1234567890?text=" + encodedMessage;
+
+    window.location.href = whatsappUrl;
+  });
+  
 }
 
 {%- endjavascript -%}
