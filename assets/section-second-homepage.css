@@ -112,14 +112,8 @@ h3 {
         text-align: center;
     }
 
-    .homePagePeople1 {
-        text-align: center;
-    }
-
-    .homePagePeople2 {
-        text-align: center;
-    }
-
+    .homePagePeople1,
+    .homePagePeople2,
     .homePagePeople3 {
         text-align: center;
     }
