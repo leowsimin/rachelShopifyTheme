@@ -138,16 +138,10 @@
     border-radius: 10px;
     border: 2px solid rgba(13, 38, 16, 0.20);
 
-    margin-left: 200px;
-
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-
-    position: absolute;
-    bottom: 0;
-    right: -150px;
 }
 
 .rentnow-header3-container4 {
