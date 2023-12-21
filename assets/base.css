@@ -3543,7 +3543,8 @@ details-disclosure>details {
   padding-right: 30px;
 }
 
-.navLink:hover {
+.navLink:hover,
+.logInButton:hover {
   color: #FFA665;
   font-size: 16px;
 }
