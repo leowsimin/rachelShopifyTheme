@@ -880,9 +880,9 @@ function updatingSection(startDate, endDate) {
     return diffDays;
 }
 
-function collectionOptions(diffDays) {
+let collectionMethod = null;
 
-    let collectionMethod = null;
+function collectionOptions(diffDays) {
 
     const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
     const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
