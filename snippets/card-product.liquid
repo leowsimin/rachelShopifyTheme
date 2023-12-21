@@ -347,8 +347,9 @@
   <form method="post" action="/cart/add" id="addToCartForm">
     <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
     <div class="add-ons-header2-container1" id="productInfo" data-product-id="{{ card_product.id }}">
+      {% comment %} <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" /> {% endcomment %}
       <a href="https://wa.me/93692997?text=Product%20Details%3A%20{{ card_product.title | url_encode }}">
-        <span>Buy</span>
+        <span class="add-ons-add-to-cart">Buy</span>
       </a>
       <quantity-input class="quantity">
         <button class="quantity__button no-js-hidden" name="minus" type="button">
