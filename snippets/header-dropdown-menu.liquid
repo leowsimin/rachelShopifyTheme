@@ -171,7 +171,12 @@
     </a> {% endcomment %}
 
     {% if customer %}
-        {{ customer.first_name }} {{ 'Log out' | customer_logout_link }}
+        <div class="header-first-name">
+          {{ customer.first_name }} 
+        </div>
+        <div>
+          {{ 'Log out' | customer_logout_link }}
+      </div>
     {% else %}
         <div class="logInButton">
             {{ 'Log in' | customer_login_link }}
