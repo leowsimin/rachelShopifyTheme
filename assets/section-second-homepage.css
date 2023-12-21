@@ -114,6 +114,6 @@ h3 {
 
     .homePageOpenQuote {
         display: flex;
-        left: 0;
+        align-self: flex-start;
     }
 }
