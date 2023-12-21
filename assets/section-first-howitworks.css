@@ -190,6 +190,9 @@
 .howitworks-subheader-container7 {
     display: flex;
     justify-content: space-between;
+
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .howitworks-subheader-container7 p {
