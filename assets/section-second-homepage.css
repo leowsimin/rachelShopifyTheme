@@ -90,6 +90,10 @@ h3 {
     width: 97px;
 }
 
+.homePageCloseQuote {
+    margin-top: 100px;
+}
+
 
 @media only screen and (max-width: 990px) {
     .homePageTestimony {
