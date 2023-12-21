@@ -86,7 +86,7 @@
     position: absolute;
     width: 160px;
 
-    transform: translate(0%, -70%);
+    transform: translateY(-20%);
 }
 
 .howitworks-header1container2 h4 {
