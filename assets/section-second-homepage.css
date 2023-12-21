@@ -112,5 +112,8 @@ h3 {
         margin-top: 0;
     }
 
-    .homePageOpenQuote {}
+    .homePageOpenQuote {
+        display: flex;
+        left: 0;
+    }
 }
