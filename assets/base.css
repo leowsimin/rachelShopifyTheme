@@ -3543,8 +3543,7 @@ details-disclosure>details {
   padding-right: 30px;
 }
 
-.navLink:hover,
-.logInButton:hover {
+.navLink:hover {
   color: #FFA665;
   font-size: 16px;
 }
@@ -3579,6 +3578,10 @@ details-disclosure>details {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.logInButton:hover {
+  font-size: 20px;
 }
 
 .signUpButton a {
