@@ -957,7 +957,6 @@ function collectionOptions(diffDays) {
         if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
             collectionMethod = collectionMethod || "Self-Collect";
             redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2);
-            console.log(whatsappMessage);
         }
     });
 
@@ -976,7 +975,9 @@ function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, coll
   if (collectionMethod == "Delivery") {
       whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2;
   }
-  
+
+  console.log(whatsappMessage);
+
 }
 
 
