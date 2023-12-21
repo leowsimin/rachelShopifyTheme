@@ -860,7 +860,6 @@ function collectionOptions(diffDays) {
     const rentNowConfirmButton = document.getElementById("rentNowConfirmButton");
 
     const rentNowWhatsappText = document.getElementById("rent-now-whatsapp-text");
-    
 
     rentNowNotClickedSelfCollect.addEventListener("click", function () {
         rentNowNotClickedSelfCollect.style.display = "none";
@@ -870,6 +869,7 @@ function collectionOptions(diffDays) {
         rentNowNotClickedDelivery.style.display = "flex";
 
         rentNowConfirmButton.style.color = "#0D2610";
+        rentNowConfirmButton.style.border = "2px solid #0D2610";
 
         rentNowWhatsappText.style.color = "#0D2610";
 
