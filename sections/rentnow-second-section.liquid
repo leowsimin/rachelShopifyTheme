@@ -906,28 +906,24 @@ function collectionOptions(diffDays) {
         deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         deliveryPickUp2Container.style.backgroundColor = "transparent";
         collectionDate1 = deliveryPickUp1.textContent;
-        console.log("Start:", collectionDate1);
     })
 
     deliveryPickUp2Container.addEventListener("click", function () {
         deliveryPickUp1Container.style.backgroundColor = "transparent";
         deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         collectionDate1 = deliveryPickUp2.textContent;
-        console.log("Start:", collectionDate1);
     })
 
     deliveryPickUp3Container.addEventListener("click", function () {
         deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         deliveryPickUp4Container.style.backgroundColor = "transparent";
         collectionDate2 = deliveryPickUp3.textContent;
-        console.log("End:", collectionDate2);
     })
 
     deliveryPickUp4Container.addEventListener("click", function () {
         deliveryPickUp3Container.style.backgroundColor = "transparent";
         deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
         collectionDate2 = deliveryPickUp4.textContent;
-        console.log("End:", collectionDate2);
     })
 
     rentNowConfirmButton.addEventListener("click", function (event) {
@@ -942,7 +938,6 @@ function collectionOptions(diffDays) {
             redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2);
         }
     });
-
 
 }
 
