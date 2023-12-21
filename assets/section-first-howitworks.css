@@ -186,3 +186,7 @@
 .howitworks-subheader-container1 h4 {
     margin-left: 200px;
 }
+
+.howitworks-subheader-container7 {
+    display: flex;
+}
