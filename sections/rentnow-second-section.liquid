@@ -957,6 +957,7 @@ function collectionOptions(diffDays) {
         if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
             collectionMethod = collectionMethod || "Self-Collect";
             redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2);
+            console.log(whatsappMessage);
         }
     });
 
@@ -965,29 +966,17 @@ function collectionOptions(diffDays) {
 
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
-  var whatsappMessage = 
-  "hello! i am interested in renting a Tner luggage! here are my details:" + 
-  "Start Date:" + startDate +
-  "End Date:" + endDate +
-  "Amount Per Luggage: $" + diffDays +
-  "Collection Method:" + collectionMethod;
+  var whatsappMessage =
+      "Hello! I am interested in renting a Tner luggage! Here are my details:\n" +
+      "Start Date: " + startDate + "\n" +
+      "End Date: " + endDate + "\n" +
+      "Amount Per Luggage: $" + diffDays + "\n" +
+      "Collection Method: " + collectionMethod;
 
   if (collectionMethod == "Delivery") {
-    whatsappMessage += "Collection Dates" + collectionDate1 + collectionDate2;
+      whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2;
   }
-
-  var encodedMessage = encodeURIComponent(whatsappMessage);
-  var whatsappUrl = "https://wa.me/93692997?text=" + encodedMessage;
-
-  window.location.href = whatsappUrl;
-
-  console.log("startDate:", startDate);
-  console.log("endDate:", endDate);
-  console.log("diffDays:", diffDays);
-  console.log("collection Method:", collectionMethod);
-  console.log("collection Date 1:", collectionDate1);
-  console.log("collection Date 2:", collectionDate2);
-
 }
+
 
 {%- endjavascript -%}
