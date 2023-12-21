@@ -340,11 +340,11 @@
       </div>
     </div>
   </div>
-
+  
 {% if card_product.variants.size > 1 and card_product.available %}
   <a style="margin-top: 17px" class="button" tabindex="0" href="{{ card_product.url | default: '#' }}"> View options </a>
 {% elsif card_product.available %} 
-  <form method="post" action="/cart/add" id="addToCartForm">
+  <form method="post" action="/cart/add" id="addToCartForm_{{ card_product.id }}">
     <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
     <div class="add-ons-header2-container1" id="productInfo" data-product-id="{{ card_product.id }}">
       <a class="add-ons-add-to-cart-container" href="https://wa.me/93692997?text=Product%20Details%3A%20{{ card_product.title | url_encode }}%0AQuantity%3A%201">
@@ -355,7 +355,7 @@
           <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
           {% render 'icon-minus' %}
         </button>
-        <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
+        <input class="quantity__input" type="number" name="quantity" id="quantity_{{ card_product.id }}" min="1" value="1">
         <button class="quantity__button no-js-hidden" name="plus" type="button">
           <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
           {% render 'icon-plus' %}
