@@ -27,6 +27,8 @@
     letter-spacing: -5px;
 
     margin: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .aboutus-header3-container1 {
