@@ -1472,7 +1472,7 @@
       {
         "type": "text",
         "id": "aboutus_title1",
-        "label": "Why is waste such a major problem?",
+        "label": "Heading1",
         "default": "The globalisation of markets has led to individualisation. Everyone wants to own something for themselves. This increase in demand leads to increased production, which contributes to a higher carbon footprint and in turn more waste generated. Hence Rent Now. Don't Buy"
       },
       {
