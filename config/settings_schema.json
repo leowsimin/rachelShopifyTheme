@@ -1849,8 +1849,8 @@
     "settings": [
       {
         "type": "text",
-        "id": "footer_PTE LTD UEN",
-        "label": "PTE_LTD UEN",
+        "id": "footer_UEN",
+        "label": "UEN Number",
         "default": "ALWC PTE LTD UEN: 202238666K"
       },
       {
