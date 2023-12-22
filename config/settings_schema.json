@@ -1730,6 +1730,30 @@
         "id": "howitworks_point3_description",
         "label": "Point 3 Description",
         "default": "We ensure constant checks and maintenance are done to the luggages."
+      },
+      {
+        "type": "text",
+        "id": "howitworks_title5",
+        "label": "Header",
+        "default": "Still Confused?"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_title6",
+        "label": "Header",
+        "default": "WE GOT YOU!"
+      },
+      {
+        "type": "textarea",
+        "id": "howitworks_instruction1",
+        "label": "Point 1 Instructions",
+        "default": "Please choose your travel date so that we can provide you with the total rental price per luggage. <br> Additionally, you'll have the option to select either delivery or self-collection. If you choose self-collection, please specify your preferred collection and return date and time. "
+      },
+      {
+        "type": "textarea",
+        "id": "howitworks_instruction2",
+        "label": "Point 2 Instructions",
+        "default": "Click the 'Rent Now' button, and you'll be instantly connected with one of our dedicated staff members ready to assist you!"
       }
     ]
   }
