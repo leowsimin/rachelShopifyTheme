@@ -1479,7 +1479,7 @@
         "type": "textarea",
         "id": "aboutus_second_textarea",
         "label": "Our Solution:",
-        "default": "The globalisation of markets has led to individualisation. Everyone wants to own something for themselves. This increase in demand leads to increased production, which contributes to a higher carbon footprint and in turn more waste generated. Hence Rent Now. Don't Buy"
+        "default": "'Huh, is it hygienic to be sharing resources?'<br> Yes, of course! Hear what our dedicated hygiene master has to say. 'When a customer returns the luggage after his trip, I will first tear away the inner lining of the luggage. Next, I will do a thorough cleaning of the luggage and air it well, before preparing for the next rental.'"
       }
     ]
   }
