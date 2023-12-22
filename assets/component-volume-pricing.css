@@ -46,7 +46,6 @@ volume-pricing show-more-button {
   display: flex;
   align-items: center;
   gap: 1rem;
-  justify-content: center;
 }
 
 .product-form__input .price-per-item {
