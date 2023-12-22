@@ -1876,12 +1876,6 @@
         "id": "registerpage_email_add",
         "label": "Email Address",
         "default": "Email Address: Shop@tner.sg"
-      },
-      {
-        "type": "checkbox",
-        "id": "registerpage_tiktok_image",
-        "label": "Tiktok Image",
-        "default": true
       }
     ]
   }
