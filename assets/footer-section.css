@@ -5,6 +5,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .footer-header-container1 {
@@ -32,7 +35,7 @@
 }
 
 .footer-header-container1 p {
-    font-size: 15px;
+    font-size: 10px;
     width: 200px;
     text-align: center;
     margin-top: 0;
