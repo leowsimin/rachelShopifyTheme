@@ -1809,5 +1809,16 @@
         "default": "Let our experienced shifu analyse the issue."
       }
     ]
+  },
+  {
+    "name": "Log In Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "loginpage_header",
+        "label": "Header",
+        "default": "Let our experienced shifu analyse the issue."
+      }
+    ]
   }
 ]
