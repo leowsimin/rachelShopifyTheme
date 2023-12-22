@@ -2,4 +2,18 @@
     display: flex;
 }
 
-.footer-header-container1 {}
+.footer-header-container1 {
+    flex: 2;
+}
+
+.footer-header-container2 {
+    flex: 2.5;
+}
+
+.footer-header-container3 {
+    flex: 2.5;
+}
+
+.footer-header-container4 {
+    flex: 3;
+}
