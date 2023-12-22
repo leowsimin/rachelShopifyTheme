@@ -1608,7 +1608,7 @@
       {
         "type": "text",
         "id": "howitworks_subheader1",
-        "label": "Subheader",
+        "label": "Subheader 1",
         "default": "Step-by-Step guide on how you can start saving the Earth!"
       },
       {
@@ -1670,6 +1670,12 @@
         "id": "howitworks_cycle_subheader7",
         "label": "Cycle Point 7",
         "default": "7. Rent from us again."
+      },
+      {
+        "type": "text",
+        "id": "howitworks_subheader2",
+        "label": "Subheader 2",
+        "default": "It's that simple."
       }
     ]
   }
