@@ -43,6 +43,12 @@
     padding-bottom: 10px;
 }
 
+.add-ons-add-to-cart:hover {
+    font-size: 19px;
+    border: 1.5px solid #0D2610;
+
+}
+
 .add-ons-header2-container1 quantity-input {
     width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
     text-align: center;
