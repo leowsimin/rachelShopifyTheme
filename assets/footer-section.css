@@ -3,7 +3,7 @@
 }
 
 .footer-header-container1 {
-    flex: 2;
+    flex: 4;
 }
 
 .footer-header-container2 {
@@ -15,5 +15,5 @@
 }
 
 .footer-header-container4 {
-    flex: 3;
+    flex: 1;
 }
