@@ -65,6 +65,8 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1px;
+
+    margin-bottom: 20px;
 }
 
 .add-ons-sold-out:hover {
