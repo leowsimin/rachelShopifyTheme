@@ -63,7 +63,9 @@
     letter-spacing: -1px;
 }
 
-.add-ons-sold-out::after {}
+.add-ons-sold-out:hover {
+    border: 2px solid #FFA665;
+}
 
 .order-receipt-text {
     color: #0D2610;
