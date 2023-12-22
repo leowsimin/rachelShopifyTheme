@@ -1,5 +1,10 @@
 .footer-section {
     display: flex;
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .footer-header-container1 {
