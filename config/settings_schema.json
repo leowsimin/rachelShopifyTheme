@@ -1472,25 +1472,25 @@
       {
         "type": "text",
         "id": "aboutus_title1",
-        "label": "About Us Title #1",
+        "label": "Title 1",
         "default": "Why is waste"
       },
       {
         "type": "text",
         "id": "aboutus_title2",
-        "label": "About Us Title #2",
+        "label": "Title 1",
         "default": "such a"
       },
       {
         "type": "text",
         "id": "aboutus_title3",
-        "label": "About Us Title #3",
+        "label": "Title 1",
         "default": "MAJOR"
       },
       {
         "type": "text",
         "id": "aboutus_title4",
-        "label": "About Us Title #4",
+        "label": "Title 1",
         "default": "problem?"
       },
       {
@@ -1498,6 +1498,12 @@
         "id": "aboutus_first_textarea",
         "label": "Why is waste such a major problem?",
         "default": "The globalisation of markets has led to individualisation. Everyone wants to own something for themselves. This increase in demand leads to increased production, which contributes to a higher carbon footprint and in turn more waste generated. Hence Rent Now. Don't Buy"
+      },
+      {
+        "type": "text",
+        "id": "aboutus_title5",
+        "label": "Title 2",
+        "default": "problem?"
       },
       {
         "type": "textarea",
