@@ -9,6 +9,7 @@
 
 .footer-header-container1 {
     flex: 3;
+    text-align: center;
 }
 
 .footer-header-container2 {
@@ -25,4 +26,9 @@
 
 .footer-tner-logo-image {
     width: 130px;
+}
+
+.footer-header-container1 p {
+    font-size: 15px;
+    width: 200px;
 }
