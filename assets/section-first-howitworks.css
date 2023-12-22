@@ -161,7 +161,7 @@
     letter-spacing: -2.5px;
 
     margin-bottom: 0;
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 .howitworks-subheader-container6 {
@@ -217,3 +217,5 @@
     margin-right: 0;
     margin-top: 0;
 }
+
+.howitworks-point5 {}
