@@ -81,7 +81,9 @@
     width: 150px;
 }
 
-.homePageRentNowCircle:hover {}
+.homePageRentNowCircle:hover {
+    transform: rotate(360deg);
+}
 
 .homePageLuggages {
     position: absolute;
