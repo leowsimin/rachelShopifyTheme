@@ -65,6 +65,7 @@
 
 .add-ons-sold-out:hover {
     border: 2px solid #FFA665;
+    font-size: 25px;
 }
 
 .order-receipt-text {
