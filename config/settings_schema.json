@@ -1471,7 +1471,7 @@
     "settings": [
       {
         "type": "textarea",
-        "id": "aboutus-",
+        "id": "aboutus-first-textarea",
         "label": "Welcome message",
         "default": "Welcome to my shop!"
       }
