@@ -218,8 +218,7 @@
     margin-top: 0;
 }
 
-.howitworks-point5,
-.howitworks-address {
+.howitworks-point5 {
     color: #0d2610;
     font-family: JejuMyeongjo;
     font-size: 20px;
@@ -229,4 +228,14 @@
     letter-spacing: -1.5px;
 
     margin-top: 70px;
+}
+
+.howitworks-address {
+    color: #0d2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
 }
