@@ -1817,7 +1817,13 @@
         "type": "text",
         "id": "loginpage_header",
         "label": "Header",
-        "default": "Let our experienced shifu analyse the issue."
+        "default": "hello"
+      },
+      {
+        "type": "text",
+        "id": "loginpage_subheader",
+        "label": "Subheader",
+        "default": "WELCOME BACK!"
       }
     ]
   }
