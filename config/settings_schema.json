@@ -1503,7 +1503,19 @@
         "type": "text",
         "id": "aboutus_title5",
         "label": "Title 2",
-        "default": "problem?"
+        "default": "Our"
+      },
+      {
+        "type": "text",
+        "id": "aboutus_title6",
+        "label": "Title 2",
+        "default": "SOLUTION:"
+      },
+      {
+        "type": "text",
+        "id": "aboutus_title7",
+        "label": "Title 2",
+        "default": "Bio-Degradable Inner Lining"
       },
       {
         "type": "textarea",
