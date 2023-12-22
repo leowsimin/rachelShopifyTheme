@@ -20,14 +20,18 @@
 
 .footer-header-container2 {
     flex: 3;
+    font-size: 15px;
 }
 
 .footer-header-container3 {
     flex: 3;
+    font-size: 15px;
 }
 
 .footer-header-container4 {
     flex: 2;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-tner-logo-image {
@@ -39,11 +43,6 @@
     width: 200px;
     text-align: center;
     margin-top: 0;
-}
-
-.footer-header-container2,
-.footer-header-container3 {
-    font-size: 15px;
 }
 
 .footer-instagram-logo-image,
