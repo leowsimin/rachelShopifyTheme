@@ -1682,6 +1682,42 @@
         "id": "howitworks_subheader3",
         "label": "Subheader 3",
         "default": "Address: 113 Eunos Ave 3, #01-06 Gordon Industrial Building Singapore 409838 <br> ( 5 minutes walk from Paya Lebar MRT )"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_title3",
+        "label": "Header",
+        "default": "Why:"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_title4",
+        "label": "Header",
+        "default": "IS IT GOOD?"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_point1",
+        "label": "Point 1",
+        "default": "HYGIENE"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_point2",
+        "label": "Point 2",
+        "default": "REIMBURSE"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_point3",
+        "label": "Point 3",
+        "default": "MAINTANENCE"
+      },
+      {
+        "type": "text",
+        "id": "howitworks_point1_description",
+        "label": "Point 1 Description",
+        "default": "We constantly change our luggage linings after every use."
       }
     ]
   }
