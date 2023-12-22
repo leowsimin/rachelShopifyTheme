@@ -1756,5 +1756,58 @@
         "default": "Click the 'Rent Now' button, and you'll be instantly connected with one of our dedicated staff members ready to assist you!"
       }
     ]
+  },
+  {
+    "name": "Refurbishment Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "refurbishment_title1",
+        "label": "Header",
+        "default": "REPAIR"
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_title2",
+        "label": "Header",
+        "default": "Of &nbsp; Luggage"
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_subheader",
+        "label": "Subheader",
+        "default": "process"
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_point1",
+        "label": "Point 1",
+        "default": "Bring your luggage to our repair centre."
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_point2",
+        "label": "Point2",
+        "default": "Let our experienced shifu analyse the issue."
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_point3",
+        "label": "Point3",
+        "default": "Hear our explanation."
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_point4",
+        "label": "Point4",
+        "default": "Let us know if you would like to proceed with the repair."
+      },
+      {
+        "type": "text",
+        "id": "refurbishment_point5",
+        "label": "Point5",
+        "default": "Let our experienced shifu analyse the issue."
+      }
+    ]
   }
 ]
