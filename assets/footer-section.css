@@ -45,3 +45,9 @@
 .footer-header-container3 {
     font-size: 15px;
 }
+
+.footer-instagram-logo-image,
+.footer-tiktok-logo-image,
+.footer-xiaohongshu-logo-image {
+    width: 100px;
+}
