@@ -1472,7 +1472,7 @@
       {
         "type": "textarea",
         "id": "aboutus-first-textarea",
-        "label": "Welcome message",
+        "label": "Why is waste such a major problem?",
         "default": "Welcome to my shop!"
       }
     ]
