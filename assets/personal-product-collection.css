@@ -63,6 +63,8 @@
     letter-spacing: -1px;
 }
 
+.add-ons-sold-out::after {}
+
 .order-receipt-text {
     color: #0D2610;
     text-align: left;
