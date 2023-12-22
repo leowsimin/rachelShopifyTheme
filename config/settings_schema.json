@@ -1718,6 +1718,18 @@
         "id": "howitworks_point1_description",
         "label": "Point 1 Description",
         "default": "We constantly change our luggage linings after every use."
+      },
+      {
+        "type": "text",
+        "id": "howitworks_point2_description",
+        "label": "Point 2 Description",
+        "default": "You may claim from us if anything happens to it abroad."
+      },
+      {
+        "type": "text",
+        "id": "howitworks_point3_description",
+        "label": "Point 3 Description",
+        "default": "We ensure constant checks and maintenance are done to the luggages."
       }
     ]
   }
