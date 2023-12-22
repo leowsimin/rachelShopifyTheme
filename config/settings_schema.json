@@ -1482,6 +1482,18 @@
         "default": "such a"
       },
       {
+        "type": "text",
+        "id": "aboutus_title3",
+        "label": "About Us Title #3",
+        "default": "MAJOR"
+      },
+      {
+        "type": "text",
+        "id": "aboutus_title4",
+        "label": "About Us Title #4",
+        "default": "problem?"
+      },
+      {
         "type": "textarea",
         "id": "aboutus_first_textarea",
         "label": "Why is waste such a major problem?",
