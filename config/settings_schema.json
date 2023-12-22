@@ -1676,6 +1676,12 @@
         "id": "howitworks_subheader2",
         "label": "Subheader 2",
         "default": "It's that simple."
+      },
+      {
+        "type": "textarea",
+        "id": "howitworks_subheader3",
+        "label": "Subheader 3",
+        "default": "Address: 113 Eunos Ave 3, #01-06 Gordon Industrial Building Singapore 409838 <br> ( 5 minutes walk from Paya Lebar MRT )"
       }
     ]
   }
