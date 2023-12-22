@@ -1832,15 +1832,15 @@
     "settings": [
       {
         "type": "text",
-        "id": "register_header",
+        "id": "registerpage_header",
         "label": "Header",
         "default": "start here"
       },
       {
         "type": "text",
-        "id": "register_subheader",
+        "id": "registerpage_subheader",
         "label": "Subheader",
-        "default": "WELCOME BACK!"
+        "default": "REGISTERATION"
       }
     ]
   }
