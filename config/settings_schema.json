@@ -1843,5 +1843,40 @@
         "default": "REGISTERATION"
       }
     ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_PTE LTD UEN",
+        "label": "PTE_LTD UEN",
+        "default": "ALWC PTE LTD UEN: 202238666K"
+      },
+      {
+        "type": "text",
+        "id": "registerpage_address",
+        "label": "Address",
+        "default": "Address: 113 Eunos Ave 3 #01-06 Singapore 409838"
+      },
+      {
+        "type": "text",
+        "id": "registerpage_opp_hours",
+        "label": "Operating Hours",
+        "default": "Operating Hours: 11am - 8pm Daily"
+      },
+      {
+        "type": "text",
+        "id": "registerpage_phone_number",
+        "label": "Phone Number",
+        "default": "Phone Number: +65 9369 2997"
+      },
+      {
+        "type": "text",
+        "id": "registerpage_email_add",
+        "label": "Email Address",
+        "default": "Email Address: Shop@tner.sg"
+      }
+    ]
   }
 ]
