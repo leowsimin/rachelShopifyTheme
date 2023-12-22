@@ -1826,5 +1826,22 @@
         "default": "WELCOME BACK!"
       }
     ]
+  },
+  {
+    "name": "Register Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "register_header",
+        "label": "Header",
+        "default": "start here"
+      },
+      {
+        "type": "text",
+        "id": "register_subheader",
+        "label": "Subheader",
+        "default": "WELCOME BACK!"
+      }
+    ]
   }
 ]
