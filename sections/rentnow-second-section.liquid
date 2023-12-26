@@ -519,32 +519,20 @@ function selectionOfDays(event) {
 
     let clickedMonth = null;
 
-    const monthContainer = findMonthContainer(event.target);
-    const yearContainer = findYearContainer(event.target);
-
-    clickedMonth = monthContainer.textContent.trim();
-    clickedYear = yearContainer.textContent.trim();
-
-    const clickedDate = new Date(`${clickedYear}-${clickedMonth}-${clickedDay}`);
-
-    console.log("Clicked Date:", clickedDate);
-    console.log("Start Date:", startDate);
-    console.log("End Date:", endDate);
-
-    if (!startDate && (clickedDate >= date)) {
-
-        console.log("sighs start");
+    if (!startDate) {
+        const monthContainer = findMonthContainer(event.target);
+        const yearContainer = findYearContainer(event.target);
 
         if (monthContainer) {
+            clickedMonth = monthContainer.textContent.trim();
+            clickedYear = yearContainer.textContent.trim();
+
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
         }
     }
 
-    else if (!endDate && (clickedDate >= date)) {
-
-        console.log("sighs end");
-
+    else if (!endDate) {
         const monthContainer = findMonthContainer(event.target);
         const yearContainer = findYearContainer(event.target);
 
@@ -579,16 +567,11 @@ function selectionOfDays(event) {
             clickedMonth = monthContainer.textContent.trim();
             clickedYear = yearContainer.textContent.trim();
 
-            if (!startDate) {
-                startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-                event.target.classList.add('rentnow-start-date');
-            } else {
-                endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-                event.target.classList.add('rentnow-end-date');
-            }
+            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+            event.target.classList.add('rentnow-start-date');
+            endDate = null;
         }
     }
-
 }
 
 function findMonthContainer(element) {
@@ -992,6 +975,7 @@ function collectionOptions(diffDays) {
     });
 
 }
+
 
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
