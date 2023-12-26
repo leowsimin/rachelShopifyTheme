@@ -530,14 +530,14 @@ function selectionOfDays(event) {
     console.log("Clicked Date:", clickedDate);
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
-    
+
 
     if (!startDate && clickedDate >= currentDate) {
-        console.log("Setting start date");
         startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
         event.target.classList.add('rentnow-start-date');
-    } else if (!endDate && clickedDate >= currentDate) {
-        console.log("Setting end date");
+    } 
+    
+    else if (!endDate && clickedDate >= currentDate) {
         endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
         event.target.classList.add('rentnow-end-date');
 
@@ -548,14 +548,15 @@ function selectionOfDays(event) {
         const daysDifference = updatingSection(startDate, endDate);
 
         collectionOptions(daysDifference);
-    } else {
+    } 
+    
+    else {
         // Remove existing classes to clear previous selection
         document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
             element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
         });
 
         if (clickedDate >= currentDate) {
-            console.log("Setting start date");
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
             endDate = null;
