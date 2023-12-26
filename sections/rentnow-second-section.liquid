@@ -579,11 +579,16 @@ function selectionOfDays(event) {
             clickedMonth = monthContainer.textContent.trim();
             clickedYear = yearContainer.textContent.trim();
 
-            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-            event.target.classList.add('rentnow-start-date');
-            endDate = null;
+            if (!startDate) {
+                startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+                event.target.classList.add('rentnow-start-date');
+            } else {
+                endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+                event.target.classList.add('rentnow-end-date');
+            }
         }
     }
+
 }
 
 function findMonthContainer(element) {
