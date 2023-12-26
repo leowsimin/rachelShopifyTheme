@@ -556,10 +556,18 @@ function selectionOfDays(event) {
             element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
         });
 
+        const rentNowDateError = document.getElementById("rentNowDateError");
+        rentNowDateError.style.display = "none";
+
         if (clickedDate >= currentDate) {
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
             endDate = null;
+        }
+
+        else {
+            rentNowDateError.style.display = "flex";
+
         }
     }
 }
