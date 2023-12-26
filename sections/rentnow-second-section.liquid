@@ -509,7 +509,6 @@ let collectionDate1 = null;
 let collectionDate2 = null;
 
 function selectionOfDays(event) {
-
     const clickedDay = event.target.textContent;
 
     // Check if the clicked element has "rentnow-nextdays" or "rentnow-prevdays" class
@@ -519,30 +518,27 @@ function selectionOfDays(event) {
 
     let clickedMonth = null;
 
-    if (!startDate) {
-        const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
+    const monthContainer = findMonthContainer(event.target);
+    const yearContainer = findYearContainer(event.target);
 
-        if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
+    clickedMonth = monthContainer.textContent.trim();
+    clickedYear = yearContainer.textContent.trim();
 
-            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-            event.target.classList.add('rentnow-start-date');
-        }
-    }
+    const clickedDate = new Date(`${clickedYear}-${clickedMonth}-${clickedDay}`);
+    const currentDate = new Date(); // Get the current date
 
-    else if (!endDate) {
-        const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
+    console.log("Clicked Date:", clickedDate);
+    console.log("Start Date:", startDate);
+    console.log("End Date:", endDate);
 
-        if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
-
-            endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-            event.target.classList.add('rentnow-end-date');
-        }
+    if (!startDate && clickedDate >= currentDate) {
+        console.log("Setting start date");
+        startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+        event.target.classList.add('rentnow-start-date');
+    } else if (!endDate && clickedDate >= currentDate) {
+        console.log("Setting end date");
+        endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+        event.target.classList.add('rentnow-end-date');
 
         applySelectedDates();
         applyFreeDates();
@@ -551,22 +547,14 @@ function selectionOfDays(event) {
         const daysDifference = updatingSection(startDate, endDate);
 
         collectionOptions(daysDifference);
-
-    }
-
-    else {
+    } else {
         // Remove existing classes to clear previous selection
         document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
             element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
         });
 
-        const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
-
-        if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
-
+        if (clickedDate >= currentDate) {
+            console.log("Setting start date");
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
             endDate = null;
