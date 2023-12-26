@@ -525,7 +525,7 @@ function selectionOfDays(event) {
     clickedMonth = monthContainer.textContent.trim();
     clickedYear = yearContainer.textContent.trim();
 
-    const clickedDate = 
+    const clickedDate = new Date(`${clickedYear}-${clickedMonth}-${clickedDay}`);
 
     if (!startDate) {
 
