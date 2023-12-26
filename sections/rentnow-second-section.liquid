@@ -520,11 +520,14 @@ function selectionOfDays(event) {
     let clickedMonth = null;
 
     if (!startDate) {
-        console.log("Date:", date);
-        console.log("Clicked Date:", clickedDay);
 
         const monthContainer = findMonthContainer(event.target);
         const yearContainer = findYearContainer(event.target);
+
+        console.log("Date:", date);
+        console.log("Clicked Date:", clickedDay);
+        console.log("Clicked Month:", monthContainer);
+        console.log("Clicked Year:", yearContainer);
 
         if (monthContainer) {
             clickedMonth = monthContainer.textContent.trim();
