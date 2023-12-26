@@ -36,6 +36,10 @@
     justify-content: space-between;
 }
 
+.footer-header-container4 a {
+    align-items: center;
+}
+
 .footer-tner-logo-image {
     width: 130px;
 }
