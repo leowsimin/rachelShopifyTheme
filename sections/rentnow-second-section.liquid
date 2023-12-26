@@ -860,7 +860,6 @@ function collectionOptions(diffDays) {
     const rentNowConfirmButton = document.getElementById("rentNowConfirmButton");
 
     const rentNowWhatsappText = document.getElementById("rent-now-whatsapp-text");
-    
 
     rentNowNotClickedSelfCollect.addEventListener("click", function () {
         rentNowNotClickedSelfCollect.style.display = "none";
@@ -889,6 +888,7 @@ function collectionOptions(diffDays) {
         rentNowNotClickedSelfCollect.style.display = "flex";
 
         rentNowConfirmButton.style.color = "rgba(13, 38, 16, 0.20)";
+        rentNowConfirmButton.style.border = "2px solid rgba(13, 38, 16, 0.20)";
 
         rentNowWhatsappText.style.color = "rgba(13, 38, 16, 0.20)";
         
@@ -975,7 +975,6 @@ function collectionOptions(diffDays) {
     });
 
 }
-
 
 function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
 
