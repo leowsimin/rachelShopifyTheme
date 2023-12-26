@@ -524,14 +524,14 @@ function selectionOfDays(event) {
         const monthContainer = findMonthContainer(event.target);
         const yearContainer = findYearContainer(event.target);
 
-        console.log("Date:", date);
-        console.log("Clicked Date:", clickedDay);
-        console.log("Clicked Month:", monthContainer);
-        console.log("Clicked Year:", yearContainer);
-
         if (monthContainer) {
             clickedMonth = monthContainer.textContent.trim();
             clickedYear = yearContainer.textContent.trim();
+
+            console.log("Date:", date);
+            console.log("Clicked Date:", clickedDay);
+            console.log("Clicked Month:", clickedMonth);
+            console.log("Clicked Year:", clickedYear);
 
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
