@@ -529,8 +529,7 @@ function selectionOfDays(event) {
 
     if (!startDate && (clickedDate >= date)) {
 
-        console.log("sighs");
-
+        console.log("sighs start");
 
         if (monthContainer) {
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
@@ -539,6 +538,9 @@ function selectionOfDays(event) {
     }
 
     else if (!endDate && (clickedDate >= date)) {
+
+        console.log("sighs end");
+
         const monthContainer = findMonthContainer(event.target);
         const yearContainer = findYearContainer(event.target);
 
