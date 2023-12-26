@@ -519,15 +519,17 @@ function selectionOfDays(event) {
 
     let clickedMonth = null;
 
+    const monthContainer = findMonthContainer(event.target);
+    const yearContainer = findYearContainer(event.target);
+
+    clickedMonth = monthContainer.textContent.trim();
+    clickedYear = yearContainer.textContent.trim();
+
+    const clickedDate = 
+
     if (!startDate) {
 
-        const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
-
         if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
-
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
         }
