@@ -37,7 +37,9 @@
 }
 
 .footer-header-container4 a {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-tner-logo-image {
