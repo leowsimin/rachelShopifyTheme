@@ -519,9 +519,7 @@ function selectionOfDays(event) {
 
     let clickedMonth = null;
 
-    if (!startDate) {
-        console.log("Date:", date);
-        console.log("HELLO");
+    if (!startDate && (clickedDay > date)) {
         const monthContainer = findMonthContainer(event.target);
         const yearContainer = findYearContainer(event.target);
 
