@@ -9,7 +9,7 @@
 }
 
 .rentnow-main-container3 {
-    text-align: left;
+    text-align: center;
 }
 
 .rentnow-header3-container1,
@@ -138,16 +138,12 @@
     border-radius: 10px;
     border: 2px solid rgba(13, 38, 16, 0.20);
 
-    margin-left: 200px;
-
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 
-    position: absolute;
-    bottom: 0;
-    right: -150px;
+    margin-top: 10px;
 }
 
 .rentnow-header3-container4 {
@@ -157,4 +153,25 @@
 #rentNowClickedDelivery,
 #rentNowClickedSelfCollect {
     display: none;
+}
+
+.rentnow-header3-container6 {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#rent-now-whatsapp-text {
+    color: rgba(13, 38, 16, 0.20);
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-top: 20px;
 }

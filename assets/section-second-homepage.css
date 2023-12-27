@@ -11,62 +11,53 @@
 
     margin: 0;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
 }
 
 .homePageAllPeople {
     display: flex;
+    flex-direction: row;
     justify-content: center;
 
-    padding-bottom: 5%;
-}
-
-.homePageOpenPeople {
-    display: flex;
-}
-
-.homePageOpenQuote {
-    padding-right: 20px;
-    width: 90px;
-    margin-bottom: 100px;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 h3 {
     color: #0D2610;
     text-align: center;
     font-family: Syncopate;
-    font-size: 15px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.homePagePeople1 {
-    text-align: center;
-}
-
-.homePagePeople2 {
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
+.homePagePeople1,
+.homePagePeople2,
 .homePagePeople3 {
+    display: block;
     text-align: center;
+
+    width: 50%;
 }
 
 .homePageDescription p {
     margin: 5px 0;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    color: #000;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
+
 
 .homePageClosePeople {
     display: flex;
-}
-
-.homePageCloseQuote {
-    padding-left: 20px;
-
-    margin-top: 100%
 }
 
 .homePageContainer {
@@ -83,69 +74,57 @@ h3 {
 .homePagePanel2 {
     height: auto;
     background-color: #FAF5EE;
+
+    padding-bottom: 7%;
 }
 
+.homePage-luggage3-image {
+    width: 80px;
+}
+
+.homePage-luggage2-image {
+    width: 95px;
+}
+
+.homePage-luggage1-image {
+    width: 97px;
+}
+
+.homePageCloseQuote {
+    margin-top: 350px;
+}
 
 @media only screen and (max-width: 990px) {
-    .homePageTestimony {
-        font-size: 40px;
-    }
-
-    h3 {
-        font-size: 13px;
-    }
-
-    .homePageDescription {
-        font-size: 13px;
-    }
-
     .homePageAllPeople {
         display: flex;
-        justify-content: center;
         flex-direction: column;
+        align-items: center;
     }
 
-    .homePagePeople1 {
-        text-align: center;
-    }
-
-    .homePagePeople2 {
-        text-align: center;
-    }
-
+    .homePagePeople1,
+    .homePagePeople2,
     .homePagePeople3 {
-        text-align: center;
-    }
-
-    .homePageOpenQuote {
-        position: absolute;
-        width: 60px;
-
-        right: 100%;
-        top: 45%;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .homePageCloseQuote {
-        position: absolute;
-        width: 60px;
-        left: 100%;
-        top: 40%;
+        margin-top: 0;
     }
 
-    .homePageClosePeople {
-        position: relative;
-        margin-right: auto;
-        margin-left: auto;
+    .homePageOpenQuote {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 100px;
     }
 
-    .homePageOpenPeople {
-        position: relative;
-        margin-right: auto;
-        margin-left: auto;
+    .homePageCloseQuote {
+        display: flex;
+        align-self: flex-end;
+        margin-right: 100px;
     }
 
-    .homePagePanel2 {
-        height: auto;
-        background-color: #FFFCF8;
+    .homePageTestimony {
+        padding-bottom: 5%;
     }
 }

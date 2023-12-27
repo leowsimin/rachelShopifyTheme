@@ -59,7 +59,7 @@
     letter-spacing: -2px;
 
     margin-top: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .howitworks-cycle-image {
@@ -78,17 +78,20 @@
 
 .howitworks-subheader-container1 {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .howitworks-tick-image {
     position: absolute;
     width: 160px;
 
-    transform: translate(-50%, -30%);
-    z-index: -1;
+    transform: translateY(-20%);
 }
 
 .howitworks-header1container2 h4 {
+    position: relative;
+
     color: #0D2610;
     text-align: center;
     font-family: Syncopate;
@@ -97,7 +100,9 @@
     font-weight: 700;
     line-height: normal;
 
-    margin-bottom: 150px;
+    margin-bottom: 40px;
+    margin-top: 1px;
+    z-index: 2;
 }
 
 .howitworks-subheader-container4 p {
@@ -127,13 +132,12 @@
 .howitworks-subheader-container3 {
     position: relative;
     margin-left: 300px;
-
 }
 
 .howitworks-circle-image {
     position: absolute;
     width: 400px;
-    transform: translate(-45%, 15%);
+    transform: translate(-45%, -20%);
 }
 
 .howitworks-subheader-container2 p {
@@ -157,4 +161,81 @@
     letter-spacing: -2.5px;
 
     margin-bottom: 0;
+    margin-top: 50px;
+}
+
+.howitworks-subheader-container6 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.howitworks-subheader-container6 p {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.howitworks-subheader-container1 h4 {
+    margin-left: 200px;
+}
+
+.howitworks-subheader-container7 {
+    display: flex;
+}
+
+.howitwork-3rd-text {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-left: 900px;
+    margin-top: 0;
+}
+
+.howitworks-subheader-container3 p {
+    color: #0D2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.howitworks-point5 {
+    color: #0d2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+
+    margin-top: 80px;
+}
+
+.howitworks-address {
+    color: #0d2610;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
 }

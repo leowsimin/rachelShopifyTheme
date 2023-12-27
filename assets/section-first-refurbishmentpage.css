@@ -1,7 +1,33 @@
 .aboutus-third-section {
     background-color: #FFFCF8;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
+}
+
+.aboutus-third-section h5 {
+    color: #0D2610;
+    text-align: center;
+    font-family: Syncopate;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin: 0;
+}
+
+.aboutus-third-section h4 {
+    color: #0D2610;
+    text-align: center;
+    font-family: JejuMyeongjo;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -5px;
+
+    margin: 0;
+    position: relative;
 }
 
 .aboutus-header3-container1 {
@@ -28,8 +54,7 @@
     position: absolute;
     width: 220px;
 
-    margin-top: 180px;
-    margin-left: 480px;
+    transform: translate(230px, 100px);
 }
 
 .aboutus-subheader-container5 h5 {
@@ -85,7 +110,7 @@
     line-height: normal;
 
     margin-top: 15%;
-    margin-bottom: 9%;
+    margin-bottom: 5%;
 }
 
 .aboutus-image9 {
@@ -108,7 +133,7 @@
     list-style-position: inside;
     text-align: center;
     /* Center-align the list content */
-    width: 300px;
+    width: 400px;
     height: 150px;
     margin: auto;
     /* Center the ordered list within the container */
@@ -123,4 +148,5 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 10px;
 }

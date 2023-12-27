@@ -6,7 +6,7 @@
 
     margin-left: 20%;
     margin-right: 15%;
-    padding-top: 5%;
+    padding-top: 4%;
 
 }
 
@@ -79,6 +79,11 @@
 .homePageRentNowCircle {
     position: absolute;
     width: 150px;
+    transition: transform 0.5s ease;
+}
+
+.homePageRentNowCircle:hover {
+    transform: rotate(360deg);
 }
 
 .homePageLuggages {

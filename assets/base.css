@@ -1284,7 +1284,7 @@ button.shopify-payment-button__button--unbranded {
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
-.button:after,
+/* .button:after,
 .shopify-challenge__button:after,
 .customer button:after,
 .shopify-payment-button__button--unbranded:after {
@@ -1296,10 +1296,10 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-  /* box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background)); */
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
   transition: box-shadow var(--duration-short) ease;
-}
+} */
 
 .button:not([disabled]):hover::after,
 .shopify-challenge__button:hover::after,
@@ -3543,23 +3543,29 @@ details-disclosure>details {
   padding-right: 30px;
 }
 
+.navLink:hover {
+  color: #FFA665;
+  font-size: 16px;
+}
+
 .navStyle {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
 }
 
 .fullNavStyle {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  white-space: nowrap;
 }
 
 .sideNavBarStyle {
   display: flex;
   position: absolute;
-  left: 86%;
+  white-space: nowrap;
+  right: 0;
+  margin-right: 20px;
 }
 
 .logInButton a {
@@ -3572,6 +3578,10 @@ details-disclosure>details {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.logInButton a:hover {
+  color: rgba(13, 38, 16, 0.20);
 }
 
 .signUpButton a {
@@ -3591,6 +3601,11 @@ details-disclosure>details {
   margin-left: 20px;
 }
 
+.signUpButton a:hover {
+  background-color: #FFA665;
+  color: #FAF5EE;
+}
+
 .header__icon--search,
 .header .header__icons .header__icon--account,
 .header .header__icons {
@@ -3604,4 +3619,21 @@ details-disclosure>details {
 
 .card-wrapper {
   height: auto !important;
+}
+
+.header-first-name,
+.header-logout {
+  color: #0D2610;
+  text-align: center;
+  font-family: JejuMyeongjo;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  text-decoration: none;
+}
+
+.header-first-name {
+  margin-right: 10px;
 }
