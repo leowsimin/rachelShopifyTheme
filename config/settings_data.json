@@ -111,6 +111,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "aboutus_first_textarea": "The globalization of markets has led to individualisation. Everyone wants to own something for themselves. This increase in demand leads to increased production, which contributes to a higher carbon footprint and in turn more waste generated. Hence Rent Now. Don't Buy.",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "f46b16ef-bfe3-46ae-80d2-c3dbd6d0ec8a": {
+      "type": "aboutuspage-first-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "312d0acc-28a2-4acd-8972-399cda7a6d8f": {
+      "type": "aboutuspage-second-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "08b2d9ac-a6f4-4aef-bca5-4081d6a22725": {
+      "type": "aboutuspage-third-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "f46b16ef-bfe3-46ae-80d2-c3dbd6d0ec8a",
+    "312d0acc-28a2-4acd-8972-399cda7a6d8f",
+    "08b2d9ac-a6f4-4aef-bca5-4081d6a22725",
+    "main"
+  ]
+}
