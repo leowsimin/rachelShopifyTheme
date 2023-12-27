@@ -7,8 +7,8 @@
 
 <div class="howitworks-third-section">
   <div class="howitworks-header3-container1">
-      <h1>Still Confused?</h1>
-      <h2>WE GOT YOU!</h2>
+      <h1>{{settings.howitworks_title5}}</h1>
+      <h2>{{settings.howitworks_title6}}</h2>
       <img class= "howitworks-swigglylines-image" src="{{ 'howitworks-swigglylines.svg' | asset_url }}" />
   </div>
 
@@ -23,10 +23,8 @@
   </div>
 
   <div class="howitworks-header3-container3">
-    <p>Please choose your travel date so that we can provide you with the total rental price per luggage.</p>
-    <p>Additionally, you'll have the option to select either delivery or self-collection. If you choose self-collection, 
-    please specify your preferred collection and return date and time. </p>
-    <p>Once done. proceed to the next section!</p>
+    <p>{{settings.howitworks_instruction1}}</p>
+    {% comment %} <p>Once done. proceed to the next section!</p> {% endcomment %}
   </div>
 
   <div class="howitworks-header3-container4">
@@ -36,15 +34,16 @@
 
     <div class="howitworks-subheader3-container13">
       <div class="howitworks-subheader3-container14">
-      <p>Upon reaching the Product Page, you can customize your selection by choosing the type, size, and quantity of your
+        <p>{{settings.howitworks_instruction2}}</p>
+      {% comment %} <p>Upon reaching the Product Page, you can customize your selection by choosing the type, size, and quantity of your
       preferred luggage. </p>
       <p>Furthermore, explore our range of sustainable travel products, including disposable pillowcases, toothbrushes, 
-      towels, and more for your browsing pleasure. </p>
+      towels, and more for your browsing pleasure. </p> {% endcomment %}
       </div>
     </div>
   </div>
 
-  <div class="howitworks-header3-container5">
+  {% comment %} <div class="howitworks-header3-container5">
     <svg width="180" height="150">
       <rect width="180" height="150" style="stroke-width: 2; stroke: rgb(0, 0, 0); fill: none;" />
     </svg>
@@ -84,7 +83,7 @@
   <div class="howitworks-header3-container9">
     <p>This page displays a comprehensive overview of your chosen products, including the rented luggage.</p>
     <p>Please take a moment to review and confirm all the details before proceeding to make the payment below.</p>
-  </div>
+  </div> {% endcomment %}
 
 </div>
 

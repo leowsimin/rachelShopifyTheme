@@ -135,25 +135,24 @@
 {% stylesheet %}
 {% endstylesheet %}
 
-{% javascript %}
-
+{%- javascript -%}
 //Inserting Current Month/Year
 
 const date = new Date();
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
 ];
 
 // First Calendar
@@ -180,135 +179,135 @@ const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdown
 
 const options = dropdownSecondYear.getElementsByTagName('option');
 for (let i = 0; i < options.length; i++) {
-  if (options[i].value == currentYear) {
-    options[i].selected = true;
-  } else {
-    options[i].selected = false;
-  }
+    if (options[i].value == currentYear) {
+        options[i].selected = true;
+    } else {
+        options[i].selected = false;
+    }
 }
 
 const dropdownYear = document.getElementById('rentnow-first-year-dropdownmenu');
 
 // Event listener for label click
-rentNowFirstMonthLabel.addEventListener('click', function() {
-  dropdownMonth.style.display = 'block'; 
-  dropdownMonth.size= "7";
-  dropdownMonth.click();
-  event.stopPropagation();
+rentNowFirstMonthLabel.addEventListener('click', function () {
+    dropdownMonth.style.display = 'block';
+    dropdownMonth.size = "7";
+    dropdownMonth.click();
+    event.stopPropagation();
 });
 
 // Event listener for dropdown change
-dropdownMonth.addEventListener('change', function() {
-  const selectedMonth = dropdownMonth.value;
-  rentNowFirstMonthLabel.textContent = selectedMonth;
-  dropdownMonth.style.display = 'none';
+dropdownMonth.addEventListener('change', function () {
+    const selectedMonth = dropdownMonth.value;
+    rentNowFirstMonthLabel.textContent = selectedMonth;
+    dropdownMonth.style.display = 'none';
 
-  const selectedMonthIndex = months.indexOf(selectedMonth);
-  date.setMonth(selectedMonthIndex);
+    const selectedMonthIndex = months.indexOf(selectedMonth);
+    date.setMonth(selectedMonthIndex);
 
-  const selectedYear = dropdownYear.value;
+    const selectedYear = dropdownYear.value;
 
-  secondMonth.setMonth(selectedMonthIndex + 1);
-  secondMonth.setFullYear(selectedYear);
+    secondMonth.setMonth(selectedMonthIndex + 1);
+    secondMonth.setFullYear(selectedYear);
 
-  // Check if the month of the second calendar is January
-  if (secondMonth.getMonth() === 0) {
-    secondMonth.setFullYear(secondMonth.getFullYear() + 1);
-  }
-
-  rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
-  document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
-
-  const currentYear = secondMonth.getFullYear();
-  const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
-
-  const options = dropdownSecondYear.getElementsByTagName('option');
-  for (let i = 0; i < options.length; i++) {
-    if (options[i].value == currentYear) {
-      options[i].selected = true;
-    } else {
-      options[i].selected = false;
+    // Check if the month of the second calendar is January
+    if (secondMonth.getMonth() === 0) {
+        secondMonth.setFullYear(secondMonth.getFullYear() + 1);
     }
-  }
-  
-  updateCalendar();
-  attachEventListeners();
-  applySelectedDates();
-  applyFreeDates();
+
+    rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
+    document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+
+    const currentYear = secondMonth.getFullYear();
+    const dropdownSecondYear = document.getElementById("rentnow-second-year-dropdownmenu");
+
+    const options = dropdownSecondYear.getElementsByTagName('option');
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].value == currentYear) {
+            options[i].selected = true;
+        } else {
+            options[i].selected = false;
+        }
+    }
+
+    updateCalendar();
+    attachEventListeners();
+    applySelectedDates();
+    applyFreeDates();
 });
 
 
 // Function to update the calendar
 function updateCalendar() {
-  const firstMonthDays = document.querySelector(".rentnow-first-days");
-  let days = "";
+    const firstMonthDays = document.querySelector(".rentnow-first-days");
+    let days = "";
 
-  const secondMonthDays = document.querySelector(".rentnow-second-days");
-  let secondDays = "";
+    const secondMonthDays = document.querySelector(".rentnow-second-days");
+    let secondDays = "";
 
-  //First Calendar
+    //First Calendar
 
-  // Dates before Month
-  const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-  const lastDayPrevMonth = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+    // Dates before Month
+    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+    const lastDayPrevMonth = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 
-  for (let x = firstDay - 1; x >= 0; x--) {
-    days += `<p class="rentnow-prevdays">${lastDayPrevMonth - x}</p>`;
-  }
+    for (let x = firstDay - 1; x >= 0; x--) {
+        days += `<p class="rentnow-prevdays">${lastDayPrevMonth - x}</p>`;
+    }
 
-  // Dates correspond to Month and Year
-  const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    // Dates correspond to Month and Year
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-  for (let i = 1; i <= lastDay; i++) {
-    days += `<p>${i}</p>`;
-  }
+    for (let i = 1; i <= lastDay; i++) {
+        days += `<p>${i}</p>`;
+    }
 
-  // Dates after Month
-  const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-  const nextDays = 6 - lastDayIndex;
+    // Dates after Month
+    const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
+    const nextDays = 6 - lastDayIndex;
 
-  for (let j = 1; j <= nextDays; j++) {
-    days += `<p class="rentnow-nextdays">${j}</p>`;
-  }
+    for (let j = 1; j <= nextDays; j++) {
+        days += `<p class="rentnow-nextdays">${j}</p>`;
+    }
 
-  firstMonthDays.innerHTML = days;
+    firstMonthDays.innerHTML = days;
 
-  //Second Calendar
+    //Second Calendar
 
-  // Dates before Month
-  const firstDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 1).getDay();
-  const lastDayPrevSecondMonth = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 0).getDate();
+    // Dates before Month
+    const firstDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 1).getDay();
+    const lastDayPrevSecondMonth = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 0).getDate();
 
-  for (let t = firstDaySecond - 1; t >= 0; t--) {
-    secondDays += `<p class="rentnow-prevdays">${lastDayPrevSecondMonth - t}</p>`;
-  }
+    for (let t = firstDaySecond - 1; t >= 0; t--) {
+        secondDays += `<p class="rentnow-prevdays">${lastDayPrevSecondMonth - t}</p>`;
+    }
 
-  const lastDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDate();
+    const lastDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDate();
 
-  for (let y = 1; y <= lastDaySecond; y++) {
-    secondDays += `<p>${y}</p>`;
-  }
+    for (let y = 1; y <= lastDaySecond; y++) {
+        secondDays += `<p>${y}</p>`;
+    }
 
-  const lastDaySecondIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDay();
-  const secondNextDays = 6 - lastDaySecondIndex;
+    const lastDaySecondIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDay();
+    const secondNextDays = 6 - lastDaySecondIndex;
 
-  for (let p = 1; p <= secondNextDays; p++) {
-    secondDays += `<p class="rentnow-nextdays">${p}</p>`;
-  }
+    for (let p = 1; p <= secondNextDays; p++) {
+        secondDays += `<p class="rentnow-nextdays">${p}</p>`;
+    }
 
-  secondMonthDays.innerHTML = secondDays;
+    secondMonthDays.innerHTML = secondDays;
 }
 
 updateCalendar();
 
 // Dates before Month
-const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
+const firstPrevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 const firstFirstDayIndex = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
 let days = "";
 
 for (let x = firstFirstDayIndex; x > 0; x--) {
-  days += `<p class="rentnow-prevdays">${firstPrevLastDay - x +  1}</p>`; 
+    days += `<p class="rentnow-prevdays">${firstPrevLastDay - x + 1}</p>`;
 }
 
 // Dates correspond to Month and Year
@@ -317,48 +316,48 @@ const firstMonthDays = document.querySelector(".rentnow-first-days");
 const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 for (let i = 1; i <= lastDay; i++) {
-  days += `<p id="firstMonthDays">${i}</p>`;
+    days += `<p id="firstMonthDays">${i}</p>`;
 }
 
 // Dates after Month
 const firstLastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
 const firstNextDays = 7 - firstLastDayIndex - 1;
 
-for (let j = 1; j<= firstNextDays; j++) {
-  days += `<p class="rentnow-nextdays">${j}</p>`;
-  firstMonthDays.innerHTML = days;
+for (let j = 1; j <= firstNextDays; j++) {
+    days += `<p class="rentnow-nextdays">${j}</p>`;
+    firstMonthDays.innerHTML = days;
 }
 
 // Event listener for label click
-rentNowFirstYearLabel.addEventListener('click', function(event) {
-  dropdownYear.style.display = 'block';
-  dropdownYear.size = 7;
-  dropdownYear.click();
-  event.stopPropagation();
+rentNowFirstYearLabel.addEventListener('click', function (event) {
+    dropdownYear.style.display = 'block';
+    dropdownYear.size = 7;
+    dropdownYear.click();
+    event.stopPropagation();
 });
 
 // Event listener for dropdown change
-dropdownYear.addEventListener('change', function() {
-  const selectedYear = dropdownYear.value;
-  rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
-  dropdownYear.style.display = 'none';
+dropdownYear.addEventListener('change', function () {
+    const selectedYear = dropdownYear.value;
+    rentNowFirstYearLabel.textContent = "\u00A0" + selectedYear;
+    dropdownYear.style.display = 'none';
 
-  date.setFullYear(selectedYear);
+    date.setFullYear(selectedYear);
 
-  secondMonth.setFullYear(selectedYear);
+    secondMonth.setFullYear(selectedYear);
 
-  // Check if the month of the second calendar is January
-  if (secondMonth.getMonth() === 0) {
-    secondMonth.setFullYear(secondMonth.getFullYear() + 1);
-  }
+    // Check if the month of the second calendar is January
+    if (secondMonth.getMonth() === 0) {
+        secondMonth.setFullYear(secondMonth.getFullYear() + 1);
+    }
 
-  rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
-  document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
+    rentNowSecondMonthLabel.textContent = months[secondMonth.getMonth()];
+    document.querySelector('.rentnow-second-year-select').innerHTML = "&nbsp;" + secondMonth.getFullYear();
 
-  updateCalendar();
-  attachEventListeners();
-  applySelectedDates();
-  applyFreeDates();
+    updateCalendar();
+    attachEventListeners();
+    applySelectedDates();
+    applyFreeDates();
 });
 
 // Second Calendar
@@ -371,105 +370,105 @@ const dropdownSecondMonth = document.getElementById("rentnow-second-month-dropdo
 const rentNowMonthError = document.getElementById('rentNowMonthError');
 const rentNowYearError = document.getElementById('rentNowYearError');
 
-rentNowSecondMonthLabel.addEventListener("click", function() {
-  dropdownSecondMonth.style.display = 'block'; 
-  dropdownSecondMonth.size= "7";
-  dropdownSecondMonth.click();
-  event.stopPropagation();
+rentNowSecondMonthLabel.addEventListener("click", function () {
+    dropdownSecondMonth.style.display = 'block';
+    dropdownSecondMonth.size = "7";
+    dropdownSecondMonth.click();
+    event.stopPropagation();
 })
 
-dropdownSecondMonth.addEventListener('change', function() {
-  const selectedMonth = dropdownSecondMonth.value;
+dropdownSecondMonth.addEventListener('change', function () {
+    const selectedMonth = dropdownSecondMonth.value;
 
-  if ( (dropdownSecondYear.value > dropdownYear.value)) {
+    if ((dropdownSecondYear.value > dropdownYear.value)) {
 
-    rentNowSecondMonthLabel.textContent = selectedMonth;
-    dropdownSecondMonth.style.display = 'none';
+        rentNowSecondMonthLabel.textContent = selectedMonth;
+        dropdownSecondMonth.style.display = 'none';
 
-    const selectedMonthIndex = months.indexOf(selectedMonth);
-    secondMonth.setMonth(selectedMonthIndex);
-    rentNowMonthError.style.display = 'none';
+        const selectedMonthIndex = months.indexOf(selectedMonth);
+        secondMonth.setMonth(selectedMonthIndex);
+        rentNowMonthError.style.display = 'none';
 
-    updateCalendar();
-    attachEventListeners();
-    applySelectedDates();
-    applyFreeDates();
-  }
+        updateCalendar();
+        attachEventListeners();
+        applySelectedDates();
+        applyFreeDates();
+    }
 
-  else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(selectedMonth) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
-    rentNowSecondMonthLabel.textContent = selectedMonth;
-    dropdownSecondMonth.style.display = 'none';
+    else if ((dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(selectedMonth) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
+        rentNowSecondMonthLabel.textContent = selectedMonth;
+        dropdownSecondMonth.style.display = 'none';
 
-    const selectedMonthIndex = months.indexOf(selectedMonth);
-    secondMonth.setMonth(selectedMonthIndex);
-    rentNowMonthError.style.display = 'none';
+        const selectedMonthIndex = months.indexOf(selectedMonth);
+        secondMonth.setMonth(selectedMonthIndex);
+        rentNowMonthError.style.display = 'none';
 
-    updateCalendar();
-    attachEventListeners();
-    applySelectedDates();
-    applyFreeDates();
-  }
+        updateCalendar();
+        attachEventListeners();
+        applySelectedDates();
+        applyFreeDates();
+    }
 
-  else {
-    rentNowMonthError.style.display = 'flex';
-  }
+    else {
+        rentNowMonthError.style.display = 'flex';
+    }
 
 });
 
 // Second Year Dropdown Menu
 
-rentNowSecondYearLabel.addEventListener('click', function(event) {
-  dropdownSecondYear.style.display = 'block';
-  dropdownSecondYear.size = 7;
-  dropdownSecondYear.click();
-  event.stopPropagation();
+rentNowSecondYearLabel.addEventListener('click', function (event) {
+    dropdownSecondYear.style.display = 'block';
+    dropdownSecondYear.size = 7;
+    dropdownSecondYear.click();
+    event.stopPropagation();
 });
 
 // Event listener for dropdown change
-dropdownSecondYear.addEventListener('change', function() {
-  const selectedYear = dropdownSecondYear.value;
+dropdownSecondYear.addEventListener('change', function () {
+    const selectedYear = dropdownSecondYear.value;
 
-  if ( (dropdownSecondYear.value > dropdownYear.value)) {
-    rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
-    dropdownSecondYear.style.display = 'none';
-    rentNowYearError.style.display = 'none';
+    if ((dropdownSecondYear.value > dropdownYear.value)) {
+        rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
+        dropdownSecondYear.style.display = 'none';
+        rentNowYearError.style.display = 'none';
 
-    secondMonth.setFullYear(selectedYear);
+        secondMonth.setFullYear(selectedYear);
 
-    updateCalendar();
-    attachEventListeners();
-    applySelectedDates();
-    applyFreeDates();
-  }
+        updateCalendar();
+        attachEventListeners();
+        applySelectedDates();
+        applyFreeDates();
+    }
 
-  else if ( (dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(rentNowSecondMonthLabel.textContent) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
-    rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
-    dropdownSecondYear.style.display = 'none';
+    else if ((dropdownSecondYear.value === dropdownYear.value) && (months.indexOf(rentNowSecondMonthLabel.textContent) > months.indexOf(rentNowFirstMonthLabel.textContent))) {
+        rentNowSecondYearLabel.textContent = "\u00A0" + selectedYear;
+        dropdownSecondYear.style.display = 'none';
 
-    secondMonth.setFullYear(selectedYear);
-    rentNowYearError.style.display = 'none';
+        secondMonth.setFullYear(selectedYear);
+        rentNowYearError.style.display = 'none';
 
-    updateCalendar();
-    attachEventListeners();
-    applySelectedDates();
-    applyFreeDates();
-  }
+        updateCalendar();
+        attachEventListeners();
+        applySelectedDates();
+        applyFreeDates();
+    }
 
-  else {
-    rentNowYearError.style.display = 'flex';
-  }
+    else {
+        rentNowYearError.style.display = 'flex';
+    }
 
 });
 
 // Dates before Month
 
-const secondPrevLastDay = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 0).getDate(); 
+const secondPrevLastDay = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 0).getDate();
 const secondFirstDayIndex = new Date(secondMonth.getFullYear(), secondMonth.getMonth(), 1).getDay();
 
 let secondDays = "";
 
 for (let t = secondFirstDayIndex; t > 0; t--) {
-  secondDays += `<p class="rentnow-prevdays">${secondPrevLastDay - t +  1}</p>`; 
+    secondDays += `<p class="rentnow-prevdays">${secondPrevLastDay - t + 1}</p>`;
 }
 
 // Dates correspond to Month and Year
@@ -478,7 +477,7 @@ const secondMonthDays = document.querySelector(".rentnow-second-days");
 const lastDaySecond = new Date(secondMonth.getFullYear(), secondMonth.getMonth() + 1, 0).getDate();
 
 for (let y = 1; y <= lastDaySecond; y++) {
-  secondDays += `<p id="firstMonthDays">${y}</p>`;
+    secondDays += `<p id="firstMonthDays">${y}</p>`;
 }
 
 // Dates after Month
@@ -486,8 +485,8 @@ const secondLastDayIndex = new Date(secondMonth.getFullYear(), secondMonth.getMo
 const secondNextDays = 7 - secondLastDayIndex - 1;
 
 for (let p = 1; p <= secondNextDays; p++) {
-  secondDays += `<p class="rentnow-nextdays">${p}</p>`;
-  secondMonthDays.innerHTML = secondDays;
+    secondDays += `<p class="rentnow-nextdays">${p}</p>`;
+    secondMonthDays.innerHTML = secondDays;
 }
 
 // Date Selection
@@ -510,40 +509,37 @@ let collectionDate1 = null;
 let collectionDate2 = null;
 
 function selectionOfDays(event) {
-
     const clickedDay = event.target.textContent;
 
     // Check if the clicked element has "rentnow-nextdays" or "rentnow-prevdays" class
     if (event.target.classList.contains('rentnow-nextdays') || event.target.classList.contains('rentnow-prevdays')) {
-        return; 
+        return;
     }
 
     let clickedMonth = null;
 
-    if (!startDate) {
-        const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
+    const monthContainer = findMonthContainer(event.target);
+    const yearContainer = findYearContainer(event.target);
 
-        if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
+    clickedMonth = monthContainer.textContent.trim();
+    clickedYear = yearContainer.textContent.trim();
 
-            startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-            event.target.classList.add('rentnow-start-date');
-        }
-    }
+    const clickedDate = new Date(`${clickedYear}-${clickedMonth}-${clickedDay}`);
+    const currentDate = new Date(); // Get the current date
 
-    else if (!endDate) {
-        const monthContainer = findMonthContainer(event.target);
-        const yearContainer = findYearContainer(event.target);
+    console.log("Clicked Date:", clickedDate);
+    console.log("Start Date:", startDate);
+    console.log("End Date:", endDate);
 
-        if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
 
-            endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
-            event.target.classList.add('rentnow-end-date');
-        }
+    if (!startDate && clickedDate >= currentDate) {
+        startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+        event.target.classList.add('rentnow-start-date');
+    } 
+    
+    else if (!endDate && clickedDate >= currentDate) {
+        endDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
+        event.target.classList.add('rentnow-end-date');
 
         applySelectedDates();
         applyFreeDates();
@@ -552,25 +548,27 @@ function selectionOfDays(event) {
         const daysDifference = updatingSection(startDate, endDate);
 
         collectionOptions(daysDifference);
-
-    }
-
+    } 
+    
     else {
-      // Remove existing classes to clear previous selection
-       document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
+        // Remove existing classes to clear previous selection
+        document.querySelectorAll('.rentnow-start-date, .rentnow-end-date, .rentnow-selected-date, .rentnow-selected-first-date, .rentnow-selected-last-date, .rentnow-selected-start-date, .rentnow-selected-end-date, .rentnow-free-first-date, .rentnow-free-last-date').forEach(element => {
             element.classList.remove('rentnow-start-date', 'rentnow-end-date', 'rentnow-selected-date', 'rentnow-selected-first-date', 'rentnow-selected-last-date', 'rentnow-selected-start-date', 'rentnow-selected-end-date', 'rentnow-free-first-date', 'rentnow-free-last-date');
         });
 
-       const monthContainer = findMonthContainer(event.target);
-       const yearContainer = findYearContainer(event.target);
+        const rentNowDateError = document.getElementById("rentNowDateError");
+        rentNowDateError.style.display = "none";
 
-        if (monthContainer) {
-            clickedMonth = monthContainer.textContent.trim();
-            clickedYear = yearContainer.textContent.trim();
-
+        if (clickedDate >= currentDate) {
             startDate = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
             event.target.classList.add('rentnow-start-date');
             endDate = null;
+        }
+
+        else {
+            console.log("Out of place");
+            rentNowDateError.style.display = "flex";
+
         }
     }
 }
@@ -698,20 +696,20 @@ function isDateInRange(currentDate, startDate, endDate) {
 
 function applyFreeDates() {
 
-  const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
-  const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
-  const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
-  const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
+    const deliveryPickUp1 = document.getElementById("deliveryPickUp1");
+    const deliveryPickUp2 = document.getElementById("deliveryPickUp2");
+    const deliveryPickUp3 = document.getElementById("deliveryPickUp3");
+    const deliveryPickUp4 = document.getElementById("deliveryPickUp4");
 
     if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
-        return; 
+        return;
     }
 
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
 
     // Calculate two days before the startDate
-    const twoDaysBeforeStartDate = new Date(startDateObj);    
+    const twoDaysBeforeStartDate = new Date(startDateObj);
     twoDaysBeforeStartDate.setDate(startDateObj.getDate() - 2);
 
     const formattedtwoDaysBeforeStartDate = `${(twoDaysBeforeStartDate.getDate() < 10 ? '0' : '') + twoDaysBeforeStartDate.getDate()}/${(twoDaysBeforeStartDate.getMonth() < 9 ? '0' : '') + (twoDaysBeforeStartDate.getMonth() + 1)}/${twoDaysBeforeStartDate.getFullYear().toString().slice(-2)}`;
@@ -774,43 +772,6 @@ function applyFreeDates() {
             }
         }
     });
-
-    // DELIVERY Options
-
-    const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
-    const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
-
-    const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
-    const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
-
-
-    deliveryPickUp1Container.addEventListener("click", function() {
-      deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-      deliveryPickUp2Container.style.backgroundColor = "transparent";
-      collectionDate1 = deliveryPickUp1.textContent;
-      console.log("Start:", collectionDate1);
-    })
-
-    deliveryPickUp2Container.addEventListener("click", function() {
-      deliveryPickUp1Container.style.backgroundColor = "transparent";
-      deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-      collectionDate1 = deliveryPickUp2.textContent;
-      console.log("Start:", collectionDate1);
-    })
-
-    deliveryPickUp3Container.addEventListener("click", function() {
-      deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-      deliveryPickUp4Container.style.backgroundColor = "transparent";
-      collectionDate2 = deliveryPickUp3.textContent;
-      console.log("End:", collectionDate2);
-    })
-
-    deliveryPickUp4Container.addEventListener("click", function() {
-      deliveryPickUp3Container.style.backgroundColor = "transparent";
-      deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
-      collectionDate2 = deliveryPickUp4.textContent;
-      console.log("End:", collectionDate2);
-    })
 }
 
 function attachEventListeners() {
@@ -851,97 +812,191 @@ function isEndDateBeforeStartDate(endDate, startDate) {
 
 function updatingSection(startDate, endDate) {
 
-  const startDateFormat = new Date(startDate);
-  const endDateFormat = new Date(endDate);
+    const startDateFormat = new Date(startDate);
+    const endDateFormat = new Date(endDate);
 
-  const numberOfSelectedDates = document.getElementById("rentNowNumberOfSelectedDates");
-  const selectedDates = document.getElementById("rentNowSelectedDates");
-  const rentNowRentalCost = document.getElementById("rentNowRentalCost");
+    const numberOfSelectedDates = document.getElementById("rentNowNumberOfSelectedDates");
+    const selectedDates = document.getElementById("rentNowSelectedDates");
+    const rentNowRentalCost = document.getElementById("rentNowRentalCost");
 
-  if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
+    if (endDate && isEndDateBeforeStartDate(endDate, startDate)) {
         selectedDates.textContent = "";
         numberOfSelectedDates.textContent = "";
         rentNowRentalCost.textContent = "";
-        return;  
+        return;
     }
 
-  const formattedStartDate = `${(startDateFormat.getDate() < 10 ? '0' : '') + startDateFormat.getDate()}/${(startDateFormat.getMonth() < 9 ? '0' : '') + (startDateFormat.getMonth() + 1)}/${startDateFormat.getFullYear().toString().slice(-2)}`;
-  const formattedEndDate = `${(endDateFormat.getDate() < 10 ? '0' : '') + endDateFormat.getDate()}/${(endDateFormat.getMonth() < 9 ? '0' : '') + (endDateFormat.getMonth() + 1)}/${endDateFormat.getFullYear().toString().slice(-2)}`;
+    const formattedStartDate = `${(startDateFormat.getDate() < 10 ? '0' : '') + startDateFormat.getDate()}/${(startDateFormat.getMonth() < 9 ? '0' : '') + (startDateFormat.getMonth() + 1)}/${startDateFormat.getFullYear().toString().slice(-2)}`;
+    const formattedEndDate = `${(endDateFormat.getDate() < 10 ? '0' : '') + endDateFormat.getDate()}/${(endDateFormat.getMonth() < 9 ? '0' : '') + (endDateFormat.getMonth() + 1)}/${endDateFormat.getFullYear().toString().slice(-2)}`;
 
-  selectedDates.textContent = formattedStartDate + " - " + formattedEndDate;
+    selectedDates.textContent = formattedStartDate + " - " + formattedEndDate;
 
-  const timeDifference = endDateFormat - startDateFormat;
-  const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
-  const diffDays = Math.round(timeDifference / oneDay) + 1;
+    const timeDifference = endDateFormat - startDateFormat;
+    const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
+    const diffDays = Math.round(timeDifference / oneDay) + 1;
 
-  numberOfSelectedDates.textContent = `(${diffDays} day${diffDays !== 1 ? 's' : ''})`;
+    numberOfSelectedDates.textContent = `(${diffDays} day${diffDays !== 1 ? 's' : ''})`;
 
-  rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
+    rentNowRentalCost.textContent = `$1/day  x  ${diffDays} days = $${diffDays}`;
 
-  return diffDays;
-  }
-
-function collectionOptions(diffDays) {
-  
-  const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
-  const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
-
-  const rentNowNotClickedDelivery = document.getElementById("rentNowNotClickedDelivery");
-  const rentNowClickedDelivery = document.getElementById("rentNowClickedDelivery");
-
-  const deliveryTimeDate = document.getElementById("rentNowHeader3Container4");
-
-  const totalAmountCalculation = document.getElementById("totalAmountCalculation");
-
-  const rentNowConfirmButton = document.getElementById("rentNowConfirmButton");
-  
-  rentNowNotClickedSelfCollect.addEventListener("click", function() {
-    rentNowNotClickedSelfCollect.style.display = "none";
-    rentNowClickedSelfCollect.style.display = "flex";
-
-    rentNowClickedDelivery.style.display = "none";
-    rentNowNotClickedDelivery.style.display = "flex";
-
-    rentNowConfirmButton.style.color = "#0D2610";
-    rentNowConfirmButton.style.border = "2px solid #0D2610";
-
-    deliveryTimeDate.style.display = "none";
-
-    totalAmountCalculation.textContent = `$${diffDays} + $0 = $${diffDays}`;
-  });
-
-  rentNowNotClickedDelivery.addEventListener("click", function() {
-    rentNowNotClickedDelivery.style.display = "none";
-    rentNowClickedDelivery.style.display = "flex";
-
-    rentNowClickedSelfCollect.style.display = "none";
-    rentNowNotClickedSelfCollect.style.display = "flex";
-
-    rentNowConfirmButton.style.color = "#0D2610";
-    rentNowConfirmButton.style.border = "2px solid #0D2610";
-
-    deliveryTimeDate.style.display = "block";
-
-    totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
-  });
-
-  rentNowConfirmButton.addEventListener("click", function(event) {
-    
-    event.preventDefault();
-
-    var buttonColor = window.getComputedStyle(rentNowConfirmButton).getPropertyValue("color");
-
-    // Check if the color is equal to the desired color
-    if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
-      // Proceed to the next page
-      console.log("issa the colour");
-      window.location.href = "https://tner-rental.myshopify.com/pages/rent-now-product-page";
-    } else {
-      // Display an error message (you can customize this part)
-      alert("Error: Please choose the correct color.");
-    }
-  });
-  
+    return diffDays;
 }
 
-{% endjavascript %}
+let collectionMethod = null;
+
+function collectionOptions(diffDays) {
+
+    const rentNowNotClickedSelfCollect = document.getElementById("rentNowNotClickedSelfCollect");
+    const rentNowClickedSelfCollect = document.getElementById("rentNowClickedSelfCollect");
+
+    const rentNowNotClickedDelivery = document.getElementById("rentNowNotClickedDelivery");
+    const rentNowClickedDelivery = document.getElementById("rentNowClickedDelivery");
+
+    const deliveryTimeDate = document.getElementById("rentNowHeader3Container4");
+
+    const totalAmountCalculation = document.getElementById("totalAmountCalculation");
+
+    const rentNowConfirmButton = document.getElementById("rentNowConfirmButton");
+
+    const rentNowWhatsappText = document.getElementById("rent-now-whatsapp-text");
+
+    rentNowNotClickedSelfCollect.addEventListener("click", function () {
+        rentNowNotClickedSelfCollect.style.display = "none";
+        rentNowClickedSelfCollect.style.display = "flex";
+
+        rentNowClickedDelivery.style.display = "none";
+        rentNowNotClickedDelivery.style.display = "flex";
+
+        rentNowConfirmButton.style.color = "#0D2610";
+        rentNowConfirmButton.style.border = "2px solid #0D2610";
+
+        rentNowWhatsappText.style.color = "#0D2610";
+
+        deliveryTimeDate.style.display = "none";
+
+        totalAmountCalculation.textContent = `$${diffDays} + $0 = $${diffDays}`;
+
+        collectionMethod = "Self-Collect";
+    });
+
+    rentNowNotClickedDelivery.addEventListener("click", function () {
+        rentNowNotClickedDelivery.style.display = "none";
+        rentNowClickedDelivery.style.display = "flex";
+
+        rentNowClickedSelfCollect.style.display = "none";
+        rentNowNotClickedSelfCollect.style.display = "flex";
+
+        rentNowConfirmButton.style.color = "rgba(13, 38, 16, 0.20)";
+        rentNowConfirmButton.style.border = "2px solid rgba(13, 38, 16, 0.20)";
+
+        rentNowWhatsappText.style.color = "rgba(13, 38, 16, 0.20)";
+        
+        
+        deliveryTimeDate.style.display = "block";
+
+        totalAmountCalculation.textContent = `$${diffDays} + $20 = $${diffDays + 20}`;
+
+        collectionMethod = "Delivery";
+    });
+
+    // DELIVERY Options
+
+    const deliveryPickUp1Container = document.getElementById("deliveryPickUp1Container");
+    const deliveryPickUp2Container = document.getElementById("deliveryPickUp2Container");
+
+    const deliveryPickUp3Container = document.getElementById("deliveryPickUp3Container");
+    const deliveryPickUp4Container = document.getElementById("deliveryPickUp4Container");
+
+
+    deliveryPickUp1Container.addEventListener("click", function () {
+        deliveryPickUp1Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+        deliveryPickUp2Container.style.backgroundColor = "transparent";
+        collectionDate1 = deliveryPickUp1.textContent;
+
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+
+          rentNowWhatsappText.style.color = "#0D2610";
+        }
+    })
+
+    deliveryPickUp2Container.addEventListener("click", function () {
+        deliveryPickUp1Container.style.backgroundColor = "transparent";
+        deliveryPickUp2Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+        collectionDate1 = deliveryPickUp2.textContent;
+
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+
+          rentNowWhatsappText.style.color = "#0D2610";
+        }
+    })
+
+    deliveryPickUp3Container.addEventListener("click", function () {
+        deliveryPickUp3Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+        deliveryPickUp4Container.style.backgroundColor = "transparent";
+        collectionDate2 = deliveryPickUp3.textContent;
+
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+
+          rentNowWhatsappText.style.color = "#0D2610";
+        }
+    })
+
+    deliveryPickUp4Container.addEventListener("click", function () {
+        deliveryPickUp3Container.style.backgroundColor = "transparent";
+        deliveryPickUp4Container.style.backgroundColor = "rgba(255, 166, 101, 0.50)";
+        collectionDate2 = deliveryPickUp4.textContent;
+
+        if (collectionDate1 !== null && collectionDate2 !== null) {
+          rentNowConfirmButton.style.color = "#0D2610";
+          rentNowConfirmButton.style.border = "2px solid #0D2610";
+
+          rentNowWhatsappText.style.color = "#0D2610";
+        }
+    })
+
+    rentNowConfirmButton.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        var buttonColor = window.getComputedStyle(rentNowConfirmButton).getPropertyValue("color");
+
+        // Check if the color is equal to the desired color
+        if (buttonColor === "rgb(13, 38, 16)") { // RGB value for color #0D2610
+            collectionMethod = collectionMethod || "Self-Collect";
+            redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2);
+        }
+    });
+
+}
+
+
+function redirectToWhatsapp(startDate, endDate, diffDays, collectionMethod, collectionDate1, collectionDate2) {
+
+  var whatsappMessage =
+      "Hello! I am interested in renting a Tner luggage!\n" + 
+      "Here are my details:\n" +
+      "Start Date: " + startDate + "\n" +
+      "End Date: " + endDate + "\n" +
+      "Amount Per Luggage: $" + diffDays + "\n" +
+      "Collection Method: " + collectionMethod; 
+
+  if (collectionMethod == "Delivery") {
+      whatsappMessage += "\nCollection Dates: " + collectionDate1 + " " + collectionDate2 + "\n" + 
+      "Total Amount: $" + diffDays + " + $20 = $" + (diffDays + 20);
+  } else {
+      whatsappMessage += "\nTotal Amount: $" + diffDays;
+  }
+
+  var encodedMessage = encodeURIComponent(whatsappMessage);
+  var whatsappUrl = "https://wa.me/90216926?text=" + encodedMessage;
+
+  window.location.href = whatsappUrl;
+}
+
+{%- endjavascript -%}

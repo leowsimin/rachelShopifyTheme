@@ -1,0 +1,56 @@
+{{ 'footer-section.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kristi&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo" rel="stylesheet">
+
+
+<div class="footer-section">
+
+  <div class="footer-header-container1">
+    <img class="footer-tner-logo-image" src="{{ 'footer-tner-logo.svg' | asset_url }}"/>
+    <p>{{settings.footer_UEN}}</p>
+  </div>
+
+  <div class="footer-header-container2">
+    <p>{{settings.registerpage_address}}</p>
+    <p>{{settings.registerpage_opp_hours}}</p>
+  </div>
+
+  <div class="footer-header-container3">
+    <p>{{settings.registerpage_phone_number}}</p>
+    <p>{{settings.registerpage_email_add}}</p>
+  </div>
+
+  <div class="footer-header-container4">
+    <a href="https://www.instagram.com/tner.sg/">
+      <img class="footer-instagram-logo-image" src="{{ 'footer-instagram-logo.svg' | asset_url }}"/>
+    </a>
+    <a href="https://www.tiktok.com/@tner.sg?lang=en">
+      <img class="footer-tiktok-logo-image" src="{{ 'footer-tiktok-logo.svg' | asset_url }}"/>
+    </a>
+    <a>
+      <img class="footer-xiaohongshu-logo-image" src="{{ 'footer-xiaohongshu-logo.svg' | asset_url }}"/>
+    </a>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Footer Section",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Footer Section"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -9,9 +9,9 @@
 
     <div class="howitworks-header1-container1">
         <img class="howitworks-luggages-image" src="{{ 'howitworks-luggages.svg' | asset_url }}" />
-        <h1>How:</h1>
-        <h2>DOES IT WORK?</h2>
-        <h3>Step-by-Step guide on how you can start saving the Earth!</h3>
+        <h1>{{settings.howitworks_title1}}</h1>
+        <h2>{{settings.howitworks_title2}}</h2>
+        <h3>{{settings.howitworks_subheader1}}</h3>
     </div>
 
     <img class="howitworks-cycle-image" src="{{ 'howitworks-cycle.svg' | asset_url }}" />
@@ -22,22 +22,29 @@
 
             <div class="howitworks-subheader-container1">
                 <img class="howitworks-tick-image" src="{{ 'howitworks-tick.svg' | asset_url }}" />
-                <h4>RENT</h4>
+                <h4>{{settings.howitworks_cycle_title1}}</h4>
+
+                <div class="howitworks-subheader-container6">
+                    <p>{{settings.howitworks_cycle_subheader1}}</p>
+                    <p>{{settings.howitworks_cycle_subheader2}}</p>
+                </div>
             </div>
 
-            <p>7. Rent from us again.</p>
+            <p>{{settings.howitworks_cycle_subheader7}}</p>
+            <span class="howitwork-3rd-text">{{settings.howitworks_cycle_subheader3}}</span>
 
             <div class="howitworks-subheader-container5">
 
                 <div class="howitworks-subheader-container2">
                     <img class= "howitworks-arrow-image" src="{{ 'howitworks-arrow.svg' | asset_url }}" />
-                    <h4>RETURN</h4>
-                    <p>6. Return the luggage to us !</p>
+                    <h4>{{settings.howitworks_cycle_title2}}</h4>
+                    <p>{{settings.howitworks_cycle_subheader6}}</p>
                 </div>
 
                 <div class="howitworks-subheader-container3">
                     <img class= "howitworks-circle-image" src="{{ 'howitworks-circle.svg' | asset_url }}" />
-                    <h4>COLLECT</h4>
+                    <h4>{{settings.howitworks_cycle_title3}}</h4>
+                    <p>{{settings.howitworks_cycle_subheader4}}</p>
                 </div>
 
             </div>
@@ -46,7 +53,9 @@
 
     </div>
     
-    <h5>It's that simple.</h5>
+    <p class="howitworks-point5">{{settings.howitworks_cycle_subheader5}}</p>
+    <h5>{{settings.howitworks_subheader2}}</h5>
+    <p class="howitworks-address" >{{settings.howitworks_subheader3}}</p>
 
 </div>
 

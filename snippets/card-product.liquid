@@ -164,8 +164,13 @@
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
           >
-            <a
+            {% comment %} <a
               href="{{ card_product.url }}"
+              id="CardLink-{{ section_id }}-{{ card_product.id }}"
+              class="full-unstyled-link"
+              aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
+            > {% endcomment %}
+            <a
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -286,7 +291,7 @@
                     {% if card_product.selected_or_first_available_variant.available == false %}
                       disabled
                     {% endif %}
-                  >
+                  >       
                   <button
                     id="{{ product_form_id }}-submit"
                     type="submit"
@@ -347,8 +352,11 @@
   <form method="post" action="/cart/add" id="addToCartForm">
     <input type="hidden" name="id" value="{{ card_product.variants.first.id }}" />
     <div class="add-ons-header2-container1" id="productInfo" data-product-id="{{ card_product.id }}">
-      <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" />
-      <quantity-input class="quantity">
+      {% comment %} <input type="submit" value="Add to cart" class="add-ons-add-to-cart" style="margin-top: 17px" /> {% endcomment %}
+      <a class="add-ons-add-to-cart-container" href="https://wa.me/90216926?text=Product%20Details%3A%20{{ card_product.title | url_encode }}">
+        <span class="add-ons-add-to-cart">Buy</span>
+      </a>
+      {% comment %} <quantity-input class="quantity">
         <button class="quantity__button no-js-hidden" name="minus" type="button">
           <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
           {% render 'icon-minus' %}
@@ -358,12 +366,13 @@
           <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
           {% render 'icon-plus' %}
         </button>
-      </quantity-input>
+      </quantity-input> {% endcomment %}
     </div>
-    <span id="itemAddedToCart_{{ card_product.variants.first.id }}" class="itemAddedToCartText" >Item Added to Cart!</span>
+    
+    {% comment %} <span id="itemAddedToCart_{{ card_product.variants.first.id }}" class="itemAddedToCartText" >Item Added to Cart!</span> {% endcomment %}
   </form> 
 {% else %}
-  <a style="margin-top: 17px" class="button add-ons-sold-out" tabindex="0"> Sold out</a>
+  <a class="button add-ons-sold-out" tabindex="0"> Sold out</a>
 {%- endif -%}
 
 
