@@ -185,5 +185,7 @@
         margin-left: 0;
     }
 
-    .aboutus-subheader-container9 h6 {}
+    .aboutus-subheader-container9 h6 {
+        font-size: 15px;
+    }
 }
