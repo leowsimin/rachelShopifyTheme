@@ -262,4 +262,8 @@
         letter-spacing: -1px;
         margin-top: 5px;
     }
+
+    .howitworks-cycle-image {
+        width: 250px;
+    }
 }
