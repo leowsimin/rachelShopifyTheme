@@ -139,4 +139,10 @@
     .howitwork-subheader-container8 h3 {
         font-size: 15px;
     }
+
+    .howitwork-subheader-container6 p,
+    .howitwork-subheader-container7 p,
+    .howitwork-subheader-container8 p {
+        font-size: 12px;
+    }
 }
