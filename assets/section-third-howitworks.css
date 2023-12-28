@@ -172,4 +172,10 @@
     .howitworks-header3-container1 h2 {
         margin-top: 45px;
     }
+
+    .howitworks-swigglylines-image {
+        position: absolute;
+        width: 570px;
+        transform: translate(58%, 130%);
+    }
 }
