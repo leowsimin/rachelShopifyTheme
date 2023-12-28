@@ -179,4 +179,11 @@
         width: 300px;
         transform: translate(50%, 130%);
     }
+
+    .howitworks-one-image,
+    .howitworks-two-image,
+    .howitworks-three-image,
+    .howitworks-four-image {
+        width: 40px;
+    }
 }
