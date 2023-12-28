@@ -294,6 +294,8 @@
         margin-left: 10px;
     }
 
-    .howitworks-subheader-container2 p {}
+    .howitworks-subheader-container2 p {
+        margin-right: 320px;
+    }
 
 }
