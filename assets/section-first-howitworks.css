@@ -256,4 +256,9 @@
         top: 30%;
         transform: translate(-55%);
     }
+
+    .howitworks-header1-container1 h3 {
+        font-size: 15px;
+
+    }
 }
