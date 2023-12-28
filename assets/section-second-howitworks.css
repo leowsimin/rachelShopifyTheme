@@ -119,12 +119,12 @@
     }
 
     .howitworks-reimburse-image {
-        width: 85px;
+        width: 75px;
         margin-top: 10px;
     }
 
     .howitworks-maintanence-image {
-        width: 95px;
+        width: 85px;
     }
 
     .howitwork-subheader-container6,
@@ -148,7 +148,7 @@
     }
 
     .howitworks-hygiene-image {
-        width: 110px;
+        width: 100px;
         margin-top: 10px;
     }
 }
