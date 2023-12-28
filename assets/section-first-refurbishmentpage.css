@@ -183,6 +183,7 @@
 
     .aboutus-subheader-container8 {
         margin-left: 0;
+        width: 300px;
     }
 
     .aboutus-subheader-container9 h6 {
@@ -191,6 +192,5 @@
 
     .aboutus-subheader-container8 ol li {
         font-size: 15px;
-        width: 200px;
     }
 }
