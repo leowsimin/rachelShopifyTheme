@@ -161,3 +161,5 @@
 .howitworks-subheader3-container14 p {
     margin-top: 30px;
 }
+
+@media only screen and (max-width: 990px) {}
