@@ -75,4 +75,8 @@ h5 {
     margin-top: 5%;
 }
 
-@media only screen and (max-width: 990px) {}
+@media only screen and (max-width: 990px) {
+    h4 {
+        font-size: 40px;
+    }
+}
