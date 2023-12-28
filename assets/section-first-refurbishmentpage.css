@@ -152,5 +152,8 @@
 }
 
 @media only screen and (max-width: 990px) {
-    .howitworks-luggages-image {}
+    .howitworks-luggages-image {
+        width: 300px;
+
+    }
 }
