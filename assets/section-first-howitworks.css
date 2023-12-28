@@ -317,6 +317,7 @@
     }
 
     .howitworks-circle-image {
-        width: 150px;
+        width: 130px;
+        transform: translate(-45%, 5%);
     }
 }
