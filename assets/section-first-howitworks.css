@@ -321,5 +321,7 @@
         transform: translate(-45%, 5%);
     }
 
-    .howitworks-subheader-container3 p {}
+    .howitworks-subheader-container3 p {
+        margin-top: 20px;
+    }
 }
