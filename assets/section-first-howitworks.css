@@ -337,5 +337,7 @@
         letter-spacing: -1.5px;
     }
 
-    .howitworks-point5 {}
+    .howitworks-point5 {
+        font-size: 12px;
+    }
 }
