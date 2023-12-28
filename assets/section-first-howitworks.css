@@ -254,6 +254,6 @@
     .howitworks-header1-container1 h1 {
         font-size: 30px;
         top: 30%;
-        transform: translate(-55%, -50%);
+        transform: translate(-55%);
     }
 }
