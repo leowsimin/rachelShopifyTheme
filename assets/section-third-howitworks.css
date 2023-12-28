@@ -168,4 +168,8 @@
     .howitworks-header3-container1 h2 {
         font-size: 30px;
     }
+
+    .howitworks-header3-container1 h1 {
+        margin-top: 50px;
+    }
 }
