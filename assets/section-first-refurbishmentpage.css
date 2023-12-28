@@ -152,6 +152,7 @@
 }
 
 @media only screen and (max-width: 990px) {
+
     .howitworks-luggages-image {
         width: 300px;
         padding-left: 20px;
@@ -165,5 +166,4 @@
     .howitworks-header1-container1 h1 {
         font-size: 30px;
     }
-
 }
