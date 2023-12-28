@@ -145,4 +145,9 @@
     .howitwork-subheader-container8 p {
         font-size: 12px;
     }
+
+    .howitworks-hygiene-image {
+        width: 120px;
+        margin-top: 20px;
+    }
 }
