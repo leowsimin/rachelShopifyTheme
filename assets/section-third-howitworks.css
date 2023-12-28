@@ -196,4 +196,8 @@
         width: 80%;
         margin-left: 40px;
     }
+
+    .howitworks-third-section p {
+        font-size: 12px
+    }
 }
