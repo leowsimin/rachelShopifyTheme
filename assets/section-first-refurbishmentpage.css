@@ -157,4 +157,9 @@
     .aboutus-third-section h4 {
         font-size: 30px;
     }
+
+    .aboutus-image5 {
+        width: 220px;
+        transform: translate(230px, 100px);
+    }
 }
