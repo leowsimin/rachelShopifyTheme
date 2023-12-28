@@ -269,6 +269,7 @@
 
     .howitworks-subheader-container1 h4 {
         margin-left: 150px;
+        white-space: nowrap;
     }
 
 
