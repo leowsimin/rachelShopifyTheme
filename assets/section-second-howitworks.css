@@ -133,4 +133,10 @@
         margin-right: 10px;
         margin-left: 10px;
     }
+
+    .howitwork-subheader-container6 h3,
+    .howitwork-subheader-container7 h3,
+    .howitwork-subheader-container8 h3 {
+        font-size: 15px;
+    }
 }
