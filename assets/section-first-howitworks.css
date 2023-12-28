@@ -307,5 +307,6 @@
 
     .howitworks-subheader-container5 {
         margin-top: 0;
+        white-space: nowrap;
     }
 }
