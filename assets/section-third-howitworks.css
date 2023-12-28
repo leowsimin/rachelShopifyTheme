@@ -190,4 +190,10 @@
     .howitworks-calendar-image {
         width: 300px;
     }
+
+    .howitworks-subheader3-container11,
+    .howitworks-subheader3-container16 {
+        width: 80%;
+        margin-left: 60px;
+    }
 }
