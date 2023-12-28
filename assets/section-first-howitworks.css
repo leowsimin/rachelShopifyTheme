@@ -260,5 +260,6 @@
     .howitworks-header1-container1 h3 {
         font-size: 15px;
         letter-spacing: -1px;
+        margin-top: 5px;
     }
 }
