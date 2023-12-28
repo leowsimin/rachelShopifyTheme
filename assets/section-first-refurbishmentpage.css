@@ -167,5 +167,7 @@
         width: 350px;
     }
 
-    .aboutus-subheader-container7 {}
+    .aboutus-subheader-container7 {
+        margin-left: 14%;
+    }
 }
