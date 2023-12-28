@@ -138,7 +138,7 @@
 @media only screen and (max-width: 990px) {
 
     .rentnow-header1-container1 h1,
-    {
-    font-size: 40px;
-}
+    .rentnow-header1-container1 h2 {
+        font-size: 40px;
+    }
 }
