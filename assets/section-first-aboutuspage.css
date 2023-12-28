@@ -91,4 +91,8 @@ h5 {
     .aboutus-first-section-description p {
         font-size: 15px;
     }
+
+    .aboutus-image2 {
+        width: 250px;
+    }
 }
