@@ -65,8 +65,4 @@
     line-height: normal;
 }
 
-@media only screen and (max-width: 990px) {
-    .aboutus-image2 {
-        width:
-    }
-}
+@media only screen and (max-width: 990px) {}
