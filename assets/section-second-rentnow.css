@@ -385,10 +385,9 @@
         font-size: 10px;
     }
 
-    svg {
-        width: 20;
-        height: 20;
-        fill: none;
+    .rentnow-subheader-container5 svg {
+        width: 7;
+        height: 7;
     }
 
 }
