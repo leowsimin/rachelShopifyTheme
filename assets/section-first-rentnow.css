@@ -173,7 +173,11 @@
         width: 15px;
     }
 
-    .rentnow-arrow-image {}
+    .rentnow-arrow-image {
+        width: 200px;
+        transform: translate(60%, -95%);
+        z-index: 2;
+    }
 
 
 }
