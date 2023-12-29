@@ -200,5 +200,7 @@
 
     .aboutus-image9 {
         top: -10px;
+        z-index: 0;
+        width: 100px;
     }
 }
