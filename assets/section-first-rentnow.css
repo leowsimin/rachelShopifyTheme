@@ -159,6 +159,7 @@
     .rentnow-header1-container1 h3 {
         font-size: 6px;
         white-space: nowrap;
+        margin-right: 5px;
     }
 
     .rentnow-header1-container1 h4 {
@@ -169,7 +170,7 @@
     }
 
     .rentnow-question-mark-image {
-        width: 20px;
+        width: 15px;
     }
 
 
