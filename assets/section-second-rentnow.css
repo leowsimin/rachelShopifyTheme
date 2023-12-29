@@ -351,4 +351,11 @@
         border-bottom: solid 0.3px #000;
     }
 
+    .rentnow-first-days,
+    .rentnow-second-days {
+        font-size: 15px;
+        letter-spacing: -1px;
+        margin-left: 18px;
+    }
+
 }
