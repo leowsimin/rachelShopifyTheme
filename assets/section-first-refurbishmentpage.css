@@ -198,5 +198,7 @@
         width: 160px;
     }
 
-    .aboutus-image9 {}
+    .aboutus-image9 {
+        top: -10px;
+    }
 }
