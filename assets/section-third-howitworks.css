@@ -164,7 +164,9 @@
 
 @media only screen and (max-width: 990px) {
 
-
+    .howitworks-header3-container1 {
+        margin-top: 5%;
+    }
 
     .howitworks-header3-container1 h1,
     .howitworks-header3-container1 h2 {
