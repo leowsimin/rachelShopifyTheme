@@ -140,5 +140,9 @@ h3 {
         font-size: 15px;
     }
 
-    .homePageDescription p {}
+    .homePageDescription p {
+        font-size: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
