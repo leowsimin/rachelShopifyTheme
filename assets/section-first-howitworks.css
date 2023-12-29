@@ -304,11 +304,13 @@
         margin-right: 250px;
         margin-bottom: 0;
         margin-top: 3%;
+        letter-spacing: -0.5px;
     }
 
     .howitwork-3rd-text {
         font-size: 8px;
-        margin-left: 310px;
+        margin-left: 250px;
+        letter-spacing: -0.5px;
     }
 
     .howitworks-subheader-container5 {
