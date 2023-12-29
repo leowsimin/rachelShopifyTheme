@@ -339,4 +339,17 @@
         margin: 5px 0;
     }
 
+    .rentnow-first-weekdays,
+    .rentnow-second-weekdays {
+        font-size: 15px;
+        letter-spacing: -1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 24px;
+        margin-right: 24px;
+
+        border-top: solid 1px #000;
+        border-bottom: solid 1px #000;
+    }
+
 }
