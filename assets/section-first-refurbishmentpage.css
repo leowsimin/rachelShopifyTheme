@@ -207,5 +207,6 @@
     .aboutus-subheader-container8 ol {
         width: 100px;
         height: 150px;
+        padding: 0;
     }
 }
