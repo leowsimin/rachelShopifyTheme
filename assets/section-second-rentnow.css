@@ -332,4 +332,9 @@
         height: 133px;
     }
 
+    .rentnow-first-months label,
+    .rentnow-second-months label {
+        font-size: 30px;
+    }
+
 }
