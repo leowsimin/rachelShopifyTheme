@@ -358,4 +358,12 @@
         margin-left: 6px;
     }
 
+    .rentnow-first-days p,
+    .rentnow-second-days p {
+        width: 15px;
+        margin: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
 }
