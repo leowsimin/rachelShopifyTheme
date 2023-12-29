@@ -53,10 +53,14 @@
     margin-top: 0;
 }
 
-.footer-instagram-logo-image,
 .footer-tiktok-logo-image,
 .footer-xiaohongshu-logo-image {
     width: 25px;
+    margin-right: 60px;
+}
+
+.footer-instagram-logo-image {
+    width: 30px;
     margin-right: 60px;
 }
 
@@ -88,7 +92,7 @@
     }
 
     .footer-instagram-logo-image {
-        width: 15px;
+        width: 12px;
         margin-left: 15px;
         margin-right: 10px;
     }
