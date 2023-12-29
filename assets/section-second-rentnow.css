@@ -385,4 +385,10 @@
         font-size: 10px;
     }
 
+    svg {
+        width: 20;
+        height: 20;
+        fill: none;
+    }
+
 }
