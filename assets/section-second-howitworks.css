@@ -113,7 +113,9 @@
         letter-spacing: -2px;
     }
 
-    .howitworks-header2-container1 {}
+    .howitworks-header2-container1 {
+        margin-left: 5%;
+    }
 
     .howitworks-header2-container1 h2 {
         font-size: 30px;
