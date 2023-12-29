@@ -64,4 +64,9 @@
     .footer-tner-logo-image {
         width: 50px;
     }
+
+    .footer-header-container1 p {
+        font-size: 5px;
+        width: 50px;
+    }
 }
