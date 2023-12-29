@@ -175,9 +175,8 @@
     }
 
     .howitworks-swigglylines-image {
-        position: absolute;
-        width: 300px;
-        transform: translate(50%, 130%);
+        width: 170px;
+        transform: translate(60%, 160%);
     }
 
     .howitworks-one-image,
