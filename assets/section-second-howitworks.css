@@ -153,9 +153,9 @@
     .howitwork-subheader-container6 p,
     .howitwork-subheader-container7 p,
     .howitwork-subheader-container8 p {
-        font-size: 12px;
-        width: 100px;
-        letter-spacing: -1px;
+        font-size: 8px;
+        width: 80px;
+        letter-spacing: 0;
     }
 
     .howitworks-hygiene-image {
