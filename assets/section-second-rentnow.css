@@ -353,9 +353,9 @@
 
     .rentnow-first-days,
     .rentnow-second-days {
-        font-size: 15px;
-        letter-spacing: -1px;
-        margin-left: 18px;
+        font-size: 5px;
+        letter-spacing: -0.5px;
+        margin-left: 6px;
     }
 
 }
