@@ -116,6 +116,7 @@ h3 {
         display: flex;
         align-self: flex-start;
         margin-left: 30px;
+        width: 35px;
     }
 
     .homePageCloseQuote {
