@@ -326,4 +326,10 @@
         padding: 7px;
     }
 
+    .rentnow-first-calendar,
+    .rentnow-second-calendar {
+        width: 118px;
+        height: 133px;
+    }
+
 }
