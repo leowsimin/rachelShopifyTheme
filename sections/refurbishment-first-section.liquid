@@ -22,13 +22,13 @@
             <img class="aboutus-image7" src="{{ 'aboutus-happyluggage.svg' | asset_url }}" />
         </div>
 
-        {% comment %} <div class="aboutus-subheader-container8">
+        <div class="aboutus-subheader-container8">
             <img class="aboutus-image8" src="{{ 'aboutus-15mins.svg' | asset_url }}" />
 
-            <div class="aboutus-subheader-container9">
+            {% comment %} <div class="aboutus-subheader-container9">
                 <h6>{{settings.refurbishment_subheader}}</h6>
                 <img class="aboutus-image9" src="{{ 'aboutus-process-circle.svg' | asset_url }}" />
-            </div>
+            </div> {% endcomment %}
 
             <ol>
                 <li>{{settings.refurbishment_point1}}</li>
@@ -38,7 +38,7 @@
                 <li>{{settings.refurbishment_point5}}</li>
             </ol>
 
-        <div> {% endcomment %}
+        <div>
     </div>
 </div>
 
