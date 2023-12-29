@@ -222,5 +222,8 @@
         font-size: 15px;
     }
 
-    #rent-now-whatsapp-text {}
+    #rent-now-whatsapp-text {
+        font-size: 10px;
+        letter-spacing: -0.5px;
+    }
 }
