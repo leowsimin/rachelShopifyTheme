@@ -380,6 +380,9 @@
         letter-spacing: -0.5px;
     }
 
-    .rentnow-subheader-container5 h2 {}
+    .rentnow-subheader-container5 h2 {
+        letter-spacing: -0.5px;
+        font-size: 10px;
+    }
 
 }
