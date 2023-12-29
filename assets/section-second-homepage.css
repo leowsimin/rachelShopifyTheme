@@ -135,4 +135,8 @@ h3 {
     .homePage-luggage1-image {
         width: 67px;
     }
+
+    h3 {
+        font-size: 15px;
+    }
 }
