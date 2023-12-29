@@ -105,7 +105,7 @@
     z-index: 2;
 }
 
-.howitworks-subheader-container4 p {
+.howitworks-cycle-subheader7 {
     color: #0D2610;
     font-family: JejuMyeongjo;
     font-size: 20px;
@@ -238,4 +238,131 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1.5px;
+}
+
+@media only screen and (max-width: 990px) {
+
+    .howitworks-first-section {
+        padding-top: 10%;
+    }
+
+    .howitworks-luggages-image {
+        width: 250px;
+        padding-left: 10px;
+    }
+
+    .howitworks-header1-container1 h2 {
+        font-size: 25px;
+        margin-top: 0;
+    }
+
+    .howitworks-header1-container1 h1 {
+        font-size: 25px;
+        top: 35%;
+        transform: translate(-65%);
+    }
+
+    .howitworks-header1-container1 h3 {
+        font-size: 10px;
+        letter-spacing: -1px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    .howitworks-cycle-image {
+        width: 200px;
+    }
+
+    .howitworks-subheader-container1 h4 {
+        margin-left: 90px !important;
+        white-space: nowrap;
+    }
+
+    .howitworks-header1container2 h4 {
+        font-size: 15px;
+        margin-top: 15px;
+        margin: 0;
+    }
+
+    .howitworks-subheader-container6 p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .howitworks-subheader-container6 {
+        margin-left: 10px;
+        letter-spacing: -0.5px;
+    }
+
+    .howitworks-tick-image {
+        width: 50px;
+    }
+
+    .howitworks-subheader-container1 p {
+        font-size: 8px;
+        margin-left: 0;
+        letter-spacing: -0.5px;
+    }
+
+    .howitworks-cycle-subheader7 {
+        font-size: 8px;
+        margin-right: 250px;
+        margin-bottom: 0;
+        margin-top: 3%;
+        letter-spacing: -0.5px;
+    }
+
+    .howitwork-3rd-text {
+        font-size: 8px;
+        margin-left: 250px;
+        letter-spacing: -0.5px;
+    }
+
+    .howitworks-subheader-container5 {
+        margin-top: 55px;
+        white-space: nowrap;
+    }
+
+    .howitworks-subheader-container3 {
+        margin-left: 90px;
+    }
+
+    .howitworks-circle-image {
+        width: 110px;
+        transform: translate(-45%, -20%);
+    }
+
+    .howitworks-subheader-container3 p {
+        font-size: 8px;
+        margin-top: 7px;
+        letter-spacing: -0.5px;
+    }
+
+    .howitworks-cycle-subheader6 {
+        color: #0d2610;
+        font-family: JejuMyeongjo;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.5px;
+    }
+
+    .howitworks-point5 {
+        font-size: 8px;
+        margin-top: 20px;
+        letter-spacing: -0.5px;
+    }
+
+    .howitworks-first-section h5 {
+        font-size: 15px;
+        margin-top: 25px;
+        letter-spacing: -1.5px;
+    }
+
+    .howitworks-address {
+        font-size: 8px;
+        letter-spacing: -0.5px;
+    }
+
 }

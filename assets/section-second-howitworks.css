@@ -105,3 +105,72 @@
     margin: 0 auto;
     /* Center the paragraph horizontally */
 }
+
+@media only screen and (max-width: 990px) {
+
+    .howitworks-header2-container1 h1 {
+        font-size: 30px;
+        letter-spacing: -2px;
+        margin-bottom: 10px;
+    }
+
+    .howitworks-header2-container1 {
+        margin-left: 5%;
+    }
+
+    .howitworks-header2-container1 h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .howitworks-reimburse-image {
+        width: 65px;
+        margin-top: 6px;
+    }
+
+    .howitworks-maintanence-image {
+        width: 75px;
+    }
+
+    .howitwork-subheader-container6,
+    .howitwork-subheader-container7,
+    .howitwork-subheader-container8 {
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 25%;
+    }
+
+    .howitwork-subheader-container6 h3,
+    .howitwork-subheader-container7 h3,
+    .howitwork-subheader-container8 h3 {
+        font-size: 8px;
+        margin-top: 5px;
+    }
+
+    .howitwork-subheader-container7 h3 {
+        margin-top: 10px;
+    }
+
+    .howitwork-subheader-container6 h3 {
+        margin-top: 5px;
+    }
+
+    .howitwork-subheader-container6 p,
+    .howitwork-subheader-container7 p,
+    .howitwork-subheader-container8 p {
+        font-size: 8px;
+        width: 80px;
+        letter-spacing: 0;
+    }
+
+    .howitworks-hygiene-image {
+        width: 90px;
+        margin-top: 5px;
+    }
+
+    .howitworks-header2-container2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

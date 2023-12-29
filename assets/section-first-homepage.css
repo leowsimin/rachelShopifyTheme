@@ -99,6 +99,12 @@
 }
 
 @media only screen and (max-width: 990px) {
+
+    .homePagePanel1 {
+        height: 90vh;
+        background-color: #faf5ee;
+    }
+
     .homePageStyle {
         display: flex;
         flex-direction: column;
@@ -145,6 +151,7 @@
 
     .homePageArrow {
         visibility: hidden;
+        width: 1px;
     }
 
     .homePageStyle3 {

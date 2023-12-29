@@ -104,8 +104,8 @@ h3 {
     .homePagePeople1,
     .homePagePeople2,
     .homePagePeople3 {
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .homePageCloseQuote {
@@ -115,16 +115,43 @@ h3 {
     .homePageOpenQuote {
         display: flex;
         align-self: flex-start;
-        margin-left: 100px;
+        margin-left: 30px;
+        width: 35px;
     }
 
     .homePageCloseQuote {
         display: flex;
         align-self: flex-end;
-        margin-right: 100px;
+        margin-right: 20px;
+        width: 40px;
     }
 
     .homePageTestimony {
         padding-bottom: 5%;
+        font-size: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .homePage-luggage1-image {
+        width: 67px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .homePageDescription p {
+        font-size: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .homePage-luggage2-image {
+        width: 65px;
+    }
+
+    .homePage-luggage3-image {
+        width: 50px;
     }
 }

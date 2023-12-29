@@ -74,3 +74,25 @@ h5 {
     width: 600px;
     margin-top: 5%;
 }
+
+@media only screen and (max-width: 990px) {
+
+    h4,
+    h5 {
+        font-size: 30px;
+        letter-spacing: -2px;
+    }
+
+    .aboutus-image1 {
+        width: 160px;
+        margin-right: 10%;
+    }
+
+    .aboutus-first-section-description p {
+        font-size: 15px;
+    }
+
+    .aboutus-image2 {
+        width: 250px;
+    }
+}

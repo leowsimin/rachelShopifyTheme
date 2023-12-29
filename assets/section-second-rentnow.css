@@ -306,3 +306,96 @@
     letter-spacing: -1px;
     margin-top: 5px;
 }
+
+@media only screen and (max-width: 990px) {
+    .rentnow-second-section h1 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+
+    .rentnow-second-section h3 {
+        font-size: 9px;
+        margin-bottom: 15px;
+    }
+
+    .rentnow-header2-container1 {
+        width: 257px;
+        height: 173px;
+    }
+
+    .rentnow-calendar-group {
+        padding: 7px;
+    }
+
+    .rentnow-first-calendar,
+    .rentnow-second-calendar {
+        width: 118px;
+        height: 133px;
+    }
+
+    .rentnow-first-months label,
+    .rentnow-second-months label {
+        font-size: 10px;
+        letter-spacing: -0.5px;
+        margin: 5px 0;
+    }
+
+    .rentnow-first-weekdays,
+    .rentnow-second-weekdays {
+        font-size: 8px;
+        letter-spacing: -0.5px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-left: 8px;
+        margin-right: 8px;
+        border-top: solid 0.3px #000;
+        border-bottom: solid 0.3px #000;
+    }
+
+    .rentnow-first-weekdays p,
+    .rentnow-second-weekdays p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .rentnow-first-days,
+    .rentnow-second-days {
+        font-size: 5px;
+        letter-spacing: -0.5px;
+        margin-left: 6px;
+    }
+
+    .rentnow-first-days p,
+    .rentnow-second-days p {
+        width: 15px;
+        margin: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .rentnow-nextdays,
+    .rentnow-prevdays {
+        font-size: 5px;
+        letter-spacing: -0.5px;
+    }
+
+    .rentnow-subheader-container5 h2 {
+        letter-spacing: -0.5px;
+        font-size: 7px;
+    }
+
+    .rentnow-subheader-container5 svg {
+        width: 7px;
+        height: 7px;
+    }
+
+    .rentnow-subheader-container5 {
+        margin-bottom: 6px;
+    }
+
+    .rentnow-calendar-legend {
+        padding-left: 10px;
+    }
+
+}

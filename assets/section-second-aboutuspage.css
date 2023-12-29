@@ -64,3 +64,20 @@
     font-weight: 400;
     line-height: normal;
 }
+
+@media only screen and (max-width: 990px) {
+
+    .aboutus-image3 {
+        width: 80px;
+        margin-left: 250px;
+        margin-top: 20px;
+    }
+
+    .aboutus-second-section-description p {
+        font-size: 15px;
+    }
+
+    .aboutus-image4 {
+        width: 130px;
+    }
+}

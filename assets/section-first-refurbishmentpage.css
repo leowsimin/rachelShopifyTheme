@@ -150,3 +150,65 @@
     line-height: normal;
     margin: 10px;
 }
+
+@media only screen and (max-width: 990px) {
+
+    .aboutus-third-section h5,
+    .aboutus-third-section h4 {
+        font-size: 30px;
+        letter-spacing: -2.5px;
+    }
+
+    .aboutus-image5 {
+        width: 100px;
+        transform: translate(100px, 50px);
+    }
+
+    .aboutus-image6 {
+        width: 250px;
+    }
+
+    .aboutus-subheader-container7 {
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .aboutus-image7 {
+        width: 65px;
+        margin-top: 190px;
+        margin-left: 30px;
+    }
+
+    .aboutus-image8 {
+        width: 100px;
+    }
+
+    .aboutus-subheader-container8 {
+        margin-left: 0;
+        width: 240px;
+        margin-top: 180px;
+    }
+
+    .aboutus-subheader-container9 h6 {
+        font-size: 15px;
+        margin-top: 2%;
+    }
+
+    .aboutus-subheader-container8 ol li {
+        font-size: 12px;
+        width: 160px;
+    }
+
+    .aboutus-image9 {
+        top: -10px;
+        z-index: 0;
+        width: 100px;
+    }
+
+    .aboutus-subheader-container8 ol {
+        width: 100px;
+        height: 150px;
+        padding: 0;
+        margin-left: 30px;
+    }
+}

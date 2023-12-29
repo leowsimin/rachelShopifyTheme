@@ -161,3 +161,50 @@
 .howitworks-subheader3-container14 p {
     margin-top: 30px;
 }
+
+@media only screen and (max-width: 990px) {
+
+    .howitworks-header3-container1 {
+        padding-top: 10%;
+    }
+
+    .howitworks-header3-container1 h1,
+    .howitworks-header3-container1 h2 {
+        font-size: 20px;
+        letter-spacing: -2px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .howitworks-swigglylines-image {
+        width: 170px;
+        transform: translate(60%, 160%);
+    }
+
+    .howitworks-one-image,
+    .howitworks-two-image,
+    .howitworks-three-image,
+    .howitworks-four-image {
+        width: 20px;
+    }
+
+    .howitworks-calendar-image {
+        width: 160px;
+    }
+
+    .howitworks-subheader3-container11,
+    .howitworks-subheader3-container16 {
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .howitworks-third-section p {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .howitworks-subheader3-container14 p {
+        margin-top: 23px;
+    }
+
+}
