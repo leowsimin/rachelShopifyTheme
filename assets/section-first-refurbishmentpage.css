@@ -198,5 +198,14 @@
         width: 160px;
     }
 
+    .aboutus-image9 {
+        top: -10px;
+        z-index: 0;
+        width: 100px;
+    }
 
+    .aboutus-subheader-container8 ol {
+        width: 400px;
+        height: 150px;
+    }
 }
