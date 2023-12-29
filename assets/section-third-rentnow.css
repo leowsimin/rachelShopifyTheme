@@ -191,5 +191,8 @@
         font-size: 15px;
     }
 
-    .rentnow-subheader-container7 svg {}
+    .rentnow-subheader-container7 svg {
+        width: 20;
+        height: 20;
+    }
 }
