@@ -71,7 +71,11 @@
     }
 
     .footer-header-container2 {
-        flex: 3;
+        font-size: 8px;
+        margin-top: 5px;
+    }
+
+    .footer-header-container3 {
         font-size: 8px;
         margin-top: 5px;
     }
