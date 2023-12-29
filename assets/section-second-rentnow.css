@@ -366,4 +366,10 @@
         padding-bottom: 5px;
     }
 
+    .rentnow-nextdays,
+    .rentnow-prevdays {
+        font-size: 5px;
+        letter-spacing: -0.5px;
+    }
+
 }
