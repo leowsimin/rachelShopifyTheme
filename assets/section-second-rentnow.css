@@ -353,6 +353,12 @@
         border-bottom: solid 0.3px #000;
     }
 
+    .rentnow-first-weekdays p,
+    .rentnow-second-weekdays p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
     .rentnow-first-days,
     .rentnow-second-days {
         font-size: 5px;
