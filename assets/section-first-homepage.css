@@ -1,4 +1,4 @@
-.homePageStyle {
+/* .homePageStyle {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -101,7 +101,7 @@
 @media only screen and (max-width: 990px) {
 
     .homePagePanel1 {
-        height: 70vh;
+        height: 90vh;
         background-color: #faf5ee;
     }
 
@@ -176,4 +176,4 @@
         padding-left: 2%;
         padding-top: 15px;
     }
-}
+} */
